@@ -70,7 +70,7 @@ function MenuOverlay({
     >
       <div className="flex items-center justify-between border-b-[3px] border-cream/20 px-5 py-4">
         <span className="font-display text-lg text-cream">
-          Permis<span className="text-yellow">Hub</span>
+          Permis<span className="text-brick">Hub</span>
         </span>
         <button
           onClick={onClose}
