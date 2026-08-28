@@ -1,4 +1,5 @@
 import type { NextAuthOptions } from 'next-auth'
+import { getServerSession } from 'next-auth/next'
 import { PrismaAdapter } from '@auth/prisma-adapter'
 import GoogleProvider from 'next-auth/providers/google'
 import EmailProvider from 'next-auth/providers/email'
@@ -36,4 +37,24 @@ export const authOptions: NextAuthOptions = {
       return session
     },
   },
+}
+
+/**
+ * Session optionnelle pour le checkout invité (api/checkout/pack,
+ * api/checkout/circuit) — ne doit JAMAIS bloquer un achat, que
+ * l'utilisateur soit connecté ou non. Sans ce garde-fou,
+ * getServerSession() (stratégie 'database') tente une vraie connexion
+ * Prisma à chaque appel ; si DATABASE_URL est vide ou la base
+ * injoignable, la requête reste bloquée indéfiniment au lieu d'échouer
+ * vite, ce qui bloque tout achat (trouvé en testant le paiement en
+ * production le 2026-08-28, DATABASE_URL pas encore configurée).
+ */
+export async function getOptionalSession() {
+  if (!process.env.DATABASE_URL) return null
+  try {
+    const timeout = new Promise<null>((resolve) => setTimeout(() => resolve(null), 4000))
+    return await Promise.race([getServerSession(authOptions), timeout])
+  } catch {
+    return null
+  }
 }

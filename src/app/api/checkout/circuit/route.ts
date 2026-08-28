@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server'
-import { getServerSession } from 'next-auth/next'
-import { authOptions } from '@/lib/auth'
+import { getOptionalSession } from '@/lib/auth'
 import { stripe } from '@/lib/stripe'
 import { getFeaturedCircuit, getCenters } from '@/content/centers/registry'
 
@@ -18,7 +17,7 @@ import { getFeaturedCircuit, getCenters } from '@/content/centers/registry'
  * transmis directement, pas besoin de repasser par l'email.
  */
 export async function POST(request: Request) {
-  const session = await getServerSession(authOptions)
+  const session = await getOptionalSession()
 
   const body = await request.json().catch(() => null)
   const circuitId = typeof body?.circuitId === 'string' ? body.circuitId : null
