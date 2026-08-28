@@ -1,0 +1,637 @@
+[
+  {
+    "id": 1,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Que signifie ce signal routier ?",
+    "choix": [
+      "A. Vous approchez d’un arrêt de tram.",
+      "B. Des rails de tram se trouvent sur la chaussée."
+    ],
+    "reponse": "B",
+    "explication": "Ce panneau est un panneau de danger.Attention au tram, qui a toujours la priorité.",
+    "image": "/examen-blanc/examen-5/q01.jpg"
+  },
+  {
+    "id": 2,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Quelle distance latérale le conducteur de la voiture doit-il garder en dépassant le cyclomotoriste ?",
+    "choix": [
+      "A. 1 mètre.",
+      "B. 1,5 mètre.",
+      "C. Une distance suffisante."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 15Lors du dépassement d’un cycliste ou d’un cyclomotoriste en agglomération, il faut garder 1 mètre de distance latérale.Hors agglomération, cette distance doit être d’au moins 1,5 mètre.",
+    "image": "/examen-blanc/examen-5/q02.jpg"
+  },
+  {
+    "id": 3,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Un bras saigne.",
+    "choix": [
+      "A. Vous l’entourez d’un bandage.",
+      "B. Vous posez un garrot sur la partie supérieure du bras.",
+      "C. Vous posez un garrot sur la partie inférieure du bras."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 29 – ‘Accident’.Couvrez la plaie à l’aide d’un mouchoir propre ou entourez-la d’un bandage.",
+    "image": "/examen-blanc/examen-5/q03.jpg"
+  },
+  {
+    "id": 4,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Au-delà de quel signal routier pouvez-vous circuler avec une voiture de 7 mètres de long ?",
+    "choix": [
+      "A. Seulement au-delà du signal A.",
+      "B. Seulement au-delà du signal B.",
+      "C. Au-delà du signal A et du signal B."
+    ],
+    "reponse": "C",
+    "explication": "LEÇON 10C27. Accès interdit aux conducteurs de véhicules dont la largeur, chargement compris, dépasse celle indiquée.C29. Accès interdit aux conducteurs de véhicules dont la hauteur, chargement compris, dépasse celle indiquée.",
+    "image": "/examen-blanc/examen-5/q04.jpg"
+  },
+  {
+    "id": 5,
+    "type": "numerique",
+    "gravite": "normale",
+    "question": "Entrez un nombre.Un jeune cycliste est impliqué dans un accident.À partir de quel âge (… ans) ce cycliste doit-il présenter sa carte d’identité ?",
+    "choix": [],
+    "reponse": "15",
+    "explication": "LEÇON 29 – ‘Accident’.Les personnes âgées de 15 ans et plus doivent montrer leur carte d’identité.",
+    "image": "/examen-blanc/examen-5/q05.jpg"
+  },
+  {
+    "id": 6,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Dans une agglomération, vous circulez sur une voie publique à deux chaussées qui comporte deux bandes dans votre direction.Pouvez-vous circuler dans celle de gauche ?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "LEÇON 2 – ‘Bandes de circulation’.ExplicationLes conditions préalables suivantes sont réuniesa) nous sommes en agglomérationb) il y a des bandes de circulationLe choix de la bande est donc possible car nous sommes sur une chaussée à sens unique (pas de signal mais bien une voie publique à deux chaussées distinctes)Dans les agglomérations les conducteurs peuvent emprunter la bande qui convient le mieux à leur destination.",
+    "image": "/examen-blanc/examen-5/q06.jpg"
+  },
+  {
+    "id": 7,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Dans quel ordre ces conducteurs peuvent-ils s’engager dans le carrefour ?",
+    "choix": [
+      "A. Tram - Voiture brune - Voiture bleue.",
+      "B. Voiture brune - tram - Voiture bleue.",
+      "C. Tram - Voiture bleue - Voiture brune."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 22 – ‘Train – tram -autobus’.Un tram a toujours priorité.",
+    "image": "/examen-blanc/examen-5/q07.jpg"
+  },
+  {
+    "id": 8,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Un accident sans blessés.Les parties concernées remplissent un constat européen d’accident, est-ce suffisant?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "LEÇON 29 – ‘Accident’.Un accident sans blessés : la police ne doit pas venir.",
+    "image": "/examen-blanc/examen-5/q08.jpg"
+  },
+  {
+    "id": 9,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Qu’est-ce qui ne doit pas obligatoirement se trouver dans la voiture ?",
+    "choix": [
+      "A. N° 1.",
+      "B. N° 2.",
+      "C. N° 3."
+    ],
+    "reponse": "C",
+    "explication": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.Les accessoires obligatoires sonta) le triangle de danger –b) un extincteur avec 1 kg de poudre accessible en 10 secondesc) un – gilet de sécurité réfléchissant (à mettre avant de quitter la voiture dans certains cas)d) – une trousse de secours.",
+    "image": "/examen-blanc/examen-5/q09.jpg"
+  },
+  {
+    "id": 10,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Quelle voiture peut s'engager en premier dans ce carrefour ?",
+    "choix": [
+      "A. Voiture A.",
+      "B. Voiture B.",
+      "C. Voiture C."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 19 – ‘Une intersection et les signaux routiers’.La voiture 'C' est à côté d'un signal d'arrêt.La voiture 'A' a la priorité de droite.",
+    "image": "/examen-blanc/examen-5/q10.jpg"
+  },
+  {
+    "id": 11,
+    "type": "choix_multiple",
+    "gravite": "grave",
+    "question": "En agglomérationSi vous voulez dépasser le cycliste par la gauche, vous devez laisser un espace latéral de sécurité de ...",
+    "choix": [
+      "A. ... 1 mètre.",
+      "B. ... 1,5 mètre.",
+      "C. ... 2 mètres."
+    ],
+    "reponse": "A",
+    "explication": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 15+16 – ‘Le dépassement’.Le conducteur doit laisser une distance latérale d'au moins un mètre entre son véhicule et le cycliste ou le conducteur de cyclomoteur à deux roues.En dehors des agglomérations, la distance latérale est d’au moins un mètre et demi.",
+    "image": "/examen-blanc/examen-5/q11.jpg"
+  },
+  {
+    "id": 12,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Qu’est-ce que l’aquaplanage ?",
+    "choix": [
+      "A. Une pluie très intense qui empêche le conducteur de voir correctement.",
+      "B. Des pneus qui perdent le contact avec la chaussée à cause d’une grande quantité d’eau.",
+      "C. De l’eau projetée que les essuie-glaces ne peuvent plus évacuer."
+    ],
+    "reponse": "B",
+    "explication": "L’aquaplanage est un phénomène où les pneus perdent le contact avec la route à cause d’une couche d’eau.Au lieu d’adhérer au revêtement, le véhicule glisse sur une pellicule d’eau.Résultat : il n’est plus possible de diriger, de freiner ou d’accélérer normalement.On peut comparer cela au ski nautique.",
+    "image": "/examen-blanc/examen-5/q12.jpg"
+  },
+  {
+    "id": 13,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Une ligne jaune discontinue au bord de la chaussée.Cette voiture peut s’arrêter pour faire descendre quelqu’un.Mais le conducteur peut-il aussi y stationner ?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "LEÇON 26 – ‘Arrêt et stationnement’.Lashune ligne jaune discontinue est peinte au bord de la chaussée, vous ne pouvez que vous arrêter.Le stationnement sur la chaussée est interdit.",
+    "image": "/examen-blanc/examen-5/q13.jpg"
+  },
+  {
+    "id": 14,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Cette photo a été prise en agglomération.Pouvez-vous stationner sur la chaussée au-delà de ce panneau?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "LEÇON 26 – ‘Arrêt et stationnement’.Hors agglomération sur la chaussée d’une voie prioritaire vous ne pouvez pas stationner. Mais vous pouvez vous arrêter.",
+    "image": "/examen-blanc/examen-5/q14.jpg"
+  },
+  {
+    "id": 15,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Sur cette route, pouvez-vous dépasser une voiture par la gauche ?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "LEÇON 15+16 – ‘Le dépassement’.Le signal d’interdiction interdit aux conducteurs de dépasser par la gauche:. un véhicule attelé.. ou un véhicule à plus de deux roues.",
+    "image": "/examen-blanc/examen-5/q15.jpg"
+  },
+  {
+    "id": 16,
+    "type": "numerique",
+    "gravite": "normale",
+    "question": "Introduisez un nombre.Quelle est la vitesse maximale(... km/h) à laquelle cette voiture peut rouler à cet endroit en Flandre ?",
+    "choix": [],
+    "reponse": "50",
+    "explication": "LEÇON 12 – ‘La vitesse’.La vitesse en agglomération : jusqu'à 50 km / h.Bruxelles-capitale region: 30 km/h.",
+    "image": "/examen-blanc/examen-5/q16.jpg"
+  },
+  {
+    "id": 17,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Si vous voyez ces signaux, vous savez que vous devez ... au prochain carrefour",
+    "choix": [
+      "A. ... vous arrêter.",
+      "B. ... céder le passage et si nécessaire vous arrêter."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Le signal routier ‘STOP 150 m’ indique qu'il y a un signal d'arrêt à l'intersection.",
+    "image": "/examen-blanc/examen-5/q17.jpg"
+  },
+  {
+    "id": 18,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "La voiture est à l’arrêt pendant que trois enfants descendent.Cette dame peut-elle prendre son gsm en main ?",
+    "choix": [
+      "A. Oui.",
+      "B. Non."
+    ],
+    "reponse": "A",
+    "explication": "LEÇONOui. Lorsque le véhicule est à l’arrêt pour faire monter ou descendre des passagers, le conducteur peut tenir son gsm en main.Cela est considéré comme un “arrêt” au sens du code de la route.Attention : s’arrêter à un feu rouge, à un passage à niveau ou dans un embouteillage n’est pas considéré comme un arrêt dans ce sens. Dans ces cas, il est interdit de tenir son gsm en main.",
+    "image": "/examen-blanc/examen-5/q18.jpg"
+  },
+  {
+    "id": 19,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Ce signal de zone s’applique ...",
+    "choix": [
+      "A. ... seulement pendant les heures scolaires.",
+      "B. ... de jour et de nuit."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 12 – ‘La vitesse’.Un signal de zone solide s’applique jour et nuit.",
+    "image": "/examen-blanc/examen-5/q19.jpg"
+  },
+  {
+    "id": 20,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Quelle est la vitesse maximale autorisée dans une zone cyclable ?",
+    "choix": [
+      "A. Max. 20 km/h.",
+      "B. Max. 25 km/h.",
+      "C. Max. 30 km/h."
+    ],
+    "reponse": "C",
+    "explication": "LEÇON 3 – ‘La piste cyclable’.La vitesse maximale autorisée est de 30 km/h.Dans une zone cyclable, les voitures ne peuvent pas dépasser les cyclistes.",
+    "image": "/examen-blanc/examen-5/q20.jpg"
+  },
+  {
+    "id": 21,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Sur les derniers mètres avant l'intersection, la voiture bleue peut-elle rouler sur la bande à sa droite ?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "LEÇON 22 – ‘Train – tram -autobus’.Vous pouvez rouler sur une bande réservée aux autobus, les derniers mètres avant un carrefour.",
+    "image": "/examen-blanc/examen-5/q21.jpg"
+  },
+  {
+    "id": 22,
+    "type": "numerique",
+    "gravite": "grave",
+    "question": "Introduisez un nombre.Après avoir franchi ce panneau en Wallonie, en voiture vous pouvez rouler à une vitesse maximale de (...) km/h.",
+    "choix": [],
+    "reponse": "90",
+    "explication": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 6 – ‘Endroits particuliers’.Fin d’une agglomération. La vitesse maximale autorisée en Flandre et Bruxelles-capitale est de 70 km/h.",
+    "image": "/examen-blanc/examen-5/q22.jpg"
+  },
+  {
+    "id": 23,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "La circulation est dense et il y a une réduction du nombre de bandes de circulation.",
+    "choix": [
+      "A. L'insertion selon le principe de la tirette est obligatoire.",
+      "B. L'insertion selon le principe de la tirette n'est pas obligatoire, juste conseillée et courtoise."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 2 – ‘Bandes de circulation’.Le principe de la tirette est obligatoire quand la circulation est ralentie et qu’il y a des bandes.Les conducteurs qui, lorsque la circulation est fortement ralentie, circulent sur une bande de circulation qui prend fin ou sur laquelle la circulation est interrompue, peuvent s’intercaler sur la bande libre adjacente seulement juste devant le rétrécissement.Les conducteurs qui circulent sur cette bande libre, doivent céder tour à tour, juste devant le rétrécissement, la priorité à un conducteur qui s’intercale; si la circulation est interrompue aussi bien sur la bande de gauche que sur celle de droite, la priorité doit être cédée à un conducteur qui se trouve sur la bande de droite et ensuite à un conducteur qui se trouve sur la bande de gauche.",
+    "image": "/examen-blanc/examen-5/q23.jpg"
+  },
+  {
+    "id": 24,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Il y a une ligne blanche sur le bord de la chaussée.À cet endroit, la voiture peut…",
+    "choix": [
+      "A. ... seulement s’arrêter.",
+      "B. ... s’arrêter et stationner.",
+      "C. ... ni s’arrêter, ni stationner."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 26 – ‘Arrêt et stationnement’.Cette linge indique uniquement le bord extérieur de la chaussée. Elle n’a aucune autre signification.",
+    "image": "/examen-blanc/examen-5/q24.jpg"
+  },
+  {
+    "id": 25,
+    "type": "choix_multiple",
+    "gravite": "grave",
+    "question": "Votre voiture roule à l'essence ou au GPL.Pouvez-vous franchir ce signal routier ?",
+    "choix": [
+      "A/ Oui.",
+      "B/ Non.",
+      "C/ Oui, si vous passez du GPL à l'essence."
+    ],
+    "reponse": "A",
+    "explication": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 10 – ‘Chargement de véhicules’.Le signal concerne le chargement transporté et non pas le carburant utilisé.",
+    "image": "/examen-blanc/examen-5/q25.jpg"
+  },
+  {
+    "id": 26,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Une agglomérationQuelle distance de sécurité devez-vous laisser en dépassant ce cycliste ?",
+    "choix": [
+      "A / Minimum 1 mètre.",
+      "B / Minimum 1,5 mètres.",
+      "C / Vous ne pouvez pas dépasser ce cycliste."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 16 - 'Dépassement'.",
+    "image": "/examen-blanc/examen-5/q26.jpg"
+  },
+  {
+    "id": 27,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Le conducteur de la voiture brune ...",
+    "choix": [
+      "A. Peut seulement tourner à gauche.",
+      "B. Peut seulement tourner à droite.",
+      "C. Peut tourner à gauche et à droite."
+    ],
+    "reponse": "C",
+    "explication": "LEÇON 24 – ‘Direction obligatoire’.Le conducteur peut tourner dans les deux directions.",
+    "image": "/examen-blanc/examen-5/q27.jpg"
+  },
+  {
+    "id": 28,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Que signifie ce signal de danger ?",
+    "choix": [
+      "A. Céder le passage au bétail.",
+      "B. Traversée de bétail.",
+      "C. Zone agricole."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 8 – ‘Les conducteurs’.Signification : traversée de bétail.Signal de danger.",
+    "image": "/examen-blanc/examen-5/q28.jpg"
+  },
+  {
+    "id": 29,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Que pouvez-vous faire à 15 mètres avant et après le signal indiquant un arrêt de bus ?",
+    "choix": [
+      "A. Ne pas stationner, mais s’arrêter est autorisé.",
+      "B. Ni stationner ni s’arrêter.",
+      "C. Stationner et s’arrêter."
+    ],
+    "reponse": "C",
+    "explication": "LEÇON 26À moins de 15 mètres avant et après un arrêt de bus, il est interdit de stationer sur a chaussée. En revanche, il est autorisé de s’arrêter brièvement pour faire monter ou descendre un passager.",
+    "image": "/examen-blanc/examen-5/q29.jpg"
+  },
+  {
+    "id": 30,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "La voiture bleue ne peut pas stationner à cet endroit.Mais peut-elle s’y arrêter?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "LEÇON 26 – ‘Arrêt et stationnement’.Là où la chaussée est trop étroite, vous devez laisser au moins 3 mètres de passage libre.",
+    "image": "/examen-blanc/examen-5/q30.jpg"
+  },
+  {
+    "id": 31,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Le conducteur de cette voiture n’a vu aucun autre conducteur et est entré prudemment dans l’intersection sans s’arrêter.Avait-il le droit de le faire ?",
+    "choix": [
+      "A. Oui, car il n’y a pas de ligne d’arrêt sur la chaussée.",
+      "B. Non, il doit d’abord s’arrêter."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 19Un STOP signifie que vous devez vous arrêter complètement à la ligne d’arrêt et céder le passage aux conducteurs qui circulent sur la voie publique que vous voulez rejoindre.S’il n’y a pas de ligne d’arrêt sur la chaussée, vous vous arrêtez au signal routier.Même s’il n’y a pas de conducteurs sur la route transversale, vous devez d’abord marquer un arrêt complet avant d’entrer dans l’intersection.",
+    "image": "/examen-blanc/examen-5/q31.jpg"
+  },
+  {
+    "id": 32,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Cette fille a 15 ans. Elle roule à vélo sur la chaussée dans une agglomération.Peut-elle aussi rouler sur le trottoir surélevé ?",
+    "choix": [
+      "A. Oui.",
+      "B. Non."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 3Lorsqu’il existe une piste cyclable, le cycliste est obligé de l’emprunter (sauf si elle est impraticable).Il est interdit de circuler sur le trottoir à vélo en agglomération, sauf pour les enfants de moins de 10 ans, qui peuvent toujours rouler sur le trottoir ou sur la berme surélevée.Hors agglomération, les cyclistes peuvent, s’il n’existe pas de piste cyclable praticable et à condition de rouler à droite dans le sens de la circulation, circuler sur le trottoir ou sur la berme surélevée.",
+    "image": "/examen-blanc/examen-5/q32.jpg"
+  },
+  {
+    "id": 33,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "La voiture brune roule à 35 km/h en Wallonnie.La voiture bleue peut-elle la dépasser par la gauche ?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "LEÇON 15+16 – ‘Le dépassement’.La vitesse maximale dans une agglomération en Wallonnie est de 50 km/h.",
+    "image": "/examen-blanc/examen-5/q33.jpg"
+  },
+  {
+    "id": 34,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Quelle est la vitesse maximale autorisée sur une autoroute avec des pneus cloutés ?",
+    "choix": [
+      "A. Maximum 70 km/h.",
+      "B. Maximum 90 km/h.",
+      "C. Maximum 100 km/h."
+    ],
+    "reponse": "B",
+    "explication": "",
+    "image": "/examen-blanc/examen-5/q34.jpg"
+  },
+  {
+    "id": 35,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Une voie prioritaire hors agglomération.Ce conducteur a-t-il garé sa voiture correctement ?",
+    "choix": [
+      "A. Oui.",
+      "B. Non."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 26En agglomération, il est permis de s’arrêter sur la chaussée et aussi d’y stationner si elle n’est pas divisée en bandes de circulation.Hors agglomération, on peut s’arrêter sur la chaussée, mais on ne peut pas y stationner.",
+    "image": "/examen-blanc/examen-5/q35.jpg"
+  },
+  {
+    "id": 36,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Un accident.Une femme tente d’enlever le casque de la tête du motard.Est-ce une bonne idée ?",
+    "choix": [
+      "A. Oui, ainsi il peut mieux respirer.",
+      "B. Non."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 29Laissez une personne blessée calmement allongée ou assise.Laissez le casque sur la tête, sauf en cas de vomissements, et ne lui donnez ni à manger ni à boire.",
+    "image": "/examen-blanc/examen-5/q36.jpg"
+  },
+  {
+    "id": 37,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Quel âge faut-il avoir pour pouvoir présenter l’examen théorique du permis B ?",
+    "choix": [
+      "A. 17 ans.",
+      "B. 17 ans et 9 mois.",
+      "C. 18 ans."
+    ],
+    "reponse": "A",
+    "explication": "INFO : PERMIS DE CONDUIREDès que tu as 17 ans, tu peux passer l’examen théorique dans un centre d’examen. Pour réussir, il faut obtenir au moins 41 points sur 50.",
+    "image": "/examen-blanc/examen-5/q37.jpg"
+  },
+  {
+    "id": 38,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Un conducteur doit faire un long trajet à l’étranger.À quelle fréquence est-il préférable qu'il fasse une pause ?",
+    "choix": [
+      "A. Toutes les demi-heures.",
+      "B. Toutes les heures.",
+      "C. Toutes les deux heures."
+    ],
+    "reponse": "C",
+    "explication": "LEÇON 13Lors d’un long trajet en voiture, il est conseillé de faire une courte pause d’au moins 15 minutes toutes les deux heures pour éviter la fatigue et rester attentif. Profitez-en pour sortir du véhicule, vous dégourdir les jambes, respirer profondément et vous hydrater avec de l’eau ou des collations légères.",
+    "image": "/examen-blanc/examen-5/q38.jpg"
+  },
+  {
+    "id": 39,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Les dépanneuses sont-elles autorisées à circuler sur la voie fermée en direction d'un accident ?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "",
+    "image": "/examen-blanc/examen-5/q39.jpg"
+  },
+  {
+    "id": 40,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Lorsque vous circulez avec une galerie sur le toit, la consommation de carburant est très légèrement supérieure.C’est pourquoi vous ne devez pas la retirer lorsque vous n’en avez pas besoin.",
+    "choix": [
+      "A. Vrai.",
+      "B. Faux."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 30 – ‘Consommation de carburant’.Ne roulez pas avec une galerie vide sur le toit de la voiture.",
+    "image": "/examen-blanc/examen-5/q40.jpg"
+  },
+  {
+    "id": 41,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "La sortie se trouve 500m plus loin. A quel endroit voulez-vous emprunter la sortie  ?",
+    "choix": [
+      "A. Dès le début de la sortie.",
+      "B. Environ au milieu de la sortie.",
+      "C. A la fin de la sortie."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 4 – ‘L’autoroute’.Au début de la sortie.",
+    "image": "/examen-blanc/examen-5/q41.jpg"
+  },
+  {
+    "id": 42,
+    "type": "choix_multiple",
+    "gravite": "grave",
+    "question": "Vous approchez un carrefour avec la voiture brune. Le feu de circulation est au rouge. Au milieu du carrefour se trouve un agent avec les bras tendus horizontalement. Pourquoi vous arrêtez-vous?",
+    "choix": [
+      "A / Parce que l'agent le commande.",
+      "B / Parce que le feux est rouge.",
+      "C / A cause de la commande de l'agent et du feu rouge."
+    ],
+    "reponse": "A",
+    "explication": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 17 – ‘Les personnes qualifiées’.La commande d'un agent passe avant tout.",
+    "image": "/examen-blanc/examen-5/q42.jpg"
+  },
+  {
+    "id": 43,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "La photo est prise depuis la voiture avec laquelle vous sortez du rond-point. En sortant, vous devez céder le passage aux vélos et aux cyclomoteurs de la piste cyclable.",
+    "choix": [
+      "A. Vrai.",
+      "B. Faux."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Le signal indique que vous devez donner la priorité et que les cyclistes et les cyclomotoristes peuvent venir de deux directions.",
+    "image": "/examen-blanc/examen-5/q43.jpg"
+  },
+  {
+    "id": 44,
+    "type": "choix_multiple",
+    "gravite": "grave",
+    "question": "Vous voyez ce feu à votre droite.Que pouvez-vous faire ?",
+    "choix": [
+      "A. Seulement tourner à droite.",
+      "B. Continuer tout droit ou tourner à droite."
+    ],
+    "reponse": "A",
+    "explication": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 18 – ‘les feux de circulation’.La flèche verte indique que vous pouvez tourner à droite.Mais vous devez donner la priorité aux conducteurs venant des autres directions et aussi aux piétons.",
+    "image": "/examen-blanc/examen-5/q44.jpg"
+  },
+  {
+    "id": 45,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Qui doit s’arrêter ?",
+    "choix": [
+      "A. La voiture brune.",
+      "B. La voiture bleue.",
+      "C. La voiture brune et la voiture bleue."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 18 – ‘les feux de circulation’.Les ordres d'un officier de police, sont plus importants que les feux de signalisation.",
+    "image": "/examen-blanc/examen-5/q45.jpg"
+  },
+  {
+    "id": 46,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "La voiture blanche peut, à cet endroit ...",
+    "choix": [
+      "A. Seulement s’arrêter.",
+      "B. S’arrêter et stationner.",
+      "C. Ni s’arrêter ni stationner."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 26Ce signal routier rond, avec une barre oblique, indique que, du côté où il est placé, le stationnement est interdit sur la chaussée et sur l’accotement, jusqu’au carrefour.",
+    "image": "/examen-blanc/examen-5/q46.jpg"
+  },
+  {
+    "id": 47,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Est ce que en agglomération, la voiture bleue peut dépasser par la droite la voiture brune ?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "LEÇON 15+16 – ‘Le dépassement’.En agglomération les conducteurs sont autorisés à conduire sur la voie qu'ils choisissent:. soit sur une rue à sens unique qui est divisé en voies,. soit sur une rue à quatre voies ou plus, dont au moins deux pour chaque direction.",
+    "image": "/examen-blanc/examen-5/q47.jpg"
+  },
+  {
+    "id": 48,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "La conductrice de cette voiture attend son amie dans cette zone résidentielle.La voiture est-elle bien stationnée ?",
+    "choix": [
+      "A. Oui, car la voiture est devant le signal routier.",
+      "B. Non."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 26Dans une zone résidentielle, il est uniquement permis de stationner dans les emplacements prévus à cet effet.",
+    "image": "/examen-blanc/examen-5/q48.jpg"
+  },
+  {
+    "id": 49,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Qu'est-ce qui n'est PAS autorisé ?",
+    "choix": [
+      "A. Pneus radiaux avant et arrière.",
+      "B. Pneus radiaux avant et arrière diagonaux.",
+      "C. Pneus diagonaux avant et radiaux arrière."
+    ],
+    "reponse": "B",
+    "explication": "- LES PNEUS RADIAUX sont autorisés à l'avant et à l'arrière.- Les PNEUS DIAGONAUX sont autorisés à l'avant et à l'arrière.- DIAGONAL à l'avant et RADIAL à l'arrière est autorisé.- RADIAL à l'avant et DIAGINAL à l'arrière ne sont PAS autorisés.(parce que: vous ne pouvez placer des pneus radiaux à l'avant que s'il y a aussi des pneus radiaux à l'arrière.",
+    "image": "/examen-blanc/examen-5/q49.jpg"
+  },
+  {
+    "id": 50,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Dans quel ordre les conducteurs peuvent-ils s’engager dans ce carrefour ?",
+    "choix": [
+      "A. Voiture bleue - Voiture brune - Moto.",
+      "B. Voiture bleue - Moto - Voiture brune.",
+      "C. Moto - Voiture bleue - Voiture brune."
+    ],
+    "reponse": "C",
+    "explication": "LEÇON 21 – ‘Tourner à droite ou à gauche’.La motocyclette roule sur une route prioritaire et peut aller tout d’abord.Le conducteur qui désire conduire tout droit a la priorité.Le pilote qui veut tourner à gauche, doit donner la priorité.",
+    "image": "/examen-blanc/examen-5/q50.jpg"
+  }
+]

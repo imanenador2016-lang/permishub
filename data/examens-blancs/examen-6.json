@@ -1,0 +1,625 @@
+[
+  {
+    "id": 1,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Vous voyez ce signal routier.Est-il permis de garer une moto ici ?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "",
+    "image": "/examen-blanc/examen-6/q01.jpg"
+  },
+  {
+    "id": 2,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "La priorité de droite s'applique-t-elle à cette intersection ?A. Oui.B. Non.",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "LEÇON 20 – ‘La priorité de droite’.Dans ce carrefour s’applique la priorité de droite.",
+    "image": "/examen-blanc/examen-6/q02.jpg"
+  },
+  {
+    "id": 3,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "La voiture blanche s’est arrêtée par sécurité avant le carrefour.Quelle voiture peut s’engager la première sur le carrefour ?",
+    "choix": [
+      "A. La voiture bleue, car la blanche s’est arrêtée.",
+      "B. La voiture blanche, car elle vient de droite."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 20À un carrefour où la priorité n’est pas réglée par un agent qualifié, des feux de signalisation ou des signaux routier, la priorité de droite s’applique.Même si le conducteur venant de droite s’arrête d’abord, il conserve tout de même sa priorité.",
+    "image": "/examen-blanc/examen-6/q03.jpg"
+  },
+  {
+    "id": 4,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Qui peut déboucher de cette rue ?",
+    "choix": [
+      "A. Seulement des motocyclettes et des cyclistes.",
+      "B. N’importe quel véhicule.",
+      "C. Personne."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 23 – ‘Sens interdits’.Accès interdit aux conducteurs de véhicules à moteur à plus de deux roues et de motocyclettes sans ou avec side-car.Signal d’interdiction.",
+    "image": "/examen-blanc/examen-6/q04.jpg"
+  },
+  {
+    "id": 5,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Vous approchez de ce carrefour et un agent lève un bras verticalement.Que faites-vous ?",
+    "choix": [
+      "A. Vous vous arrêtez.",
+      "B. Vous pouvez continuer, car vous arrivez face à son ventre."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 17Lorsqu’un agent lève un bras verticalement, tous les usagers doivent s’arrêter.Ceux qui se trouvent déjà dans le carrefour doivent le libérer le plus rapidement possible.",
+    "image": "/examen-blanc/examen-6/q05.jpg"
+  },
+  {
+    "id": 6,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Vous disposez d'une licence provisoire B.Pouvez-vous conduire un train de véhicules ?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "LEÇON 10 – ‘Chargement de véhicules’.Avec un permis de conduire provisoire vous ne pouvez pas tracter une remorque.il n’est donc pas possible de conduire un train de véhicules (voiture + remorque).",
+    "image": "/examen-blanc/examen-6/q06.jpg"
+  },
+  {
+    "id": 7,
+    "type": "numerique",
+    "gravite": "grave",
+    "question": "Introduisez un nombre.Après avoir franchi ce panneau en Wallonie, en voiture vous pouvez rouler à une vitesse maximale de (...) km/h.",
+    "choix": [],
+    "reponse": "90",
+    "explication": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 6 – ‘Endroits particuliers’.Fin d’une agglomération. La vitesse maximale autorisée en Flandre et Bruxelles-capitale est de 70 km/h.",
+    "image": "/examen-blanc/examen-6/q07.jpg"
+  },
+  {
+    "id": 8,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Sur cette chaussée en agglomération, vous pouvez utiliser les feux de route au lieu des feux de croisement.",
+    "choix": [
+      "A. Vrai.",
+      "B. Faux."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 11 – ‘Les feux’.Vous ne pouvez pas les utiliser, parce que la chaussée est suffisamment éclairée, ainsi vous pouvez facilement voir à 100 mètres plus loin.",
+    "image": "/examen-blanc/examen-6/q08.jpg"
+  },
+  {
+    "id": 9,
+    "type": "numerique",
+    "gravite": "normale",
+    "question": "Entrez un nombre.Lors d’une panne ou d’un accident sur cette route pour automobiles, vous placerez le triangle de danger à quelle distance minimale (...) mètres en deçà du véhicule, de manière à ce qu’il soit bien visible des usagers qui s’en approchent à minimum 50 mètres.",
+    "choix": [],
+    "reponse": "30",
+    "explication": "LEÇON 5 – ‘La route pour automobiles’.Autoroute : 100 mètres.Route pour automobiles : 30 mètres.",
+    "image": "/examen-blanc/examen-6/q09.jpg"
+  },
+  {
+    "id": 10,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Une chaussée qui n’est pas divisée en bandes de circulation.Le conducteur de la voiture blanche attend sous ce pont un collègue qui va monter dans la voiture.Peut-il le faire ?",
+    "choix": [
+      "A. Oui.",
+      "B. Non."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 25Sur la chaussée, il est interdit de s’arrêter et de stationner sous un pont.Cette interdiction s’applique dans tous les cas, que la chaussée soit ou non divisée en bandes de circulation.",
+    "image": "/examen-blanc/examen-6/q10.jpg"
+  },
+  {
+    "id": 11,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Au-delà du signal routier, je peux rouler à maximum 20 km/h en Région wallonne.",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "LEÇON 6Le signal routier indique le début d’une zone résidentielle.La vitesse maximale autorisée y est de 20 km/h.",
+    "image": "/examen-blanc/examen-6/q11.jpg"
+  },
+  {
+    "id": 12,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Qu'est-ce que la lumière blanche / jaune clignotante au centre des lumières d'un tramway signifie ?",
+    "choix": [
+      "A. Tram doit conduire très lentement à cause de dysfonctionnement des voies de tram.",
+      "B. Vous pouvez passer le feu avec double précaution et vous devez respecter les règles de priorité."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 18 – ‘les feux de circulation’.Important: à double prudence et en tenant compte des règles de priorité.",
+    "image": "/examen-blanc/examen-6/q12.jpg"
+  },
+  {
+    "id": 13,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "La voiture bleue peut-elle dépasser par la gauche à ce carrefour ?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "LEÇON 19 – ‘Une intersection et les signaux routiers’.C’est un carrefour où vous avez la priorité.",
+    "image": "/examen-blanc/examen-6/q13.jpg"
+  },
+  {
+    "id": 14,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "La voiture peut-elle dépasser le camion par la gauche ?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "LEÇON 16Le signal routier rond rouge indique qu’il est interdit aux conducteurs de :- dépasser un attelage, ou- dépasser un véhicule ayant plus de deux roues.Le panneau bleu indique que l’interdiction de dépasser commence 200 mètres plus loin.",
+    "image": "/examen-blanc/examen-6/q14.jpg"
+  },
+  {
+    "id": 15,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "À quelle vitesse cette voiture peut-elle rouler dans cette agglomération ?",
+    "choix": [
+      "A. Max. 70 km / heure.",
+      "B. Max. 50 km / heure.",
+      "C. Adapté aux circonstances."
+    ],
+    "reponse": "C",
+    "explication": "LEÇON 6 - 'Lieux spéciaux'.En cas de forte pluie, de brouillard, de neige, de neige fondue (...), le conducteur doit adapter sa vitesse en fonction des circonstances.",
+    "image": "/examen-blanc/examen-6/q15.jpg"
+  },
+  {
+    "id": 16,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Que signifie le 205 sur ce pneu?",
+    "choix": [
+      "A. La largeur du pneu en mm.",
+      "B. Le rapport hauteur/largeur.",
+      "C. Le diamètre de la jante en pouces."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 31 – ‘Technique’.205 : La largeur du pneu en mm.55 : Le rapport hauteur/largeur.",
+    "image": "/examen-blanc/examen-6/q16.jpg"
+  },
+  {
+    "id": 17,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Une rue à sens unique.Le panneau additionnel indique que les cyclistes et les cyclomoteurs de classe A peuvent circuler en sens inverse.",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "Le panneau additionnel indique que seuls les cyclistes peuvent circuler en sens inverse.",
+    "image": "/examen-blanc/examen-6/q17.jpg"
+  },
+  {
+    "id": 18,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Le feu blanc lunaire est allumé à ce passage à niveau à double voie.Quels véhicules pouvez-vous dépasser par la gauche si c’est possible en toute sécurité ?",
+    "choix": [
+      "A. Uniquement les cyclistes et assimilés.",
+      "B. Uniquement les cyclistes et les cyclomoteurs à deux roues.",
+      "C. Tous les véhicules."
+    ],
+    "reponse": "C",
+    "explication": "LEÇON 15+16 – ‘Le dépassement’.Tant que les feux rouges ne clignotent pas, vous pouvez vous approcher du passage à niveau.Lorsque les feux rouges clignotent alternativement, vous devez vous arrêter et il est interdit de vous engager sur le passage à niveau.",
+    "image": "/examen-blanc/examen-6/q18.jpg"
+  },
+  {
+    "id": 19,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Le signal d’indication indique qu’il s’agit d’une rue à sens unique.Mais à quoi se rapporte le signal d’interdiction ?",
+    "choix": [
+      "A. La Masse Maximale Autorisée (M.M.A.).",
+      "B. La Masse en Charge (M.E.C.)."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 9Interdiction d’accès aux conducteurs de véhicules dont la masse en charge est supérieure à celle indiquée sur le signal routier.",
+    "image": "/examen-blanc/examen-6/q19.jpg"
+  },
+  {
+    "id": 20,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "L’interdiction de stationnement jusqu’au carrefour suivant s’applique ...",
+    "choix": [
+      "A. ... seulement à la chaussée.",
+      "B. ... à la chaussée et à l’accotement."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 26 – ‘Arrêt et stationnement’.Il est interdit de stationner sur la chaussée et sur l’accotement, jusqu’au carrefour suivant. Mais vous pouvez vous arrêter.",
+    "image": "/examen-blanc/examen-6/q20.jpg"
+  },
+  {
+    "id": 21,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Que devez-vous faire si votre véhicule est en aquaplanage ?",
+    "choix": [
+      "A. Freiner fortement et tourner le volant pour reprendre le contrôle.",
+      "B. Relâcher l’accélérateur, ne pas freiner et garder le volant droit.",
+      "C. Accélérer pour que les pneus retrouvent de l’adhérence."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 31L’aquaplanage est un phénomène où les pneus perdent le contact avec la route à cause d’une couche d’eau.En cas d’aquaplanage, vous devez relâcher l’accélérateur, ne pas freiner et garder le volant le plus droit possible.Évitez les mouvements brusques. Le contrôle revient progressivement lorsque les pneus retrouvent l’adhérence.",
+    "image": "/examen-blanc/examen-6/q21.jpg"
+  },
+  {
+    "id": 22,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "À quelle vitesse maximale la voiture blanche peut-elle circuler sur cette route pour automobiles dans la Région flamande ?",
+    "choix": [
+      "A. 70 km/h.",
+      "B. 90 km/h.",
+      "C. 120 km/h."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 5Il s’agit d’une chaussée ordinaire divisée en deux bandes de circulation.La vitesse maximale autorisée dans les Régions flamande et bruxelloise est de 70 km/h.Dans la Région wallonne, elle est de 90 km/h.",
+    "image": "/examen-blanc/examen-6/q22.jpg"
+  },
+  {
+    "id": 23,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Qui a la priorité ?",
+    "choix": [
+      "A. La voiture noire.",
+      "B. La voiture jaune (indiquée par la ligne jaune)."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 19 – ‘Une intersection et les panneaux’.Le signal routier indique que la voiture jaune à la priorité.",
+    "image": "/examen-blanc/examen-6/q23.jpg"
+  },
+  {
+    "id": 24,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Quand devez-vous avertir la police?",
+    "choix": [
+      "A. De préférence lors de chaque accident.",
+      "B. Seulement lors d’un accident avec blessés."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 29 – ‘Accident’.Seulement lors d’un accident avec blessés.",
+    "image": "/examen-blanc/examen-6/q24.jpg"
+  },
+  {
+    "id": 25,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Que signifie ce signal de danger ?",
+    "choix": [
+      "A. Succession de virages dangereux.",
+      "B. Aquaplaning.",
+      "C. Chaussée glissante."
+    ],
+    "reponse": "C",
+    "explication": "LEÇON 1 – ‘La voie publique’.La signification: chaussée glissante.Les signaux de danger sont placés à une distance approximative de 150 m de l'endroit dangereux, sauf mention contraire sur un panneau bleu placé sous le signal.",
+    "image": "/examen-blanc/examen-6/q25.jpg"
+  },
+  {
+    "id": 26,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Faut-il avoir un gilet de sécurité rétro-réfléchissant dans la voiture ?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "LEÇON 4 – ‘L’autoroute’.Les accessoires obligatoires sont. Un gilet de sécurité (pour le conducteur. Il doit être porté AVANT de sortir de la voitureet donc accessible depuis l’habitacle ; pas dans le coffre !)). Le triangle de danger;. Un extincteur : (contenant 1 kg de poudre et accessible en 10 secondes;. Une trousse de premiers soins.",
+    "image": "/examen-blanc/examen-6/q26.jpg"
+  },
+  {
+    "id": 27,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Le conducteur du bus actionne le clignotant gauche.Où devez-vous céder le passage au bus ?",
+    "choix": [
+      "A : Toujours.",
+      "B : Uniquement en dehors d’une agglomération.",
+      "C : Uniquement dans une agglomération."
+    ],
+    "reponse": "C",
+    "explication": "Explication :Lorsque le clignotant du bus fonctionne et que le conducteur veut quitter l’arrêt, vous devez lui céder le passage dans une agglomération.Cette règle ne s’applique pas à un autocar ni à un bus scolaire.",
+    "image": "/examen-blanc/examen-6/q27.jpg"
+  },
+  {
+    "id": 28,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Que peut faire la voiture bleue à cet endroit ?",
+    "choix": [
+      "A. Seulement s'arrêter.",
+      "B. S'arrêter et stationner.",
+      "C. Ni s'arrêter ni stationner."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 25Sur une voie à sens unique, vous pouvez ranger votre voiture autant à droite qu’à gauche.",
+    "image": "/examen-blanc/examen-6/q28.jpg"
+  },
+  {
+    "id": 29,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "À partir de quel âge peut-on apprendre à conduire une voiture en Belgique ?",
+    "choix": [
+      "A. 17 ans.",
+      "B. 17 ans et 9 mois.",
+      "C. 18 ans."
+    ],
+    "reponse": "A",
+    "explication": "INFO : PERMIS DE CONDUIREDès l’âge de 17 ans, et après avoir réussi l’examen théorique, vous pouvez apprendre à conduire une voiture avec une auto-école ou avec un guide.L’examen pratique peut être présenté à partir de 18 ans, après avoir effectué le nombre d’heures de stage requis.",
+    "image": "/examen-blanc/examen-6/q29.jpg"
+  },
+  {
+    "id": 30,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Les conducteurs possédant un permis de conduire provisoire B peuvent-ils s’entraîner sur l’autoroute?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "LEÇON 4 – ‘L’autoroute’.Avec un permis de conduire provisoire, vous devez également pratiquer sur une autoroute.Conseil pour la pratique :Faites surtout des montées sur l’autoroute et des sorties de l’autoroute ainsi que des dépassements plutôt que juste des kms en ligne droite.Plus vous roulez vite, plus vous devez regarder loin car il faudra réagir à temps.",
+    "image": "/examen-blanc/examen-6/q30.jpg"
+  },
+  {
+    "id": 31,
+    "type": "numerique",
+    "gravite": "grave",
+    "question": "À quelle vitesse maximale pouvez-vous circuler sur une route publique ordinaire en Flandre ?",
+    "choix": [],
+    "reponse": "70",
+    "explication": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 2 – ‘Bandes de circulation’.En Flandre la vitesse maximale hors agglomération est de 70 km/h (sauf si les signaux routiers ou règles imposent une limite de vitesse différente.(En Wallonie, dans les mêmes conditions la vitesse maximale est de 90 km/heure).",
+    "image": "/examen-blanc/examen-6/q31.jpg"
+  },
+  {
+    "id": 32,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Le chauffeur de la voiture brune veut tourner à gauche. Peut-il s’engager dans le carrefour ?",
+    "choix": [
+      "A. Oui, le feu est vert.",
+      "B. Non, le carrefour n’est pas libre."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 18 – ‘les feux de circulation’.Bien que la lumière est verte, le conducteur de la voiture brune ne peut pas conduire sur la traversée. Il doit attendre jusqu'à ce que l'intersection est libre.",
+    "image": "/examen-blanc/examen-6/q32.jpg"
+  },
+  {
+    "id": 33,
+    "type": "numerique",
+    "gravite": "grave",
+    "question": "Entrez un nombre aussi long et aussi bas que possible (p. ex., 1356 et non 6531), composé des numéros des panneaux dont la vitesse maximale autorisée est de 20 km / heure.",
+    "choix": [],
+    "reponse": "3",
+    "explication": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 12 – ‘La vitesse’.",
+    "image": "/examen-blanc/examen-6/q33.jpg"
+  },
+  {
+    "id": 34,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Un autobus quitte un arrêt de bus.Où devez-vous céder le passage ?",
+    "choix": [
+      "A. Toujours.",
+      "B. En dehors d’une agglomération.",
+      "C. Dans une agglomération."
+    ],
+    "reponse": "C",
+    "explication": "Si un autobus (et non un autocar) met son clignotant gauche et veut quitter l’arrêt dans une agglomération, vous devez ralentir et, si nécessaire, vous arrêter pour lui céder le passage.",
+    "image": "/examen-blanc/examen-6/q34.jpg"
+  },
+  {
+    "id": 35,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "4 avril. Il a beaucoup neigé en Wallonie.Pouvez-vous rouler avec des chaînes à neige ?",
+    "choix": [
+      "A. Oui.",
+      "B. Non."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 31Les chaînes à neige ne peuvent être utilisées que lorsqu’il y a de la neige ou du verglas sur la chaussée.",
+    "image": "/examen-blanc/examen-6/q35.jpg"
+  },
+  {
+    "id": 36,
+    "type": "numerique",
+    "gravite": "normale",
+    "question": "Introduisez un nombre.Ce signal routier se trouve à une hauteur de 1,20 mètre.Votre voiture a une hauteur inférieure à 1,65 mètre.Jusqu'à combien (…) de mètres de distance de ce signal ne pouvez-vous ni vous arrêter ni stationner votre voiture ?",
+    "choix": [],
+    "reponse": "20",
+    "explication": "LEÇON 25 – ‘Arrêt et stationnement’.Le bord inférieur du signal ne se trouve pas à au moins 2 mètres de hauteur.",
+    "image": "/examen-blanc/examen-6/q36.jpg"
+  },
+  {
+    "id": 37,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Qu’est-ce qui ne doit pas obligatoirement se trouver dans la voiture ?",
+    "choix": [
+      "A. N° 1.",
+      "B. N° 2.",
+      "C. N° 3."
+    ],
+    "reponse": "C",
+    "explication": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.Les accessoires obligatoires sonta) le triangle de danger –b) un extincteur avec 1 kg de poudre accessible en 10 secondesc) un – gilet de sécurité réfléchissant (à mettre avant de quitter la voiture dans certains cas)d) – une trousse de secours.",
+    "image": "/examen-blanc/examen-6/q37.jpg"
+  },
+  {
+    "id": 38,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Vous roulez au diesel.Quel est le régime conseillé pour changer de vitesse ?",
+    "choix": [
+      "A. 2000 tours.",
+      "B. 2500 tours.",
+      "C. 3000 tours."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 30 – ‘Consommation de carburant’.Diesel : 2000 tours.L’essence : 2500 tours.",
+    "image": "/examen-blanc/examen-6/q38.jpg"
+  },
+  {
+    "id": 39,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Vous devez transporter des vélos.Il est conseillé de les fixer ...",
+    "choix": [
+      "A. ... à l’arrière de la voiture.",
+      "B. ... sur le toit de la voiture."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 30 – ‘Consommation de carburant’.Il est conseillé de les fixer les vélos à l’arrière de la voiture..",
+    "image": "/examen-blanc/examen-6/q39.jpg"
+  },
+  {
+    "id": 40,
+    "type": "oui_non",
+    "gravite": "grave",
+    "question": "Le conducteur de la voiture bleue doit-il céder le passage au piéton ?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 18 – ‘les feux de circulation’.La flèche verte indique que vous pouvez tourner à droite. Mais il faut donner la priorité aux autres usagers de la route.",
+    "image": "/examen-blanc/examen-6/q40.jpg"
+  },
+  {
+    "id": 41,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Ce conducteur se sent en sécurité en roulant au milieu de la chaussée.Mais est-ce qu’il en a le droit ?",
+    "choix": [
+      "A. Oui.",
+      "B. Non."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 1Les conducteurs roulent à droite de la chaussée si c’est possible.Rouler sans raison au milieu ou à gauche de la chaussée constitue une infraction.",
+    "image": "/examen-blanc/examen-6/q41.jpg"
+  },
+  {
+    "id": 42,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "À partir de quand le feu antibrouillard avant doit-il être allumé en cas de fort brouillard ?",
+    "choix": [
+      "A. Lorsque la visibilité est inférieure à 200 mètres.",
+      "B. Lorsque la visibilité est inférieure à 100 mètres.",
+      "C. Jamais."
+    ],
+    "reponse": "C",
+    "explication": "LEÇON 11Une voiture ne doit pas obligatoirement être équipée de feux antibrouillard avant.Il n’existe donc aucune règle de circulation qui impose leur utilisation.",
+    "image": "/examen-blanc/examen-6/q42.jpg"
+  },
+  {
+    "id": 43,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Vous attendez devant un pont-levis, alors qu’il gèle.Pouvez-vous appuyer continuellement sur l’accélérateur pour garder le moteur chaud ?",
+    "choix": [
+      "A. Oui.",
+      "B. Non."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 30Lorsque vous devez attendre plus de 30 secondes, il est préférable de couper le moteur.Le fait de maintenir le moteur en accélérant est interdit, car cela provoque une pollution et des nuisances sonores inutiles.",
+    "image": "/examen-blanc/examen-6/q43.jpg"
+  },
+  {
+    "id": 44,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Il y a du brouillard et vous voulez stationner votre voiture sur la chaussée.Le feu antibrouillard arrière...",
+    "choix": [
+      "A. ... doit rester allumé.",
+      "B. ... peut rester allumé.",
+      "C. ... ne peut pas rester allumé."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 25 – ‘Arrêt et stationnement’.Il n'est pas obligatoire. La batterie peut s’épuiser.",
+    "image": "/examen-blanc/examen-6/q44.jpg"
+  },
+  {
+    "id": 45,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Vous approchez d'un feu rouge.Vous appuyez sur la pédale d'embrayage.",
+    "choix": [
+      "A. Correct.",
+      "B. Faux."
+    ],
+    "reponse": "B",
+    "explication": "N'appuyez jamais sur la pédale d'embrayage pour ralentir.",
+    "image": "/examen-blanc/examen-6/q45.jpg"
+  },
+  {
+    "id": 46,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Vous approchez de ce carrefour avec votre voiture.",
+    "choix": [
+      "A. Vous êtes obligé de tourner à gauche.",
+      "B. Vous pouvez tourner à gauche ou à droite."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 24Le signal routier bleu du bas indique que vous pouvez tourner aussi bien à gauche qu’à droite.",
+    "image": "/examen-blanc/examen-6/q46.jpg"
+  },
+  {
+    "id": 47,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Pouvez-vous dépasser par la gauche la moto à ce carrefour ?",
+    "choix": [
+      "A. Oui.",
+      "B. Oui, si vous laissez une distance latérale suffisante.",
+      "C. Non."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 15+16 – ‘Le dépassement’.Aux carrefours où vous avez la priorité, vous pouvez dépasser d’autres conducteurs par la gauche.- Priorité au prochain carrefour.- Route prioritaire.- Feu vert.",
+    "image": "/examen-blanc/examen-6/q47.jpg"
+  },
+  {
+    "id": 48,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Combien de bandes de circulation voyez-vous sur cette route pour automobile ?",
+    "choix": [
+      "A. 1.",
+      "B. 2.",
+      "C. 3."
+    ],
+    "reponse": "C",
+    "explication": "LEÇON 2 – ‘Bandes de circulation’.Sur l’image, vous voyez trois bandes de circulation et la bande d’arrêt d’urgence.Sur une route pour automobile ou sur une autoroute, la partie à droite est une bande d’arrêt d’urgence ; Sur une route ordinaire c’est une bande de stationnement.",
+    "image": "/examen-blanc/examen-6/q48.jpg"
+  },
+  {
+    "id": 49,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Dans les endroits où la vitesse est limitée à 30 km/h, les piétons ont toujours la priorité lorsqu’ils traversent la chaussée.",
+    "choix": [
+      "A. Vrai.",
+      "B. Faux."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 7Un piéton qui veut traverser la chaussée à un endroit où il n’y a pas de passage pour piétons doit céder le passage lui-même.Cependant, le conducteur doit toujours faire preuve de prudence.",
+    "image": "/examen-blanc/examen-6/q49.jpg"
+  },
+  {
+    "id": 50,
+    "type": "choix_multiple",
+    "gravite": "grave",
+    "question": "Afin de maintenir une distance suffisante, le conducteur de la voiture blanche parcourt l'accotement au niveau du sol.",
+    "choix": [
+      "A / Ceci est interdit.",
+      "B / Ceci est autorisé s'il n'obstrue pas les piétons.",
+      "C / Ceci est autorisé. Les piétons doivent céder la place à la voiture."
+    ],
+    "reponse": "B",
+    "explication": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 14 – ‘Le croisement des véhicules’.",
+    "image": "/examen-blanc/examen-6/q50.jpg"
+  }
+]

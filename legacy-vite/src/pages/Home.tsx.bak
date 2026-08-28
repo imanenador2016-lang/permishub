@@ -1,0 +1,74 @@
+import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { Container } from '@/components/ui/Container'
+import { Card } from '@/components/ui/Card'
+import { Button } from '@/components/ui/Button'
+import { Icon } from '@/components/ui/Icon'
+import { usePreferencesStore } from '@/state/preferences-store'
+
+const FEATURES = [
+  { key: 'courses', icon: 'BookOpen' as const },
+  { key: 'practice', icon: 'ListChecks' as const },
+  { key: 'exam', icon: 'Timer' as const },
+  { key: 'progress', icon: 'TrendingUp' as const },
+]
+
+export function Home() {
+  const { t } = useTranslation()
+  const onboarded = usePreferencesStore((s) => s.onboarded)
+
+  return (
+    <div>
+      {!onboarded && (
+        <div className="bg-brand-800">
+          <Container className="flex flex-col items-center justify-between gap-3 py-3 text-sm text-ivory-50 sm:flex-row">
+            <span className="flex items-center gap-2">
+              <Icon name="MapPin" size={16} /> {t('onboarding.subtitle')}
+            </span>
+            <Link to="/bienvenue" className="font-semibold underline underline-offset-2">
+              {t('onboarding.title')}
+            </Link>
+          </Container>
+        </div>
+      )}
+      <section className="relative overflow-hidden bg-ink-950 py-24 text-ivory-50 sm:py-32">
+        <div
+          className="pointer-events-none absolute -right-40 -top-40 h-96 w-96 rounded-full opacity-40 blur-3xl"
+          style={{ background: 'radial-gradient(circle, var(--color-brand-600), transparent 70%)' }}
+        />
+        <Container className="relative">
+          <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-brand-700 bg-brand-900/60 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-brand-300">
+            {t('common.brand')} · Belgique 🇧🇪
+          </p>
+          <h1 className="max-w-2xl text-4xl font-semibold leading-[1.08] text-ivory-50 sm:text-6xl">{t('home.heroTitle')}</h1>
+          <p className="mt-6 max-w-xl text-lg text-ivory-200">{t('home.heroSubtitle')}</p>
+          <div className="mt-9 flex flex-wrap gap-3">
+            <Link to="/apprendre">
+              <Button size="lg">{t('home.ctaPrimary')}</Button>
+            </Link>
+            <Link to="/examens">
+              <Button size="lg" variant="secondary" className="border-ink-700 bg-transparent text-ivory-50 hover:bg-ink-900">
+                {t('home.ctaSecondary')}
+              </Button>
+            </Link>
+          </div>
+        </Container>
+      </section>
+
+      <Container className="py-20">
+        <h2 className="font-display text-2xl font-semibold sm:text-3xl">{t('home.featuresTitle')}</h2>
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {FEATURES.map((f) => (
+            <Card key={f.key}>
+              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-brand-100 text-brand-800">
+                <Icon name={f.icon} size={20} />
+              </div>
+              <h3 className="text-base font-semibold text-ink-950">{t(`home.features.${f.key}.title`)}</h3>
+              <p className="mt-1.5 text-sm text-ink-500">{t(`home.features.${f.key}.body`)}</p>
+            </Card>
+          ))}
+        </div>
+      </Container>
+    </div>
+  )
+}

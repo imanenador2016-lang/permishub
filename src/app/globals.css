@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cream text-ink font-body antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+
+  :focus-visible {
+    outline: 3px solid #C1432E;
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Motif de base "ligne claire" : bordure noire épaisse + ombre portée
+     dure décalée, jamais de flou. Remplace les "cards" SaaS classiques —
+     voir docs/DESIGN_SYSTEM.md. En dessous de 640px, l'épaisseur et
+     l'offset sont réduits plutôt que supprimés (brief §Mobile-first). */
+  .panel {
+    @apply relative border-[3px] border-ink bg-cream shadow-hard-xs sm:border-4 sm:shadow-hard;
+  }
+
+  .btn-comic {
+    @apply inline-flex items-center justify-center gap-2 border-[3px] border-ink bg-yellow font-display text-sm text-ink shadow-hard-xs transition-all duration-150 ease-out hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-hard-sm active:translate-x-0 active:translate-y-0 active:shadow-none sm:border-4 sm:shadow-hard-sm sm:text-base sm:hover:shadow-hard;
+  }
+}
+
+/*
+ * Technique d'annotation — élément signature à réutiliser partout où une
+ * illustration accompagne un contenu (voir reference-design-hero.html et
+ * components/annotation/PinnedCard.tsx). Punaise + flèche "queue" pointue,
+ * jamais une simple juxtaposition carte/illustration sans lien visuel.
+ */
+.annotation-pin {
+  position: absolute;
+  top: -9px;
+  left: 18px;
+  width: 18px;
+  height: 18px;
+  background: #C1432E;
+  border: 3px solid #1F1A14;
+  border-radius: 50%;
+  z-index: 4;
+}
+.annotation-tail {
+  position: absolute;
+  bottom: -12px;
+  left: 30px;
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+  border-right: 0 solid transparent;
+  border-top: 14px solid #1F1A14;
+  z-index: 2;
+}
+.annotation-tail::after {
+  content: '';
+  position: absolute;
+  top: -17px;
+  left: -6px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-top: 11px solid #F7F1E4;
+}
+.annotation-ring {
+  fill: none;
+  stroke: #C1432E;
+  stroke-width: 4;
+  stroke-dasharray: 6 6;
+}

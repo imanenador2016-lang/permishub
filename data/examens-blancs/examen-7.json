@@ -1,0 +1,641 @@
+[
+  {
+    "id": 1,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Vous approchez d'une intersection et vous voyez un de ces signaux.À quelle intersection pouvez-vous dépasser un cycliste par la gauche ?",
+    "choix": [
+      "A. Intersection 1.",
+      "B. Intersection 2.",
+      "C. Intersection 1 et 2."
+    ],
+    "reponse": "C",
+    "explication": "LEÇON 15+16 – ‘Le dépassement’.Dépasser un vélo par la gauche n’est pas interdit aux intersections où vous devez donner la priorité.",
+    "image": "/examen-blanc/examen-7/q01.jpg"
+  },
+  {
+    "id": 2,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "En voyant ce panneau, vous savez que...",
+    "choix": [
+      "A. … à cet endroit les rails du tram croisent la route.",
+      "B. … à 150 mètres les rails du tram croiseront la route."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 22 – ‘Train – tram -autobus’.Un signe de danger est à 150 mètres d'un danger.",
+    "image": "/examen-blanc/examen-7/q02.jpg"
+  },
+  {
+    "id": 3,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Quels conducteurs de cyclomoteurs ne peuvent pas emprunter la piste cyclable après ce panneau?",
+    "choix": [
+      "A. Seulement les cyclomoteurs de classe B.",
+      "B. Les cyclomoteurs de classe A et B."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 3 – ‘La piste cyclable’.Si les piétons et les cyclistes ne sont pas à côté de l’autre, mais se trouvent l’un au-dessus de l’autre, seuls les cyclistes et les piétons doivent emprunter cette partie de la voie publique et les cyclomoteurs de classe A et de classe B ne peuvent pas l’emprunter.",
+    "image": "/examen-blanc/examen-7/q03.jpg"
+  },
+  {
+    "id": 4,
+    "type": "oui_non",
+    "gravite": "grave",
+    "question": "Votre amie vit dans une zone piétonne.Pouvez-vous rendre jusque chez elle avec votre voiture?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 7 – ‘Les piétons’.L'accès aux zones piétonnes est réservé aux piétons.Toutefois:1° peuvent accéder à ces zones:b) les véhicules de surveillance, de contrôle et d'entretien de cette zone et les véhicules affectés au ramassage des immondices;c) les véhicules prioritaires, lorsque la nature de leur mission le justifie;d) les véhicules des services réguliers de transport en commun;e) les conducteurs de véhicules dont le garage est situé à l'intérieur de ces zones et qui n'est accessible qu'en traversant ces zones;f) en cas d'absolue nécessité, les véhicules appartenant à des entreprises commerciales établies dans ces zones et uniquement accessible qu'en les traversant, lorsque ces véhicules sont affectés à des livraisons et si ces livraisons constituent une activité principale de ces entreprises;g) en cas d'absolue nécessité, les véhicules destinés à effectuer des travaux dans ces zones;h) les trains miniatures touristiques et les trains de véhicules composés d’un véhicule tracteur et d’un chariot bâché, les véhicules attelés, les cycles-taxis;i) les véhicules employés dans le cadre d'activités médicales ou de soins à domicile;Dans les cas visés sous e) à i), les bénéficiaires doivent apposer sur la face interne du pare-brise de leur véhicule, un laisser-passer délivré par le bourgmestre ou son délégué; pour les véhicules attelés et les cycles taxis, le conducteur doit détenir ce laissez-passer.2° peuvent accéder à ces zones lorsque la signalisation routière le prévoit et selon les restrictions qui y figurent:a) les véhicules qui doivent charger ou décharger dans lesdites zones;b) les taxis qui ont une destination déterminée à l'intérieur de ces zones pour l'embarquement ou le débarquement de personnes;c) les cyclistes.",
+    "image": "/examen-blanc/examen-7/q04.jpg"
+  },
+  {
+    "id": 5,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Disque de stationnement (ou parcmètre).Combien de temps pouvez-vous stationner (sauf indication contraire) ?",
+    "choix": [
+      "A. 1 heure.",
+      "B. 1,5 heure.",
+      "C. 2 heures."
+    ],
+    "reponse": "C",
+    "explication": "",
+    "image": "/examen-blanc/examen-7/q05.jpg"
+  },
+  {
+    "id": 6,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Qui a la priorité ?",
+    "choix": [
+      "A. La voiture noire.",
+      "B. La voiture jaune (indiquée par la ligne jaune)."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 19 – ‘Une intersection et les panneaux’.Le signal routier indique que la voiture jaune à la priorité.",
+    "image": "/examen-blanc/examen-7/q06.jpg"
+  },
+  {
+    "id": 7,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Le voyant ABS reste allumé. Que faites-vous ?",
+    "choix": [
+      "A. Retirer le fusible pour que le voyant s’éteigne.",
+      "B. Continuer à rouler, mais aller le plus rapidement possible au garage.",
+      "C. Vous devez vous arrêter et ne plus rouler tant que le problème n’est pas réparé par un garagiste."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 31L’ABS intervient lorsque vous appuyez fortement et profondément sur la pédale de frein.Si le voyant ABS reste allumé, le système ABS ne fonctionne plus, mais le freinage normal reste opérationnel.Vous pouvez donc continuer à rouler, mais vous devez vous rendre au plus vite dans un garage.",
+    "image": "/examen-blanc/examen-7/q07.jpg"
+  },
+  {
+    "id": 8,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Vous avez un permis de conduire provisoire B.Pouvez-vous traverser ce pont avec une camionnette ?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.Une camionnette est un véhicule avec une M.M.A. jusqu'à 3500 kg.",
+    "image": "/examen-blanc/examen-7/q08.jpg"
+  },
+  {
+    "id": 9,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Pouvez-vous traverser une bande bus en voiture pour rejoindre votre propriété ?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "LEÇON 22 – ‘Train – tram -autobus’.Traverser cette bande n’est est pas la même que conduire sur cette bande.",
+    "image": "/examen-blanc/examen-7/q09.jpg"
+  },
+  {
+    "id": 10,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Le conducteur de cette voiture s'est arrêté près d'une maison pour demander la route.",
+    "choix": [
+      "A. La voiture est à l'arrêt.",
+      "B. La voiture est stationnée."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 25 – ‘Arrêt et stationnement’.Si vous restez immobile au-delà du temps nécessaire pour embarquer ou débarquer une personne, cela est considéré comme stationner.",
+    "image": "/examen-blanc/examen-7/q10.jpg"
+  },
+  {
+    "id": 11,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Je roule sur cette chaussée à sens unique et je veux tourner à gauche.Où dois-je me placer ?",
+    "choix": [
+      "A. Sur la bande de gauche (1).",
+      "B. Sur la bande du milieu (2).",
+      "C. Je garde la bande de droite et je tourne à gauche depuis celle-ci."
+    ],
+    "reponse": "A",
+    "explication": "",
+    "image": "/examen-blanc/examen-7/q11.jpg"
+  },
+  {
+    "id": 12,
+    "type": "numerique",
+    "gravite": "normale",
+    "question": "Introduisez un nombre.La voiture, sur cette image, peut rouler à une vitesse maximale de (...) km/h.",
+    "choix": [],
+    "reponse": "70",
+    "explication": "LEÇON 6 – ‘Endroits particuliers’.La voiture quitte une agglomération. Mais il y a un panneau qui dit que la vitesse maximale autorisée est de 70 km/heure.",
+    "image": "/examen-blanc/examen-7/q12.jpg"
+  },
+  {
+    "id": 13,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Quelle est la vitesse maximale autorisée dans une agglomération en Flandre ?",
+    "choix": [
+      "A. Maximum 30 km/h.",
+      "B. Maximum 50 km/h."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 6En Flandre et en Wallonie : maximum 50 km/h.Dans la Région de Bruxelles-Capitale : maximum 30 km/h.",
+    "image": "/examen-blanc/examen-7/q13.jpg"
+  },
+  {
+    "id": 14,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Que signifie ce signal d’indication?",
+    "choix": [
+      "A. Obligation de tourner à droite.",
+      "B. Voie sans issue.",
+      "C. Accès interdit."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 1 – ‘La voie publique’.La signification de ce panneau: voie sans issue (pour tout usager).C'est un signal d'indication.",
+    "image": "/examen-blanc/examen-7/q14.jpg"
+  },
+  {
+    "id": 15,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Que faites-vous lorsque vous voyez cette combinaison de signaux routiers ?",
+    "choix": [
+      "A : Vous ralentissez immédiatement jusqu’à 30 km/h.",
+      "B : Vous continuez à rouler et veillez à ne pas dépasser 30 km/h 70 mètres plus loin."
+    ],
+    "reponse": "B",
+    "explication": "Explication :Le signal de danger et le panneau additionnel indiquent qu’un dispositif surélevé se trouve 70 mètres plus loin.La vitesse maximale autorisée sur un dispositif surélevé est de 30 km/h.",
+    "image": "/examen-blanc/examen-7/q15.jpg"
+  },
+  {
+    "id": 16,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "À cet endroit, cette voiture peut...",
+    "choix": [
+      "A. S’arrêter et stationner.",
+      "B. S’arrêter.",
+      "C. Ni s’arrêter ni stationner."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 26 – ‘Arrêt et stationnement’.Une ligne jaune discontinue : vous ne pouvez pas stationner.",
+    "image": "/examen-blanc/examen-7/q16.jpg"
+  },
+  {
+    "id": 17,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Une autoroute.Qui a la priorité ?",
+    "choix": [
+      "A. La voiture rouge.",
+      "B. La voiture jaune."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 4 – ‘L’autoroute’.Quand vous entrez sur une autoroute, vous devez cédez le passage à ceux qui y circulent.",
+    "image": "/examen-blanc/examen-7/q17.jpg"
+  },
+  {
+    "id": 18,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Si un filtre à air est sale, est-ce que cela augmente la consommation d’essence ?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "LEÇON 31Les filtres à air obstrués ou sales peuvent entraîner une diminution du débit d’air vers le moteur, ce qui augmente la quantité de carburant nécessaire pour maintenir les performances du véhicule.L’encrassement du filtre à air a donc un impact important sur votre consommation de carburant, quel que soit le type de motorisation (essence ou diesel).Selon le type de véhicule et de carburant utilisé, la surconsommation peut aller de 10 % à 25 %.",
+    "image": "/examen-blanc/examen-7/q18.jpg"
+  },
+  {
+    "id": 19,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Devez-vous informer la police dans un accident avec seulement des dégâts matériels?",
+    "choix": [
+      "A. Oui, toujours.",
+      "B. Oui en cas de désaccord, et qu'une des personnes refuse de signer.",
+      "C. Jamais."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 29 – ‘Accident’.Un accident avec blessées : toujours.Un accident sans blessées: en cas de désaccord.",
+    "image": "/examen-blanc/examen-7/q19.jpg"
+  },
+  {
+    "id": 20,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Nous sommes le 26 mars.Pouvez-vous stationner avant ce signal routier ?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "LEÇON 26 – ‘Arrêt et stationnement’.Ce panneau signifie que vous ne pouvez pas stationner de ce côté de la chaussée du 1er au 15 du mois.",
+    "image": "/examen-blanc/examen-7/q20.jpg"
+  },
+  {
+    "id": 21,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Sur une autoroute, ce conducteur roule à l'extrême gauche de sa bande de circulation car il dépasse un autre véhicule qui se trouve à sa droite.",
+    "choix": [
+      "A. C'est permis à condition qu'il respecte sa bande de circulation.",
+      "B. il doit rouler, autant que possible, à droite dans sa bande de circulation."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 4 – ‘L’autoroute’.",
+    "image": "/examen-blanc/examen-7/q21.jpg"
+  },
+  {
+    "id": 22,
+    "type": "oui_non",
+    "gravite": "grave",
+    "question": "La voiture bleue peut-t-elle encore tourner à gauche ?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 17Lorsqu’un agent qualifié lève un bras verticalement, tous les usagers de la route, y compris les piétons, doivent s’arrêter.Ceux qui se trouvent déjà engagé dans le carrefour doivent le quitter le plus rapidement possible.",
+    "image": "/examen-blanc/examen-7/q22.jpg"
+  },
+  {
+    "id": 23,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Quelle est la vitesse maximale à laquelle cette voiture peut rouler ?",
+    "choix": [
+      "A. Maximum 70 km/h.",
+      "B. Maximum 90 km/h."
+    ],
+    "reponse": "A",
+    "explication": "Le panneau de signalisation est à droite du conducteur.",
+    "image": "/examen-blanc/examen-7/q23.jpg"
+  },
+  {
+    "id": 24,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "À quelle catégorie appartient ce signal?",
+    "choix": [
+      "A. Signal d’obligation.",
+      "B. Signal d’interdiction.",
+      "C. Signal de danger."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 3 – ‘La piste cyclable’.Signification : accès interdit aux conducteurs de cycles.",
+    "image": "/examen-blanc/examen-7/q24.jpg"
+  },
+  {
+    "id": 25,
+    "type": "choix_multiple",
+    "gravite": "grave",
+    "question": "Qui peut s'engager dans le carrefour ?",
+    "choix": [
+      "A. La voiture verte.",
+      "B. La voiture bleue.",
+      "C. Le cyclomoteur."
+    ],
+    "reponse": "C",
+    "explication": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 17Lorsqu'un agent tend un bras ou les deux bras horizontalement : Les usagers qui se dirigent vers son ventre ou son dos doivent s'arrêter. Ceux qui approchent de son côté (ou de la main tendue) peuvent s'engager dans le carrefour pour continuer tout droit ou tourner à gauche ou à droite. Un agent qui tend les deux bras horizontalement donne la même injonction que s'il tend un seul bras horizontalement.",
+    "image": "/examen-blanc/examen-7/q25.jpg"
+  },
+  {
+    "id": 26,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Quand le feu arrière de brouillard doit-il être allumé ?",
+    "choix": [
+      "A. Toujours en cas de brouillard.",
+      "B. Lorsque la visibilité est inférieure à 100 mètres.",
+      "C. Lorsque la visibilité est inférieure à 50 mètres."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 11Une voiture doit être équipée d’un ou de deux feux arrière de brouillard, qui doivent obligatoirement être allumés :en cas de brouillard, lorsque la visibilité est inférieure à environ 100 mètres ;en cas de chute de neige, lorsque la visibilité est inférieure à environ 100 mètres ;en cas de fortes pluies, ils doivent toujours être allumés en Belgique.",
+    "image": "/examen-blanc/examen-7/q26.jpg"
+  },
+  {
+    "id": 27,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Cette voiture ...",
+    "choix": [
+      "A. ... peut tourner à gauche ou à droite.",
+      "B. ... doit tourner à droite."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 24 – ‘Direction obligatoire’.Le signal routier indique que le conducteur doit tourner à droite.",
+    "image": "/examen-blanc/examen-7/q27.jpg"
+  },
+  {
+    "id": 28,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Le conducteur de la voiture bleue peut-il traverser le carrefour ?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "LEÇON 24 – ‘Direction obligatoire’.Le signal rouge indique qu'il est interdit de conduire après le signe dans cette direction.",
+    "image": "/examen-blanc/examen-7/q28.jpg"
+  },
+  {
+    "id": 29,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Le feu est vert : pouvez-vous vous engager...",
+    "choix": [
+      "A. ... immédiatement ?",
+      "B. ... ou seulement si le carrefour est libre ?"
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 18Même si le feu est vert, si une file venant en sens inverse risque de vous bloquer au milieu, vous ne pouvez pas vous engager dans le carrefour.",
+    "image": "/examen-blanc/examen-7/q29.jpg"
+  },
+  {
+    "id": 30,
+    "type": "choix_multiple",
+    "gravite": "grave",
+    "question": "Vous devez vous arrêter, parce que vous conduisiez dans une agglomération en Flandre 77 km par heure.Quelles sont les conséquences?",
+    "choix": [
+      "A. Vous devez payer une amende à la police.",
+      "B. Votre permis de conduire peut être retiré sur-le-champ.",
+      "C. Vous devez apparaître dans les 14 jours devant le juge."
+    ],
+    "reponse": "B",
+    "explication": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 12 – ‘La vitesse’.Apprenez très bien la différence entre:- retrait immédiat temporaire de votre permis de conduire.- une déchéance du droit de conduire un véhicule à moteur.",
+    "image": "/examen-blanc/examen-7/q30.jpg"
+  },
+  {
+    "id": 31,
+    "type": "numerique",
+    "gravite": "normale",
+    "question": "Sur cette route pour automobiles en Wallonie, comptant 2 x 2 bandes de circulation, une voiture peut rouler à une vitesse maximale de (...) km/h.",
+    "choix": [],
+    "reponse": "90",
+    "explication": "LEÇON 5 – ‘La route pour automobiles’.La vitesse maximale sur une route ordinaire est…… en Wallonne: 90 km/h;… en Flandre et Bruxelles capitale: 70 km/h.",
+    "image": "/examen-blanc/examen-7/q31.jpg"
+  },
+  {
+    "id": 32,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Cet autobus veut quitter l’arrêt en agglomération.",
+    "choix": [
+      "A. La voiture a priorité.",
+      "B. L’autobus a priorité."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 22 – ‘Train – tram -autobus’.Dans une agglomération, et le signal de retour est activé, vous devez donner la priorité.",
+    "image": "/examen-blanc/examen-7/q32.jpg"
+  },
+  {
+    "id": 33,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Ce signal d’interdiction s’applique ...",
+    "choix": [
+      "A. ... à toutes les catégories de véhicules.",
+      "B. ... seulement aux camions."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 10 – ‘Chargement de véhicules’.Accès interdit aux conducteurs de véhicules ou trains de véhicules ayant, chargement compris, une longueur supérieure à celle indiquée.Cela peut donc vous concerner, même en voiture et malgré le dessin d’un camion, si votre voiture, chargement compris dépasse la longueur ou si le train de véhicules que vous conduisez (votre voiture + une remorque = un train de véhicules) dépasse cette longueur.",
+    "image": "/examen-blanc/examen-7/q33.jpg"
+  },
+  {
+    "id": 34,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Qui peut s'engager en premier dans ce carrefour ?",
+    "choix": [
+      "A. Le piéton.",
+      "B. La voiture."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Un triangle sur sa pointe signifie que vous devez céder le passage aux conducteurs (pas aux piétions) qui circulent sur la voie que vous allez emprunter, et que vous devez éventuellement vous arrêter. Il n'y a pas un passage pour piétons.",
+    "image": "/examen-blanc/examen-7/q34.jpg"
+  },
+  {
+    "id": 35,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Lorsque vous roulez sur cette route, vous pouvez dépasser un véhicule par la gauche si cela peut être fait en toute sécurité.",
+    "choix": [
+      "A. Vrai.",
+      "B. Faux."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Signification: route prioritaire.",
+    "image": "/examen-blanc/examen-7/q35.jpg"
+  },
+  {
+    "id": 36,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Jusqu’à quelle distance une charge indivisible peut-elle dépasser à l’avant de la voiture sans signalisation ?",
+    "choix": [
+      "A. 1 mètre.",
+      "B. 0,5 mètre.",
+      "C. Pas du tout."
+    ],
+    "reponse": "C",
+    "explication": "LEÇON 10Une charge ne peut jamais dépasser à l’avant de la voiture.Tenez-en compte si vous transportez un jour une échelle sur la galerie.À l’arrière, le dépassement maximum autorisé est de 1 mètre.",
+    "image": "/examen-blanc/examen-7/q36.jpg"
+  },
+  {
+    "id": 37,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "La maison de votre père se trouve dans cette rue.Pouvez-vous conduire dans cette rue avec votre voiture ?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "LEÇON 7 - 'Les piétons'.Les piétons peuvent utiliser toute la largeur de la route dans une zone piétonne. Les cyclistes sont autorisés à conduire dans la zone si le panneau de zone le permet, mais seulement au pas sans gêner ou mettre en danger les piétons. Les voitures ne peuvent entrer dans la zone qu'avec une autorisation spéciale. Le stationnement dans une zone piétonne est interdit.",
+    "image": "/examen-blanc/examen-7/q37.jpg"
+  },
+  {
+    "id": 38,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Que fais-tu lorsque tu dois monter une pente raide ?",
+    "choix": [
+      "A. Tu continues simplement en roulant plus lentement.",
+      "B. Tu passes à une vitesse supérieure.",
+      "C. Tu passes à une vitesse inférieure."
+    ],
+    "reponse": "C",
+    "explication": "LEÇON 31Lors d’une forte montée ou d’une forte descente, il est conseillé de rétrograder.Cela permet de conserver suffisamment de puissance et un meilleur contrôle du véhicule.",
+    "image": "/examen-blanc/examen-7/q38.jpg"
+  },
+  {
+    "id": 39,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Quelle taille un enfant doit-il avoir pour ne plus devoir s’asseoir dans un siège de sécurité ?",
+    "choix": [
+      "A. 1,25 mètre.",
+      "B. 1,35 mètre.",
+      "C. 1,40 mètre."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 10Les enfants de moins de 18 ans et mesurant moins de 1m35 doivent être transportés dans un siège de sécurité ou un système de retenue pour enfants conforme aux normes prescrites. (Un enfant de plus de 1m35 peut encore être transporté dans un siège spécial pour enfants). Les enfants de moins de 18 ans ne peuvent pas être transportés à l’avant dans un siège enfant orienté vers l’arrière, sauf s’il n’y a pas d’airbag à l’avant ou si celui-ci peut être désactivé.",
+    "image": "/examen-blanc/examen-7/q39.jpg"
+  },
+  {
+    "id": 40,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Quelle voiture est stationnée correctement dans cette zone résidentielle ?",
+    "choix": [
+      "A. Seulement la voiture A.",
+      "B. Seulement la voiture B.",
+      "C. Les deux."
+    ],
+    "reponse": "C",
+    "explication": "LEÇON 6 – ‘Endroits particuliers’.Dans une zone résidentielle, vous pouvez stationner votre voiture à gauche et à droite de votre sens de circulation mais uniquement sur les emplacements de stationnement indiqués.",
+    "image": "/examen-blanc/examen-7/q40.jpg"
+  },
+  {
+    "id": 41,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Ce chauffeur de DHL livre des colis.Doit-il porter la ceinture de sécurité lorsqu’il conduit ?",
+    "choix": [
+      "A. Oui.",
+      "B. Non."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 10En principe, un conducteur doit toujours porter la ceinture de sécurité.La loi prévoit toutefois certaines exceptions strictes.Sont dispensés du port de la ceinture :- le conducteur qui effectue une marche arrière ;- les chauffeurs de taxi pendant le transport de clients ;- les facteurs qui distribuent des colis de porte à porte.Cela ne s’applique pas aux livreurs de sociétés comme DHL, Amazon ou autres services de messagerie ;- les personnes habilitées et les services de secours, lorsque leur mission l’exige.➡️ Un chauffeur DHL n’est pas exempté et doit donc porter la ceinture de sécurité.",
+    "image": "/examen-blanc/examen-7/q41.jpg"
+  },
+  {
+    "id": 42,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Vous roulez en voiture sur la bande de circulation de droite de cette autoroute. Quelle est la vitesse maximale à laquelle vous pouvez circuler ?",
+    "choix": [
+      "A. 50 km/h.",
+      "B. 120 km/h."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 22 – ‘Train – tram -autobus’.La limite de vitesse sur les autoroutes est de 120 km par heure.",
+    "image": "/examen-blanc/examen-7/q42.jpg"
+  },
+  {
+    "id": 43,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Vous roulez à une vitesse trop petite.La consommation de carburant ...",
+    "choix": [
+      "A. ... diminue.",
+      "B. ... ne change pas.",
+      "C. ... augmente."
+    ],
+    "reponse": "C",
+    "explication": "LEÇON 31 – ‘Technique’.La consommation de carburant augmente.",
+    "image": "/examen-blanc/examen-7/q43.jpg"
+  },
+  {
+    "id": 44,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Vous voulez tourner à droite.Devez-vous céder le passage si une voiture arrive de la gauche ?",
+    "choix": [
+      "A. Oui, car c’est un rond-point.",
+      "B. Non, car vous avez la priorité de droite."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 20Ce n’est pas un rond-point. Il n’y a pas non plus de signaux routiers qui règlent la priorité.C’est donc la priorité de droite qui s’applique ici.",
+    "image": "/examen-blanc/examen-7/q44.jpg"
+  },
+  {
+    "id": 45,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Défier quelqu’un sur la voie publique pour rouler le plus vite constitue une infraction …",
+    "choix": [
+      "A. … du deuxième degré.",
+      "B. … du troisième degré.",
+      "C. … du quatrième degré."
+    ],
+    "reponse": "C",
+    "explication": "LEÇON – INFRACTIONS GRAVESSauf autorisation spéciale de l’autorité légalement compétente, toutes les courses de vitesse et compétitions sportives sont interdites sur la voie publique, notamment les courses de vitesse, de régularité ou d’adresse.Il s’agit d’une infraction du quatrième degré.",
+    "image": "/examen-blanc/examen-7/q45.jpg"
+  },
+  {
+    "id": 46,
+    "type": "choix_multiple",
+    "gravite": "grave",
+    "question": "Sur une route ordinaire où la vitesse est limitée à 90 km/h, vous roulez à 120 km/h.Quelles sont les conséquences ?",
+    "choix": [
+      "A. Vous recevrez une amende.",
+      "B. Votre permis sera temporairement retiré.",
+      "C. Vous devrez repasser votre examen théorique et pratique."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 1 – ‘La voie publique’.Un excès de plus de 40 km/h que la vitesse maximale permise sur des routes ordinaires, hors agglomération est puni par le juge qui prononce ladéchéance du droit de conduire pour une durée d'au moins huit jours et au maximum cinq ans.Pour l’examen : bien lire l’explication dans la leçon 12.Ici nous sommes hors agglomération et donc ce sera juste une amende car la vitesse autorisée est dépassée de 30 kms/h. Même un jeune conducteur pour qui les règles sont plus strictes n’aurait pas de déchéance car c’est 30 kms/h au-dessus de la limite et lui serait déchu à plus de 30 kms, donc à 121 kms/h.",
+    "image": "/examen-blanc/examen-7/q46.jpg"
+  },
+  {
+    "id": 47,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Lorsque vous avez pris des médicaments et que vous buvez de l’alcool, les effets de l’alcool peuvent être augmentés.",
+    "choix": [
+      "A. Vrai.",
+      "B. Faux."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 28 – ‘Alcool et drogues’.Certains médicaments ont déjà des effets néfastes sur la conduite. L’alcool les aggravera d’autant plus.",
+    "image": "/examen-blanc/examen-7/q47.jpg"
+  },
+  {
+    "id": 48,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Ce camion transporte des tonnes de poudre à lessiver.Peut-il passer ce signal routier ?",
+    "choix": [
+      "A. Oui.",
+      "B. Non."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 10Signification du signal routier C24a :Interdiction d’accès aux conducteurs de véhicules transportant des matières dangereuses.La poudre à lessiver n’est pas un produit dangereux.",
+    "image": "/examen-blanc/examen-7/q48.jpg"
+  },
+  {
+    "id": 49,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Les feux rouges sont allumés et la voiture blanche s’arrête.Le cyclomotoriste veut continuer.Est-ce autorisé ?",
+    "choix": [
+      "A. Oui, car les barrières sont levées.",
+      "B. Non. Il s’agit d’une infraction du quatrième degré."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 18Il est interdit de s’engager sur un passage à niveau lorsque :• le signal sonore retentit,• les feux rouges sont allumés,• ou que les barrières sont en train de descendre.⚠️ Attention :Si les barrières sont levées, que les feux rouges sont éteints, que le feu blanc lunaire est allumé et qu’il n’y a aucun signal sonore, le dépassement d’autres véhicules sur un passage à niveau est autorisé.",
+    "image": "/examen-blanc/examen-7/q49.jpg"
+  },
+  {
+    "id": 50,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Comment s’appelle la partie de la voie publique où vous voyez le point d’interrogation ?",
+    "choix": [
+      "A. La bande de circulation.",
+      "B. La chaussée.",
+      "C. La voie publique."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 2 – ‘Bandes de circulation’.C’est la chaussée.Cette chaussée a deux bandes de circulation.",
+    "image": "/examen-blanc/examen-7/q50.jpg"
+  }
+]

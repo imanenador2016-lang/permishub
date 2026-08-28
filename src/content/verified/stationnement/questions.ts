@@ -1,0 +1,95 @@
+import type { Question } from '@/domain/quiz'
+
+export const STATIONNEMENT_QUESTIONS: Question[] = [
+  {
+    id: 'st25-q1',
+    themeSlug: 'stationnement',
+    region: 'BE',
+    prompt: { fr: 'Vous êtes arrêté à un feu rouge depuis 40 secondes. Est-ce un stationnement ?', nl: 'U staat al 40 seconden stil aan een rood licht. Is dit parkeren?' },
+    options: [
+      { id: 'a', text: { fr: 'Oui, au-delà de 30 secondes', nl: 'Ja, na 30 seconden' }, correct: false },
+      { id: 'b', text: { fr: 'Non, c’est une immobilisation par la circulation', nl: 'Nee, dit is immobilisatie door het verkeer' }, correct: true },
+    ],
+    explanation: { fr: "Être immobilisé par la circulation (feu rouge, embouteillage) n'est ni un arrêt ni un stationnement au sens du Code.", nl: 'Stilstaan door het verkeer (rood licht, file) is noch stilstaan, noch parkeren in de zin van de wegcode.' },
+    factIds: ['st25-definitions'],
+    difficulty: 'moyen',
+  },
+  {
+    id: 'st25-q2',
+    themeSlug: 'stationnement',
+    region: 'BE',
+    prompt: { fr: 'En stationnant sur la chaussée, quel espace minimal laissez-vous avec le véhicule suivant ?', nl: 'Bij parkeren op de rijbaan, welke minimumruimte laat u met het volgende voertuig?' },
+    options: [
+      { id: 'a', text: { fr: '1 mètre', nl: '1 meter' }, correct: true },
+      { id: 'b', text: { fr: '3 mètres', nl: '3 meter' }, correct: false },
+    ],
+    explanation: { fr: "Le Code exige au moins 1 mètre entre deux véhicules stationnés sur la chaussée.", nl: 'De wegcode vereist minstens 1 meter tussen twee op de rijbaan geparkeerde voertuigen.' },
+    factIds: ['st25-ou-stationner'],
+    difficulty: 'facile',
+  },
+  {
+    id: 'st25-q3',
+    themeSlug: 'stationnement',
+    region: 'BE',
+    prompt: { fr: 'Pouvez-vous vous arrêter dans un virage sans visibilité suffisante ?', nl: 'Mag u stilstaan in een bocht zonder voldoende zicht?' },
+    options: [
+      { id: 'a', text: { fr: 'Oui, brièvement', nl: 'Ja, kort' }, correct: false },
+      { id: 'b', text: { fr: 'Non, c’est interdit', nl: 'Nee, dat is verboden' }, correct: true },
+    ],
+    explanation: { fr: "L'arrêt et le stationnement sont interdits avant ou dans un virage sans visibilité suffisante, comme près du sommet d'une côte.", nl: 'Stilstaan en parkeren zijn verboden voor of in een bocht zonder voldoende zicht, net als nabij de top van een helling.' },
+    factIds: ['st25-visibilite'],
+    difficulty: 'moyen',
+  },
+  {
+    id: 'st26-q1',
+    themeSlug: 'stationnement',
+    region: 'BE',
+    prompt: { fr: 'Pouvez-vous stationner juste devant la porte de garage d’une maison ?', nl: 'Mag u parkeren net voor de garagepoort van een huis?' },
+    options: [
+      { id: 'a', text: { fr: 'Oui, si personne ne s’en plaint', nl: 'Ja, als niemand klaagt' }, correct: false },
+      { id: 'b', text: { fr: 'Non, sauf le riverain avec sa plaque visible', nl: 'Nee, behalve de bewoner met zijn zichtbare nummerplaat' }, correct: true },
+    ],
+    explanation: { fr: "Stationner devant une porte de garage est interdit, sauf pour l'occupant qui a reproduit sa plaque d'immatriculation de façon visible sur la porte.", nl: 'Parkeren voor een garagepoort is verboden, behalve voor de bewoner die zijn nummerplaat zichtbaar op de poort heeft aangebracht.' },
+    factIds: ['st26-arret-ok-stationnement-non'],
+    difficulty: 'moyen',
+  },
+  {
+    id: 'st26-q2',
+    themeSlug: 'stationnement',
+    region: 'BE',
+    prompt: { fr: 'Un signal rond bleu est barré de DEUX diagonales. Que signifie-t-il ?', nl: 'Een blauw rond bord heeft TWEE diagonale strepen. Wat betekent dit?' },
+    options: [
+      { id: 'a', text: { fr: 'Stationnement interdit uniquement', nl: 'Enkel parkeren verboden' }, correct: false },
+      { id: 'b', text: { fr: 'Stationnement ET arrêt interdits', nl: 'Parkeren ÉN stilstaan verboden' }, correct: true },
+    ],
+    explanation: { fr: "Deux diagonales sur le signal signifient que l'arrêt est également interdit, en plus du stationnement.", nl: 'Twee diagonale strepen op het bord betekenen dat ook stilstaan verboden is, naast parkeren.' },
+    factIds: ['st26-signaux-fleches'],
+    difficulty: 'facile',
+  },
+  {
+    id: 'st27-q1',
+    themeSlug: 'stationnement',
+    region: 'BE',
+    prompt: { fr: 'Un panneau P avec le dessin d’une voiture autorise-t-il une camionnette à stationner ?', nl: 'Laat een P-bord met een tekening van een auto een bestelwagen toe om te parkeren?' },
+    options: [
+      { id: 'a', text: { fr: 'Oui, comme les voitures', nl: 'Ja, net als auto’s' }, correct: false },
+      { id: 'b', text: { fr: 'Non, la camionnette n’est pas incluse', nl: 'Nee, de bestelwagen is niet inbegrepen' }, correct: true },
+    ],
+    explanation: { fr: "Ce panneau autorise voitures, voitures mixtes, minibus et motocyclettes — mais pas les camionnettes.", nl: 'Dit bord laat auto\'s, gemengde auto\'s, minibussen en motorfietsen toe — maar geen bestelwagens.' },
+    factIds: ['st27-signaux-p'],
+    difficulty: 'difficile',
+  },
+  {
+    id: 'st27-q2',
+    themeSlug: 'stationnement',
+    region: 'BE',
+    prompt: { fr: 'Combien de temps maximum un véhicule en panne peut-il rester sur la voie publique ?', nl: 'Hoe lang mag een voertuig met pech maximaal op de openbare weg blijven?' },
+    options: [
+      { id: 'a', text: { fr: '24 heures', nl: '24 uur' }, correct: true },
+      { id: 'b', text: { fr: '3 heures', nl: '3 uur' }, correct: false },
+    ],
+    explanation: { fr: "Un véhicule en panne ne peut jamais rester plus de 24 heures sur la voie publique (3 heures pour un véhicule publicitaire).", nl: 'Een voertuig met pech mag nooit langer dan 24 uur op de openbare weg blijven (3 uur voor een reclamevoertuig).' },
+    factIds: ['st27-longue-duree'],
+    difficulty: 'facile',
+  },
+]

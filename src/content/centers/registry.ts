@@ -1,0 +1,212 @@
+import type { ExamCenter, PracticeCircuit } from '@/domain/centers'
+
+/**
+ * Catalogue des centres d'examen pris en charge. Chaque centre = un produit
+ * vendu séparément à 24,99 €, jamais un abonnement global (voir
+ * docs/PRICING.md). Liste volontairement limitée à 2 centres pour le MVP —
+ * facile à étendre : il suffit d'ajouter une entrée ici et ses circuits
+ * ci-dessous, aucune page ne dépend d'une liste figée.
+ */
+export const EXAM_CENTERS: ExamCenter[] = [
+  { id: 'anderlecht', slug: 'anderlecht', name: 'Anderlecht', region: 'BRUXELLES', priceCents: 2499, lat: 50.8333, lng: 4.3 },
+  { id: 'schaerbeek', slug: 'schaerbeek', name: 'Schaerbeek', region: 'BRUXELLES', priceCents: 2499, lat: 50.8676, lng: 4.3737 },
+  { id: 'louvain-la-neuve', slug: 'louvain-la-neuve', name: 'Louvain-la-Neuve', region: 'WALLONIE', priceCents: 2499, lat: 50.6681, lng: 4.6118 },
+  { id: 'couillet', slug: 'couillet', name: 'Couillet', region: 'WALLONIE', priceCents: 2499, lat: 50.4028, lng: 4.4696 },
+  { id: 'mariembourg', slug: 'mariembourg', name: 'Mariembourg', region: 'WALLONIE', priceCents: 2499, lat: 50.0965, lng: 4.5211 },
+  { id: 'braine-le-comte', slug: 'braine-le-comte', name: 'Braine-le-Comte', region: 'WALLONIE', priceCents: 2499, lat: 50.6094, lng: 4.1447 },
+  { id: 'cuesmes', slug: 'cuesmes', name: 'Cuesmes', region: 'WALLONIE', priceCents: 2499, lat: 50.44, lng: 3.9333 },
+  { id: 'lobbes', slug: 'lobbes', name: 'Lobbes', region: 'WALLONIE', priceCents: 2499, lat: 50.3486, lng: 4.2664 },
+]
+
+/**
+ * Emplacements de contenu pour les circuits d'entraînement. Le tracé réel
+ * (Google Maps, manœuvres précises testées à cet examen) n'a pas encore été
+ * préparé/vérifié — ces entrées permettent de construire et tester
+ * l'interface (aperçu verrouillé, page centre, déblocage) sans jamais
+ * prétendre représenter le tracé officiel tant qu'il n'est pas vérifié.
+ */
+export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
+  {
+    id: 'anderlecht-1',
+    centerSlug: 'anderlecht',
+    title: { fr: 'Circuit d’entraînement 1', nl: 'Trainingscircuit 1' },
+    description: {
+      fr: 'Itinéraire à parcourir en voiture autour du centre, avec les manœuvres typiquement testées à l’examen pratique (créneau, rond-point, priorité de droite).',
+      nl: 'Route om met de auto rond het centrum te rijden, met de manoeuvres die typisch getest worden bij het praktijkexamen (parkeren, rotonde, voorrang van rechts).',
+    },
+    durationMinutes: 20,
+    // Circuit "vitrine" affiché sur le carrousel de la home (brief v2). Prix
+    // réel confirmé (24,99€) ; distance/points d'attention/difficulté sont
+    // des valeurs d'exemple reprises du mockup de référence, en attendant
+    // une méthode de calcul réelle — voir domain/centers.ts CircuitDifficulty.
+    priceCents: 2499,
+    distanceKm: 4.2,
+    attentionPointsCount: 5,
+    difficulty: 'difficile',
+  },
+  {
+    id: 'anderlecht-2',
+    centerSlug: 'anderlecht',
+    title: { fr: 'Circuit d’entraînement 2', nl: 'Trainingscircuit 2' },
+    description: {
+      fr: 'Deuxième itinéraire, avec un enchaînement de carrefours et de changements de bande différent du premier circuit.',
+      nl: 'Tweede route, met een andere opeenvolging van kruispunten en rijstrookwissels dan het eerste circuit.',
+    },
+    durationMinutes: 20,
+  },
+  {
+    id: 'anderlecht-3',
+    centerSlug: 'anderlecht',
+    title: { fr: 'Circuit d’entraînement 3', nl: 'Trainingscircuit 3' },
+    description: {
+      fr: 'Troisième itinéraire, pour varier les conditions de circulation rencontrées avant le jour J.',
+      nl: 'Derde route, om de verkeersomstandigheden vóór de grote dag te variëren.',
+    },
+    durationMinutes: 20,
+  },
+  {
+    id: 'schaerbeek-1',
+    centerSlug: 'schaerbeek',
+    title: { fr: 'Circuit d’entraînement 1', nl: 'Trainingscircuit 1' },
+    description: {
+      fr: 'Itinéraire à parcourir en voiture autour du centre, avec les manœuvres typiquement testées à l’examen pratique.',
+      nl: 'Route om met de auto rond het centrum te rijden, met de manoeuvres die typisch getest worden bij het praktijkexamen.',
+    },
+    durationMinutes: 20,
+    // Circuit "vitrine" affiché sur le carrousel de la home — voir note sur anderlecht-1.
+    priceCents: 2499,
+    distanceKm: 3.6,
+    attentionPointsCount: 3,
+    difficulty: 'moyen',
+  },
+  {
+    id: 'schaerbeek-2',
+    centerSlug: 'schaerbeek',
+    title: { fr: 'Circuit d’entraînement 2', nl: 'Trainingscircuit 2' },
+    description: {
+      fr: 'Deuxième itinéraire, avec un enchaînement de carrefours différent du premier circuit.',
+      nl: 'Tweede route, met een andere opeenvolging van kruispunten dan het eerste circuit.',
+    },
+    durationMinutes: 20,
+  },
+  {
+    id: 'schaerbeek-3',
+    centerSlug: 'schaerbeek',
+    title: { fr: 'Circuit d’entraînement 3', nl: 'Trainingscircuit 3' },
+    description: {
+      fr: 'Troisième itinéraire, pour varier les conditions de circulation rencontrées avant le jour J.',
+      nl: 'Derde route, om de verkeersomstandigheden vóór de grote dag te variëren.',
+    },
+    durationMinutes: 20,
+  },
+
+  // --- Centres wallons ajoutés le 2026-08-21 (difficulté donnée par le
+  // client ; distance/points d'attention = valeurs d'exemple en attendant
+  // une méthode de calcul réelle, voir note sur anderlecht-1). ---
+  {
+    id: 'louvain-la-neuve-1',
+    centerSlug: 'louvain-la-neuve',
+    title: { fr: 'Circuit d’entraînement 1', nl: 'Trainingscircuit 1' },
+    description: {
+      fr: 'Itinéraire à parcourir en voiture autour du centre, avec les manœuvres typiquement testées à l’examen pratique.',
+      nl: 'Route om met de auto rond het centrum te rijden, met de manoeuvres die typisch getest worden bij het praktijkexamen.',
+    },
+    durationMinutes: 20,
+    priceCents: 2499,
+    distanceKm: 3.8,
+    attentionPointsCount: 4,
+    difficulty: 'moyen',
+  },
+  {
+    id: 'couillet-1',
+    centerSlug: 'couillet',
+    title: { fr: 'Circuit d’entraînement 1', nl: 'Trainingscircuit 1' },
+    description: {
+      fr: 'Itinéraire à parcourir en voiture autour du centre — plusieurs pièges classiques signalés autour de ce centre, à surveiller particulièrement.',
+      nl: 'Route om met de auto rond het centrum te rijden — verschillende klassieke valkuilen rond dit centrum, extra aandacht vereist.',
+    },
+    durationMinutes: 20,
+    priceCents: 2499,
+    distanceKm: 4.6,
+    attentionPointsCount: 6,
+    difficulty: 'difficile',
+  },
+  {
+    id: 'mariembourg-1',
+    centerSlug: 'mariembourg',
+    title: { fr: 'Circuit d’entraînement 1', nl: 'Trainingscircuit 1' },
+    description: {
+      fr: 'Itinéraire à parcourir en voiture autour du centre, avec les manœuvres typiquement testées à l’examen pratique.',
+      nl: 'Route om met de auto rond het centrum te rijden, met de manoeuvres die typisch getest worden bij het praktijkexamen.',
+    },
+    durationMinutes: 20,
+    priceCents: 2499,
+    distanceKm: 3.5,
+    attentionPointsCount: 4,
+    difficulty: 'moyen',
+  },
+  {
+    id: 'braine-le-comte-1',
+    centerSlug: 'braine-le-comte',
+    title: { fr: 'Circuit d’entraînement 1', nl: 'Trainingscircuit 1' },
+    description: {
+      fr: 'Itinéraire à parcourir en voiture autour du centre, avec les manœuvres typiquement testées à l’examen pratique.',
+      nl: 'Route om met de auto rond het centrum te rijden, met de manoeuvres die typisch getest worden bij het praktijkexamen.',
+    },
+    durationMinutes: 20,
+    priceCents: 2499,
+    distanceKm: 3.7,
+    attentionPointsCount: 4,
+    difficulty: 'moyen',
+  },
+  {
+    id: 'cuesmes-1',
+    centerSlug: 'cuesmes',
+    title: { fr: 'Circuit d’entraînement 1', nl: 'Trainingscircuit 1' },
+    description: {
+      fr: 'Itinéraire à parcourir en voiture autour du centre, avec les manœuvres typiquement testées à l’examen pratique.',
+      nl: 'Route om met de auto rond het centrum te rijden, met de manoeuvres die typisch getest worden bij het praktijkexamen.',
+    },
+    durationMinutes: 20,
+    priceCents: 2499,
+    distanceKm: 2.8,
+    attentionPointsCount: 2,
+    difficulty: 'facile',
+  },
+  {
+    id: 'lobbes-1',
+    centerSlug: 'lobbes',
+    title: { fr: 'Circuit d’entraînement 1', nl: 'Trainingscircuit 1' },
+    description: {
+      fr: 'Itinéraire à parcourir en voiture autour du centre, avec les manœuvres typiquement testées à l’examen pratique.',
+      nl: 'Route om met de auto rond het centrum te rijden, met de manoeuvres die typisch getest worden bij het praktijkexamen.',
+    },
+    durationMinutes: 20,
+    priceCents: 2499,
+    distanceKm: 2.6,
+    attentionPointsCount: 2,
+    difficulty: 'facile',
+  },
+]
+
+export function getCenters(): ExamCenter[] {
+  return EXAM_CENTERS
+}
+
+export function getCenter(slug: string): ExamCenter | undefined {
+  return EXAM_CENTERS.find((c) => c.slug === slug)
+}
+
+export function getCircuitsByCenter(centerSlug: string): PracticeCircuit[] {
+  return PRACTICE_CIRCUITS.filter((c) => c.centerSlug === centerSlug)
+}
+
+/** Le circuit mis en avant sur la carte du carrousel home (premier circuit du centre). */
+export function getFeaturedCircuit(centerSlug: string): PracticeCircuit | undefined {
+  return getCircuitsByCenter(centerSlug)[0]
+}
+
+/** Retrouve un circuit par son id (ex. depuis le metadata circuitId d'une session Stripe). */
+export function getCircuitById(id: string): PracticeCircuit | undefined {
+  return PRACTICE_CIRCUITS.find((c) => c.id === id)
+}

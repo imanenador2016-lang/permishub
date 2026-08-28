@@ -1,0 +1,262 @@
+// Schéma validé avec l'utilisateur le 2026-08-20 (voir échange de design).
+// Bilingue en colonnes Fr/Nl séparées — cohérent avec domain/content.ts
+// (LocalizedText) côté application. Voir SETUP.md pour DATABASE_URL.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Region {
+  BE
+  WALLONIE
+  BRUXELLES
+  FLANDRE
+}
+
+enum Lang {
+  fr
+  nl
+}
+
+enum Niveau {
+  DEBUTANT
+  INTERMEDIAIRE
+  PRET
+}
+
+enum Plan {
+  FREE
+  PREMIUM
+}
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  name          String?
+  image         String?
+  region        Region?
+  preferredLang Lang      @default(fr)
+  createdAt     DateTime  @default(now())
+
+  accounts      Account[]
+  sessions      Session[]
+  progressions  ProgressionUtilisateur[]
+  testResults   TestDeNiveau[]
+  examSessions  ExamenBlancSession[]
+  subscription  Abonnement?
+  achatsCircuits AchatCircuit[]
+}
+
+// --- Modèles requis par l'adapter Prisma de NextAuth ---
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+// --- Contenu pédagogique ---
+model Theme {
+  id         String        @id @default(cuid())
+  slug       String        @unique
+  order      Int
+  titleFr    String
+  titleNl    String
+  descFr     String
+  descNl     String
+  icon       String
+  difficulty Int           @default(1)
+  estMinutes Int           @default(10)
+  modules    CoursModule[]
+  questions  Question[]
+}
+
+model CoursModule {
+  id        String @id @default(cuid())
+  themeId   String
+  theme     Theme  @relation(fields: [themeId], references: [id], onDelete: Cascade)
+  order     Int
+  titleFr   String
+  titleNl   String
+  contentFr Json
+  contentNl Json
+}
+
+model Question {
+  id             String   @id @default(cuid())
+  themeId        String
+  theme          Theme    @relation(fields: [themeId], references: [id], onDelete: Cascade)
+  region         Region   @default(BE)
+  difficulty     Int      @default(1)
+  textFr         String
+  textNl         String
+  imageUrl       String?
+  videoUrl       String?
+  choices        Json // [{ id, textFr, textNl, correct }]
+  explanationFr  String
+  explanationNl  String
+  factRef        String? // référence à la source vérifiée (page PDF), voir docs/CONTENT_PIPELINE.md
+
+  examReponses   ExamenBlancReponse[]
+}
+
+model TestDeNiveau {
+  id           String   @id @default(cuid())
+  userId       String?
+  user         User?    @relation(fields: [userId], references: [id])
+  takenAt      DateTime @default(now())
+  scoreByTheme Json // { themeSlug: pct }
+  level        Niveau
+  answers      Json
+}
+
+model ProgressionUtilisateur {
+  id        String  @id @default(cuid())
+  userId    String
+  user      User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  themeId   String
+  pctDone   Int     @default(0)
+  weakTheme Boolean @default(false)
+
+  @@unique([userId, themeId])
+}
+
+model ExamenBlancSession {
+  id         String    @id @default(cuid())
+  userId     String
+  user       User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  startedAt  DateTime  @default(now())
+  finishedAt DateTime?
+  score      Int?
+  passed     Boolean?
+  reponses   ExamenBlancReponse[]
+}
+
+model ExamenBlancReponse {
+  id         String              @id @default(cuid())
+  sessionId  String
+  session    ExamenBlancSession  @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  questionId String
+  question   Question            @relation(fields: [questionId], references: [id])
+  correct    Boolean
+}
+
+// --- Examen pratique ---
+model CentreExamen {
+  id       String    @id @default(cuid())
+  slug     String    @unique
+  nom      String
+  ville    String
+  region   Region
+  lat      Float
+  lng      Float
+  circuits Circuit[]
+}
+
+model Circuit {
+  id       String         @id @default(cuid())
+  centreId String
+  centre   CentreExamen   @relation(fields: [centreId], references: [id], onDelete: Cascade)
+  nom      String
+  points   PointCircuit[]
+
+  // --- Brief v2 §Monétisation : vendu à l'unité, 24,99€/circuit ---
+  priceCents             Int      @default(2499)
+  distanceKm             Float?
+  attentionPointsCount   Int?
+  // Placeholder en attendant une méthode de calcul réelle (voir
+  // domain/centers.ts CircuitDifficulty) — volontairement une String
+  // éditable en base, pas un enum figé.
+  difficulte             String?
+  googleMapsDirectionsUrl String?
+
+  achats AchatCircuit[]
+}
+
+enum StatutRemboursement {
+  NON_APPLICABLE
+  DEMANDE
+  APPROUVE
+  REFUSE
+  REMBOURSE
+}
+
+// Brief v2 §Monétisation : achat à l'unité d'un circuit, remboursable en
+// cas d'échec à l'examen pratique (jamais une garantie de réussite — voir
+// copy validée : "Remboursé si tu échoues à l'examen"). Conditions exactes
+// (délai, justificatif) à définir avec l'utilisateur avant mise en prod —
+// voir SETUP.md.
+model AchatCircuit {
+  id                          String              @id @default(cuid())
+  userId                      String
+  user                        User                @relation(fields: [userId], references: [id], onDelete: Cascade)
+  circuitId                   String
+  circuit                     Circuit             @relation(fields: [circuitId], references: [id])
+  montant                     Int // centimes, snapshot du prix payé
+  dateAchat                   DateTime            @default(now())
+  statutRemboursement         StatutRemboursement @default(NON_APPLICABLE)
+  dateLimiteDemandeRemboursement DateTime?
+  stripePaymentIntentId       String?
+}
+
+// Carte "Ta ville n'est pas là ?" du carrousel circuits (brief v2) — sert à
+// prioriser les prochains centres à ajouter.
+model DemandeVilleCircuit {
+  id        String   @id @default(cuid())
+  email     String
+  ville     String?
+  createdAt DateTime @default(now())
+}
+
+model PointCircuit {
+  id         String  @id @default(cuid())
+  circuitId  String
+  circuit    Circuit @relation(fields: [circuitId], references: [id], onDelete: Cascade)
+  order      Int
+  lat        Float
+  lng        Float
+  noteFr     String?
+  noteNl     String?
+  difficulte String?
+}
+
+model Abonnement {
+  id        String    @id @default(cuid())
+  userId    String    @unique
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  plan      Plan      @default(FREE)
+  stripeId  String?
+  expiresAt DateTime?
+}

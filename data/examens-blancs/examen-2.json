@@ -1,0 +1,637 @@
+[
+  {
+    "id": 1,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Vous roulez avec une voiture diesel. À combien de tours est-il préférable de changer de vitesse ?",
+    "choix": [
+      "A. 1000–1500.",
+      "B. 1500–2000.",
+      "C. 2000–2500."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 30La plage de régime idéale pour changer de vitesse avec un moteur diesel est 1500–2000 tours/minute.Ordre des actions lors du changement de vitesse :1. Appuyez à fond sur l’embrayage et relâchez simultanément l’accélérateur.2. Passez à la vitesse appropriée.3. Relevez l’embrayage jusqu’au point de patinage et appuyez doucement sur l’accélérateur.4. Relâchez complètement l’embrayage et placez votre pied gauche à côté de la pédale.",
+    "image": "/examen-blanc/examen-2/q01.jpg"
+  },
+  {
+    "id": 2,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Cette fille a 12 ans et mesure 1,45 mètre.Elle est assise à l’arrière de la voiture et porte la ceinture de sécurité.Est-ce correct ?",
+    "choix": [
+      "A. Oui, car elle mesure 1,45 mètre.",
+      "B. Non, elle doit être installée dans un siège pour enfant, car elle n’a que 12 ans."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 10Les enfants de moins de 18 ans et mesurant moins de 1,35 m doivent être transportés dans un dispositif de retenue pour enfants conforme aux normes prescrites.Un enfant de plus de 1,35 m peut encore être transporté dans un siège pour enfant spécial.Les enfants de moins de 18 ans ne peuvent pas être transportés à l’avant dans un siège orienté vers l’arrière, sauf s’il n’y a pas d’airbag à l’avant ou si celui-ci peut être désactivé.",
+    "image": "/examen-blanc/examen-2/q02.jpg"
+  },
+  {
+    "id": 3,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Pouvez-vous passer ce signal routier en voiture ?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "LEÇON 6 – ‘Endroits particuliers’.Les emblèmes sur le panneau montrent quels usagers peuvent emprunter cette route.",
+    "image": "/examen-blanc/examen-2/q03.jpg"
+  },
+  {
+    "id": 4,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Vous circulez avec votre voiture dans une nouvelle commune en Flandre.À quelle vitesse maximale pouvez-vous rouler après ce panneau sur une chaussée ordinaire ?",
+    "choix": [
+      "A. 50 km/h.",
+      "B. 70 km/h.",
+      "C. 90 km/h."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 6Le panneau jaune avec un contour rouge indique uniquement le début administratif d’une commune. Il n’indique PAS le début d’une agglomération et n’a aucune autre signification.",
+    "image": "/examen-blanc/examen-2/q04.jpg"
+  },
+  {
+    "id": 5,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Pouvez-vous dépasser par la gauche la moto à ce carrefour ?",
+    "choix": [
+      "A. Oui.",
+      "B. Oui, si vous laissez une distance latérale suffisante.",
+      "C. Non."
+    ],
+    "reponse": "C",
+    "explication": "LEÇON 15+16 – ‘Le dépassement’.Aux carrefours où il n’y a pas de signaux qui règlent la priorité, ou à ceux où vous trouvez ce signal routier et où la priorité de droite s’applique, il est interdit de dépasser par la gauche :un véhicule attelé,un véhicule à plus de deux roues,ou un véhicule à moteur à deux roues.(Un cycliste n’est pas un véhicule à moteur, vous pouvez donc le dépasser. Vous pouvez également dépasser un engin de déplacement.)",
+    "image": "/examen-blanc/examen-2/q05.jpg"
+  },
+  {
+    "id": 6,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Lequel de ces signaux n’allez-vous pas rencontrer sur une autoroute ?",
+    "choix": [
+      "A. Signal A.",
+      "B. Signal B.",
+      "C. Signal C."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 4 – ‘L’autoroute’.Signal A : Ce signal désigne une route ordinaire.",
+    "image": "/examen-blanc/examen-2/q06.jpg"
+  },
+  {
+    "id": 7,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Qui a la priorité ?",
+    "choix": [
+      "A. Voiture A.",
+      "B. Voiture B."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 14 – ‘Le croisement des véhicules’.Le signal bleu indique que la voiture B a priorité.",
+    "image": "/examen-blanc/examen-2/q07.jpg"
+  },
+  {
+    "id": 8,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Que signifie ce signal routier ?",
+    "choix": [
+      "A. Vous approchez d’un arrêt de tram.",
+      "B. Des rails de tram se trouvent sur la chaussée."
+    ],
+    "reponse": "B",
+    "explication": "Ce panneau est un panneau de danger.Attention au tram, qui a toujours la priorité.",
+    "image": "/examen-blanc/examen-2/q08.jpg"
+  },
+  {
+    "id": 9,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Peut-on, en voiture, dépasser un cyclomoteur par la gauche dans une zone cyclable ?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "Dans une zone cyclable, les véhicules motorisés ne peuvent pas dépasser un cycliste, une trottinette ou tout autre engin de déplacement assimilé à un cycliste.D'autres véhicules (par exemple un cyclomoteur) peuvent être dépassés par la gauche dans une zone cyclable, à condition que la vitesse maximale autorisée ne soit pas dépassée.",
+    "image": "/examen-blanc/examen-2/q09.jpg"
+  },
+  {
+    "id": 10,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Nous sommes le 25 mars et il neige fortement. La visibilité est de 80 mètres.Cette voiture peut-elle rouler avec des pneus cloutés ?",
+    "choix": [
+      "A. Non.",
+      "B. Oui, uniquement hors agglomération.",
+      "C. Oui, en agglomération et hors agglomération."
+    ],
+    "reponse": "C",
+    "explication": "LEÇON 31Les pneus cloutés peuvent être utilisés du 1er novembre au 31 mars, en agglomération et hors agglomération.",
+    "image": "/examen-blanc/examen-2/q10.jpg"
+  },
+  {
+    "id": 11,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Qui doit céder le passage ?",
+    "choix": [
+      "A. La voiture brune.",
+      "B. La voiture bleue."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 14 – ‘Le croisement des véhicules’.Il n’y a aucun signal de priorité.Le conducteur qui a l’obstacle ou le rétrécissement, doit céder le passage.",
+    "image": "/examen-blanc/examen-2/q11.jpg"
+  },
+  {
+    "id": 12,
+    "type": "numerique",
+    "gravite": "normale",
+    "question": "Introduisez un nombre.Vous avez un permis de conduire B.A quelle vitesse pouvez-vous conduire en Région bruxelloise, sur une route ordinaire en dehors de l'agglomération.",
+    "choix": [],
+    "reponse": "70",
+    "explication": "LEÇON 6 – ‘Endroits particuliers’",
+    "image": "/examen-blanc/examen-2/q12.jpg"
+  },
+  {
+    "id": 13,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "La circulation est dense et il y a une réduction du nombre de bandes de circulation.",
+    "choix": [
+      "A. L'insertion selon le principe de la tirette est obligatoire.",
+      "B. L'insertion selon le principe de la tirette n'est pas obligatoire, juste conseillée et courtoise."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 2 – ‘Bandes de circulation’.Le principe de la tirette est obligatoire quand la circulation est ralentie et qu’il y a des bandes.Les conducteurs qui, lorsque la circulation est fortement ralentie, circulent sur une bande de circulation qui prend fin ou sur laquelle la circulation est interrompue, peuvent s’intercaler sur la bande libre adjacente seulement juste devant le rétrécissement.Les conducteurs qui circulent sur cette bande libre, doivent céder tour à tour, juste devant le rétrécissement, la priorité à un conducteur qui s’intercale; si la circulation est interrompue aussi bien sur la bande de gauche que sur celle de droite, la priorité doit être cédée à un conducteur qui se trouve sur la bande de droite et ensuite à un conducteur qui se trouve sur la bande de gauche.",
+    "image": "/examen-blanc/examen-2/q13.jpg"
+  },
+  {
+    "id": 14,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "25 septembre. Un tapis de neige recouvre la Flandre.Ce conducteur peut-il rouler avec des pneus à clous ?",
+    "choix": [
+      "A. Oui.",
+      "B. Non."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 31Les pneus à clous ne peuvent être utilisés qu’entre le 1er novembre et le 31 mars sur les véhicules dont la M.M.A. ne dépasse pas 3,5 tonnes.Vitesses maximales autorisées :- Sur routes ordinaires : 60 km/h- Sur autoroutes et routes à 2x2 bandes : 90 km/hLes chaînes à neige peuvent être utilisées lorsqu’il y a de la neige ou du verglas sur la chaussée.",
+    "image": "/examen-blanc/examen-2/q14.jpg"
+  },
+  {
+    "id": 15,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "L’alternateur a pour but de:1. fournir de l’électricité électrique pendant que la voiture roule.2. recharger la batterie de la voiture.",
+    "choix": [
+      "A. Seulement 1.",
+      "B. Seulement 2.",
+      "C. Aussi bien 1 que 2."
+    ],
+    "reponse": "C",
+    "explication": "LEÇON 31 – ‘Technique’.L’alternateur a pour but de fournir de l’électricité électrique pendant que la voiture roule et de recharger la batterie de la voiture.",
+    "image": "/examen-blanc/examen-2/q15.jpg"
+  },
+  {
+    "id": 16,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Que signifie ce signal d’indication ?",
+    "choix": [
+      "A. Passage pour cyclistes et cyclomoteurs à deux roues.",
+      "B. Les cyclistes peuvent emprunter la chaussée.",
+      "C. Accès interdit aux cyclistes."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 3 – ‘La piste cyclable’.Signification : passage pour cyclistes et cyclomoteurs à deux roues.Le signal d'indication se trouve au passage.",
+    "image": "/examen-blanc/examen-2/q16.jpg"
+  },
+  {
+    "id": 17,
+    "type": "choix_multiple",
+    "gravite": "grave",
+    "question": "À quoi ce signal routier fait-il référence ?",
+    "choix": [
+      "A. La M.E.C.",
+      "B. La M.M.A."
+    ],
+    "reponse": "A",
+    "explication": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 23 – ‘Sens interdits’.Accès interdit aux conducteurs de véhicules dont la masse en charge dépasse la masse indiquée.",
+    "image": "/examen-blanc/examen-2/q17.jpg"
+  },
+  {
+    "id": 18,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Qui peut s'engager en premier dans ce carrefour ?",
+    "choix": [
+      "A. Voiture A.",
+      "B. Voiture B."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Le signal routier à côté de la voiture B indique que le conducteur a la priorité à ce carrefour.",
+    "image": "/examen-blanc/examen-2/q18.jpg"
+  },
+  {
+    "id": 19,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Quand devez-vous obligatoirement utiliser le clignotant ?",
+    "choix": [
+      "A. En entrant et en quittant un rond-point.",
+      "B. Uniquement en entrant dans un rond-point.",
+      "C. Uniquement en quittant un rond-point."
+    ],
+    "reponse": "C",
+    "explication": "LEÇON 19En entrant dans un rond-point, vous pouvez utiliser le clignotant, mais ce n’est pas obligatoire.En quittant un rond-point, vous devez utiliser le clignotant droit pour indiquer clairement votre sortie.",
+    "image": "/examen-blanc/examen-2/q19.jpg"
+  },
+  {
+    "id": 20,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Les triangles sur leur pointe devant la voiture bleue s’appellent également ...",
+    "choix": [
+      "A. ... des dents de requin.",
+      "B. ... des bords de fossé.",
+      "C. ... des coins d’arrêt."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Les dents de requin indiquent l'endroit où, Si nécessaire, vous devez vous arrêter.",
+    "image": "/examen-blanc/examen-2/q20.jpg"
+  },
+  {
+    "id": 21,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Tu as garé ta voiture dans une rue et tu passes la nuit chez tes grands-parents.Le lendemain matin, tu veux repartir, mais la rue est devenue une rue scolaire.Peux-tu encore partir ?",
+    "choix": [
+      "A. Oui, mais au pas.",
+      "B. Non."
+    ],
+    "reponse": "A",
+    "explication": "Pour réduire l’affluence au début et à la fin de la journée scolaire, une rue proche d’une école peut être fermée deux fois par jour à la circulation des véhicules motorisés. Dans ce cas, elle devient une rue scolaire.La fermeture se fait à l’aide d’un signal routier C3 (accès interdit) complété par un panneau portant la mention RUE SCOLAIRE.Qui peut entrer dans une rue scolaire ?– Les piétons, cyclistes et speed pedelecs.– Les habitants de la rue ou les conducteurs ayant un garage dans cette rue (avec permis d’accès).– Les véhicules prioritaires.– Les véhicules disposant d’une autorisation spéciale.",
+    "image": "/examen-blanc/examen-2/q21.jpg"
+  },
+  {
+    "id": 22,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Vous roulez avec votre voiture dans une zone cyclable.Pouvez-vous dépasser une trottinette ?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "Dans une zone cyclable, les véhicules motorisés ne peuvent pas dépasser les cyclistes ni les utilisateurs d’engins de déplacement (comme les trottinettes électriques), même s’il y a suffisamment d’espace.La vitesse maximale est limitée à 30 km/h.",
+    "image": "/examen-blanc/examen-2/q22.jpg"
+  },
+  {
+    "id": 23,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Le conducteur d’une voiture dépasse par la gauche un cycliste qui roule sur la chaussée.Quelle distance latérale doit-il respecter ici ?",
+    "choix": [
+      "A. 1 mètre.",
+      "B. 1,5 mètre.",
+      "C. Une distance suffisante."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 15Cette image montre clairement une situation hors agglomération.- Sur la chaussée :Lorsque vous dépassez un piéton qui marche sur la chaussée, ou un cycliste ou cyclomotoriste qui y circule, vous devez garder au moins 1,5 mètre de distance latérale.- Sur la piste cyclable :Si le cycliste ou cyclomotoriste circule sur une piste cyclable, vous devez également respecter cette distance de 1,5 mètre. (Cette distance s’applique aussi lorsque vous croisez un cycliste.)En agglomération, la distance latérale est de 1 mètre.",
+    "image": "/examen-blanc/examen-2/q23.jpg"
+  },
+  {
+    "id": 24,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Faut-il appliquer la règle des deux secondes de distance de sécurité sur une chaussée enneigée ou glissante ?",
+    "choix": [
+      "A. Elle peut être réduite, car vous roulez plus lentement.",
+      "B. Elle doit être doublée."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 12Par temps de neige, il faut garder au minimum 4 secondes de distance avec le véhicule qui vous précède, au lieu des 2 secondes habituelles. En effet, la distance de freinage est beaucoup plus longue sur une route enneigée ou glissante. Pour appliquer cette règle des 4 secondes, choisissez un point fixe, commencez à compter quand le véhicule devant vous le dépasse, et assurez-vous d’y arriver seulement après 4 secondes.",
+    "image": "/examen-blanc/examen-2/q24.jpg"
+  },
+  {
+    "id": 25,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Un test de l’haleine ou une analyse de l’haleine peuvent-ils être aussi imposés aux cavaliers sur la voie publique ?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "LEÇON 28 – ‘Alcool et drogues’.Les cavaliers sur la voie publique sont des conducteurs.",
+    "image": "/examen-blanc/examen-2/q25.jpg"
+  },
+  {
+    "id": 26,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Ce signal de danger indique une réduction du nombre de bandes de circulation.",
+    "choix": [
+      "A. Vrai.",
+      "B. Faux."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 14 – ‘Le croisement des véhicules’.Signification: rétrécissement de la chaussée.Signal de danger.",
+    "image": "/examen-blanc/examen-2/q26.jpg"
+  },
+  {
+    "id": 27,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Quelle distance latérale la voiture doit-elle respecter en dépassant le cycliste ?",
+    "choix": [
+      "A. Une distance suffisante.",
+      "B. 1 mètre.",
+      "C. 1,5 mètre."
+    ],
+    "reponse": "C",
+    "explication": "LEÇON 15Lorsque tu dépasses un piéton qui s’engage sur la chaussée, ou un cycliste ou cyclomotoriste qui roule sur la chaussée, tu dois respecter au moins 1,5 mètre de distance latérale hors agglomération.La distance laissée par cette voiture est donc insuffisante.",
+    "image": "/examen-blanc/examen-2/q27.jpg"
+  },
+  {
+    "id": 28,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Sous ce bouchon bleu il y a le réservoir pour …",
+    "choix": [
+      "A. … l’huile.",
+      "B. … le liquide de frein.",
+      "C. … le liquide de refroidissement."
+    ],
+    "reponse": "C",
+    "explication": "LEÇON 31 – ‘Technique’.Sous ce bouchon bleu il y a le réservoir pour le liquide de refroidissement.",
+    "image": "/examen-blanc/examen-2/q28.jpg"
+  },
+  {
+    "id": 29,
+    "type": "numerique",
+    "gravite": "normale",
+    "question": "Introduisez un nombre.Ce signal de danger est placé à (...) mètres en deçà du passage pour piétons en Flandre.",
+    "choix": [],
+    "reponse": "150",
+    "explication": "LEÇON 7 – ‘Les piétons’.Le signal routier rouge est un signal de danger et se trouve à environ 150 mètres en deçà du passage pour piétons sauf mention contraire sur un signal bleu.",
+    "image": "/examen-blanc/examen-2/q29.jpg"
+  },
+  {
+    "id": 30,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Qu'indique cette combinaison de signes ?",
+    "choix": [
+      "A. Zone où la priorité de la droite s'applique partout.",
+      "B. Abords d'école."
+    ],
+    "reponse": "B",
+    "explication": "Le terme \"Abords d'école\" désigne une zone constituée d'une ou de plusieurs voies publiques, ou parties de voie publique, incluant un accès à une école et dont le début et la fin sont délimités par des signaux F4a et F4b. Le signal A23 est associé au signal F4a.",
+    "image": "/examen-blanc/examen-2/q30.jpg"
+  },
+  {
+    "id": 31,
+    "type": "oui_non",
+    "gravite": "grave",
+    "question": "Au-delà de ces signaux routiers, une motocyclette peut-elle dépasser une voiture par la gauche ?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 15+16 – ‘Le dépassement’.Le signal d’interdiction interdit aux conducteurs de dépasser par la gauche:. un véhicule attelé.. ou un véhicule à plus de deux roues.",
+    "image": "/examen-blanc/examen-2/q31.jpg"
+  },
+  {
+    "id": 32,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Vous ne pouvez évidemment pas franchir ces signaux routiiers en voiture.Mais une voiture peut-elle sortir de cette rue ?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "LEÇON 23 – ‘Sens interdits’.Accès interdit, dans les deux sens, à tout conducteur.Hors vélos et vélos électriques = pedelecsSignal d’interdiction.",
+    "image": "/examen-blanc/examen-2/q32.jpg"
+  },
+  {
+    "id": 33,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Vous êtes impliqué dans un accident.La police peut-elle vous demander de passer un test salivaire ?",
+    "choix": [
+      "A. Uniquement en cas de fort soupçon de consommation de drogues.",
+      "B. Oui, en cas d’accident, toujours."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 28En principe, un test salivaire ne peut être effectué que si la police soupçonne une consommation de drogues.MAIS ATTENTION : en cas d’accident, la police peut toujours imposer un test salivaire.Si le résultat dépasse la valeur autorisée :- le permis de conduire doit être immédiatement remis pour 12 heures ;- un retrait immédiat du permis est également possible ;- après les 12 heures, un nouveau test salivaire est effectué.Les contrevenants risquent en outre de lourdes amendes et un retrait du droit de conduire pouvant aller jusqu’à 5 ans.",
+    "image": "/examen-blanc/examen-2/q33.jpg"
+  },
+  {
+    "id": 34,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "À droite de la chaussée se trouve une bande bus.Dans les derniers mètres avant de tourner à droite …",
+    "choix": [
+      "A. Vous devez vous placer sur la bande bus.",
+      "B. Vous pouvez vous placer sur la bande bus.",
+      "C. Vous ne pouvez pas vous placer sur la bande bus."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 22Avec une voiture, il est interdit sur une bande bus :- de circuler,- de s’arrêter,- de stationner.Exception :Vous pouvez emprunter la bande bus sur les derniers mètres avant un carrefour afin de vous placer pour tourner à gauche ou à droite.Vous pouvez également traverser une bande bus :- à un carrefour,- pour accéder à une propriété (garage, commerce, station-service, habitation …).",
+    "image": "/examen-blanc/examen-2/q34.jpg"
+  },
+  {
+    "id": 35,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Vous avez dépassé ce signal routier jaune.Que savez-vous ?",
+    "choix": [
+      "A : Vous avez la priorité au prochain carrefour.",
+      "B : Au prochain carrefour, vous devez céder la priorité à tous les usagers.",
+      "C : Au prochain carrefour, vous devez céder la priorité aux conducteurs venant de droite."
+    ],
+    "reponse": "A",
+    "explication": "Explication :Signal de priorité B9.Signification : voie prioritaire.Vous avez la priorité aux carrefours suivants jusqu’au signal routier indiquant la fin de la voie prioritaire.",
+    "image": "/examen-blanc/examen-2/q35.jpg"
+  },
+  {
+    "id": 36,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Que pouvez-vous faire sur la chaussée à hauteur de ce panneau ?",
+    "choix": [
+      "A. Vous pouvez vous arrêter.",
+      "B. Vous pouvez vous arrêter et stationner.",
+      "C. Vous ne pouvez ni vous arrêter ni stationner."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 22 – ‘Train – tram -autobus’.Ce panneau indique un arrêt de bus.Le stationnement est interdit jusqu’à 15 mètres avant et 15 mètres après le panneau.",
+    "image": "/examen-blanc/examen-2/q36.jpg"
+  },
+  {
+    "id": 37,
+    "type": "choix_multiple",
+    "gravite": "grave",
+    "question": "Qui peut s’engager en premier dans ce carrefour ?",
+    "choix": [
+      "A. La voiture A.",
+      "B. La voiture B."
+    ],
+    "reponse": "B",
+    "explication": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 21 – ‘Tourner à droite ou à gauche’.Le conducteur qui désire conduire tout droit a la priorité.Le conducteur qui veut tourner à gauche, doit donner la priorité.",
+    "image": "/examen-blanc/examen-2/q37.jpg"
+  },
+  {
+    "id": 38,
+    "type": "numerique",
+    "gravite": "normale",
+    "question": "Introduisez un nombre.Quelle est la vitesse maximale (... km/h) à laquelle cette voiture peut rouler sur cette autoroute ?",
+    "choix": [],
+    "reponse": "120",
+    "explication": "LEÇON 12 – ‘La vitesse’.La vitesse maximale autorisée sur une autoroute: 120 km par heure.",
+    "image": "/examen-blanc/examen-2/q38.jpg"
+  },
+  {
+    "id": 39,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Qu'est-ce qui n'est PAS autorisé ?",
+    "choix": [
+      "A. Pneus radiaux avant et arrière diagonaux.",
+      "B. Pneus diagonaux avant et radiaux arrière."
+    ],
+    "reponse": "A",
+    "explication": "- LES PNEUS RADIAUX sont autorisés à l'avant et à l'arrière.- Les PNEUS DIAGONAUX sont autorisés à l'avant et à l'arrière.- DIAGONAL à l'avant et RADIAL à l'arrière est autorisé.- Le RADIAL à l'avant et le DIAGINAL à l'arrière ne sont PAS autorisés.(parce que: vous ne pouvez placer des pneus radiaux à l'avant que s'il y a aussi des pneus radiaux à l'arrière.",
+    "image": "/examen-blanc/examen-2/q39.jpg"
+  },
+  {
+    "id": 40,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Le carburant de ta voiture est du GPL ou de l’essence.Peux-tu passer ce signal routier ?",
+    "choix": [
+      "A. Oui.",
+      "B. Non.",
+      "C. Oui, à condition de passer du GPL à l’essence."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 10Ce signal routier n’a rien à voir avec le carburant utilisé par le véhicule.Il concerne la cargaison que tu transportes.Signal d’interdiction C24b : accès interdit aux conducteurs de véhicules transportant des matières inflammables ou explosives.",
+    "image": "/examen-blanc/examen-2/q40.jpg"
+  },
+  {
+    "id": 41,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Cette voiture s’est arrêtée parce que le feu est rouge.Mais est-elle arrêtée au bon endroit ?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "LEÇON 18À certains carrefours, une zone avancée pour les cyclistes et les cyclomoteurs à deux roues est aménagée par des marquages au sol. Les voitures doivent s’arrêter devant la première ligne d’arrêt lorsque le feu est orange ou rouge. Les cyclistes et les cyclomoteurs à deux roues s’arrêtent devant la deuxième ligne d’arrêt, la plus proche du carrefour.",
+    "image": "/examen-blanc/examen-2/q41.jpg"
+  },
+  {
+    "id": 42,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Ce signal routier concerne ...",
+    "choix": [
+      "A. ... la masse en charge.",
+      "B. ... la masse maximale autorisée."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.La Masse en Charge M.E.C.",
+    "image": "/examen-blanc/examen-2/q42.jpg"
+  },
+  {
+    "id": 43,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Que signifient ces signaux routiers ?",
+    "choix": [
+      "A. Début d’une agglomération.",
+      "B. Début d’une zone touristique.",
+      "C. Début d’un centre-ville."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 5 – ‘La route pour automobiles’.Signal d’indication.",
+    "image": "/examen-blanc/examen-2/q43.jpg"
+  },
+  {
+    "id": 44,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "À partir de quel taux d’alcool dans l’air expiré êtes-vous en infraction ?",
+    "choix": [
+      "A. À partir de 0,22 mg/l.",
+      "B. À partir de 0,25 mg/l.",
+      "C. À partir de 0,35 mg/l."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 28- Si vous avez moins de 0,22 mg/l, vous pouvez continuer à circuler.- Si le résultat est de 0,22 mg/l ou plus, mais inférieur à 0,35 mg/l, vous devez remettre votre permis pendant 12 heures.C’est une infraction et vous recevrez une amende.- Si vous avez 0,35 mg/l ou plus, vous devez remettre votre permis pendant 15 jours.Une retrait immédiat du permis est également possible, et vous recevrez une amende.Après ces 6 heures, une nouvelle épreuve respiratoire sera effectuée.",
+    "image": "/examen-blanc/examen-2/q44.jpg"
+  },
+  {
+    "id": 45,
+    "type": "oui_non",
+    "gravite": "grave",
+    "question": "Vous avez le permis de conduire provisoire B.En voiture, pouvez-vous dépasser par la gauche un cheval attelé ?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 15+16 – ‘Le dépassement’.Le signal d’interdiction interdit aux conducteurs de dépasser par la gauche:. un véhicule attelé.. ou un véhicule à plus de deux roues.",
+    "image": "/examen-blanc/examen-2/q45.jpg"
+  },
+  {
+    "id": 46,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Que pouvez-vous faire sur un dispositf surélevé ?",
+    "choix": [
+      "A. Ne dépasser aucun conducteur.",
+      "B. Dépasser un cycliste.",
+      "C. Dépasser un cycliste et un cyclomoteur de classe A."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 12Sur un dispositf surélevé, il est interdit de dépasser par la gauche un attelage, un véhicule à deux roues motorisé ou un véhicule à plus de deux roues. Il est permis de dépasser un cycliste.",
+    "image": "/examen-blanc/examen-2/q46.jpg"
+  },
+  {
+    "id": 47,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Comment devez-vous freiner avec l'ABS?",
+    "choix": [
+      "A. En pompant sur la pédale de frein.",
+      "B. En appuyant doucement sur la pédale de frein.",
+      "C. En appuyant fortement sur la pédale de frein."
+    ],
+    "reponse": "C",
+    "explication": "LEÇON 31 – ‘Technique’.En appuyant fortement sur la pédale de frein.",
+    "image": "/examen-blanc/examen-2/q47.jpg"
+  },
+  {
+    "id": 48,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Un enfant mesurant moins de 1,35 mètre peut-il être assis à l’avant de la voiture dans un siège de sécurité adapté pour enfant, comme ici ?",
+    "choix": [
+      "A. Oui.",
+      "B. Non."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 10Les enfants de moins de 18 ans et mesurant moins de 1,35 m doivent être transportés dans un siège de sécurité adapté ou un système de retenue pour enfants conforme aux normes légales.Un enfant plus grand que 1,35 m peut encore être transporté dans un siège pour enfant.Les enfants de moins de 18 ans ne peuvent pas être placés à l’avant dans un siège orienté vers l’arrière, sauf s’il n’y a pas d’airbag avant ou si celui-ci peut être désactivé.",
+    "image": "/examen-blanc/examen-2/q48.jpg"
+  },
+  {
+    "id": 49,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Dans quel ordre ces voitures peuvent-elles s’engager dans ce carrefour ?",
+    "choix": [
+      "A. A - B - C.",
+      "B. C - B - A.",
+      "C. B - A - C."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 20 – ‘La priorité de droite’.",
+    "image": "/examen-blanc/examen-2/q49.jpg"
+  },
+  {
+    "id": 50,
+    "type": "oui_non",
+    "gravite": "grave",
+    "question": "Un passage à niveau sans feu blanc et sans barrières.Une voiture peut-elle y dépasser une motocyclette ?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 15+16 – ‘Le dépassement’.C’est interdit de dépasser par la gauche : un véhicule attelé, un véhicule à plus de deux roues ou un véhicule à moteur à deux roues, sauf s’il y a des barrières ou si le feu blanc clignote.",
+    "image": "/examen-blanc/examen-2/q50.jpg"
+  }
+]

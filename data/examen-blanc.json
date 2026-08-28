@@ -1,0 +1,617 @@
+[
+  {
+    "id": 1,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Lorsque vous roulez derrière ce bus, vous savez ...",
+    "choix": [
+      "A. ... que des enfants peuvent aussi se trouver dans ce bus.",
+      "B. ... qu’il s’agit d’un bus scolaire."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 7 – ‘Les piétons’.Les véhicules de transport scolaire sont reconnaissables à un panneau jaune (au moins 0,40 m), bien visible à l’avant et à l’arrière du véhicule. Ce panneau doit être enlevé ou recouvert lorsque le véhicule n’est pas utilisé pour le transport scolaire.Soyez particulièrement prudent et réduisez votre vitesse.Arrêtez-vous si nécessaire lorsque vous voyez un véhicule de transport scolaire qui allume ses indicateurs de direction, ce qui signifie que des enfants vont monter ou descendre. Cela vaut aussi bien pour les véhicules à l’arrêt que pour ceux qui s’arrêtent sur la chaussée.",
+    "image": "/examen-blanc/q01.jpg"
+  },
+  {
+    "id": 2,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "La voiture bleue peut-elle dépasser la brune par la gauche ?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "",
+    "image": "/examen-blanc/q02.jpg"
+  },
+  {
+    "id": 3,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Comment réagissez-vous lorsque vous voyez sur la rue un cheval qui montre des signes de frayeur?",
+    "choix": [
+      "A. Continuer.",
+      "B. Ralentir.",
+      "C. Arrêter."
+    ],
+    "reponse": "C",
+    "explication": "",
+    "image": "/examen-blanc/q03.jpg"
+  },
+  {
+    "id": 4,
+    "type": "choix_multiple",
+    "gravite": "grave",
+    "question": "Vous devez vous arrêter, parce que vous conduisiez dans une agglomération en Flandre 77 km par heure.Quelles sont les conséquences?",
+    "choix": [
+      "A. Vous devez payer une amende à la police.",
+      "B. Votre permis de conduire peut être retiré sur-le-champ.",
+      "C. Vous devez apparaître dans les 14 jours devant le juge."
+    ],
+    "reponse": "B",
+    "explication": "",
+    "image": "/examen-blanc/q04.jpg"
+  },
+  {
+    "id": 5,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Ce signal signifie que vous pouvez choisir librement de stationner sur l’accotement ou sur la chaussée.",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "",
+    "image": "/examen-blanc/q05.jpg"
+  },
+  {
+    "id": 6,
+    "type": "oui_non",
+    "gravite": "grave",
+    "question": "Votre amie vit dans une zone piétonne.Pouvez-vous rendre jusque chez elle avec votre voiture?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "",
+    "image": "/examen-blanc/q06.jpg"
+  },
+  {
+    "id": 7,
+    "type": "numerique",
+    "gravite": "normale",
+    "question": "Entrez un nombre.À quelle vitesse maximale une voiture peut-elle rouler sur cette route pour automobiles ?",
+    "choix": [],
+    "reponse": "120",
+    "explication": "",
+    "image": "/examen-blanc/q07.jpg"
+  },
+  {
+    "id": 8,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Qui peut s'engager en premier dans ce carrefour ?",
+    "choix": [
+      "A. Voiture A.",
+      "B. Voiture B.",
+      "C. Voiture C."
+    ],
+    "reponse": "C",
+    "explication": "",
+    "image": "/examen-blanc/q08.jpg"
+  },
+  {
+    "id": 9,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Le cycliste et le camion veulent tourner à droite à ce carrefour.Comment réagit le cycliste ?",
+    "choix": [
+      "A. Il se dépêche pour tourner le premier.",
+      "B. Il tourne en même temps que le camion.",
+      "C. Il ralentit et laisse le camion tourner en premier."
+    ],
+    "reponse": "C",
+    "explication": "",
+    "image": "/examen-blanc/q09.jpg"
+  },
+  {
+    "id": 10,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Le code de la route s’applique-t-il aussi aux véhicules sur rails qui empruntent la voie publique ?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "LEÇON 1 – ‘La voie publique’.Les conducteurs de tram ne doivent pas non plus tenir compte du code de la route, sauf les injonctions des agents qualifiés et les feux lumineux de circulation.",
+    "image": "/examen-blanc/q10.jpg"
+  },
+  {
+    "id": 11,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "La voiture peut-elle stationner à cet endroit?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "LEÇON 26 – ‘Arrêt et stationnement’.Une ligne jaune discontinue : vous ne pouvez pas stationner. Mais vous pouvez vous arrêter.",
+    "image": "/examen-blanc/q11.jpg"
+  },
+  {
+    "id": 12,
+    "type": "choix_multiple",
+    "gravite": "grave",
+    "question": "Les feux de signalisation sont en panne.Qui peut s'engager dans le carrefour ?",
+    "choix": [
+      "A. La motocyclette.",
+      "B. La voiture."
+    ],
+    "reponse": "A",
+    "explication": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 17La voiture brune se dirige vers le ventre de l’agent et doit s’arrêter.Lorsqu'un agent tend un bras ou les deux bras horizontalement : Les usagers qui se dirigent vers son ventre ou son dos doivent s'arrêter. Ceux qui approchent de son côté (ou de la main tendue) peuvent s'engager dans le carrefour pour continuer tout droit ou tourner à gauche ou à droite. Un agent qui tend les deux bras horizontalement donne la même injonction que s'il tend un seul bras horizontalement.",
+    "image": "/examen-blanc/q12.jpg"
+  },
+  {
+    "id": 13,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "À quelle vitesse maximale cette voiture peut-elle rouler après ce signal routier dans la Région de Bruxelles-Capitale ?",
+    "choix": [
+      "A. 30 km/h.",
+      "B. 50 km/h.",
+      "C. 70 km/h."
+    ],
+    "reponse": "C",
+    "explication": "",
+    "image": "/examen-blanc/q13.jpg"
+  },
+  {
+    "id": 14,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Un enfant de plus de 10 ans qui mesure 1m45.",
+    "choix": [
+      "A. Doit s'assoir dans un siège-enfant.",
+      "B. Peut s'assoir dans un siège-enfant.",
+      "C. Ne peut plus s'assoir dans un siège-enfant."
+    ],
+    "reponse": "B",
+    "explication": "",
+    "image": "/examen-blanc/q14.jpg"
+  },
+  {
+    "id": 15,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Le feu rouge est déjà allumé, mais la barrière est toujours ouverte.Êtes-vous autorisé à conduire plus loin ?",
+    "choix": [
+      "A. Oui, mais soigneusement.",
+      "B. Non, vous devez vous arrêter."
+    ],
+    "reponse": "B",
+    "explication": "",
+    "image": "/examen-blanc/q15.jpg"
+  },
+  {
+    "id": 16,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Cette chaussée est divisée en deux bandes de circulation.Quelle est la vitesse maximale autorisée en Région de Bruxelles-Capitale après le panneau jaune ?",
+    "choix": [
+      "A. 60 km/h.",
+      "B. 70 km/h.",
+      "C. 90 km/h."
+    ],
+    "reponse": "B",
+    "explication": "",
+    "image": "/examen-blanc/q16.jpg"
+  },
+  {
+    "id": 17,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Le conducteur de ce camion n’empiète qu’un petit peu sur la bande cyclable suggérée.",
+    "choix": [
+      "A. C’est incorrect, car il doit rouler à droite sur la chaussée.",
+      "B. C’est correct, car il laisse assez d’espace pour les cyclistes."
+    ],
+    "reponse": "A",
+    "explication": "",
+    "image": "/examen-blanc/q17.jpg"
+  },
+  {
+    "id": 18,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "À cet endroit, la voiture bleue peut...",
+    "choix": [
+      "A. Seulement s’arrêter.",
+      "B. S’arrêter et stationner.",
+      "C. Ni stationner ni s’arrêter."
+    ],
+    "reponse": "A",
+    "explication": "",
+    "image": "/examen-blanc/q18.jpg"
+  },
+  {
+    "id": 19,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Cette combinaison d'un signal routier et un panneau concerne ...",
+    "choix": [
+      "A. ... la M.M.A.",
+      "B. ... la M.E.C."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.À partir ce signal routier jusqu'à la prochaine intersection, il est interdit pour les véhicules avec une M.M.A. de plus de 3,5 tonnes de circuler plus rapidement que la vitesse reprise sur le signal de limitation.",
+    "image": "/examen-blanc/q19.jpg"
+  },
+  {
+    "id": 20,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Un carrefour sans signalisation.Le conducteur de la voiture blanche s’arrête un instant au carrefour et veut ensuite continuer tout droit. Mais la voiture grise tourne soudain à gauche.",
+    "choix": [
+      "A. C’est permis, car la voiture grise vient de droite.",
+      "B. C’est permis, car la voiture blanche s’est arrêtée.",
+      "C. Ce n’est pas permis, car la voiture blanche continue tout droit."
+    ],
+    "reponse": "C",
+    "explication": "LEÇON 21Le trafic qui continue tout droit a la priorité sur le trafic qui tourne.Même si le conducteur de la voiture blanche s’arrête un instant, il garde sa priorité.",
+    "image": "/examen-blanc/q20.jpg"
+  },
+  {
+    "id": 21,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "La voiture bleue peut-elle dépasser le camion-citerne par la gauche ?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "Explication :Les deux bandes de circulation sont séparées par une ligne blanche continue et une ligne blanche discontinue. Le conducteur doit tenir compte de la ligne qui se trouve de son côté. Du côté de la voiture bleue, la ligne est discontinue. Aucun signal routier n’interdit le dépassement. La voiture bleue peut donc dépasser le camion-citerne par la gauche, si elle peut le faire en toute sécurité.",
+    "image": "/examen-blanc/q21.jpg"
+  },
+  {
+    "id": 22,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Nous sommes le 12 février.Que peut faire la voiture à cet endroit ?",
+    "choix": [
+      "A. S’arrêter et stationner.",
+      "B. S’arrêter uniquement.",
+      "C. Ne pas s’arrêter et ne pas stationner."
+    ],
+    "reponse": "A",
+    "explication": "",
+    "image": "/examen-blanc/q22.jpg"
+  },
+  {
+    "id": 23,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Le résultat d'un test de l'haleine est de 0,5 ‰.Quelle est la conséquence ?",
+    "choix": [
+      "A : Vous pouvez poursuivre votre route.",
+      "B : Vous recevez une interdiction immédiate de conduire pendant 3 heures.",
+      "C : Vous recevez une interdiction immédiate de conduire pendant 12 heures."
+    ],
+    "reponse": "C",
+    "explication": "Explication :Un résultat de 0,5 ‰ au test de l'haleine entraîne une interdiction immédiate de conduire de 12 heures.Un résultat de 0,8 ‰ entraîne une interdiction immédiate de conduire de 15 jours.",
+    "image": "/examen-blanc/q23.jpg"
+  },
+  {
+    "id": 24,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Vous avez le permis de conduire provisoire B.Pouvez-vous dépasser un camion au-delà de ces signaux routiers ?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "",
+    "image": "/examen-blanc/q24.jpg"
+  },
+  {
+    "id": 25,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "L’air conditionné dans la voiture est allumé.En conséquence ...",
+    "choix": [
+      "A. ... la consommation de carburant augmente.",
+      "B. ... la consommation de carburant diminue.",
+      "C. ... il n’y a pas d’effet sur la consommation de carburant."
+    ],
+    "reponse": "A",
+    "explication": "",
+    "image": "/examen-blanc/q25.jpg"
+  },
+  {
+    "id": 26,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Les quatre chiffres qui suivent la mention DOT sur le flanc d’un pneu indiquent la date de fabrication du pneu.",
+    "choix": [
+      "A. Les deux premiers chiffres indiquent la semaine et les deux derniers l’année.",
+      "B. Les deux premiers chiffres indiquent l’année et les deux derniers la semaine.",
+      "C. Les quatre chiffres n’ont rien à voir avec la date de fabrication."
+    ],
+    "reponse": "A",
+    "explication": "",
+    "image": "/examen-blanc/q26.jpg"
+  },
+  {
+    "id": 27,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "À quelle vitesse maximale la voiture blanche peut-elle circuler sur cette route pour automobiles dans la Région wallonne ?",
+    "choix": [
+      "A. 50 km/h.",
+      "B. 70 km/h.",
+      "C. 90 km/h."
+    ],
+    "reponse": "C",
+    "explication": "",
+    "image": "/examen-blanc/q27.jpg"
+  },
+  {
+    "id": 28,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Que ne peut pas faire le conducteur de la voiture bleue ?",
+    "choix": [
+      "A. Continuer tout droit.",
+      "B. Tourner à droite.",
+      "C. Tourner à gauche."
+    ],
+    "reponse": "B",
+    "explication": "",
+    "image": "/examen-blanc/q28.jpg"
+  },
+  {
+    "id": 29,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Le véhicule blanc peut-il stationner à cet endroit?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "",
+    "image": "/examen-blanc/q29.jpg"
+  },
+  {
+    "id": 30,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Qu'est-ce qui n'est PAS autorisé ?",
+    "choix": [
+      "A. Pneus radiaux avant et arrière diagonaux.",
+      "B. Pneus diagonaux avant et radiaux arrière."
+    ],
+    "reponse": "A",
+    "explication": "",
+    "image": "/examen-blanc/q30.jpg"
+  },
+  {
+    "id": 31,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Pouvez-vous dépasser par la gauche la moto à ce carrefour ?",
+    "choix": [
+      "A. Oui.",
+      "B. Oui, si vous laissez une distance latérale suffisante.",
+      "C. Non."
+    ],
+    "reponse": "B",
+    "explication": "",
+    "image": "/examen-blanc/q31.jpg"
+  },
+  {
+    "id": 32,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Que signifie le panneau additionnel avec les flèches dirigées vers le haut placé sous ce signal de danger ?",
+    "choix": [
+      "A: 1 500 mètres plus loin…",
+      "B: Sur une distance de 1 500 mètres…"
+    ],
+    "reponse": "B",
+    "explication": "",
+    "image": "/examen-blanc/q32.jpg"
+  },
+  {
+    "id": 33,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Sur ces marques routières, vous ne pouvez ni circuler, ni vous arrêter ni stationner.Comment appelle-t-on ces marquages routiers?",
+    "choix": [
+      "A. Zone d’évitement.",
+      "B. Marques en damier.",
+      "C. Zone d’interdiction."
+    ],
+    "reponse": "A",
+    "explication": "",
+    "image": "/examen-blanc/q33.jpg"
+  },
+  {
+    "id": 34,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Quelle est votre réaction lorsque vous entrez soudainement dans un banc de brouillard ?",
+    "choix": [
+      "A. Vous freinez brusquement.",
+      "B. Vous freinez progressivement."
+    ],
+    "reponse": "B",
+    "explication": "",
+    "image": "/examen-blanc/q34.jpg"
+  },
+  {
+    "id": 35,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Cette limite de vitesse s’applique...",
+    "choix": [
+      "A. ... jusqu’au carrefour suivant.",
+      "B. ... jusqu’à ce que vous voyez le panneau “Fin de Zone”."
+    ],
+    "reponse": "A",
+    "explication": "",
+    "image": "/examen-blanc/q35.jpg"
+  },
+  {
+    "id": 36,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Il y a une ligne blanche sur le bord de la chaussée.À cet endroit, la voiture peut…",
+    "choix": [
+      "A. ... seulement s’arrêter.",
+      "B. ... s’arrêter et stationner.",
+      "C. ... ni s’arrêter, ni stationner."
+    ],
+    "reponse": "B",
+    "explication": "",
+    "image": "/examen-blanc/q36.jpg"
+  },
+  {
+    "id": 37,
+    "type": "choix_multiple",
+    "gravite": "grave",
+    "question": "Lequel de ces signaux indique que les conducteurs qui transportent certaines marchandises inflammatoires, ne peuvent pas franchir le signal ?",
+    "choix": [
+      "A. Signal 1.",
+      "B. Signal 2.",
+      "C. Signal 3."
+    ],
+    "reponse": "B",
+    "explication": "",
+    "image": "/examen-blanc/q37.jpg"
+  },
+  {
+    "id": 38,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Lors d’un test de l’haleine, la lettre S apparaît sur l’écran.",
+    "choix": [
+      "A. Vous devez faire une analyse de l’haleine.",
+      "B. Vous recevez une interdiction de conduire provisoire de 3 heures.",
+      "C. Vous pouvez continuer votre route."
+    ],
+    "reponse": "C",
+    "explication": "",
+    "image": "/examen-blanc/q38.jpg"
+  },
+  {
+    "id": 39,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Le conducteur de la voiture brune peut-il dépasser la bleue par la gauche ?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "",
+    "image": "/examen-blanc/q39.jpg"
+  },
+  {
+    "id": 40,
+    "type": "oui_non",
+    "gravite": "grave",
+    "question": "L’ambulance dans laquelle se trouve votre père, roule à 155 km/h.Pouvez-vous la suivre ?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "",
+    "image": "/examen-blanc/q40.jpg"
+  },
+  {
+    "id": 41,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Vous devez présenter votre voiture au contrôle technique pour la première fois lorsqu’elle a (…) ans.",
+    "choix": [
+      "A. 2 ans.",
+      "B. 3 ans.",
+      "C. 4 ans."
+    ],
+    "reponse": "C",
+    "explication": "",
+    "image": "/examen-blanc/q41.jpg"
+  },
+  {
+    "id": 42,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Pouvez-vous dépasser par la gauche avec une voiture un cycliste dans une rue cyclable ?",
+    "choix": [
+      "A. Oui.",
+      "B. Oui, si vous pouvez obtenir 1 mètre écart en toute sécurité.",
+      "C. NON."
+    ],
+    "reponse": "C",
+    "explication": "",
+    "image": "/examen-blanc/q42.jpg"
+  },
+  {
+    "id": 43,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Une ligne jaune discontinue au bord de la chaussée.Cette voiture peut s’arrêter pour faire descendre quelqu’un.Mais le conducteur peut-il aussi y stationner ?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "",
+    "image": "/examen-blanc/q43.jpg"
+  },
+  {
+    "id": 44,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Vous voulez tourner à droite à ce carrefour.Vous ralentissez et, si nécessaire, vous vous arrêtez pour céder le passage à …",
+    "choix": [
+      "A. Tous les usagers.",
+      "B. Tous les conducteurs."
+    ],
+    "reponse": "B",
+    "explication": "",
+    "image": "/examen-blanc/q44.jpg"
+  },
+  {
+    "id": 45,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Peut-on dépasser un cycliste par la gauche sur un dispositif surélevé situé dans une agglomération ?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "",
+    "image": "/examen-blanc/q45.jpg"
+  },
+  {
+    "id": 46,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Parfois, un agent se tient à un carrefour avec un bras tendu horizontalement. Parfois, il tend ses deux bras horizontalement. Donne-t-il exactement le même ordre ?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "",
+    "image": "/examen-blanc/q46.jpg"
+  },
+  {
+    "id": 47,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "En cas d’accident, comment un conducteur doit-il avertir les autres usagers du danger ?",
+    "choix": [
+      "A. Il porte sa veste rétro-réfléchissante.",
+      "B. Il place le triangle de danger.",
+      "C. Il appelle les secours."
+    ],
+    "reponse": "B",
+    "explication": "LEÇON 29 - 'Accident'Toujours placer un triangle de danger.",
+    "image": "/examen-blanc/q47.jpg"
+  },
+  {
+    "id": 48,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Dans une zone 30, les conducteurs doivent toujours donner la priorité aux piétons, même en l'absence d’un passage pour piétons.",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "",
+    "image": "/examen-blanc/q48.jpg"
+  },
+  {
+    "id": 49,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Qui peut s'engager en premier dans ce carrefour ?",
+    "choix": [
+      "A. Voiture A.",
+      "B. Voiture B."
+    ],
+    "reponse": "A",
+    "explication": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Un signal d'arrêt se trouve à côté de la voiture B.",
+    "image": "/examen-blanc/q49.jpg"
+  }
+]
