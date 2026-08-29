@@ -22,7 +22,10 @@
     "backToCircuits": "Terug naar de circuits",
     "packPendingTitle": "Jouw inhoud komt zeer binnenkort",
     "packPendingBody": "Je betaling is bevestigd en je toegang is gereserveerd. We werken de inhoud nog af — je bent een van de eersten die ze ontvangt zodra ze klaar is.",
-    "backToPacks": "Terug naar de packs"
+    "backToPacks": "Terug naar de packs",
+    "bundleTitle": "Alle circuits ontgrendeld!",
+    "bundleBody": "Onbeperkte toegang tot alle circuits van {center}, vanaf nu.",
+    "viewCircuits": "Bekijk mijn circuits"
   },
   "testimonials": {
     "title": "Zij slaagden met PermisHub",
@@ -95,7 +98,7 @@
     "circuitBullet1": "De echte route van jouw examencentrum",
     "circuitBullet2": "Rechtstreeks trainbaar via Google Maps",
     "circuitBullet3": "Aandachtspunten met locatie",
-    "circuitPriceLabel": "vanaf 24,99 €",
+    "circuitPriceLabel": "9,99 € — onbeperkte toegang",
     "circuitCta": "Bekijk de circuits",
     "circuitRefund": "terugbetaald als je niet slaagt voor het examen",
     "perceptionEyebrow": "Binnenkort",
@@ -129,7 +132,22 @@
     "circuitLabel": "Circuit {n}",
     "viewItinerary": "Bekijk de route",
     "circuitComingSoon": "Binnenkort beschikbaar",
-    "backToCenters": "← Alle centra"
+    "backToCenters": "← Alle centra",
+    "openInGoogleMaps": "Openen in Google Maps"
+  },
+  "circuitOffer": {
+    "eyebrow": "Onbeperkte toegang",
+    "title": "Ontgrendel alle circuits van {center}",
+    "subtitle": "Eenmalige betaling. Geen abonnement. Toegang voor altijd.",
+    "priceNote": "in plaats van 24,99 € per circuit",
+    "bullet1": "Alle circuits van {center}, huidige en toekomstige",
+    "bullet2": "Echte Google Maps-routes, meteen trainbaar met de auto",
+    "bullet3": "Onmiddellijke toegang na betaling",
+    "bullet4": "Terugbetaald als je niet slaagt voor het examen",
+    "cta": "Nu ontgrendelen",
+    "trustLine": "🔒 Veilige betaling · Directe toegang",
+    "close": "Sluiten",
+    "errorFallback": "De betaling is mislukt. Probeer opnieuw."
   },
   "offers": {
     "sectionTitle": "Ga een versnelling hoger",

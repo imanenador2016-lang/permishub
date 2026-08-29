@@ -6,6 +6,7 @@ import { formatPrice } from '@/domain/centers'
 import { Container } from '@/components/ui/Container'
 import { Navbar } from '@/components/site/Navbar'
 import { Footer } from '@/components/site/Footer'
+import { UnlockCenterEffect } from '@/components/circuits/UnlockCenterEffect'
 import { Link } from '@/i18n/navigation'
 import type { AppLocale } from '@/i18n/request'
 
@@ -45,7 +46,24 @@ export default async function CircuitSuccessPage({
       <Navbar />
       <main className="px-4 py-16 sm:px-6">
         <Container className="max-w-xl">
-          {result ? (
+          {result?.kind === 'bundle' ? (
+            <div className="panel p-6 text-center sm:p-8">
+              <UnlockCenterEffect centerSlug={result.centerSlug} />
+              <span className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full border-[3px] border-ink bg-forest text-2xl text-cream">
+                ✓
+              </span>
+              <h1 className="mb-2 font-display text-2xl sm:text-3xl">{t('bundleTitle')}</h1>
+              <p className="mb-6 text-sm text-ink/70">
+                {t('bundleBody', { center: result.centerName })} — {formatPrice(result.amountCents, locale)}
+              </p>
+
+              <Link href={`/circuits/${result.centerSlug}`} className="btn-comic inline-flex px-4 py-2.5 text-sm">
+                {t('viewCircuits')} →
+              </Link>
+
+              <p className="mt-5 text-xs text-ink/50">{t('receiptNote')}</p>
+            </div>
+          ) : result?.kind === 'circuit' ? (
             <div className="panel p-6 text-center sm:p-8">
               <span className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full border-[3px] border-ink bg-forest text-2xl text-cream">
                 ✓
@@ -93,6 +111,22 @@ async function verifyAndResolve(sessionId: string) {
 
   if (session.payment_status !== 'paid') return null
 
+  // Déblocage "tous les circuits d'un centre" (api/checkout/circuits-bundle) —
+  // le cas courant depuis le passage au prix unique à 9,99 €.
+  if (session.metadata?.kind === 'circuits-bundle') {
+    const centerSlug = session.metadata.centerSlug
+    const center = centerSlug ? getCenter(centerSlug) : undefined
+    if (!center) return null
+    return {
+      kind: 'bundle' as const,
+      centerSlug: center.slug,
+      centerName: center.name,
+      amountCents: session.amount_total ?? 0,
+    }
+  }
+
+  // Ancien achat par circuit (api/checkout/circuit) — conservé pour les
+  // sessions Stripe déjà créées avant le passage au prix unique.
   const circuitId = session.metadata?.circuitId
   const circuit = circuitId ? getCircuitById(circuitId) : undefined
   if (!circuit) return null
@@ -105,6 +139,7 @@ async function verifyAndResolve(sessionId: string) {
       : undefined)
 
   return {
+    kind: 'circuit' as const,
     circuitTitle: center ? `${center.name}` : circuit.title.fr,
     amountCents: session.amount_total ?? circuit.priceCents ?? 0,
     mapsUrl,

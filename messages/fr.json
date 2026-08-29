@@ -22,7 +22,10 @@
     "backToCircuits": "Retour aux circuits",
     "packPendingTitle": "Ton contenu arrive très bientôt",
     "packPendingBody": "Ton paiement est confirmé et ton accès est réservé. On finalise ce contenu — tu seras parmi les premiers à le recevoir dès qu'il est prêt.",
-    "backToPacks": "Retour aux packs"
+    "backToPacks": "Retour aux packs",
+    "bundleTitle": "Tous les circuits débloqués !",
+    "bundleBody": "Accès illimité à tous les circuits de {center}, dès maintenant.",
+    "viewCircuits": "Voir mes circuits"
   },
   "testimonials": {
     "title": "Ils ont réussi avec PermisHub",
@@ -95,7 +98,7 @@
     "circuitBullet1": "L'itinéraire réel de ton centre d'examen",
     "circuitBullet2": "Entraînable directement sur Google Maps",
     "circuitBullet3": "Points d'attention géolocalisés",
-    "circuitPriceLabel": "dès 24,99 €",
+    "circuitPriceLabel": "9,99 € — accès illimité",
     "circuitCta": "Voir les circuits",
     "circuitRefund": "remboursé si tu échoues à l'examen",
     "perceptionEyebrow": "Bientôt",
@@ -129,7 +132,22 @@
     "circuitLabel": "Circuit {n}",
     "viewItinerary": "Voir l'itinéraire",
     "circuitComingSoon": "Bientôt disponible",
-    "backToCenters": "← Tous les centres"
+    "backToCenters": "← Tous les centres",
+    "openInGoogleMaps": "Ouvrir sur Google Maps"
+  },
+  "circuitOffer": {
+    "eyebrow": "Accès illimité",
+    "title": "Débloque tous les circuits de {center}",
+    "subtitle": "Paiement unique. Pas d'abonnement. Accès à vie.",
+    "priceNote": "au lieu de 24,99 € le circuit",
+    "bullet1": "Tous les circuits de {center}, actuels et à venir",
+    "bullet2": "Vrais tracés Google Maps, entraînables direct en voiture",
+    "bullet3": "Accès immédiat après paiement",
+    "bullet4": "Remboursé si tu échoues à l'examen",
+    "cta": "Débloquer maintenant",
+    "trustLine": "🔒 Paiement sécurisé · Accès instantané",
+    "close": "Fermer",
+    "errorFallback": "Le paiement a échoué. Réessaie."
   },
   "offers": {
     "sectionTitle": "Passe à la vitesse supérieure",

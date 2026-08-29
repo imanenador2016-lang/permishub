@@ -1,22 +1,20 @@
 import type { ExamCenter, PracticeCircuit } from '@/domain/centers'
 
 /**
- * Catalogue des centres d'examen pris en charge. Chaque centre = un produit
- * vendu séparément à 24,99 €, jamais un abonnement global (voir
- * docs/PRICING.md). Liste volontairement limitée à 2 centres pour le MVP —
+ * Catalogue des centres d'examen pris en charge. Liste volontairement
+ * limitée à 2 centres actifs pour le MVP (les autres sont `comingSoon`) —
  * facile à étendre : il suffit d'ajouter une entrée ici et ses circuits
  * ci-dessous, aucune page ne dépend d'une liste figée.
  */
 
 /**
- * ⚠️ TEMPORAIRE (2026-08-29) : circuits laissés gratuits (pas de paiement
- * Stripe) le temps que le client crée plusieurs vrais parcours par centre
- * et vérifie leur rendu — voir circuits/[centerSlug]/page.tsx et
- * conversation du 2026-08-29. Remettre à `false` avant la mise en ligne
- * définitive du verrou payant (le flux Stripe existant dans
- * lib/circuit-payment.ts n'a pas été supprimé, juste débranché du bouton).
+ * Prix du déblocage "tous les circuits" d'un centre — un seul paiement,
+ * accès illimité à tous les circuits actuels ET à venir de ce centre
+ * (remplace l'ancien prix par circuit à 24,99 €, voir conversation du
+ * 2026-08-30). Jamais d'abonnement — voir api/checkout/circuits-bundle et
+ * CircuitOfferModal.tsx.
  */
-export const CIRCUITS_FREE_FOR_TESTING = true
+export const CIRCUITS_BUNDLE_PRICE_CENTS = 999
 export const EXAM_CENTERS: ExamCenter[] = [
   // lat/lng = adresse réelle du centre d'examen GOCA (Rue du Labeur, 1070 Anderlecht),
   // confirmée via le point de départ du parcours 1 fourni par le client le 2026-08-29

@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { Navbar } from '@/components/site/Navbar'
 import { Footer } from '@/components/site/Footer'
 import { Container } from '@/components/ui/Container'
+import { CircuitUnlockCta } from '@/components/circuits/CircuitUnlockCta'
 import { Link } from '@/i18n/navigation'
 import { EXAM_CENTERS, getCenter, getCircuitsByCenter } from '@/content/centers/registry'
 import { REGION_LABELS } from '@/domain/region'
@@ -34,10 +35,11 @@ const DIFFICULTY_STYLES: Record<string, string> = {
 }
 
 /**
- * Liste des circuits d'un centre (Circuit 1, 2, 3...) — remplace le lien
- * direct vers l'achat Stripe (voir CircuitsCarousel.tsx). Circuits
- * temporairement gratuits, voir CIRCUITS_FREE_FOR_TESTING dans
- * content/centers/registry.ts (conversation du 2026-08-29).
+ * Liste des circuits d'un centre (Circuit 1, 2, 3...). Chaque circuit avec
+ * un tracé prêt ouvre l'offre de déblocage "tous les circuits du centre"
+ * (CircuitOfferModal, 9,99 € — voir CircuitUnlockCta.tsx) au lieu d'aller
+ * directement sur Google Maps ; une fois débloqué, le CTA devient un vrai
+ * lien "Ouvrir sur Google Maps" (voir conversation du 2026-08-30).
  */
 export default async function CenterCircuitsPage({
   params: { locale, centerSlug },
@@ -93,14 +95,7 @@ export default async function CenterCircuitsPage({
                 <p className="flex-1 text-sm text-ink/70">{circuit.description[locale]}</p>
 
                 {circuit.mapsUrl ? (
-                  <a
-                    href={circuit.mapsUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-comic block w-full px-4 py-3 text-center text-sm"
-                  >
-                    {t('viewItinerary')} →
-                  </a>
+                  <CircuitUnlockCta mapsUrl={circuit.mapsUrl} centerSlug={center.slug} centerName={center.name} locale={locale} />
                 ) : (
                   <span className="block w-full cursor-not-allowed border-[3px] border-ink/25 px-4 py-3 text-center text-sm font-bold text-ink/40">
                     {t('circuitComingSoon')}
