@@ -1,6 +1,7 @@
 'use client'
 
 import { useRef, useState } from 'react'
+import Image from 'next/image'
 import { useTranslations, useLocale } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import { getCenters, getFeaturedCircuit } from '@/content/centers/registry'
@@ -10,6 +11,11 @@ import { CircuitIllustrationAnderlecht, CircuitIllustrationSchaerbeek, CircuitIl
 const ILLUSTRATIONS: Record<string, () => React.JSX.Element> = {
   anderlecht: CircuitIllustrationAnderlecht,
   schaerbeek: CircuitIllustrationSchaerbeek,
+}
+
+/** Vraie photo du centre — remplace l'illustration dessinée quand elle est disponible (fournie par le client). */
+const PHOTOS: Record<string, string> = {
+  schaerbeek: '/images/centers/schaerbeek.jpg',
 }
 
 const DIFFICULTY_STYLES: Record<string, string> = {
@@ -64,10 +70,17 @@ export function CircuitsCarousel() {
         {centers.map((center, i) => {
           const circuit = getFeaturedCircuit(center.slug)
           const Illustration = ILLUSTRATIONS[center.slug]
+          const photo = PHOTOS[center.slug]
           return (
             <div key={center.id} className="panel w-[84%] flex-none !p-0 [scroll-snap-align:center] sm:w-[320px]">
-              <div className="h-[150px] border-b-[3px] border-ink sm:border-b-4">
-                {Illustration ? <Illustration /> : <CircuitIllustrationGeneric seed={i} />}
+              <div className="relative h-[150px] border-b-[3px] border-ink sm:border-b-4">
+                {photo ? (
+                  <Image src={photo} alt={center.name} fill className="object-cover" sizes="(min-width: 640px) 320px, 84vw" />
+                ) : Illustration ? (
+                  <Illustration />
+                ) : (
+                  <CircuitIllustrationGeneric seed={i} />
+                )}
               </div>
               <div className="p-4">
                 <p className="font-display text-lg">
