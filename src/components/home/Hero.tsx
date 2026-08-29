@@ -6,14 +6,7 @@ import { useTranslations } from 'next-intl'
 import type { Question } from '@/domain/quiz'
 import { Button } from '@/components/ui/Button'
 import { TestDeNiveau } from '@/components/test-de-niveau/TestDeNiveau'
-import { StatCounter } from './StatCounter'
 import { HeroProof } from './HeroProof'
-
-const AVATAR_INITIALS = [
-  { letter: 'L', bg: '#C1432E' },
-  { letter: 'A', bg: '#2B5E44' },
-  { letter: 'M', bg: '#1F1A14' },
-]
 
 export function Hero({
   questions,
@@ -69,28 +62,6 @@ export function Hero({
             </div>
             <p className="mb-1 mt-2.5 text-xs font-medium text-ink/65">{t('microcopy')}</p>
             <p className="mb-5 text-[11px] italic text-ink/50">{t('delayNote')}</p>
-
-            <div className="flex items-center gap-3">
-              <div className="flex">
-                {AVATAR_INITIALS.map((a, i) => (
-                  <span
-                    key={a.letter}
-                    style={{ background: a.bg, marginLeft: i === 0 ? 0 : -10 }}
-                    className="flex h-8 w-8 items-center justify-center rounded-full border-[3px] border-cream text-[11px] font-extrabold text-cream outline outline-2 outline-ink"
-                  >
-                    {a.letter}
-                  </span>
-                ))}
-              </div>
-              <div className="text-[13px] font-semibold leading-tight">
-                <div className="tracking-widest text-yellow-600" style={{ color: '#C79200' }}>
-                  ★★★★★
-                </div>
-                <div>
-                  <StatCounter to={1284} /> {t('socialProofLabel')}
-                </div>
-              </div>
-            </div>
           </motion.div>
 
           {/* Preuve sociale : vraies photos de candidats, à la place de
