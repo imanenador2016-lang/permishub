@@ -129,12 +129,7 @@
     "circuitLabel": "Circuit {n}",
     "viewItinerary": "Voir l'itinéraire",
     "circuitComingSoon": "Bientôt disponible",
-    "backToCenters": "← Tous les centres",
-    "summaryPlaceholder": "[À compléter : résumé du centre]",
-    "strictnessTitle": "Exigence des examinateurs",
-    "strictness": { "souple": "Souple", "modere": "Modéré", "strict": "Strict" },
-    "pitfallsTitle": "Pièges à connaître",
-    "masteryTitle": "À maîtriser"
+    "backToCenters": "← Tous les centres"
   },
   "offers": {
     "sectionTitle": "Passe à la vitesse supérieure",

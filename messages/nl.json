@@ -129,12 +129,7 @@
     "circuitLabel": "Circuit {n}",
     "viewItinerary": "Bekijk de route",
     "circuitComingSoon": "Binnenkort beschikbaar",
-    "backToCenters": "← Alle centra",
-    "summaryPlaceholder": "[Aan te vullen: samenvatting van het centrum]",
-    "strictnessTitle": "Strengheid van de examinatoren",
-    "strictness": { "souple": "Soepel", "modere": "Matig", "strict": "Streng" },
-    "pitfallsTitle": "Valkuilen om te kennen",
-    "masteryTitle": "Te beheersen"
+    "backToCenters": "← Alle centra"
   },
   "offers": {
     "sectionTitle": "Ga een versnelling hoger",
