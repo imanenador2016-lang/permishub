@@ -22,6 +22,7 @@ export function OfferCard({
   ctaHref,
   refundNote,
   highlight,
+  comingSoon,
 }: {
   eyebrow: string
   title: string
@@ -35,6 +36,8 @@ export function OfferCard({
   refundNote?: string
   /** Met la carte en avant (bordure/ombre plus marquées) — un seul pack par ligne, jamais tous. */
   highlight?: boolean
+  /** Pas encore vendable : bouton désactivé, ni `offer` ni `ctaHref` ne sont utilisés. */
+  comingSoon?: boolean
 }) {
   const locale = useLocale() as 'fr' | 'nl'
   const [message, setMessage] = useState<string | null>(null)
@@ -73,9 +76,13 @@ export function OfferCard({
         ))}
       </ul>
 
-      <p className="mb-2 font-display text-3xl">{price}</p>
+      {!comingSoon && <p className="mb-2 font-display text-3xl">{price}</p>}
 
-      {ctaHref ? (
+      {comingSoon ? (
+        <span className="block w-full cursor-not-allowed border-[3px] border-ink/25 px-4 py-3 text-center text-sm font-bold text-ink/40">
+          {ctaLabel}
+        </span>
+      ) : ctaHref ? (
         <a href={ctaHref} className="btn-comic block w-full px-4 py-3 text-center text-sm">
           {ctaLabel} →
         </a>

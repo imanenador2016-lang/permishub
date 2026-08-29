@@ -38,6 +38,7 @@ export function CircuitsCarousel() {
   const locale = useLocale() as 'fr' | 'nl'
   const trackRef = useRef<HTMLDivElement>(null)
   const centers = getCenters()
+  const availableCount = centers.filter((c) => !c.comingSoon).length
   const cardCount = centers.length + 1 // + carte "ta ville n'est pas là"
   const [activeIndex, setActiveIndex] = useState(0)
 
@@ -52,7 +53,7 @@ export function CircuitsCarousel() {
     <div>
       <span className="mb-3 inline-flex w-fit -rotate-2 items-center gap-2 border-[3px] border-ink bg-cream px-3 py-1.5 text-xs font-bold">
         <span className="h-2 w-2 rounded-full bg-forest" />
-        {t('availableBadge', { count: centers.length })}
+        {t('availableBadge', { count: availableCount })}
       </span>
 
       <div
@@ -82,10 +83,18 @@ export function CircuitsCarousel() {
                     {t(`difficulty.${circuit.difficulty}`)}
                   </span>
                 )}
-                <p className="mb-2.5 inline-block border-2 border-ink bg-sky px-2 py-1 text-xs font-bold">{t('realMapsBadge')}</p>
-                <Link href={`/circuits/${center.slug}`} className="btn-comic block w-full px-4 py-2.5 text-center text-sm">
-                  {t('ctaViewCircuits')} →
-                </Link>
+                {!center.comingSoon && (
+                  <p className="mb-2.5 inline-block border-2 border-ink bg-sky px-2 py-1 text-xs font-bold">{t('realMapsBadge')}</p>
+                )}
+                {center.comingSoon ? (
+                  <span className="block w-full cursor-not-allowed border-[3px] border-ink/25 px-4 py-2.5 text-center text-sm font-bold text-ink/40">
+                    {t('circuitComingSoon')}
+                  </span>
+                ) : (
+                  <Link href={`/circuits/${center.slug}`} className="btn-comic block w-full px-4 py-2.5 text-center text-sm">
+                    {t('ctaViewCircuits')} →
+                  </Link>
+                )}
               </div>
             </div>
           )

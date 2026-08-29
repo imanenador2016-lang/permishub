@@ -21,6 +21,8 @@ export interface ExamCenter {
    */
   lat?: number
   lng?: number
+  /** Centre pas encore ouvert à la vente (circuits pas encore prêts) — affiché verrouillé "Bientôt". */
+  comingSoon?: boolean
 }
 
 /**

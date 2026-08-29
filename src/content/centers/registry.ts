@@ -23,12 +23,16 @@ export const EXAM_CENTERS: ExamCenter[] = [
   // (remplace l'ancienne approximation centre-ville).
   { id: 'anderlecht', slug: 'anderlecht', name: 'Anderlecht', region: 'BRUXELLES', priceCents: 2499, lat: 50.8201738, lng: 4.3100693 },
   { id: 'schaerbeek', slug: 'schaerbeek', name: 'Schaerbeek', region: 'BRUXELLES', priceCents: 2499, lat: 50.8676, lng: 4.3737 },
-  { id: 'louvain-la-neuve', slug: 'louvain-la-neuve', name: 'Louvain-la-Neuve', region: 'WALLONIE', priceCents: 2499, lat: 50.6681, lng: 4.6118 },
-  { id: 'couillet', slug: 'couillet', name: 'Couillet', region: 'WALLONIE', priceCents: 2499, lat: 50.4028, lng: 4.4696 },
-  { id: 'mariembourg', slug: 'mariembourg', name: 'Mariembourg', region: 'WALLONIE', priceCents: 2499, lat: 50.0965, lng: 4.5211 },
-  { id: 'braine-le-comte', slug: 'braine-le-comte', name: 'Braine-le-Comte', region: 'WALLONIE', priceCents: 2499, lat: 50.6094, lng: 4.1447 },
-  { id: 'cuesmes', slug: 'cuesmes', name: 'Cuesmes', region: 'WALLONIE', priceCents: 2499, lat: 50.44, lng: 3.9333 },
-  { id: 'lobbes', slug: 'lobbes', name: 'Lobbes', region: 'WALLONIE', priceCents: 2499, lat: 50.3486, lng: 4.2664 },
+  // Verrouillés "Bientôt" le 2026-08-29 à la demande du client — seuls
+  // Anderlecht et Schaerbeek ont un vrai tracé prêt pour l'instant, voir
+  // conversation du 2026-08-29. Repasser comingSoon à false/l'enlever une
+  // fois leurs circuits réels ajoutés.
+  { id: 'louvain-la-neuve', slug: 'louvain-la-neuve', name: 'Louvain-la-Neuve', region: 'WALLONIE', priceCents: 2499, lat: 50.6681, lng: 4.6118, comingSoon: true },
+  { id: 'couillet', slug: 'couillet', name: 'Couillet', region: 'WALLONIE', priceCents: 2499, lat: 50.4028, lng: 4.4696, comingSoon: true },
+  { id: 'mariembourg', slug: 'mariembourg', name: 'Mariembourg', region: 'WALLONIE', priceCents: 2499, lat: 50.0965, lng: 4.5211, comingSoon: true },
+  { id: 'braine-le-comte', slug: 'braine-le-comte', name: 'Braine-le-Comte', region: 'WALLONIE', priceCents: 2499, lat: 50.6094, lng: 4.1447, comingSoon: true },
+  { id: 'cuesmes', slug: 'cuesmes', name: 'Cuesmes', region: 'WALLONIE', priceCents: 2499, lat: 50.44, lng: 3.9333, comingSoon: true },
+  { id: 'lobbes', slug: 'lobbes', name: 'Lobbes', region: 'WALLONIE', priceCents: 2499, lat: 50.3486, lng: 4.2664, comingSoon: true },
 ]
 
 /**
@@ -49,9 +53,9 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
     },
     // Vrai tracé fourni par le client le 2026-08-29 : Centre d'examen
     // Anderlecht (Rue du Labeur) → Bd International → Rue du Sillon → Rue
-    // Dr Huet → Av. Nellie Melba → Rue Claude Debussy → Rue Félicien Rops →
-    // Av. Guillaume Stassart → Bd Théo Lambert.
-    mapsUrl: 'https://maps.app.goo.gl/zt6CKNuq1qkA5CTE8',
+    // Dr Huet → Av. Nellie Melba → Rue Claude Debussy → Av. Guillaume
+    // Stassart → Bd Théo Lambert → Bd Maurice Carême → Rue du Charroi.
+    mapsUrl: 'https://maps.app.goo.gl/KH3mQf9WqmVmYxd97',
     durationMinutes: 20,
     // Circuit "vitrine" affiché sur le carrousel de la home (brief v2). Prix
     // réel confirmé (24,99€). distanceKm/attentionPointsCount/difficulty
@@ -71,6 +75,8 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
       fr: 'Deuxième itinéraire, avec un enchaînement de carrefours et de changements de bande différent du premier circuit.',
       nl: 'Tweede route, met een andere opeenvolging van kruispunten en rijstrookwissels dan het eerste circuit.',
     },
+    // Vrai tracé fourni par le client le 2026-08-29 — voir note sur anderlecht-1.
+    mapsUrl: 'https://maps.app.goo.gl/XjELyouuBK1F3Aud9',
     durationMinutes: 20,
   },
   {
@@ -81,6 +87,8 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
       fr: 'Troisième itinéraire, pour varier les conditions de circulation rencontrées avant le jour J.',
       nl: 'Derde route, om de verkeersomstandigheden vóór de grote dag te variëren.',
     },
+    // Vrai tracé fourni par le client le 2026-08-29 — voir note sur anderlecht-1.
+    mapsUrl: 'https://maps.app.goo.gl/cxrhoee2AB2vctq56',
     durationMinutes: 20,
   },
   {
@@ -91,6 +99,8 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
       fr: 'Itinéraire à parcourir en voiture autour du centre, avec les manœuvres typiquement testées à l’examen pratique.',
       nl: 'Route om met de auto rond het centrum te rijden, met de manoeuvres die typisch getest worden bij het praktijkexamen.',
     },
+    // Vrai tracé fourni par le client le 2026-08-29 — voir note sur anderlecht-1.
+    mapsUrl: 'https://maps.app.goo.gl/esT5LVveGjwS1fyp8',
     durationMinutes: 20,
     // Circuit "vitrine" affiché sur le carrousel de la home — voir note sur anderlecht-1.
     priceCents: 2499,
@@ -106,6 +116,8 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
       fr: 'Deuxième itinéraire, avec un enchaînement de carrefours différent du premier circuit.',
       nl: 'Tweede route, met een andere opeenvolging van kruispunten dan het eerste circuit.',
     },
+    // Vrai tracé fourni par le client le 2026-08-29 — voir note sur anderlecht-1.
+    mapsUrl: 'https://maps.app.goo.gl/ksBSgHgB7rurF5JD9',
     durationMinutes: 20,
   },
   {
@@ -116,6 +128,8 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
       fr: 'Troisième itinéraire, pour varier les conditions de circulation rencontrées avant le jour J.',
       nl: 'Derde route, om de verkeersomstandigheden vóór de grote dag te variëren.',
     },
+    // Vrai tracé fourni par le client le 2026-08-29 — voir note sur anderlecht-1.
+    mapsUrl: 'https://maps.app.goo.gl/8Lc35hDBZCiAfkE59',
     durationMinutes: 20,
   },
 

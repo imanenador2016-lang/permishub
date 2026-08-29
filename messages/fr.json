@@ -103,7 +103,8 @@
     "perceptionBullet1": "Repère les dangers avant qu'ils arrivent",
     "perceptionBullet2": "Même format que l'épreuve officielle",
     "perceptionBullet3": "Accès prioritaire dès la sortie",
-    "perceptionRefund": "pas réussi ? remboursé."
+    "perceptionRefund": "pas réussi ? remboursé.",
+    "comingSoonCta": "Bientôt disponible"
   },
   "circuits": {
     "eyebrow": "Trouve ton centre",

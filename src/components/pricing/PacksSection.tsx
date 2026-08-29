@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { OfferCard } from './OfferCard'
-import { RESUME_OFFER, EXAMENS_ILLIMITES_OFFER, PERCEPTION_RISQUE_OFFER } from '@/content/pricing-config'
+import { RESUME_OFFER, EXAMENS_ILLIMITES_OFFER } from '@/content/pricing-config'
 
 type Tab = 'theorique' | 'pratique'
 
@@ -88,9 +88,8 @@ export function PacksSection() {
               eyebrow={t('perceptionEyebrow')}
               title={t('perceptionTitle')}
               bullets={[t('perceptionBullet1'), t('perceptionBullet2'), t('perceptionBullet3')]}
-              offer={PERCEPTION_RISQUE_OFFER}
-              ctaLabel={t('cta')}
-              refundNote={t('perceptionRefund')}
+              ctaLabel={t('comingSoonCta')}
+              comingSoon
             />
           </motion.div>
         )}
