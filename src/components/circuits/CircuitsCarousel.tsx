@@ -15,6 +15,7 @@ const ILLUSTRATIONS: Record<string, () => React.JSX.Element> = {
 
 /** Vraie photo du centre — remplace l'illustration dessinée quand elle est disponible (fournie par le client). */
 const PHOTOS: Record<string, string> = {
+  anderlecht: '/images/centers/anderlecht.jpg',
   schaerbeek: '/images/centers/schaerbeek.jpg',
 }
 
