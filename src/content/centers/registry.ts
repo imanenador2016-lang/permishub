@@ -92,6 +92,18 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
     durationMinutes: 20,
   },
   {
+    id: 'anderlecht-4',
+    centerSlug: 'anderlecht',
+    title: { fr: 'Circuit d’entraînement 4', nl: 'Trainingscircuit 4' },
+    description: {
+      fr: 'Quatrième itinéraire, pour varier encore les conditions de circulation rencontrées avant le jour J.',
+      nl: 'Vierde route, om de verkeersomstandigheden vóór de grote dag verder te variëren.',
+    },
+    // Vrai tracé fourni par le client le 2026-08-29 — voir note sur anderlecht-1.
+    mapsUrl: 'https://maps.app.goo.gl/CrVtteMgvbt4vJHs7',
+    durationMinutes: 20,
+  },
+  {
     id: 'schaerbeek-1',
     centerSlug: 'schaerbeek',
     title: { fr: 'Circuit d’entraînement 1', nl: 'Trainingscircuit 1' },
@@ -129,7 +141,19 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
       nl: 'Derde route, om de verkeersomstandigheden vóór de grote dag te variëren.',
     },
     // Vrai tracé fourni par le client le 2026-08-29 — voir note sur anderlecht-1.
-    mapsUrl: 'https://maps.app.goo.gl/8Lc35hDBZCiAfkE59',
+    mapsUrl: 'https://maps.app.goo.gl/uqHTa9QMZ9aQ7V6d9',
+    durationMinutes: 20,
+  },
+  {
+    id: 'schaerbeek-4',
+    centerSlug: 'schaerbeek',
+    title: { fr: 'Circuit d’entraînement 4', nl: 'Trainingscircuit 4' },
+    description: {
+      fr: 'Quatrième itinéraire, pour varier encore les conditions de circulation rencontrées avant le jour J.',
+      nl: 'Vierde route, om de verkeersomstandigheden vóór de grote dag verder te variëren.',
+    },
+    // Vrai tracé fourni par le client le 2026-08-29 — voir note sur anderlecht-1.
+    mapsUrl: 'https://maps.app.goo.gl/KKMXpEpMEm15gjjq8',
     durationMinutes: 20,
   },
 

@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { Navbar } from '@/components/site/Navbar'
 import { Footer } from '@/components/site/Footer'
 import { Container } from '@/components/ui/Container'
+import { CenterInfoBlock } from '@/components/circuits/CenterInfoBlock'
 import { Link } from '@/i18n/navigation'
 import { EXAM_CENTERS, getCenter, getCircuitsByCenter } from '@/content/centers/registry'
 import { REGION_LABELS } from '@/domain/region'
@@ -68,6 +69,8 @@ export default async function CenterCircuitsPage({
               {REGION_LABELS[center.region][locale]} — {center.name}
             </h1>
           </div>
+
+          <CenterInfoBlock center={center} locale={locale} />
 
           <div className="grid gap-4 sm:grid-cols-2">
             {circuits.map((circuit, i) => (

@@ -23,6 +23,34 @@ export interface ExamCenter {
   lng?: number
   /** Centre pas encore ouvert à la vente (circuits pas encore prêts) — affiché verrouillé "Bientôt". */
   comingSoon?: boolean
+  /**
+   * Résumé du centre en général (ambiance, type de circulation dominante),
+   * affiché en tête de la page centre — 2 lignes max. Absent = un
+   * placeholder "à compléter" est affiché, jamais de texte inventé.
+   */
+  summary?: LocalizedText
+  /**
+   * Exigence des examinateurs de ce centre, de 0 (souple) à 100 (strict).
+   * Absent = valeur neutre par défaut affichée (DEFAULT_EXAMINER_STRICTNESS),
+   * jamais une estimation inventée.
+   */
+  examinerStrictness?: number
+  /** Pièges spécifiques à ce centre (2-4 puces). Absent/vide = section masquée. */
+  pitfalls?: LocalizedText[]
+  /** Compétences clés à maîtriser pour ce centre, en tags (pas de description). Absent/vide = section masquée. */
+  masteryTags?: LocalizedText[]
+}
+
+/** Valeur neutre affichée quand `ExamCenter.examinerStrictness` n'a pas encore été renseigné. */
+export const DEFAULT_EXAMINER_STRICTNESS = 50
+
+export type StrictnessLevel = 'souple' | 'modere' | 'strict'
+
+/** Mappe une valeur 0-100 sur les 3 paliers affichés au-dessus du curseur de la barre d'exigence. */
+export function getStrictnessLevel(value: number): StrictnessLevel {
+  if (value < 34) return 'souple'
+  if (value < 67) return 'modere'
+  return 'strict'
 }
 
 /**
