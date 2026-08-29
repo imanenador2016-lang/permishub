@@ -8,7 +8,10 @@ import type { ExamCenter, PracticeCircuit } from '@/domain/centers'
  * ci-dessous, aucune page ne dépend d'une liste figée.
  */
 export const EXAM_CENTERS: ExamCenter[] = [
-  { id: 'anderlecht', slug: 'anderlecht', name: 'Anderlecht', region: 'BRUXELLES', priceCents: 2499, lat: 50.8333, lng: 4.3 },
+  // lat/lng = adresse réelle du centre d'examen GOCA (Rue du Labeur, 1070 Anderlecht),
+  // confirmée via le point de départ du parcours 1 fourni par le client le 2026-08-29
+  // (remplace l'ancienne approximation centre-ville).
+  { id: 'anderlecht', slug: 'anderlecht', name: 'Anderlecht', region: 'BRUXELLES', priceCents: 2499, lat: 50.8201738, lng: 4.3100693 },
   { id: 'schaerbeek', slug: 'schaerbeek', name: 'Schaerbeek', region: 'BRUXELLES', priceCents: 2499, lat: 50.8676, lng: 4.3737 },
   { id: 'louvain-la-neuve', slug: 'louvain-la-neuve', name: 'Louvain-la-Neuve', region: 'WALLONIE', priceCents: 2499, lat: 50.6681, lng: 4.6118 },
   { id: 'couillet', slug: 'couillet', name: 'Couillet', region: 'WALLONIE', priceCents: 2499, lat: 50.4028, lng: 4.4696 },
@@ -34,11 +37,17 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
       fr: 'Itinéraire à parcourir en voiture autour du centre, avec les manœuvres typiquement testées à l’examen pratique (créneau, rond-point, priorité de droite).',
       nl: 'Route om met de auto rond het centrum te rijden, met de manoeuvres die typisch getest worden bij het praktijkexamen (parkeren, rotonde, voorrang van rechts).',
     },
+    // Vrai tracé fourni par le client le 2026-08-29 : Centre d'examen
+    // Anderlecht (Rue du Labeur) → Bd International → Rue du Sillon → Rue
+    // Dr Huet → Av. Nellie Melba → Rue Claude Debussy → Rue Félicien Rops →
+    // Av. Guillaume Stassart → Bd Théo Lambert.
+    mapsUrl: 'https://maps.app.goo.gl/zt6CKNuq1qkA5CTE8',
     durationMinutes: 20,
     // Circuit "vitrine" affiché sur le carrousel de la home (brief v2). Prix
-    // réel confirmé (24,99€) ; distance/points d'attention/difficulté sont
-    // des valeurs d'exemple reprises du mockup de référence, en attendant
-    // une méthode de calcul réelle — voir domain/centers.ts CircuitDifficulty.
+    // réel confirmé (24,99€). distanceKm/attentionPointsCount/difficulty
+    // restent les valeurs d'exemple du mockup de référence (pas encore
+    // remplacées par une vraie mesure malgré le tracé désormais réel — à
+    // confirmer avec le client) — voir domain/centers.ts CircuitDifficulty.
     priceCents: 2499,
     distanceKm: 4.2,
     attentionPointsCount: 5,
