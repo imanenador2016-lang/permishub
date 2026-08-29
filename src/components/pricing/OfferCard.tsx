@@ -92,11 +92,17 @@ export function OfferCard({
         </button>
       )}
 
-      {refundNote && (
-        <p className="mt-2.5 flex items-center justify-center gap-1.5 border-2 border-forest bg-forest/10 px-2 py-1.5 text-center text-[11px] font-bold text-forest">
-          <span aria-hidden>✓</span> {refundNote}
-        </p>
-      )}
+      {/* Slot toujours rendu (invisible si pas de refundNote) : sinon son absence
+          change la hauteur "fixe" du bas de carte selon les offres, et le
+          `flex-1` des bullets ci-dessus compense en désalignant les boutons
+          "Débloquer" entre les cartes d'une même rangée. */}
+      <p
+        className={`mt-2.5 flex items-center justify-center gap-1.5 border-2 border-forest bg-forest/10 px-2 py-1.5 text-center text-[11px] font-bold text-forest ${
+          refundNote ? '' : 'invisible'
+        }`}
+      >
+        <span aria-hidden>✓</span> {refundNote || ' '}
+      </p>
       {message && <p className="mt-1.5 text-center text-[11px] text-ink/60">{message}</p>}
     </div>
   )
