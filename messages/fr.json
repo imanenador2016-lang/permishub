@@ -112,6 +112,7 @@
     "availableBadge": "{count} centres disponibles — d'autres arrivent chaque mois",
     "kmPoints": "{km} km · {points} points d'attention",
     "ctaUnlock": "Débloquer",
+    "ctaViewCircuits": "Voir les circuits",
     "refundNote": "remboursé si tu échoues à l'examen",
     "realMapsBadge": "📍 Itinéraire Google Maps réel, entraînable",
     "difficulty": { "facile": "Facile", "moyen": "Moyen", "difficile": "Difficile" },
@@ -122,7 +123,12 @@
     "notifySent": "C'est noté, merci !",
     "swipeHint": "← glisse pour voir les autres centres →",
     "coutEcheeSourcePending": "Source à confirmer",
-    "coutEcheeSourceLink": "Voir la source officielle"
+    "coutEcheeSourceLink": "Voir la source officielle",
+    "circuitListBadge": "Circuits d'entraînement",
+    "circuitLabel": "Circuit {n}",
+    "viewItinerary": "Voir l'itinéraire",
+    "circuitComingSoon": "Bientôt disponible",
+    "backToCenters": "← Tous les centres"
   },
   "offers": {
     "sectionTitle": "Passe à la vitesse supérieure",

@@ -112,6 +112,7 @@
     "availableBadge": "{count} centra beschikbaar — er komen er elke maand bij",
     "kmPoints": "{km} km · {points} aandachtspunten",
     "ctaUnlock": "Ontgrendel",
+    "ctaViewCircuits": "Bekijk de circuits",
     "refundNote": "terugbetaald als je niet slaagt voor het examen",
     "realMapsBadge": "📍 Echte, trainbare Google Maps-route",
     "difficulty": { "facile": "Makkelijk", "moyen": "Gemiddeld", "difficile": "Moeilijk" },
@@ -122,7 +123,12 @@
     "notifySent": "Genoteerd, bedankt!",
     "swipeHint": "← swipe om de andere centra te zien →",
     "coutEcheeSourcePending": "Bron te bevestigen",
-    "coutEcheeSourceLink": "Bekijk de officiële bron"
+    "coutEcheeSourceLink": "Bekijk de officiële bron",
+    "circuitListBadge": "Trainingscircuits",
+    "circuitLabel": "Circuit {n}",
+    "viewItinerary": "Bekijk de route",
+    "circuitComingSoon": "Binnenkort beschikbaar",
+    "backToCenters": "← Alle centra"
   },
   "offers": {
     "sectionTitle": "Ga een versnelling hoger",

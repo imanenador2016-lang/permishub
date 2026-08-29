@@ -2,10 +2,9 @@
 
 import { useRef, useState } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 import { getCenters, getFeaturedCircuit } from '@/content/centers/registry'
-import { formatPrice } from '@/domain/centers'
 import { REGION_LABELS } from '@/domain/region'
-import { createCircuitCheckoutSession } from '@/lib/circuit-payment'
 import { CircuitIllustrationAnderlecht, CircuitIllustrationSchaerbeek, CircuitIllustrationGeneric } from './CircuitIllustration'
 
 const ILLUSTRATIONS: Record<string, () => React.JSX.Element> = {
@@ -21,9 +20,18 @@ const DIFFICULTY_STYLES: Record<string, string> = {
 
 /**
  * Carrousel horizontal en scroll-snap — reproduit apercu-circuits-swipe.html
- * (brief v2 §Section circuits). Données réelles uniquement : 2 centres
- * (Anderlecht, Schaerbeek), voir content/centers/registry.ts. La dernière
- * carte collecte un email pour prioriser les prochaines villes.
+ * (brief v2 §Section circuits). Données réelles uniquement : voir
+ * content/centers/registry.ts. La dernière carte collecte un email pour
+ * prioriser les prochaines villes.
+ *
+ * Chaque carte mène vers la liste des circuits du centre
+ * (circuits/[centerSlug]/page.tsx) plutôt que directement vers l'achat —
+ * voir conversation du 2026-08-29 : les circuits sont temporairement
+ * gratuits (CIRCUITS_FREE_FOR_TESTING dans content/centers/registry.ts)
+ * pendant que le client crée plusieurs parcours par centre. L'ancien
+ * bouton "Débloquer" → Stripe (UnlockButton/createCircuitCheckoutSession)
+ * reste disponible dans lib/circuit-payment.ts pour être réactivé plus
+ * tard sur la page de liste.
  */
 export function CircuitsCarousel() {
   const t = useTranslations('circuits')
@@ -75,8 +83,9 @@ export function CircuitsCarousel() {
                   </span>
                 )}
                 <p className="mb-2.5 inline-block border-2 border-ink bg-sky px-2 py-1 text-xs font-bold">{t('realMapsBadge')}</p>
-                <UnlockButton priceCents={circuit?.priceCents ?? center.priceCents} circuitId={circuit?.id ?? center.id} locale={locale} label={t('ctaUnlock')} />
-                <p className="mt-1.5 text-center font-hand text-[13px] text-forest">{t('refundNote')}</p>
+                <Link href={`/circuits/${center.slug}`} className="btn-comic block w-full px-4 py-2.5 text-center text-sm">
+                  {t('ctaViewCircuits')} →
+                </Link>
               </div>
             </div>
           )
@@ -87,44 +96,6 @@ export function CircuitsCarousel() {
 
       <Dots count={cardCount} active={activeIndex} />
       <p className="mt-2 text-center font-hand text-sm text-forest">{t('swipeHint')}</p>
-    </div>
-  )
-}
-
-function UnlockButton({
-  priceCents,
-  circuitId,
-  locale,
-  label,
-}: {
-  priceCents: number
-  circuitId: string
-  locale: 'fr' | 'nl'
-  label: string
-}) {
-  const [message, setMessage] = useState<string | null>(null)
-  const [loading, setLoading] = useState(false)
-
-  async function handleClick() {
-    setLoading(true)
-    setMessage(null)
-    try {
-      const { url } = await createCircuitCheckoutSession(circuitId)
-      window.location.href = url
-    } catch (err) {
-      // Jamais de faux succès — l'accès n'est débloqué que par le webhook
-      // Stripe (api/webhooks/stripe), jamais ici.
-      setMessage(err instanceof Error ? err.message : 'Une erreur est survenue.')
-      setLoading(false)
-    }
-  }
-
-  return (
-    <div>
-      <button onClick={handleClick} disabled={loading} className="btn-comic block w-full px-4 py-2.5 text-sm disabled:opacity-60">
-        {label} — {formatPrice(priceCents, locale)} →
-      </button>
-      {message && <p className="mt-1.5 text-center text-[11px] text-ink/60">{message}</p>}
     </div>
   )
 }
