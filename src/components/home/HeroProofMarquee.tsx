@@ -10,13 +10,19 @@ import { TESTIMONIALS } from './TestimonialsSection'
  * desktop (`hover:[animation-play-state:paused]`), scrollable au doigt sur
  * mobile (overflow-x natif, l'animation continue en fond sans gêner le
  * swipe), et statique-mais-scrollable si `prefers-reduced-motion`
- * (`motion-reduce:animate-none`). Réutilise les 6 vrais avis déjà présents
+ * (`motion-reduce:animate-none`). Réutilise les vrais avis déjà présents
  * ailleurs sur le site (TestimonialsSection.tsx) — jamais de témoignage
- * inventé.
+ * inventé. N'affiche QUE ceux pas déjà montrés juste au-dessus dans
+ * HeroProof (reussite1-3) : sinon les mêmes avis se répètent à l'identique
+ * juste en dessous, ce qui a l'air d'un bug plutôt que d'une preuve
+ * sociale (voir conversation du 2026-08-30).
  */
+const HERO_PROOF_KEYS: string[] = ['reussite1', 'reussite2', 'reussite3']
+
 export function HeroProofMarquee() {
   const t = useTranslations('testimonials')
-  const items = [...TESTIMONIALS, ...TESTIMONIALS]
+  const marqueeTestimonials = TESTIMONIALS.filter((item) => !HERO_PROOF_KEYS.includes(item.key))
+  const items = [...marqueeTestimonials, ...marqueeTestimonials]
 
   return (
     <div className="mt-3 min-w-0">
