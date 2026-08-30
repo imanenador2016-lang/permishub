@@ -8,8 +8,10 @@ import { TrustBar } from '@/components/home/TrustBar'
 import { CircuitsCarousel } from '@/components/circuits/CircuitsCarousel'
 import { CoutEchecBanner } from '@/components/circuits/CoutEchecBanner'
 import { PacksSection } from '@/components/pricing/PacksSection'
-import { TestimonialsSection } from '@/components/home/TestimonialsSection'
+import { FaqSection } from '@/components/home/FaqSection'
+import { FinalCtaSection } from '@/components/home/FinalCtaSection'
 import { Container } from '@/components/ui/Container'
+import { FAQ_ITEMS } from '@/content/faq'
 import type { AppLocale } from '@/i18n/request'
 
 export default async function HomePage({ params: { locale } }: { params: { locale: AppLocale } }) {
@@ -20,8 +22,25 @@ export default async function HomePage({ params: { locale } }: { params: { local
   const questions = getTestDeNiveauQuestions('BE')
   const themeLabels = themes.map((th) => ({ slug: th.slug, label: th.title[locale] }))
 
+  // JSON-LD FAQPage — générée depuis FAQ_ITEMS (content/faq.ts), la même
+  // source que la FAQ affichée (FaqSection.tsx) : jamais désynchronisée
+  // avec le contenu réellement visible, condition pour rester éligible aux
+  // rich snippets Google sans risquer un signalement "structured data
+  // trompeuse".
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: FAQ_ITEMS.map((item) => ({
+      '@type': 'Question',
+      name: item.question[locale],
+      acceptedAnswer: { '@type': 'Answer', text: item.answer[locale] },
+    })),
+  }
+
   return (
     <>
+      {/* eslint-disable-next-line react/no-danger */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <Navbar />
       <main>
         {/* 1. Hero (test de niveau) */}
@@ -44,8 +63,12 @@ export default async function HomePage({ params: { locale } }: { params: { local
           <PacksSection />
         </Container>
 
-        {/* Avis clients */}
-        <TestimonialsSection />
+        {/* FAQ — remplace l'ancienne section témoignages (voir conversation
+            du 2026-08-31). */}
+        <FaqSection />
+
+        {/* CTA final, juste après la FAQ */}
+        <FinalCtaSection questions={questions} themeLabels={themeLabels} />
 
         {/* Bandeau de confiance / preuve sociale */}
         <TrustBar />

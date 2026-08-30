@@ -34,9 +34,7 @@
     "viewCircuits": "Voir mes circuits"
   },
   "testimonials": {
-    "title": "Ils ont réussi avec PermisHub",
     "heroEyebrow": "Ils ont réussi",
-    "badge": "Réussi ✓",
     "reussite1": { "quote": "J'ai réussi avec 46/50 grâce à PermisHub.", "label": "Examen théorique" },
     "reussite2": { "quote": "J'ai réussi mon examen pratique du premier coup grâce à PermisHub.", "label": "Examen pratique" },
     "reussite3": { "quote": "Le Résumé sans blabla est juste magnifique. Réussi enfin, 45/50 !", "label": "Résumé sans blabla" },
@@ -303,5 +301,13 @@
     "lockedBody": "Débloque les 6 examens blancs restants en un seul paiement — accès immédiat, tentatives illimitées.",
     "lockedCta": "Débloquer les examens",
     "backToPicker": "← Voir tous les examens"
+  },
+  "faq": {
+    "title": "Questions fréquentes"
+  },
+  "finalCta": {
+    "title": "Prêt à tester ton niveau ?",
+    "subtitle": "2 minutes pour savoir où tu en es, gratuitement.",
+    "cta": "Tester gratuitement"
   }
 }
