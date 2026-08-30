@@ -66,6 +66,7 @@ export function PacksSection() {
               bullets={[t('examensBullet1'), t('examensBullet2'), t('examensBullet3')]}
               offer={EXAMENS_ILLIMITES_OFFER}
               ctaLabel={t('cta')}
+              refundNote={t('examensTrustLine')}
             />
           </motion.div>
         ) : (
