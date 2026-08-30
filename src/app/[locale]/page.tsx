@@ -9,6 +9,7 @@ import { CircuitsCarousel } from '@/components/circuits/CircuitsCarousel'
 import { CoutEchecBanner } from '@/components/circuits/CoutEchecBanner'
 import { PacksSection } from '@/components/pricing/PacksSection'
 import { FaqSection } from '@/components/home/FaqSection'
+import { ReviewsPanel } from '@/components/home/ReviewsPanel'
 import { FinalCtaSection } from '@/components/home/FinalCtaSection'
 import { Container } from '@/components/ui/Container'
 import { FAQ_ITEMS } from '@/content/faq'
@@ -63,9 +64,14 @@ export default async function HomePage({ params: { locale } }: { params: { local
           <PacksSection />
         </Container>
 
-        {/* FAQ — remplace l'ancienne section témoignages (voir conversation
-            du 2026-08-31). */}
-        <FaqSection />
+        {/* FAQ + avis clients côte à côte — remplace l'ancienne section
+            témoignages (voir conversation du 2026-08-31). */}
+        <Container className="pb-16">
+          <div className="grid gap-10 md:grid-cols-2">
+            <FaqSection />
+            <ReviewsPanel locale={locale} />
+          </div>
+        </Container>
 
         {/* CTA final, juste après la FAQ */}
         <FinalCtaSection questions={questions} themeLabels={themeLabels} />
