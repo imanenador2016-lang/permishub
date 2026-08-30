@@ -3,18 +3,19 @@
 import { useState } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
 import { Link } from '@/i18n/navigation'
-import { formatPrice } from '@/domain/centers'
-import { EXAMENS_ILLIMITES_OFFER } from '@/content/pricing-config'
 import { ExamOfferModal } from './ExamOfferModal'
 import type { ExamenBlancSummary } from '@/lib/examens-blancs'
 
 /**
- * Liste des examens blancs — 1 gratuit (lien direct), les suivants
- * réservés au pack "Examens illimités" : clic ouvre l'offre (ExamOfferModal,
- * même stratégie de conversion que CircuitOfferModal pour les circuits)
- * plutôt qu'un achat instantané. Verrou "à l'affichage" ici + "à l'entrée"
- * sur la page de l'examen (ExamAccessGate.tsx) — voir src/lib/examens-blancs.ts
- * pour la réserve sur le contrôle d'accès réel.
+ * Liste des examens blancs — tous réservés au pack "Examens illimités"
+ * (voir conversation du 2026-08-30 : plus aucun examen gratuit). Clic
+ * ouvre l'offre (ExamOfferModal, même stratégie de conversion que
+ * CircuitOfferModal pour les circuits) plutôt qu'un achat instantané — le
+ * prix n'apparaît que dans le modal, jamais répété sur chaque carte.
+ * Verrou "à l'affichage" ici + "à l'entrée" sur la page de l'examen
+ * (ExamAccessGate.tsx) — voir src/lib/examens-blancs.ts pour la réserve
+ * sur le contrôle d'accès réel. La branche `exam.free` est gardée pour
+ * pouvoir réintroduire un teaser gratuit facilement plus tard.
  */
 export function ExamenBlancPicker({ exams }: { exams: ExamenBlancSummary[] }) {
   const t = useTranslations('examenBlanc')
@@ -50,9 +51,7 @@ export function ExamenBlancPicker({ exams }: { exams: ExamenBlancSummary[] }) {
               </span>
               <p className="font-display text-xl leading-tight">{exam.title}</p>
               <p className="flex-1 text-sm text-ink/70">{t('pickerQuestionCount', { count: exam.questionCount })}</p>
-              <span className="btn-comic block px-4 py-3 text-center text-sm">
-                {to('cta')} — {formatPrice(EXAMENS_ILLIMITES_OFFER.priceCents, locale)} →
-              </span>
+              <span className="btn-comic block px-4 py-3 text-center text-sm">{to('cta')} →</span>
             </button>
           ),
         )}

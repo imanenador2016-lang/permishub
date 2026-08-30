@@ -78,14 +78,14 @@
     "ctaSecondary": "Voir les cours",
     "sectionCoursTitle": "Des cours construits pour l'examen belge",
     "sectionCoursBody": "Signalisation, priorités, vitesse et distances, stationnement, premiers secours, éco-conduite — chaque thème avec sa progression, son temps estimé et sa difficulté.",
-    "sectionExamBadge": "Gratuit",
-    "sectionExamTitle": "Ton premier examen blanc, gratuit",
+    "sectionExamBadge": "Entraînement",
+    "sectionExamTitle": "De vrais examens blancs, comme le jour J",
     "sectionExamBody": "{count} vraies questions avec photo, comme le jour de l'examen — scoring officiel, correction détaillée à chaque erreur.",
-    "sectionExamCta": "Commencer l'examen gratuit",
+    "sectionExamCta": "Voir les examens",
     "sectionCircuitsTitle": "Les circuits d'examen pratique, sur la carte",
     "sectionCircuitsBody": "Repère les centres GOCA, leurs circuits probables et les points d'attention — ronds-points, priorités complexes, zones scolaires.",
     "pricingTitle": "Commence gratuitement",
-    "pricingBody": "Le test de niveau et un examen blanc sont gratuits. L'accès complet — tous les cours, tous les examens, tous les circuits — est en abonnement.",
+    "pricingBody": "Le test de niveau est gratuit. L'accès complet — tous les cours, tous les examens, tous les circuits — est en abonnement.",
     "pricingCta": "Voir les tarifs"
   },
   "packs": {
@@ -253,10 +253,10 @@
     "title": "Examen blanc — questions avec photos",
     "pickerBadge": "Série d'examens blancs",
     "pickerTitle": "Choisis ton examen blanc",
-    "pickerIntro": "Le premier est gratuit. Les suivants sont débloqués avec l'accès illimité.",
+    "pickerIntro": "De vraies questions avec photo, comme le jour de l'examen — débloque l'accès illimité pour t'entraîner autant que tu veux.",
     "pickerQuestionCount": "{count} questions avec photo",
     "pickerPlay": "Commencer",
-    "introPhoto": "{total} questions réelles, chacune avec sa photo — comme le vrai examen théorique. 100% gratuit, réponds à ton rythme, la correction complète s'affiche à la fin.",
+    "introPhoto": "{total} questions réelles, chacune avec sa photo — comme le vrai examen théorique. Réponds à ton rythme, la correction complète s'affiche à la fin.",
     "start": "Commencer l'examen",
     "questionOf": "Question {current} / {total}",
     "previous": "Précédente",
@@ -296,6 +296,6 @@
     "lockedTitle": "Cet examen fait partie des Examens illimités",
     "lockedBody": "Débloque les 6 examens blancs restants en un seul paiement — accès immédiat, tentatives illimitées.",
     "lockedCta": "Débloquer les examens",
-    "backToPicker": "← Voir les examens gratuits"
+    "backToPicker": "← Voir tous les examens"
   }
 }

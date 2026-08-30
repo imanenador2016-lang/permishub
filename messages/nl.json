@@ -78,14 +78,14 @@
     "ctaSecondary": "Bekijk de lessen",
     "sectionCoursTitle": "Lessen gebouwd voor het Belgische examen",
     "sectionCoursBody": "Signalisatie, voorrang, snelheid en afstand, parkeren, eerste hulp, ecologisch rijden — elk thema met voortgang, geschatte tijd en moeilijkheidsgraad.",
-    "sectionExamBadge": "Gratis",
-    "sectionExamTitle": "Jouw eerste proefexamen, gratis",
+    "sectionExamBadge": "Oefening",
+    "sectionExamTitle": "Echte proefexamens, zoals op de grote dag",
     "sectionExamBody": "{count} echte vragen met foto, zoals op de dag zelf — officiële score, gedetailleerde uitleg bij elke fout.",
-    "sectionExamCta": "Start het gratis examen",
+    "sectionExamCta": "Bekijk de examens",
     "sectionCircuitsTitle": "De circuits van het praktijkexamen, op de kaart",
     "sectionCircuitsBody": "Vind de GOCA-centra, hun waarschijnlijke circuits en de aandachtspunten — rotondes, complexe voorrang, schoolzones.",
     "pricingTitle": "Begin gratis",
-    "pricingBody": "Het niveautest en één proefexamen zijn gratis. Volledige toegang — alle lessen, alle examens, alle circuits — via abonnement.",
+    "pricingBody": "De niveautest is gratis. Volledige toegang — alle lessen, alle examens, alle circuits — via abonnement.",
     "pricingCta": "Bekijk de tarieven"
   },
   "packs": {
@@ -253,10 +253,10 @@
     "title": "Proefexamen — vragen met foto's",
     "pickerBadge": "Reeks proefexamens",
     "pickerTitle": "Kies je proefexamen",
-    "pickerIntro": "Het eerste is gratis. De volgende worden ontgrendeld met onbeperkte toegang.",
+    "pickerIntro": "Echte vragen met foto, zoals op de dag zelf — ontgrendel onbeperkte toegang om zoveel te oefenen als je wil.",
     "pickerQuestionCount": "{count} vragen met foto",
     "pickerPlay": "Starten",
-    "introPhoto": "{total} echte vragen, elk met een foto — zoals het echte theorie-examen. 100% gratis, antwoord op je eigen tempo, de volledige correctie verschijnt op het einde.",
+    "introPhoto": "{total} echte vragen, elk met een foto — zoals het echte theorie-examen. Antwoord op je eigen tempo, de volledige correctie verschijnt op het einde.",
     "start": "Start het examen",
     "questionOf": "Vraag {current} / {total}",
     "previous": "Vorige",
@@ -296,6 +296,6 @@
     "lockedTitle": "Dit examen hoort bij de Onbeperkte proefexamens",
     "lockedBody": "Ontgrendel de 6 overige proefexamens in één betaling — directe toegang, onbeperkt aantal pogingen.",
     "lockedCta": "Ontgrendel de examens",
-    "backToPicker": "← Bekijk de gratis examens"
+    "backToPicker": "← Bekijk alle examens"
   }
 }

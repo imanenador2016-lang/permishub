@@ -8,11 +8,10 @@ import examen7Raw from '../../data/examens-blancs/examen-7.json'
 import type { ExamenPhotoQuestion } from '@/domain/examen-photo'
 
 /**
- * Registre des examens blancs "photo" du site — un seul gratuit (examen-1,
- * teaser d'acquisition), les 6 suivants réservés au pack "Examens
- * illimités" (voir src/content/pricing-config.ts). Verrou remis en place
- * le 2026-08-30 (voir conversation) après une période de relecture client
- * où tout était temporairement gratuit.
+ * Registre des examens blancs "photo" du site — tous réservés au pack
+ * "Examens illimités" (voir src/content/pricing-config.ts), plus aucun
+ * gratuit (voir conversation du 2026-08-30 : le client a retiré le teaser
+ * examen-1, jugé pas assez incitatif à l'achat).
  *
  * Verrou volontairement "à l'affichage + à l'entrée" (ExamAccessGate.tsx
  * sur la page [slug]), pas un vrai contrôle d'accès serveur : le site n'a
@@ -37,7 +36,7 @@ export interface ExamenBlancEntry {
 }
 
 export const EXAMENS_BLANCS: ExamenBlancEntry[] = [
-  { slug: 'examen-1', title: 'Examen 1', free: true, hideCorrection: true, questions: examen1Raw as ExamenPhotoQuestion[] },
+  { slug: 'examen-1', title: 'Examen 1', free: false, hideCorrection: true, questions: examen1Raw as ExamenPhotoQuestion[] },
   { slug: 'examen-2', title: 'Examen 2', free: false, questions: examen2Raw as ExamenPhotoQuestion[] },
   { slug: 'examen-3', title: 'Examen 3', free: false, questions: examen3Raw as ExamenPhotoQuestion[] },
   { slug: 'examen-4', title: 'Examen 4', free: false, questions: examen4Raw as ExamenPhotoQuestion[] },
