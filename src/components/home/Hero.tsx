@@ -16,6 +16,7 @@ export function Hero({
   themeLabels: { slug: string; label: string }[]
 }) {
   const t = useTranslations('home')
+  const tt = useTranslations('testimonials')
   const [open, setOpen] = useState(false)
 
   return (
@@ -71,6 +72,12 @@ export function Hero({
             className="min-w-0"
           >
             <HeroProof />
+            <button
+              onClick={() => setOpen(true)}
+              className="mt-3 w-fit -rotate-1 border-2 border-ink bg-forest px-3.5 py-2 font-hand text-base text-cream transition-transform hover:-translate-y-0.5"
+            >
+              {tt('whyNotYou')} →
+            </button>
           </motion.div>
         </div>
       </div>
