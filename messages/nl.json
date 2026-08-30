@@ -43,8 +43,13 @@
   },
   "nav": {
     "cours": "Lessen",
+    "theorieB": "Theorie B",
+    "pratiqueB": "Praktijk B",
+    "resume": "Samenvatting",
     "examens": "Proefexamens",
     "circuits": "Examencircuits",
+    "perception": "Gevaarherkenning",
+    "roadbook": "Roadbook",
     "pricing": "Tarieven",
     "dashboard": "Mijn omgeving",
     "login": "Inloggen"
@@ -167,6 +172,32 @@
     "examensBullet2": "Zoveel pogingen als je wil, met gedetailleerde uitleg",
     "cta": "Ontgrendel",
     "notReady": "Online betalen is nog niet beschikbaar."
+  },
+  "resumePage": {
+    "eyebrow": "Theorie B",
+    "title": "Beu om te studeren zonder resultaat?",
+    "subtitle": "Wij geven je het beste van het beste, zonder blabla — enkel wat je moet weten om te slagen voor je theorie-examen.",
+    "why1Title": "Compact",
+    "why1Body": "Enkel het essentiële, niets zelf te sorteren.",
+    "why2Title": "Gericht",
+    "why2Body": "Gebaseerd op wat écht doet zakken voor het examen.",
+    "why3Title": "Onmiddellijk",
+    "why3Body": "Toegang zodra de betaling bevestigd is, voor altijd van jou.",
+    "trustLine": "🔒 Veilige betaling · Directe toegang"
+  },
+  "roadbookPage": {
+    "eyebrow": "Praktijk B",
+    "badge": "Gratis",
+    "title": "Het roadbook, begrijpen en goed invullen",
+    "subtitle": "Je rijboekje om elke begeleide rijles bij te houden — handig om te vorderen en klaar aan de start te komen op je examendag.",
+    "whatTitle": "Wat is een roadbook?",
+    "whatBody": "Een roadbook (rijboekje) dient om je rijlessen te noteren: wanneer, waar, met wie, en wat je hebt geoefend. Het helpt je je vooruitgang op te volgen en te zien wat je nog moet oefenen voor het examen.",
+    "howTitle": "Hoe vul je het goed in",
+    "how1": "Noteer de datum, duur en route van elke rijles",
+    "how2": "Vermeld de omstandigheden: weer, dag of nacht, type weg",
+    "how3": "Vat samen wat je hebt geoefend en wat nog beter kan",
+    "how4": "Laat het ondertekenen door je begeleider na elke rijles",
+    "downloadCta": "Download het roadbook (gratis PDF)"
   },
   "testDeNiveau": {
     "badge": "Niveautest",

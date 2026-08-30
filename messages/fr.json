@@ -43,8 +43,13 @@
   },
   "nav": {
     "cours": "Cours",
+    "theorieB": "Théorie B",
+    "pratiqueB": "Pratique B",
+    "resume": "Résumé",
     "examens": "Examens blancs",
     "circuits": "Circuits d'examen",
+    "perception": "Perception des risques",
+    "roadbook": "Roadbook",
     "pricing": "Tarifs",
     "dashboard": "Mon espace",
     "login": "Se connecter"
@@ -167,6 +172,32 @@
     "examensBullet2": "Autant de tentatives que tu veux, corrections détaillées",
     "cta": "Débloquer",
     "notReady": "Le paiement en ligne n'est pas encore disponible."
+  },
+  "resumePage": {
+    "eyebrow": "Théorie B",
+    "title": "Marre d'étudier sans résultat ?",
+    "subtitle": "On te donne la crème de la crème, sans blabla — juste ce qu'il faut savoir pour réussir ton examen théorique.",
+    "why1Title": "Condensé",
+    "why1Body": "Que l'essentiel, rien à trier toi-même.",
+    "why2Title": "Ciblé",
+    "why2Body": "Basé sur ce qui fait vraiment échouer à l'examen.",
+    "why3Title": "Immédiat",
+    "why3Body": "Accès dès le paiement confirmé, à toi pour toujours.",
+    "trustLine": "🔒 Paiement sécurisé · Accès instantané"
+  },
+  "roadbookPage": {
+    "eyebrow": "Pratique B",
+    "badge": "Gratuit",
+    "title": "Le roadbook, comprendre et bien le remplir",
+    "subtitle": "Ton carnet de bord pour suivre chaque sortie de conduite accompagnée — utile pour progresser et pour te présenter prêt le jour de l'examen.",
+    "whatTitle": "C'est quoi, un roadbook ?",
+    "whatBody": "Un roadbook (carnet de bord) sert à noter tes sorties de conduite : quand, où, avec qui, et ce que tu as travaillé. Il t'aide à suivre ta progression au fil des heures et à repérer ce qu'il te reste à travailler avant l'examen.",
+    "howTitle": "Comment bien le compléter",
+    "how1": "Note la date, la durée et l'itinéraire de chaque sortie",
+    "how2": "Précise les conditions : météo, jour ou nuit, type de route",
+    "how3": "Résume ce que tu as travaillé et ce qu'il reste à améliorer",
+    "how4": "Fais-le signer par ton accompagnateur après chaque sortie",
+    "downloadCta": "Télécharger le roadbook (PDF gratuit)"
   },
   "testDeNiveau": {
     "badge": "Test de niveau",

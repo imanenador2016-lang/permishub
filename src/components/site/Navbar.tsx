@@ -3,21 +3,26 @@ import { Link } from '@/i18n/navigation'
 import { Container } from '@/components/ui/Container'
 import { LOCALES } from '@/i18n/request'
 import { MobileMenu } from './MobileMenu'
+import { NavDropdown } from './NavDropdown'
 
 export async function Navbar() {
   const t = await getTranslations('nav')
   const locale = await getLocale()
 
-  // /examen-blanc existe désormais comme vraie page (voir 2026-08-26) — lien
-  // direct plutôt qu'une ancre. /cours et /pricing restent des ancres tant
-  // qu'ils n'existent pas comme pages dédiées : un lien vers une route
-  // inexistante est un 404 silencieux, mauvais pour le SEO (budget de
-  // crawl gaspillé) et pour l'utilisateur (voir audit SEO 2026-08-22,
-  // SETUP.md).
-  const links = [
+  // Nav restructurée en 2 groupes le 2026-08-30 (Théorie B / Pratique B —
+  // voir conversation) : chaque item vers une vraie page ou une ancre
+  // existante, jamais une route qui n'existe pas encore (404 silencieux,
+  // mauvais pour le SEO — voir audit SEO 2026-08-22, SETUP.md). Perception
+  // des risques n'a pas encore de page dédiée (offre "Bientôt") donc pointe
+  // vers la section tarifs où elle est affichée verrouillée.
+  const theorieLinks = [
+    { href: '/resume', label: t('resume') },
     { href: '/examen-blanc', label: t('examens') },
+  ]
+  const pratiqueLinks = [
     { href: '/#circuits', label: t('circuits') },
-    { href: '/#packs', label: t('pricing') },
+    { href: '/#packs', label: t('perception') },
+    { href: '/roadbook', label: t('roadbook') },
   ]
 
   return (
@@ -29,11 +34,11 @@ export async function Navbar() {
           </Link>
 
           <nav className="hidden items-center gap-6 text-sm font-medium text-ink md:flex">
-            {links.map((link) => (
-              <Link key={link.href} href={link.href} className="hover:text-brick">
-                {link.label}
-              </Link>
-            ))}
+            <NavDropdown label={t('theorieB')} links={theorieLinks} />
+            <NavDropdown label={t('pratiqueB')} links={pratiqueLinks} />
+            <Link href="/#packs" className="hover:text-brick">
+              {t('pricing')}
+            </Link>
           </nav>
 
           <div className="flex items-center gap-3">
@@ -51,7 +56,13 @@ export async function Navbar() {
                 </Link>
               ))}
             </div>
-            <MobileMenu links={links} />
+            <MobileMenu
+              groups={[
+                { label: t('theorieB'), children: theorieLinks },
+                { label: t('pratiqueB'), children: pratiqueLinks },
+              ]}
+              pricingLink={{ href: '/#packs', label: t('pricing') }}
+            />
           </div>
         </header>
       </Container>

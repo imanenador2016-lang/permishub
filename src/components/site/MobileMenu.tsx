@@ -18,10 +18,15 @@ const TRANSITION_MS = 200
  * librairie se retrouvait chargée même par les visiteurs desktop qui ne
  * l'ouvrent jamais. Voir audit performance du 2026-08-28.
  */
+type NavLink = { href: string; label: string }
+type NavGroup = { label: string; children: NavLink[] }
+
 export function MobileMenu({
-  links,
+  groups,
+  pricingLink,
 }: {
-  links: { href: string; label: string }[]
+  groups: NavGroup[]
+  pricingLink: NavLink
 }) {
   const [open, setOpen] = useState(false)
   const [rendered, setRendered] = useState(false)
@@ -50,23 +55,32 @@ export function MobileMenu({
 
       {/* Portail vers <body> : évite que l'overlay plein écran hérite d'un
           containing block d'un ancêtre positionné (header). */}
-      {mounted && rendered && createPortal(<MenuOverlay links={links} open={open} onClose={() => setOpen(false)} />, document.body)}
+      {mounted &&
+        rendered &&
+        createPortal(<MenuOverlay groups={groups} pricingLink={pricingLink} open={open} onClose={() => setOpen(false)} />, document.body)}
     </div>
   )
 }
 
 function MenuOverlay({
-  links,
+  groups,
+  pricingLink,
   open,
   onClose,
 }: {
-  links: { href: string; label: string }[]
+  groups: NavGroup[]
+  pricingLink: NavLink
   open: boolean
   onClose: () => void
 }) {
+  // Aplatit groupes + lien tarifs en une seule liste animée (entête de
+  // groupe non cliquable + ses liens, puis le lien tarifs) — même effet de
+  // cascade au défilé que l'ancienne liste plate.
+  let i = 0
+
   return (
     <div
-      className={`fixed inset-0 z-50 bg-ink transition-opacity duration-200 ease-out ${open ? 'opacity-100' : 'opacity-0'}`}
+      className={`fixed inset-0 z-50 overflow-y-auto bg-ink transition-opacity duration-200 ease-out ${open ? 'opacity-100' : 'opacity-0'}`}
     >
       <div className="flex items-center justify-between border-b-[3px] border-cream/20 px-5 py-4">
         <span className="font-display text-lg text-cream">
@@ -81,21 +95,39 @@ function MenuOverlay({
         </button>
       </div>
       <nav className="flex flex-col gap-1 px-5 py-4">
-        {links.map((link, i) => (
-          <div
-            key={link.href}
-            className={`transition-all duration-200 ease-out ${open ? 'translate-x-0 opacity-100' : '-translate-x-3 opacity-0'}`}
-            style={{ transitionDelay: open ? `${50 * i}ms` : '0ms' }}
-          >
-            <Link
-              href={link.href}
-              onClick={onClose}
-              className="block border-b-2 border-cream/10 py-4 font-display text-lg text-cream"
+        {groups.map((group) => (
+          <div key={group.label} className="mb-2">
+            <p
+              className={`pt-3 font-display text-xs uppercase tracking-wide text-cream/50 transition-all duration-200 ease-out ${open ? 'translate-x-0 opacity-100' : '-translate-x-3 opacity-0'}`}
+              style={{ transitionDelay: open ? `${50 * i++}ms` : '0ms' }}
             >
-              {link.label}
-            </Link>
+              {group.label}
+            </p>
+            {group.children.map((link) => (
+              <div
+                key={link.href}
+                className={`transition-all duration-200 ease-out ${open ? 'translate-x-0 opacity-100' : '-translate-x-3 opacity-0'}`}
+                style={{ transitionDelay: open ? `${50 * i++}ms` : '0ms' }}
+              >
+                <Link
+                  href={link.href}
+                  onClick={onClose}
+                  className="block border-b-2 border-cream/10 py-4 font-display text-lg text-cream"
+                >
+                  {link.label}
+                </Link>
+              </div>
+            ))}
           </div>
         ))}
+        <div
+          className={`transition-all duration-200 ease-out ${open ? 'translate-x-0 opacity-100' : '-translate-x-3 opacity-0'}`}
+          style={{ transitionDelay: open ? `${50 * i++}ms` : '0ms' }}
+        >
+          <Link href={pricingLink.href} onClick={onClose} className="block border-b-2 border-cream/10 py-4 font-display text-lg text-cream">
+            {pricingLink.label}
+          </Link>
+        </div>
       </nav>
     </div>
   )
