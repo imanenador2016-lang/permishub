@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
 import { formatPrice } from '@/domain/centers'
 import { createCheckoutSession } from '@/lib/payment'
-import { RESUME_OFFER, EXAMENS_ILLIMITES_OFFER } from '@/content/pricing-config'
+import { RESUME_OFFER, EXAMENS_ILLIMITES_OFFER, RESUME_FREE_FOR_TESTING, RESUME_PDF_URL } from '@/content/pricing-config'
 import { RESUME_HOOK_MESSAGES } from '@/content/resume-hook-messages'
 
 /**
@@ -36,7 +36,18 @@ export function ResumeHook({
   const copy = RESUME_HOOK_MESSAGES[clampedScore]
   const examensIsPrimary = copy.primaryOffer === 'examens'
 
+  // ⚠️ TEMPORAIRE — voir RESUME_FREE_FOR_TESTING (pricing-config.ts) : ouvre
+  // le PDF directement au lieu de Stripe pour le pack Résumé.
+  function offerPriceLabel(offer: { id: string; priceCents: number }) {
+    if (RESUME_FREE_FOR_TESTING && offer.id === RESUME_OFFER.id) return to('resumeFreeTemp')
+    return formatPrice(offer.priceCents, locale)
+  }
+
   async function unlock(offer: { id: string; priceCents: number }, setMsg: (m: string | null) => void) {
+    if (RESUME_FREE_FOR_TESTING && offer.id === RESUME_OFFER.id) {
+      window.open(RESUME_PDF_URL, '_blank', 'noopener,noreferrer')
+      return
+    }
     try {
       const { url } = await createCheckoutSession(offer)
       window.location.href = url
@@ -78,7 +89,7 @@ export function ResumeHook({
         </span>
       )}
       <button onClick={() => unlock(primaryOffer, setPrimaryMessage)} className="btn-comic block w-full px-5 py-4 text-base">
-        {copy.ctaLabel[locale]} — {formatPrice(primaryOffer.priceCents, locale)} →
+        {copy.ctaLabel[locale]} — {offerPriceLabel(primaryOffer)} →
       </button>
       {!examensIsPrimary && <p className="mt-2 text-center font-hand text-sm text-forest">{to('resumeRefund')}</p>}
       {primaryMessage && <p className="mt-1.5 text-center text-xs text-ink/60">{primaryMessage}</p>}
@@ -87,7 +98,7 @@ export function ResumeHook({
         onClick={() => unlock(secondaryOffer, setSecondaryMessage)}
         className="mt-5 block w-full text-center text-xs font-semibold text-ink/70 underline decoration-2 underline-offset-4 hover:text-brick"
       >
-        {secondaryPrefix} {secondaryTitle} — {formatPrice(secondaryOffer.priceCents, locale)} →
+        {secondaryPrefix} {secondaryTitle} — {offerPriceLabel(secondaryOffer)} →
       </button>
       {examensIsPrimary && <p className="mt-1.5 text-center font-hand text-sm text-forest">{to('resumeRefund')}</p>}
       {secondaryMessage && <p className="mt-1.5 text-center text-xs text-ink/60">{secondaryMessage}</p>}

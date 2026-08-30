@@ -20,6 +20,7 @@ export function OfferCard({
   priceLabel,
   ctaLabel,
   ctaHref,
+  ctaHrefNewTab,
   refundNote,
   highlight,
   comingSoon,
@@ -33,6 +34,8 @@ export function OfferCard({
   priceLabel?: string
   ctaLabel: string
   ctaHref?: string
+  /** `ctaHref` pointe hors du site (ex. un PDF) — ouvre un nouvel onglet plutôt que de naviguer sur place. */
+  ctaHrefNewTab?: boolean
   refundNote?: string
   /** Met la carte en avant (bordure/ombre plus marquées) — un seul pack par ligne, jamais tous. */
   highlight?: boolean
@@ -83,7 +86,11 @@ export function OfferCard({
           {ctaLabel}
         </span>
       ) : ctaHref ? (
-        <a href={ctaHref} className="btn-comic block w-full px-4 py-3 text-center text-sm">
+        <a
+          href={ctaHref}
+          {...(ctaHrefNewTab ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+          className="btn-comic block w-full px-4 py-3 text-center text-sm"
+        >
           {ctaLabel} →
         </a>
       ) : (

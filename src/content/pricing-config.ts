@@ -11,6 +11,18 @@ export const RESUME_OFFER = {
   title: { fr: 'Résumé sans blabla', nl: 'Samenvatting zonder blabla' },
 }
 
+/**
+ * ⚠️ TEMPORAIRE (2026-08-30) : le vrai PDF du résumé est arrivé
+ * (public/documents/resume-permishub.pdf) mais pas encore intégré à la
+ * vente définitive — le client veut d'abord le voir/valider en accès
+ * libre. Tant que ce flag est `true`, les boutons Résumé (PacksSection,
+ * ResumeHook) ouvrent le PDF directement au lieu de lancer Stripe. Remettre
+ * à `false` (et brancher packs/succes dessus) une fois la vente prête —
+ * voir conversation du 2026-08-30.
+ */
+export const RESUME_FREE_FOR_TESTING = true
+export const RESUME_PDF_URL = '/documents/resume-permishub.pdf'
+
 export const EXAMENS_ILLIMITES_OFFER = {
   id: 'offer-examens-illimites',
   priceCents: 1999,

@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { OfferCard } from './OfferCard'
-import { RESUME_OFFER, EXAMENS_ILLIMITES_OFFER } from '@/content/pricing-config'
+import { RESUME_OFFER, EXAMENS_ILLIMITES_OFFER, RESUME_FREE_FOR_TESTING, RESUME_PDF_URL } from '@/content/pricing-config'
 
 type Tab = 'theorique' | 'pratique'
 
@@ -53,7 +53,10 @@ export function PacksSection() {
               title={to('resumeTitle')}
               bullets={[t('resumeBullet1'), t('resumeBullet2'), t('resumeBullet3')]}
               offer={RESUME_OFFER}
-              ctaLabel={t('cta')}
+              // ⚠️ TEMPORAIRE — voir RESUME_FREE_FOR_TESTING (pricing-config.ts).
+              {...(RESUME_FREE_FOR_TESTING
+                ? { ctaHref: RESUME_PDF_URL, ctaHrefNewTab: true, ctaLabel: t('ctaFree') }
+                : { ctaLabel: t('cta') })}
               refundNote={to('resumeRefund')}
               highlight
             />
