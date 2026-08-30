@@ -5,6 +5,7 @@ import { Navbar } from '@/components/site/Navbar'
 import { Footer } from '@/components/site/Footer'
 import { Container } from '@/components/ui/Container'
 import { CircuitUnlockCta } from '@/components/circuits/CircuitUnlockCta'
+import { CircuitIllustrationGeneric } from '@/components/circuits/CircuitIllustration'
 import { Link } from '@/i18n/navigation'
 import { EXAM_CENTERS, getCenter, getCircuitsByCenter } from '@/content/centers/registry'
 import { REGION_LABELS } from '@/domain/region'
@@ -73,34 +74,52 @@ export default async function CenterCircuitsPage({
 
           <div className="grid gap-4 sm:grid-cols-2">
             {circuits.map((circuit, i) => (
-              <div key={circuit.id} className="panel flex flex-col gap-3 p-5">
-                <p className="font-display text-xl leading-tight">{t('circuitLabel', { n: i + 1 })}</p>
+              <div key={circuit.id} className="panel flex flex-col !p-0">
+                {/* Visuel en tête de carte — même grammaire que le carrousel
+                    home (CircuitsCarousel.tsx), pas le vrai tracé Google Maps
+                    (réservé à une vraie carte embarquée, voir
+                    NEXT_PUBLIC_GOOGLE_MAPS_API_KEY dans SETUP.md, pas encore
+                    configurée) mais suffit à donner du poids visuel à chaque
+                    carte plutôt qu'un bloc de texte nu — voir conversation du
+                    2026-08-30 (conversion). Teinte différente par carte
+                    (seed=i) pour distinguer les circuits d'un même centre.
+                */}
+                <div className="h-[130px] border-b-[3px] border-ink sm:border-b-4">
+                  <CircuitIllustrationGeneric seed={i} />
+                </div>
 
-                {circuit.distanceKm != null && circuit.attentionPointsCount != null && (
-                  <p className="text-xs font-semibold text-ink/70">
-                    {t('kmPoints', {
-                      km: circuit.distanceKm.toLocaleString(locale === 'nl' ? 'nl-BE' : 'fr-BE'),
-                      points: circuit.attentionPointsCount,
-                    })}
-                  </p>
-                )}
-                {circuit.difficulty && (
-                  <span
-                    className={`w-fit border-2 border-ink px-2.5 py-1 text-[10.5px] font-extrabold ${DIFFICULTY_STYLES[circuit.difficulty]}`}
-                  >
-                    {t(`difficulty.${circuit.difficulty}`)}
-                  </span>
-                )}
+                <div className="flex flex-1 flex-col gap-3 p-5">
+                  <p className="font-display text-xl leading-tight">{t('circuitLabel', { n: i + 1 })}</p>
 
-                <p className="flex-1 text-sm text-ink/70">{circuit.description[locale]}</p>
+                  {circuit.distanceKm != null && circuit.attentionPointsCount != null && (
+                    <p className="text-xs font-semibold text-ink/70">
+                      {t('kmPoints', {
+                        km: circuit.distanceKm.toLocaleString(locale === 'nl' ? 'nl-BE' : 'fr-BE'),
+                        points: circuit.attentionPointsCount,
+                      })}
+                    </p>
+                  )}
+                  {circuit.difficulty && (
+                    <span
+                      className={`w-fit border-2 border-ink px-2.5 py-1 text-[10.5px] font-extrabold ${DIFFICULTY_STYLES[circuit.difficulty]}`}
+                    >
+                      {t(`difficulty.${circuit.difficulty}`)}
+                    </span>
+                  )}
+                  {circuit.mapsUrl && (
+                    <p className="w-fit border-2 border-ink bg-sky px-2 py-1 text-xs font-bold">{t('realMapsBadge')}</p>
+                  )}
 
-                {circuit.mapsUrl ? (
-                  <CircuitUnlockCta mapsUrl={circuit.mapsUrl} centerSlug={center.slug} centerName={center.name} locale={locale} />
-                ) : (
-                  <span className="block w-full cursor-not-allowed border-[3px] border-ink/25 px-4 py-3 text-center text-sm font-bold text-ink/40">
-                    {t('circuitComingSoon')}
-                  </span>
-                )}
+                  <p className="flex-1 text-sm text-ink/70">{circuit.description[locale]}</p>
+
+                  {circuit.mapsUrl ? (
+                    <CircuitUnlockCta mapsUrl={circuit.mapsUrl} centerSlug={center.slug} centerName={center.name} locale={locale} />
+                  ) : (
+                    <span className="block w-full cursor-not-allowed border-[3px] border-ink/25 px-4 py-3 text-center text-sm font-bold text-ink/40">
+                      {t('circuitComingSoon')}
+                    </span>
+                  )}
+                </div>
               </div>
             ))}
           </div>
