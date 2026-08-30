@@ -7,7 +7,6 @@ import type { Question } from '@/domain/quiz'
 import { Button } from '@/components/ui/Button'
 import { TestDeNiveau } from '@/components/test-de-niveau/TestDeNiveau'
 import { HeroProof } from './HeroProof'
-import { HeroProofMarquee } from './HeroProofMarquee'
 
 export function Hero({
   questions,
@@ -72,7 +71,6 @@ export function Hero({
             className="min-w-0"
           >
             <HeroProof />
-            <HeroProofMarquee />
           </motion.div>
         </div>
       </div>

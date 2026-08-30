@@ -42,8 +42,7 @@
     "reussite3": { "quote": "De Samenvatting zonder blabla is gewoon prachtig. Eindelijk geslaagd, 45/50!", "label": "Samenvatting zonder blabla" },
     "reussite4": { "quote": "Na 4 pogingen koos ik voor PermisHub. Geslaagd met 47/50, ik kreeg echt dezelfde vragen!", "label": "Theorie-examen" },
     "reussite5": { "quote": "Bedankt PermisHub! Geslaagd met 44/50.", "label": "Theorie-examen" },
-    "reussite6": { "quote": "Ik slaagde voor mijn praktijkexamen dankzij hun Google Maps-circuits, exact hetzelfde parcours als op examendag.", "label": "Praktijkexamen" },
-    "marqueeHook": "Zij deden het. Waarom jij niet?"
+    "reussite6": { "quote": "Ik slaagde voor mijn praktijkexamen dankzij hun Google Maps-circuits, exact hetzelfde parcours als op examendag.", "label": "Praktijkexamen" }
   },
   "nav": {
     "cours": "Lessen",

@@ -42,8 +42,7 @@
     "reussite3": { "quote": "Le Résumé sans blabla est juste magnifique. Réussi enfin, 45/50 !", "label": "Résumé sans blabla" },
     "reussite4": { "quote": "Après 4 essais, j'ai choisi PermisHub. Réussite 47/50, j'ai eu vraiment les mêmes questions !", "label": "Examen théorique" },
     "reussite5": { "quote": "Merci PermisHub ! Réussite 44/50.", "label": "Examen théorique" },
-    "reussite6": { "quote": "J'ai réussi mon examen pratique grâce à leurs circuits Google Maps, exactement le même parcours que le jour de l'examen.", "label": "Examen pratique" },
-    "marqueeHook": "Ils l'ont fait. Pourquoi pas toi ?"
+    "reussite6": { "quote": "J'ai réussi mon examen pratique grâce à leurs circuits Google Maps, exactement le même parcours que le jour de l'examen.", "label": "Examen pratique" }
   },
   "nav": {
     "cours": "Cours",
