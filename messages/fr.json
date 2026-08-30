@@ -26,6 +26,9 @@
     "resumeReadyTitle": "Ton résumé est prêt",
     "resumeReadyBody": "Accès immédiat, à toi pour toujours.",
     "openResume": "Voir le résumé PDF",
+    "examensReadyTitle": "Tous tes examens sont débloqués",
+    "examensReadyBody": "Accès illimité aux 7 examens blancs, tentatives et corrections comprises.",
+    "viewExamens": "Voir les examens",
     "bundleTitle": "Tous les circuits débloqués !",
     "bundleBody": "Accès illimité à tous les circuits de {center}, dès maintenant.",
     "viewCircuits": "Voir mes circuits"
@@ -158,6 +161,18 @@
     "close": "Fermer",
     "errorFallback": "Le paiement a échoué. Réessaie."
   },
+  "examOffer": {
+    "eyebrow": "Accès illimité",
+    "title": "Débloque tous les examens blancs",
+    "subtitle": "Paiement unique. Pas d'abonnement. Accès à vie.",
+    "bullet1": "Dans les conditions réelles de l'examen officiel",
+    "bullet2": "Tentatives illimitées",
+    "bullet3": "Correction détaillée à chaque erreur",
+    "cta": "Débloquer maintenant",
+    "trustLine": "🔒 Paiement sécurisé · Accès instantané",
+    "close": "Fermer",
+    "errorFallback": "Le paiement a échoué. Réessaie."
+  },
   "offers": {
     "sectionTitle": "Passe à la vitesse supérieure",
     "resumeEyebrow": "Le pur du pur",
@@ -278,6 +293,11 @@
     "yourAnswer": "Ta réponse",
     "correctAnswer": "Bonne réponse",
     "noAnswer": "Pas de réponse",
-    "retry": "Refaire l'examen"
+    "retry": "Refaire l'examen",
+    "lockedBadge": "🔒 Examen verrouillé",
+    "lockedTitle": "Cet examen fait partie des Examens illimités",
+    "lockedBody": "Débloque les 6 examens blancs restants en un seul paiement — accès immédiat, tentatives illimitées.",
+    "lockedCta": "Débloquer les examens",
+    "backToPicker": "← Voir les examens gratuits"
   }
 }

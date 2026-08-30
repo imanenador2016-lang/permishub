@@ -3,33 +3,24 @@
 import { useState } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
 import { Link } from '@/i18n/navigation'
-import { createCheckoutSession } from '@/lib/payment'
 import { formatPrice } from '@/domain/centers'
 import { EXAMENS_ILLIMITES_OFFER } from '@/content/pricing-config'
+import { ExamOfferModal } from './ExamOfferModal'
 import type { ExamenBlancSummary } from '@/lib/examens-blancs'
 
 /**
  * Liste des examens blancs — 1 gratuit (lien direct), les suivants
- * réservés au pack "Examens illimités" : clic = achat direct (même
- * `createCheckoutSession` que partout ailleurs sur le site), pas de lien
- * vers l'examen tant qu'il n'est pas acheté. Verrou "à l'affichage"
- * uniquement — voir src/lib/examens-blancs.ts pour la réserve sur le
- * contrôle d'accès réel.
+ * réservés au pack "Examens illimités" : clic ouvre l'offre (ExamOfferModal,
+ * même stratégie de conversion que CircuitOfferModal pour les circuits)
+ * plutôt qu'un achat instantané. Verrou "à l'affichage" ici + "à l'entrée"
+ * sur la page de l'examen (ExamAccessGate.tsx) — voir src/lib/examens-blancs.ts
+ * pour la réserve sur le contrôle d'accès réel.
  */
 export function ExamenBlancPicker({ exams }: { exams: ExamenBlancSummary[] }) {
   const t = useTranslations('examenBlanc')
   const to = useTranslations('offers')
   const locale = useLocale() as 'fr' | 'nl'
-  const [message, setMessage] = useState<string | null>(null)
-
-  async function unlock() {
-    try {
-      const { url } = await createCheckoutSession(EXAMENS_ILLIMITES_OFFER)
-      window.location.href = url
-    } catch (err) {
-      setMessage(err instanceof Error ? err.message : 'Une erreur est survenue.')
-    }
-  }
+  const [offerOpen, setOfferOpen] = useState(false)
 
   return (
     <div>
@@ -51,7 +42,7 @@ export function ExamenBlancPicker({ exams }: { exams: ExamenBlancSummary[] }) {
           ) : (
             <button
               key={exam.slug}
-              onClick={unlock}
+              onClick={() => setOfferOpen(true)}
               className="panel flex flex-col gap-3 p-5 text-left shadow-hard-xs transition-transform hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-hard-sm"
             >
               <span className="w-fit -rotate-2 border-[3px] border-ink bg-cream px-2.5 py-1 font-display text-[10px] text-ink/70">
@@ -66,7 +57,7 @@ export function ExamenBlancPicker({ exams }: { exams: ExamenBlancSummary[] }) {
           ),
         )}
       </div>
-      {message && <p className="mt-3 text-center text-xs text-ink/60">{message}</p>}
+      {offerOpen && <ExamOfferModal locale={locale} onClose={() => setOfferOpen(false)} />}
     </div>
   )
 }

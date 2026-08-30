@@ -26,6 +26,9 @@
     "resumeReadyTitle": "Je samenvatting is klaar",
     "resumeReadyBody": "Onmiddellijke toegang, voor altijd van jou.",
     "openResume": "Bekijk de PDF-samenvatting",
+    "examensReadyTitle": "Al je examens zijn ontgrendeld",
+    "examensReadyBody": "Onbeperkte toegang tot de 7 proefexamens, pogingen en correcties inbegrepen.",
+    "viewExamens": "Bekijk de examens",
     "bundleTitle": "Alle circuits ontgrendeld!",
     "bundleBody": "Onbeperkte toegang tot alle circuits van {center}, vanaf nu.",
     "viewCircuits": "Bekijk mijn circuits"
@@ -158,6 +161,18 @@
     "close": "Sluiten",
     "errorFallback": "De betaling is mislukt. Probeer opnieuw."
   },
+  "examOffer": {
+    "eyebrow": "Onbeperkte toegang",
+    "title": "Ontgrendel alle proefexamens",
+    "subtitle": "Eenmalige betaling. Geen abonnement. Toegang voor altijd.",
+    "bullet1": "In de echte omstandigheden van het officiële examen",
+    "bullet2": "Onbeperkt aantal pogingen",
+    "bullet3": "Gedetailleerde uitleg bij elke fout",
+    "cta": "Nu ontgrendelen",
+    "trustLine": "🔒 Veilige betaling · Directe toegang",
+    "close": "Sluiten",
+    "errorFallback": "De betaling is mislukt. Probeer opnieuw."
+  },
   "offers": {
     "sectionTitle": "Ga een versnelling hoger",
     "resumeEyebrow": "Het pure van het pure",
@@ -278,6 +293,11 @@
     "yourAnswer": "Jouw antwoord",
     "correctAnswer": "Juist antwoord",
     "noAnswer": "Geen antwoord",
-    "retry": "Doe het examen opnieuw"
+    "retry": "Doe het examen opnieuw",
+    "lockedBadge": "🔒 Examen vergrendeld",
+    "lockedTitle": "Dit examen hoort bij de Onbeperkte proefexamens",
+    "lockedBody": "Ontgrendel de 6 overige proefexamens in één betaling — directe toegang, onbeperkt aantal pogingen.",
+    "lockedCta": "Ontgrendel de examens",
+    "backToPicker": "← Bekijk de gratis examens"
   }
 }

@@ -8,27 +8,24 @@ import examen7Raw from '../../data/examens-blancs/examen-7.json'
 import type { ExamenPhotoQuestion } from '@/domain/examen-photo'
 
 /**
- * Registre des examens blancs "photo" du site — à terme un seul gratuit
- * (le premier intégré, voir conversation du 2026-08-24), les suivants
- * réservés au pack "Examens illimités" (voir src/content/pricing-config.ts).
+ * Registre des examens blancs "photo" du site — un seul gratuit (examen-1,
+ * teaser d'acquisition), les 6 suivants réservés au pack "Examens
+ * illimités" (voir src/content/pricing-config.ts). Verrou remis en place
+ * le 2026-08-30 (voir conversation) après une période de relecture client
+ * où tout était temporairement gratuit.
  *
- * Verrou volontairement "à l'affichage" uniquement (voir conversation du
- * 2026-08-26) : le site n'a pas de compte/session pour vérifier un achat,
- * donc `free: false` masque juste le lien direct et route vers l'achat —
- * ça n'empêche pas techniquement quelqu'un qui devine l'URL d'un examen
- * payant d'y accéder. Un vrai contrôle d'accès demanderait un système de
- * compte ou un jeton post-paiement Stripe, pas encore construit.
+ * Verrou volontairement "à l'affichage + à l'entrée" (ExamAccessGate.tsx
+ * sur la page [slug]), pas un vrai contrôle d'accès serveur : le site n'a
+ * pas de compte/session pour vérifier un achat, donc `free: false` cache le
+ * lien direct dans le picker ET bloque l'entrée côté client (localStorage,
+ * posé après vérification Stripe sur packs/succes) — ça n'empêche pas
+ * techniquement quelqu'un d'inspecter le payload réseau d'un examen payant.
+ * Un vrai contrôle d'accès demanderait un système de compte ou un jeton
+ * post-paiement Stripe, pas encore construit.
  *
  * `hideCorrection` est un flag séparé de `free` : c'est lui qui masque la
  * correction détaillée en fin d'examen (voir ExamenBlanc.tsx), pas le
- * statut payant en lui-même — ça permet de laisser 2 et 3 temporairement
- * accessibles (voir ci-dessous) sans pour autant cacher leur correction,
- * utile pour relire le contenu.
- *
- * ⚠️ TEMPORAIRE (2026-08-26, étendu le 2026-08-27 aux examens 4-7) :
- * examen-2 à examen-7 passés en `free: true` à la demande de l'utilisateur,
- * le temps qu'il relise le contenu. Remettre `free: false` avant la mise
- * en ligne définitive du verrou payant.
+ * statut payant en lui-même.
  */
 export interface ExamenBlancEntry {
   slug: string
@@ -41,12 +38,12 @@ export interface ExamenBlancEntry {
 
 export const EXAMENS_BLANCS: ExamenBlancEntry[] = [
   { slug: 'examen-1', title: 'Examen 1', free: true, hideCorrection: true, questions: examen1Raw as ExamenPhotoQuestion[] },
-  { slug: 'examen-2', title: 'Examen 2', free: true, questions: examen2Raw as ExamenPhotoQuestion[] },
-  { slug: 'examen-3', title: 'Examen 3', free: true, questions: examen3Raw as ExamenPhotoQuestion[] },
-  { slug: 'examen-4', title: 'Examen 4', free: true, questions: examen4Raw as ExamenPhotoQuestion[] },
-  { slug: 'examen-5', title: 'Examen 5', free: true, questions: examen5Raw as ExamenPhotoQuestion[] },
-  { slug: 'examen-6', title: 'Examen 6', free: true, questions: examen6Raw as ExamenPhotoQuestion[] },
-  { slug: 'examen-7', title: 'Examen 7', free: true, questions: examen7Raw as ExamenPhotoQuestion[] },
+  { slug: 'examen-2', title: 'Examen 2', free: false, questions: examen2Raw as ExamenPhotoQuestion[] },
+  { slug: 'examen-3', title: 'Examen 3', free: false, questions: examen3Raw as ExamenPhotoQuestion[] },
+  { slug: 'examen-4', title: 'Examen 4', free: false, questions: examen4Raw as ExamenPhotoQuestion[] },
+  { slug: 'examen-5', title: 'Examen 5', free: false, questions: examen5Raw as ExamenPhotoQuestion[] },
+  { slug: 'examen-6', title: 'Examen 6', free: false, questions: examen6Raw as ExamenPhotoQuestion[] },
+  { slug: 'examen-7', title: 'Examen 7', free: false, questions: examen7Raw as ExamenPhotoQuestion[] },
 ]
 
 export function getExamenBlanc(slug: string): ExamenBlancEntry | undefined {

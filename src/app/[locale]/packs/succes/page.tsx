@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { stripe } from '@/lib/stripe'
-import { getPackOffer, RESUME_OFFER, RESUME_PDF_URL } from '@/content/pricing-config'
+import { getPackOffer, RESUME_OFFER, RESUME_PDF_URL, EXAMENS_ILLIMITES_OFFER } from '@/content/pricing-config'
 import { formatPrice } from '@/domain/centers'
 import { Container } from '@/components/ui/Container'
 import { Navbar } from '@/components/site/Navbar'
 import { Footer } from '@/components/site/Footer'
+import { UnlockExamensEffect } from '@/components/examen-blanc/UnlockExamensEffect'
 import { Link } from '@/i18n/navigation'
 import type { AppLocale } from '@/i18n/request'
 
@@ -62,6 +63,15 @@ export default async function PackSuccessPage({
                   <a href={RESUME_PDF_URL} target="_blank" rel="noopener noreferrer" className="btn-comic inline-flex px-4 py-2.5 text-sm">
                     {t('openResume')} →
                   </a>
+                </div>
+              ) : result.offerId === EXAMENS_ILLIMITES_OFFER.id ? (
+                <div className="panel !shadow-hard-xs mb-5 p-4 text-left">
+                  <UnlockExamensEffect />
+                  <p className="mb-1 font-display text-sm">{t('examensReadyTitle')}</p>
+                  <p className="mb-3 text-sm text-ink/75">{t('examensReadyBody')}</p>
+                  <Link href="/examen-blanc" className="btn-comic inline-flex px-4 py-2.5 text-sm">
+                    {t('viewExamens')} →
+                  </Link>
                 </div>
               ) : (
                 <div className="panel !shadow-hard-xs mb-5 p-4 text-left">

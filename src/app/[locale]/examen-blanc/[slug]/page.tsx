@@ -5,6 +5,7 @@ import { Navbar } from '@/components/site/Navbar'
 import { Footer } from '@/components/site/Footer'
 import { Container } from '@/components/ui/Container'
 import { ExamenBlanc } from '@/components/examen-blanc/ExamenBlanc'
+import { ExamAccessGate } from '@/components/examen-blanc/ExamAccessGate'
 import { EXAMENS_BLANCS, getExamenBlanc } from '@/lib/examens-blancs'
 import type { AppLocale } from '@/i18n/request'
 
@@ -28,9 +29,10 @@ export async function generateMetadata({
 }
 
 /**
- * Un examen blanc "photo" précis (voir /examen-blanc pour la liste). Accès
- * direct par URL non bloqué pour les examens payants — voir la réserve sur
- * le contrôle d'accès dans src/lib/examens-blancs.ts.
+ * Un examen blanc "photo" précis (voir /examen-blanc pour la liste).
+ * ExamAccessGate bloque l'affichage pour un examen payant tant que le
+ * pack "Examens illimités" n'est pas débloqué sur ce navigateur — voir la
+ * réserve sur le contrôle d'accès réel dans src/lib/examens-blancs.ts.
  */
 export default async function ExamenBlancPlayerPage({
   params: { locale, slug },
@@ -51,7 +53,9 @@ export default async function ExamenBlancPlayerPage({
               Deze inhoud is momenteel enkel in het Frans beschikbaar.
             </p>
           )}
-          <ExamenBlanc questions={exam.questions} hideCorrection={exam.hideCorrection} />
+          <ExamAccessGate free={exam.free}>
+            <ExamenBlanc questions={exam.questions} hideCorrection={exam.hideCorrection} />
+          </ExamAccessGate>
         </Container>
       </main>
       <Footer />
