@@ -4,14 +4,14 @@ import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useTranslations, useLocale } from 'next-intl'
 import { ChevronDown } from 'lucide-react'
+import { Container } from '@/components/ui/Container'
 import { FAQ_ITEMS } from '@/content/faq'
 
 /**
- * FAQ home, colonne gauche à côté de ReviewsPanel (voir page.tsx) — remplace
- * l'ancienne section témoignages en bas de page (voir conversation du
- * 2026-08-31). Accordéon simple, une seule question ouverte à la fois. Le
- * schema JSON-LD FAQPage correspondant est généré à partir de la même
- * source (FAQ_ITEMS) directement dans page.tsx, pour ne jamais
+ * FAQ home — remplace l'ancienne section témoignages en bas de page (voir
+ * conversation du 2026-08-31). Accordéon simple, une seule question ouverte
+ * à la fois. Le schema JSON-LD FAQPage correspondant est généré à partir de
+ * la même source (FAQ_ITEMS) directement dans page.tsx, pour ne jamais
  * désynchroniser contenu affiché et données structurées.
  */
 export function FaqSection() {
@@ -20,10 +20,10 @@ export function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <div>
-      <h2 className="mb-6 font-display text-2xl tracking-tight text-ink sm:text-3xl">{t('title')}</h2>
+    <Container className="pb-16">
+      <h2 className="mb-6 text-center font-display text-2xl tracking-tight text-ink sm:text-3xl">{t('title')}</h2>
 
-      <div className="flex flex-col gap-3">
+      <div className="mx-auto flex max-w-2xl flex-col gap-3">
         {FAQ_ITEMS.map((item, i) => {
           const open = openIndex === i
           return (
@@ -53,6 +53,6 @@ export function FaqSection() {
           )
         })}
       </div>
-    </div>
+    </Container>
   )
 }
