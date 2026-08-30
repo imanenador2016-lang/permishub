@@ -22,11 +22,13 @@ type NavLink = { href: string; label: string }
 type NavGroup = { label: string; children: NavLink[] }
 
 export function MobileMenu({
+  leadingLink,
   groups,
-  pricingLink,
+  trailingLink,
 }: {
+  leadingLink: NavLink
   groups: NavGroup[]
-  pricingLink: NavLink
+  trailingLink: NavLink
 }) {
   const [open, setOpen] = useState(false)
   const [rendered, setRendered] = useState(false)
@@ -57,26 +59,44 @@ export function MobileMenu({
           containing block d'un ancêtre positionné (header). */}
       {mounted &&
         rendered &&
-        createPortal(<MenuOverlay groups={groups} pricingLink={pricingLink} open={open} onClose={() => setOpen(false)} />, document.body)}
+        createPortal(
+          <MenuOverlay leadingLink={leadingLink} groups={groups} trailingLink={trailingLink} open={open} onClose={() => setOpen(false)} />,
+          document.body,
+        )}
     </div>
   )
 }
 
 function MenuOverlay({
+  leadingLink,
   groups,
-  pricingLink,
+  trailingLink,
   open,
   onClose,
 }: {
+  leadingLink: NavLink
   groups: NavGroup[]
-  pricingLink: NavLink
+  trailingLink: NavLink
   open: boolean
   onClose: () => void
 }) {
-  // Aplatit groupes + lien tarifs en une seule liste animée (entête de
-  // groupe non cliquable + ses liens, puis le lien tarifs) — même effet de
+  // Aplatit lien d'accueil + groupes + lien de fin en une seule liste
+  // animée (entête de groupe non cliquable + ses liens) — même effet de
   // cascade au défilé que l'ancienne liste plate.
   let i = 0
+
+  function PlainLink({ link }: { link: NavLink }) {
+    return (
+      <div
+        className={`transition-all duration-200 ease-out ${open ? 'translate-x-0 opacity-100' : '-translate-x-3 opacity-0'}`}
+        style={{ transitionDelay: open ? `${50 * i++}ms` : '0ms' }}
+      >
+        <Link href={link.href} onClick={onClose} className="block border-b-2 border-cream/10 py-4 font-display text-lg text-cream">
+          {link.label}
+        </Link>
+      </div>
+    )
+  }
 
   return (
     <div
@@ -95,6 +115,7 @@ function MenuOverlay({
         </button>
       </div>
       <nav className="flex flex-col gap-1 px-5 py-4">
+        <PlainLink link={leadingLink} />
         {groups.map((group) => (
           <div key={group.label} className="mb-2">
             <p
@@ -120,14 +141,7 @@ function MenuOverlay({
             ))}
           </div>
         ))}
-        <div
-          className={`transition-all duration-200 ease-out ${open ? 'translate-x-0 opacity-100' : '-translate-x-3 opacity-0'}`}
-          style={{ transitionDelay: open ? `${50 * i++}ms` : '0ms' }}
-        >
-          <Link href={pricingLink.href} onClick={onClose} className="block border-b-2 border-cream/10 py-4 font-display text-lg text-cream">
-            {pricingLink.label}
-          </Link>
-        </div>
+        <PlainLink link={trailingLink} />
       </nav>
     </div>
   )

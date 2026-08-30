@@ -46,6 +46,7 @@
     "whyNotYou": "Pourquoi pas toi ?"
   },
   "nav": {
+    "home": "Accueil",
     "cours": "Cours",
     "theorieB": "Théorie B",
     "pratiqueB": "Pratique B",
@@ -54,6 +55,7 @@
     "circuits": "Circuits d'examen",
     "perception": "Perception des risques",
     "roadbook": "Roadbook",
+    "blog": "Blog",
     "pricing": "Tarifs",
     "dashboard": "Mon espace",
     "login": "Se connecter"
@@ -209,6 +211,12 @@
     "how3": "Résume ce que tu as travaillé et ce qu'il reste à améliorer",
     "how4": "Fais-le signer par ton accompagnateur après chaque sortie",
     "downloadCta": "Télécharger le roadbook (PDF gratuit)"
+  },
+  "blogPage": {
+    "eyebrow": "Bientôt",
+    "title": "Le blog arrive bientôt",
+    "body": "Conseils pour l'examen théorique et pratique, actus des centres, retours d'expérience — les premiers articles arrivent très vite.",
+    "backHome": "← Retour à l'accueil"
   },
   "testDeNiveau": {
     "badge": "Test de niveau",

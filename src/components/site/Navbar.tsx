@@ -34,10 +34,13 @@ export async function Navbar() {
           </Link>
 
           <nav className="hidden items-center gap-6 text-sm font-medium text-ink md:flex">
+            <Link href="/" className="hover:text-brick">
+              {t('home')}
+            </Link>
             <NavDropdown label={t('theorieB')} links={theorieLinks} />
             <NavDropdown label={t('pratiqueB')} links={pratiqueLinks} />
-            <Link href="/#packs" className="hover:text-brick">
-              {t('pricing')}
+            <Link href="/blog" className="hover:text-brick">
+              {t('blog')}
             </Link>
           </nav>
 
@@ -57,11 +60,12 @@ export async function Navbar() {
               ))}
             </div>
             <MobileMenu
+              leadingLink={{ href: '/', label: t('home') }}
               groups={[
                 { label: t('theorieB'), children: theorieLinks },
                 { label: t('pratiqueB'), children: pratiqueLinks },
               ]}
-              pricingLink={{ href: '/#packs', label: t('pricing') }}
+              trailingLink={{ href: '/blog', label: t('blog') }}
             />
           </div>
         </header>

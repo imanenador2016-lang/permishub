@@ -46,6 +46,7 @@
     "whyNotYou": "Waarom jij niet?"
   },
   "nav": {
+    "home": "Home",
     "cours": "Lessen",
     "theorieB": "Theorie B",
     "pratiqueB": "Praktijk B",
@@ -54,6 +55,7 @@
     "circuits": "Examencircuits",
     "perception": "Gevaarherkenning",
     "roadbook": "Roadbook",
+    "blog": "Blog",
     "pricing": "Tarieven",
     "dashboard": "Mijn omgeving",
     "login": "Inloggen"
@@ -209,6 +211,12 @@
     "how3": "Vat samen wat je hebt geoefend en wat nog beter kan",
     "how4": "Laat het ondertekenen door je begeleider na elke rijles",
     "downloadCta": "Download het roadbook (gratis PDF)"
+  },
+  "blogPage": {
+    "eyebrow": "Binnenkort",
+    "title": "De blog komt binnenkort",
+    "body": "Tips voor het theorie- en praktijkexamen, nieuws over de centra, ervaringen van kandidaten — de eerste artikels komen er snel aan.",
+    "backHome": "← Terug naar de startpagina"
   },
   "testDeNiveau": {
     "badge": "Niveautest",
