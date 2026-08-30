@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl'
 import type { Question } from '@/domain/quiz'
 import { Button } from '@/components/ui/Button'
 import { TestDeNiveau } from '@/components/test-de-niveau/TestDeNiveau'
+import { Link } from '@/i18n/navigation'
 import { HeroProof } from './HeroProof'
 
 export function Hero({
@@ -72,12 +73,12 @@ export function Hero({
             className="min-w-0"
           >
             <HeroProof />
-            <button
-              onClick={() => setOpen(true)}
+            <Link
+              href="/#packs"
               className="mt-3 w-fit -rotate-1 border-2 border-ink bg-forest px-3.5 py-2 font-hand text-base text-cream transition-transform hover:-translate-y-0.5"
             >
               {tt('whyNotYou')} →
-            </button>
+            </Link>
           </motion.div>
         </div>
       </div>
