@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { stripe } from '@/lib/stripe'
-import { getPackOffer } from '@/content/pricing-config'
+import { getPackOffer, RESUME_OFFER, RESUME_PDF_URL } from '@/content/pricing-config'
 import { formatPrice } from '@/domain/centers'
 import { Container } from '@/components/ui/Container'
 import { Navbar } from '@/components/site/Navbar'
@@ -21,10 +21,11 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 /**
  * Accès instantané après paiement d'un pack — même principe que
  * circuits/succes : session_id revérifié en direct auprès de Stripe
- * (payment_status === 'paid'), jamais fait confiance à l'URL seule.
- * Aucun des 3 packs n'a encore de contenu réel livrable (Résumé PDF,
- * série d'examens, perception des risques — voir SETUP.md) : le message
- * le dit honnêtement plutôt que de prétendre livrer quelque chose.
+ * (payment_status === 'paid'), jamais fait confiance à l'URL seule. Le
+ * pack Résumé a un vrai contenu livrable (PDF, voir RESUME_PDF_URL) — les
+ * 2 autres (série d'examens, perception des risques) ne l'ont pas encore
+ * (voir SETUP.md) : le message le dit honnêtement plutôt que de prétendre
+ * livrer quelque chose.
  */
 export default async function PackSuccessPage({
   params: { locale },
@@ -54,10 +55,20 @@ export default async function PackSuccessPage({
                 <strong className="text-ink">{result.offerTitle}</strong> — {formatPrice(result.amountCents, locale)}
               </p>
 
-              <div className="panel !shadow-hard-xs mb-5 p-4 text-left">
-                <p className="mb-1 font-display text-sm">{t('packPendingTitle')}</p>
-                <p className="text-sm text-ink/75">{t('packPendingBody')}</p>
-              </div>
+              {result.offerId === RESUME_OFFER.id ? (
+                <div className="panel !shadow-hard-xs mb-5 p-4 text-left">
+                  <p className="mb-1 font-display text-sm">{t('resumeReadyTitle')}</p>
+                  <p className="mb-3 text-sm text-ink/75">{t('resumeReadyBody')}</p>
+                  <a href={RESUME_PDF_URL} target="_blank" rel="noopener noreferrer" className="btn-comic inline-flex px-4 py-2.5 text-sm">
+                    {t('openResume')} →
+                  </a>
+                </div>
+              ) : (
+                <div className="panel !shadow-hard-xs mb-5 p-4 text-left">
+                  <p className="mb-1 font-display text-sm">{t('packPendingTitle')}</p>
+                  <p className="text-sm text-ink/75">{t('packPendingBody')}</p>
+                </div>
+              )}
 
               <p className="text-xs text-ink/50">{t('receiptNote')}</p>
             </div>
@@ -92,6 +103,7 @@ async function verify(sessionId: string, locale: AppLocale) {
   if (!offer) return null
 
   return {
+    offerId: offer.id,
     offerTitle: offer.title[locale],
     amountCents: session.amount_total ?? offer.priceCents,
   }

@@ -12,15 +12,12 @@ export const RESUME_OFFER = {
 }
 
 /**
- * ⚠️ TEMPORAIRE (2026-08-30) : le vrai PDF du résumé est arrivé
- * (public/documents/resume-permishub.pdf) mais pas encore intégré à la
- * vente définitive — le client veut d'abord le voir/valider en accès
- * libre. Tant que ce flag est `true`, les boutons Résumé (PacksSection,
- * ResumeHook) ouvrent le PDF directement au lieu de lancer Stripe. Remettre
- * à `false` (et brancher packs/succes dessus) une fois la vente prête —
- * voir conversation du 2026-08-30.
+ * Le vrai PDF du résumé (public/documents/resume-permishub.pdf) — vendu à
+ * 9,99 € (RESUME_OFFER.priceCents), livré instantanément sur packs/succes
+ * une fois le paiement vérifié auprès de Stripe (voir décision du
+ * 2026-08-30 : accès gratuit temporaire terminé, vente définitive active).
  */
-export const RESUME_FREE_FOR_TESTING = true
+export const RESUME_FREE_FOR_TESTING = false
 export const RESUME_PDF_URL = '/documents/resume-permishub.pdf'
 
 export const EXAMENS_ILLIMITES_OFFER = {

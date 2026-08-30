@@ -23,6 +23,9 @@
     "packPendingTitle": "Ton contenu arrive très bientôt",
     "packPendingBody": "Ton paiement est confirmé et ton accès est réservé. On finalise ce contenu — tu seras parmi les premiers à le recevoir dès qu'il est prêt.",
     "backToPacks": "Retour aux packs",
+    "resumeReadyTitle": "Ton résumé est prêt",
+    "resumeReadyBody": "Accès immédiat, à toi pour toujours.",
+    "openResume": "Voir le résumé PDF",
     "bundleTitle": "Tous les circuits débloqués !",
     "bundleBody": "Accès illimité à tous les circuits de {center}, dès maintenant.",
     "viewCircuits": "Voir mes circuits"
