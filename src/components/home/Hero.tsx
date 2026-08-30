@@ -7,6 +7,7 @@ import type { Question } from '@/domain/quiz'
 import { Button } from '@/components/ui/Button'
 import { TestDeNiveau } from '@/components/test-de-niveau/TestDeNiveau'
 import { HeroProof } from './HeroProof'
+import { HeroProofMarquee } from './HeroProofMarquee'
 
 export function Hero({
   questions,
@@ -68,8 +69,10 @@ export function Hero({
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.1 }}
+            className="min-w-0"
           >
             <HeroProof />
+            <HeroProofMarquee />
           </motion.div>
         </div>
       </div>

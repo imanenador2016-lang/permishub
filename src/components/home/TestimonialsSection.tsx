@@ -5,7 +5,8 @@ import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { Container } from '@/components/ui/Container'
 
-const TESTIMONIALS = [
+/** Les 6 vrais avis clients du site (voir messages/{fr,nl}.json `testimonials.reussite1..6`) — source unique réutilisée aussi par HeroProofMarquee.tsx. */
+export const TESTIMONIALS = [
   { key: 'reussite1', photo: '/testimonials/reussite-3.webp' },
   { key: 'reussite2', photo: '/testimonials/reussite-2.webp' },
   { key: 'reussite3', photo: '/testimonials/reussite-1.jpg' },
