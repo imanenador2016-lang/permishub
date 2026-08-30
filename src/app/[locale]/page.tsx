@@ -4,7 +4,6 @@ import { getTestDeNiveauQuestions } from '@/lib/test-de-niveau'
 import { Navbar } from '@/components/site/Navbar'
 import { Footer } from '@/components/site/Footer'
 import { Hero } from '@/components/home/Hero'
-import { ExamenBlancTeaser } from '@/components/home/ExamenBlancTeaser'
 import { TrustBar } from '@/components/home/TrustBar'
 import { CircuitsCarousel } from '@/components/circuits/CircuitsCarousel'
 import { CoutEchecBanner } from '@/components/circuits/CoutEchecBanner'
@@ -27,15 +26,6 @@ export default async function HomePage({ params: { locale } }: { params: { local
       <main>
         {/* 1. Hero (test de niveau) */}
         <Hero questions={questions} themeLabels={themeLabels} />
-
-        {/* 1bis. Examen blanc gratuit — un seul examen réel pour l'instant
-            (voir /examen-blanc et src/lib/examen-blanc.ts), remis en avant
-            depuis le 2026-08-26 : sert d'appât gratuit avant l'offre
-            "Examens illimités" (section #packs) — le hook de conversion est
-            sur l'écran de résultat de l'examen lui-même. */}
-        <Container className="py-10 sm:py-14">
-          <ExamenBlancTeaser />
-        </Container>
 
         {/* 2. Circuits d'examen pratique — remonté juste après le hero
             (section Cours retirée de la home, pas encore de contenu). */}
