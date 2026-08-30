@@ -60,8 +60,6 @@ export function Hero({
                 {t('ctaPrimary')} →
               </Button>
             </div>
-            <p className="mb-1 mt-2.5 text-xs font-medium text-ink/65">{t('microcopy')}</p>
-            <p className="mb-5 text-[11px] italic text-ink/50">{t('delayNote')}</p>
           </motion.div>
 
           {/* Preuve sociale : vraies photos de candidats, à la place de
