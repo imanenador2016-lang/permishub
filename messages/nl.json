@@ -34,7 +34,9 @@
     "viewCircuits": "Bekijk mijn circuits"
   },
   "testimonials": {
+    "title": "Zij slaagden met PermisHub",
     "heroEyebrow": "Zij slaagden",
+    "badge": "Geslaagd ✓",
     "reussite1": { "quote": "Ik slaagde met 46/50 dankzij PermisHub.", "label": "Theorie-examen" },
     "reussite2": { "quote": "Ik slaagde voor mijn praktijkexamen in één keer dankzij PermisHub.", "label": "Praktijkexamen" },
     "reussite3": { "quote": "De Samenvatting zonder blabla is gewoon prachtig. Eindelijk geslaagd, 45/50!", "label": "Samenvatting zonder blabla" },
@@ -301,9 +303,6 @@
     "lockedBody": "Ontgrendel de 6 overige proefexamens in één betaling — directe toegang, onbeperkt aantal pogingen.",
     "lockedCta": "Ontgrendel de examens",
     "backToPicker": "← Bekijk alle examens"
-  },
-  "faq": {
-    "title": "Veelgestelde vragen"
   },
   "finalCta": {
     "title": "Klaar om je niveau te testen?",
