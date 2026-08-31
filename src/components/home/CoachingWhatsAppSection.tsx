@@ -16,7 +16,7 @@ export async function CoachingWhatsAppSection() {
   const waHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(t('waMessage'))}`
 
   return (
-    <Container className="pb-16">
+    <Container id="coaching" className="scroll-mt-6 pb-16">
       <div className="panel flex flex-col items-center gap-4 bg-forest p-6 text-center text-cream sm:p-10">
         <span className="w-fit -rotate-2 border-[3px] border-ink bg-yellow px-3.5 py-1.5 font-display text-xs text-ink sm:text-sm">
           {t('eyebrow')}

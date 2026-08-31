@@ -18,6 +18,7 @@ export async function Navbar() {
   const theorieLinks = [
     { href: '/resume', label: t('resume') },
     { href: '/examen-blanc', label: t('examens') },
+    { href: '/#coaching', label: t('coaching') },
   ]
   const pratiqueLinks = [
     { href: '/#circuits', label: t('circuits') },
