@@ -214,9 +214,11 @@
     "downloadCta": "Télécharger le roadbook (PDF gratuit)"
   },
   "blogPage": {
-    "eyebrow": "Bientôt",
-    "title": "Le blog arrive bientôt",
-    "body": "Conseils pour l'examen théorique et pratique, actus des centres, retours d'expérience — les premiers articles arrivent très vite.",
+    "eyebrow": "Blog",
+    "title": "Le blog PermisHub",
+    "body": "Conseils pour l'examen théorique et pratique, actus des centres, retours d'expérience.",
+    "moreSoon": "D'autres articles arrivent bientôt.",
+    "readArticle": "Lire l'article",
     "backHome": "← Retour à l'accueil"
   },
   "coaching": {

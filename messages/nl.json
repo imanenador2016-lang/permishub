@@ -214,9 +214,11 @@
     "downloadCta": "Download het roadbook (gratis PDF)"
   },
   "blogPage": {
-    "eyebrow": "Binnenkort",
-    "title": "De blog komt binnenkort",
-    "body": "Tips voor het theorie- en praktijkexamen, nieuws over de centra, ervaringen van kandidaten — de eerste artikels komen er snel aan.",
+    "eyebrow": "Blog",
+    "title": "De PermisHub-blog",
+    "body": "Tips voor het theorie- en praktijkexamen, nieuws over de centra, ervaringen van kandidaten.",
+    "moreSoon": "Binnenkort meer artikels.",
+    "readArticle": "Lees het artikel",
     "backHome": "← Terug naar de startpagina"
   },
   "coaching": {
