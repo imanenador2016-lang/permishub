@@ -218,6 +218,14 @@
     "body": "Conseils pour l'examen théorique et pratique, actus des centres, retours d'expérience — les premiers articles arrivent très vite.",
     "backHome": "← Retour à l'accueil"
   },
+  "coaching": {
+    "eyebrow": "Coaching individuel",
+    "title": "Des difficultés ? Un coup de pouce individuel",
+    "body": "Problèmes de concentration, blocage qui revient, ou tu veux juste tout donner pour assurer ta réussite — réserve une séance de coaching individuel avec un formateur, en direct sur WhatsApp.",
+    "priceLabel": "50 € la séance",
+    "cta": "Réserver via WhatsApp",
+    "waMessage": "Bonjour, je souhaite réserver une séance de coaching individuel PermisHub (50€)."
+  },
   "testDeNiveau": {
     "badge": "Test de niveau",
     "intro": "8 à 12 questions rapides sur les priorités, la signalisation, les distances de sécurité et les règles générales. Pas de compte requis.",

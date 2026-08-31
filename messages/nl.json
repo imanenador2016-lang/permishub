@@ -218,6 +218,14 @@
     "body": "Tips voor het theorie- en praktijkexamen, nieuws over de centra, ervaringen van kandidaten — de eerste artikels komen er snel aan.",
     "backHome": "← Terug naar de startpagina"
   },
+  "coaching": {
+    "eyebrow": "Individuele coaching",
+    "title": "Moeilijkheden? Een individueel duwtje in de rug",
+    "body": "Concentratieproblemen, een terugkerende blokkade, of je wil gewoon alles geven om te slagen — boek een individuele coachingsessie met een lesgever, rechtstreeks via WhatsApp.",
+    "priceLabel": "50 € per sessie",
+    "cta": "Boek via WhatsApp",
+    "waMessage": "Hallo, ik wil graag een individuele coachingsessie bij PermisHub boeken (50€)."
+  },
   "testDeNiveau": {
     "badge": "Niveautest",
     "intro": "8 tot 12 korte vragen over voorrang, signalisatie, veiligheidsafstand en algemene regels. Geen account nodig.",

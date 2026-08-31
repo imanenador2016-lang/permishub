@@ -9,6 +9,7 @@ import { CircuitsCarousel } from '@/components/circuits/CircuitsCarousel'
 import { CoutEchecBanner } from '@/components/circuits/CoutEchecBanner'
 import { PacksSection } from '@/components/pricing/PacksSection'
 import { TestimonialsSection } from '@/components/home/TestimonialsSection'
+import { CoachingWhatsAppSection } from '@/components/home/CoachingWhatsAppSection'
 import { Container } from '@/components/ui/Container'
 import type { AppLocale } from '@/i18n/request'
 
@@ -46,6 +47,9 @@ export default async function HomePage({ params: { locale } }: { params: { local
 
         {/* Avis clients */}
         <TestimonialsSection />
+
+        {/* Coaching individuel, réservation via WhatsApp */}
+        <CoachingWhatsAppSection />
 
         {/* Bandeau de confiance / preuve sociale */}
         <TrustBar />
