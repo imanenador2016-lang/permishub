@@ -303,10 +303,5 @@
     "lockedBody": "Débloque les 6 examens blancs restants en un seul paiement — accès immédiat, tentatives illimitées.",
     "lockedCta": "Débloquer les examens",
     "backToPicker": "← Voir tous les examens"
-  },
-  "finalCta": {
-    "title": "Prêt à tester ton niveau ?",
-    "subtitle": "2 minutes pour savoir où tu en es, gratuitement.",
-    "cta": "Tester gratuitement"
   }
 }
