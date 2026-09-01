@@ -5,14 +5,17 @@ import { Footer } from '@/components/site/Footer'
 import { Container } from '@/components/ui/Container'
 import { OfferCard } from '@/components/pricing/OfferCard'
 import { RESUME_OFFER } from '@/content/pricing-config'
-import type { AppLocale } from '@/i18n/request'
+import { LOCALES, type AppLocale } from '@/i18n/request'
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: AppLocale } }): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'resumePage' })
   return {
     title: t('title'),
     description: t('subtitle'),
-    alternates: { canonical: `/${locale}/resume` },
+    alternates: {
+      canonical: `/${locale}/resume`,
+      languages: Object.fromEntries(LOCALES.map((l) => [l, `/${l}/resume`])),
+    },
   }
 }
 

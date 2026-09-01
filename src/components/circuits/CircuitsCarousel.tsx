@@ -101,9 +101,18 @@ export function CircuitsCarousel() {
                   <p className="mb-2.5 inline-block border-2 border-ink bg-sky px-2 py-1 text-xs font-bold">{t('realMapsBadge')}</p>
                 )}
                 {center.comingSoon ? (
-                  <span className="block w-full cursor-not-allowed border-[3px] border-ink/25 px-4 py-2.5 text-center text-sm font-bold text-ink/40">
+                  // Vrai <Link href> (pas un <span>) avec preventDefault : même
+                  // comportement clic qu'avant (rien ne se passe), mais l'URL
+                  // du centre redevient crawlable — voir audit SEO du
+                  // 2026-09-01, ces 6 pages n'avaient aucun lien réel les
+                  // pointant, seulement le sitemap.
+                  <Link
+                    href={`/circuits/${center.slug}`}
+                    onClick={(e) => e.preventDefault()}
+                    className="block w-full cursor-not-allowed border-[3px] border-ink/25 px-4 py-2.5 text-center text-sm font-bold text-ink/40"
+                  >
                     {t('circuitComingSoon')}
-                  </span>
+                  </Link>
                 ) : (
                   <Link href={`/circuits/${center.slug}`} className="btn-comic block w-full px-4 py-2.5 text-center text-sm">
                     {t('ctaViewCircuits')} →

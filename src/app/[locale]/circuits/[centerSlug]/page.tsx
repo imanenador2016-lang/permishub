@@ -9,7 +9,7 @@ import { CircuitIllustrationGeneric } from '@/components/circuits/CircuitIllustr
 import { Link } from '@/i18n/navigation'
 import { EXAM_CENTERS, getCenter, getCircuitsByCenter } from '@/content/centers/registry'
 import { REGION_LABELS } from '@/domain/region'
-import type { AppLocale } from '@/i18n/request'
+import { LOCALES, type AppLocale } from '@/i18n/request'
 
 export function generateStaticParams() {
   return EXAM_CENTERS.map((center) => ({ centerSlug: center.slug }))
@@ -23,9 +23,23 @@ export async function generateMetadata({
   const center = getCenter(centerSlug)
   const t = await getTranslations({ locale, namespace: 'circuits' })
   if (!center) return { title: t('title') }
+
+  // Description unique par centre (audit SEO du 2026-09-01) — jamais le
+  // même texte générique : nom, région et nombre réel de circuits varient
+  // toujours d'un centre à l'autre, aucune donnée inventée.
+  const circuitCount = getCircuitsByCenter(centerSlug).length
+  const regionLabel = REGION_LABELS[center.region][locale]
+  const description = center.comingSoon
+    ? t('metaDescriptionComingSoon', { name: center.name, region: regionLabel })
+    : t('metaDescriptionActive', { name: center.name, region: regionLabel, count: circuitCount })
+
   return {
     title: `${center.name} — ${t('title')}`,
-    alternates: { canonical: `/${locale}/circuits/${centerSlug}` },
+    description,
+    alternates: {
+      canonical: `/${locale}/circuits/${centerSlug}`,
+      languages: Object.fromEntries(LOCALES.map((l) => [l, `/${l}/circuits/${centerSlug}`])),
+    },
   }
 }
 

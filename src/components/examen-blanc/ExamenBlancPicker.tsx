@@ -16,6 +16,13 @@ import type { ExamenBlancSummary } from '@/lib/examens-blancs'
  * (ExamAccessGate.tsx) — voir src/lib/examens-blancs.ts pour la réserve
  * sur le contrôle d'accès réel. La branche `exam.free` est gardée pour
  * pouvoir réintroduire un teaser gratuit facilement plus tard.
+ *
+ * La carte verrouillée est un vrai `<Link href>` (pas un `<button>`) avec
+ * `preventDefault` — comportement clic strictement identique pour
+ * l'utilisateur (ouvre toujours le modal, ne navigue jamais), mais l'URL
+ * de l'examen redevient crawlable/trouvable par un moteur de recherche —
+ * avant l'audit SEO du 2026-09-01, aucun lien réel ne pointait vers ces 7
+ * pages, qui dépendaient uniquement du sitemap pour être découvertes.
  */
 export function ExamenBlancPicker({ exams }: { exams: ExamenBlancSummary[] }) {
   const t = useTranslations('examenBlanc')
@@ -41,9 +48,13 @@ export function ExamenBlancPicker({ exams }: { exams: ExamenBlancSummary[] }) {
               <span className="btn-comic block px-4 py-3 text-center text-sm">{t('pickerPlay')} →</span>
             </Link>
           ) : (
-            <button
+            <Link
               key={exam.slug}
-              onClick={() => setOfferOpen(true)}
+              href={`/examen-blanc/${exam.slug}`}
+              onClick={(e) => {
+                e.preventDefault()
+                setOfferOpen(true)
+              }}
               className="panel flex flex-col gap-3 p-5 text-left shadow-hard-xs transition-transform hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-hard-sm"
             >
               <span className="w-fit -rotate-2 border-[3px] border-ink bg-cream px-2.5 py-1 font-display text-[10px] text-ink/70">
@@ -52,7 +63,7 @@ export function ExamenBlancPicker({ exams }: { exams: ExamenBlancSummary[] }) {
               <p className="font-display text-xl leading-tight">{exam.title}</p>
               <p className="flex-1 text-sm text-ink/70">{t('pickerQuestionCount', { count: exam.questionCount })}</p>
               <span className="btn-comic block px-4 py-3 text-center text-sm">{to('cta')} →</span>
-            </button>
+            </Link>
           ),
         )}
       </div>

@@ -17,27 +17,29 @@ export const EXAMENS_UNLOCKED_KEY = 'examens-unlocked'
  * une fois sur packs/succes) ; localStorage n'est qu'un confort de
  * navigateur, pas un vrai contrôle d'accès serveur (voir
  * src/lib/examens-blancs.ts).
+ *
+ * `unlocked` démarre à `free` (donc le serveur affiche déjà le bon état :
+ * le contenu si gratuit, sinon l'écran verrouillé) — avant l'audit SEO du
+ * 2026-09-01, un état intermédiaire "pas encore vérifié" renvoyait `null`
+ * le temps du premier rendu, donc les 7 pages d'examen (toutes payantes)
+ * étaient servies à Google sans aucun contenu (pas de H1, rien). Le
+ * useEffect ne fait plus que *déverrouiller* si le localStorage le confirme
+ * — même comportement utilisateur, juste sans le flash de page vide.
  */
 export function ExamAccessGate({ free, children }: { free: boolean; children: React.ReactNode }) {
   const t = useTranslations('examenBlanc')
   const locale = useLocale() as 'fr' | 'nl'
   const [unlocked, setUnlocked] = useState(free)
-  const [checked, setChecked] = useState(free)
   const [offerOpen, setOfferOpen] = useState(false)
 
   useEffect(() => {
     if (free) return
     try {
-      setUnlocked(localStorage.getItem(EXAMENS_UNLOCKED_KEY) === '1')
+      if (localStorage.getItem(EXAMENS_UNLOCKED_KEY) === '1') setUnlocked(true)
     } catch {
       // localStorage indisponible — reste verrouillé, jamais bloquant pour la navigation.
-    } finally {
-      setChecked(true)
     }
   }, [free])
-
-  // Évite un flash "verrouillé" avant que le check localStorage n'ait tourné côté client.
-  if (!checked) return null
 
   if (unlocked) return <>{children}</>
 

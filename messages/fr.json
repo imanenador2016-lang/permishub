@@ -140,6 +140,8 @@
     "coutEcheeSourcePending": "Source à confirmer",
     "coutEcheeSourceLink": "Voir la source officielle",
     "circuitListBadge": "Circuits d'entraînement",
+    "metaDescriptionActive": "Entraîne-toi pour l'examen pratique du permis B à {name} ({region}) : {count} circuits avec itinéraire Google Maps réel, points d'attention et niveau de difficulté.",
+    "metaDescriptionComingSoon": "Centre d'examen du permis B à {name} ({region}) — circuits d'entraînement bientôt disponibles sur PermisHub.",
     "circuitLabel": "Circuit {n}",
     "viewItinerary": "Voir l'itinéraire",
     "circuitComingSoon": "Bientôt disponible",

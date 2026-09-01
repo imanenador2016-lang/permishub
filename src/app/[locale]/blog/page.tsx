@@ -4,14 +4,17 @@ import { Navbar } from '@/components/site/Navbar'
 import { Footer } from '@/components/site/Footer'
 import { Container } from '@/components/ui/Container'
 import { Link } from '@/i18n/navigation'
-import type { AppLocale } from '@/i18n/request'
+import { LOCALES, type AppLocale } from '@/i18n/request'
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: AppLocale } }): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'blogPage' })
   return {
     title: t('title'),
     description: t('body'),
-    alternates: { canonical: `/${locale}/blog` },
+    alternates: {
+      canonical: `/${locale}/blog`,
+      languages: Object.fromEntries(LOCALES.map((l) => [l, `/${l}/blog`])),
+    },
   }
 }
 

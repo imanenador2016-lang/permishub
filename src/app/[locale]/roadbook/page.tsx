@@ -3,7 +3,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { Navbar } from '@/components/site/Navbar'
 import { Footer } from '@/components/site/Footer'
 import { Container } from '@/components/ui/Container'
-import type { AppLocale } from '@/i18n/request'
+import { LOCALES, type AppLocale } from '@/i18n/request'
 
 const ROADBOOK_PDF_URL = '/documents/roadbook-permishub.pdf'
 
@@ -12,7 +12,10 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   return {
     title: t('title'),
     description: t('subtitle'),
-    alternates: { canonical: `/${locale}/roadbook` },
+    alternates: {
+      canonical: `/${locale}/roadbook`,
+      languages: Object.fromEntries(LOCALES.map((l) => [l, `/${l}/roadbook`])),
+    },
   }
 }
 

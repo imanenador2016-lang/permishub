@@ -80,10 +80,25 @@ const jsonLd = {
 export default async function CentresExamenPermisPratiqueArticle({ params: { locale } }: { params: { locale: AppLocale } }) {
   setRequestLocale(locale)
 
+  // BreadcrumbList — reflète le fil d'Ariane affiché plus bas (Accueil /
+  // Blog / cette page), voir audit SEO du 2026-09-01 : jamais de schema
+  // qui ne correspond pas à ce qui est réellement affiché.
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Accueil', item: `${SITE_URL}/${locale}` },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/${locale}/blog` },
+      { '@type': 'ListItem', position: 3, name: TITLE, item: `${SITE_URL}/${locale}/${SLUG}` },
+    ],
+  }
+
   return (
     <>
       {/* eslint-disable-next-line react/no-danger */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      {/* eslint-disable-next-line react/no-danger */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <Navbar />
       <main className="px-4 py-10 sm:px-6 sm:py-14">
         <Container className="max-w-3xl">

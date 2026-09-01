@@ -140,6 +140,8 @@
     "coutEcheeSourcePending": "Bron te bevestigen",
     "coutEcheeSourceLink": "Bekijk de officiële bron",
     "circuitListBadge": "Trainingscircuits",
+    "metaDescriptionActive": "Oefen voor het praktijkexamen rijbewijs B in {name} ({region}): {count} circuits met echte Google Maps-route, aandachtspunten en moeilijkheidsgraad.",
+    "metaDescriptionComingSoon": "Examencentrum rijbewijs B in {name} ({region}) — trainingscircuits binnenkort beschikbaar op PermisHub.",
     "circuitLabel": "Circuit {n}",
     "viewItinerary": "Bekijk de route",
     "circuitComingSoon": "Binnenkort beschikbaar",

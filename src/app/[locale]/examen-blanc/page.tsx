@@ -5,14 +5,17 @@ import { Footer } from '@/components/site/Footer'
 import { Container } from '@/components/ui/Container'
 import { ExamenBlancPicker } from '@/components/examen-blanc/ExamenBlancPicker'
 import { getExamensBlancsSummary } from '@/lib/examens-blancs'
-import type { AppLocale } from '@/i18n/request'
+import { LOCALES, type AppLocale } from '@/i18n/request'
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: AppLocale } }): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'examenBlanc' })
   return {
     title: t('pickerTitle'),
     description: t('pickerIntro'),
-    alternates: { canonical: `/${locale}/examen-blanc` },
+    alternates: {
+      canonical: `/${locale}/examen-blanc`,
+      languages: Object.fromEntries(LOCALES.map((l) => [l, `/${l}/examen-blanc`])),
+    },
   }
 }
 

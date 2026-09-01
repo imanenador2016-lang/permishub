@@ -7,7 +7,7 @@ import { Container } from '@/components/ui/Container'
 import { ExamenBlanc } from '@/components/examen-blanc/ExamenBlanc'
 import { ExamAccessGate } from '@/components/examen-blanc/ExamAccessGate'
 import { EXAMENS_BLANCS, getExamenBlanc } from '@/lib/examens-blancs'
-import type { AppLocale } from '@/i18n/request'
+import { LOCALES, type AppLocale } from '@/i18n/request'
 
 export function generateStaticParams() {
   return EXAMENS_BLANCS.map((exam) => ({ slug: exam.slug }))
@@ -24,7 +24,10 @@ export async function generateMetadata({
   return {
     title: `${exam.title} — ${t('title')}`,
     description: t('introPhoto', { total: exam.questions.length }),
-    alternates: { canonical: `/${locale}/examen-blanc/${slug}` },
+    alternates: {
+      canonical: `/${locale}/examen-blanc/${slug}`,
+      languages: Object.fromEntries(LOCALES.map((l) => [l, `/${l}/examen-blanc/${slug}`])),
+    },
   }
 }
 
