@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Archivo_Black, Inter, Kalam } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, setRequestLocale } from 'next-intl/server'
@@ -82,10 +83,30 @@ export default async function LocaleLayout({
       "PermisHub évalue ton niveau en 2 minutes et construit ton parcours pour l'examen théorique belge : cours, questions et examens blancs, en français et néerlandais.",
   }
 
+  // Google Analytics (gtag.js) — piloté par variable d'env plutôt qu'un ID
+  // en dur : absente (ex. en dev local si non configurée), les scripts ne
+  // sont juste pas rendus, pas de tracking accidentel avec un mauvais ID.
+  // `afterInteractive` (voir next/script) : chargé après l'hydratation,
+  // jamais bloquant pour le premier rendu — voir SETUP.md.
+  const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+
   return (
     <html lang={locale} className={`${archivoBlack.variable} ${kalam.variable} ${inter.variable}`}>
       <body className="bg-cream text-ink">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} />
+        {gaMeasurementId && (
+          <>
+            <Script src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`} strategy="afterInteractive" />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${gaMeasurementId}');
+              `}
+            </Script>
+          </>
+        )}
         <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
       </body>
     </html>

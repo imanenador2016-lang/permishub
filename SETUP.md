@@ -34,6 +34,7 @@ Copie `.env.example` en `.env.local` et remplis :
 | `EMAIL_SERVER` / `EMAIL_FROM` | Lien magique email | N'importe quel SMTP (Resend, Postmark…) |
 | `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` | Carte des circuits d'examen | console.cloud.google.com → API Maps JavaScript |
 | `STRIPE_SECRET_KEY` | Paiement à l'unité des circuits (24,99€) | dashboard.stripe.com → Développeurs → Clés API |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Suivi Google Analytics (gtag.js, voir `[locale]/layout.tsx`) | analytics.google.com → Admin → Flux de données. Absente = pas de script GA chargé du tout. |
 
 Une fois `DATABASE_URL` renseigné :
 
