@@ -269,6 +269,7 @@
   },
   "examenBlanc": {
     "badge": "Gratis examen",
+    "unlockedBadge": "✓ Ontgrendeld",
     "title": "Proefexamen — vragen met foto's",
     "pickerBadge": "Reeks proefexamens",
     "pickerTitle": "Kies je proefexamen",

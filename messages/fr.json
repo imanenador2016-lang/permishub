@@ -269,6 +269,7 @@
   },
   "examenBlanc": {
     "badge": "Examen gratuit",
+    "unlockedBadge": "✓ Débloqué",
     "title": "Examen blanc — questions avec photos",
     "pickerBadge": "Série d'examens blancs",
     "pickerTitle": "Choisis ton examen blanc",
