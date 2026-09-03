@@ -8,7 +8,8 @@
     "back": "Terug",
     "finish": "Afronden",
     "seeAll": "Alles bekijken",
-    "minutes": "min"
+    "minutes": "min",
+    "restoreAccessLink": "Al betaald? Mijn toegang herstellen"
   },
   "checkoutSuccess": {
     "title": "Toegang ontgrendeld!",
@@ -32,6 +33,27 @@
     "bundleTitle": "Alle circuits ontgrendeld!",
     "bundleBody": "Onbeperkte toegang tot alle circuits van {center}, vanaf nu.",
     "viewCircuits": "Bekijk mijn circuits"
+  },
+  "restoreAccess": {
+    "title": "Mijn toegang herstellen",
+    "subtitle": "Vul het e-mailadres in dat je gebruikte om te betalen — we sturen je een link om je toegang op dit toestel terug te vinden.",
+    "emailPlaceholder": "jouw@email.be",
+    "submitCta": "Link versturen",
+    "sending": "Versturen...",
+    "sentTitle": "Link verstuurd!",
+    "sentBody": "Check je mailbox ({email}) en klik op de link om je toegang hier terug te vinden. Kijk ook in je spam.",
+    "errorBody": "Er ging iets mis. Probeer het straks opnieuw.",
+    "loading": "Je toegang wordt gecontroleerd...",
+    "unauthTitle": "Ongeldige of verlopen link",
+    "unauthBody": "Deze link is niet meer geldig. Vraag een nieuwe aanmeldlink aan.",
+    "retryCta": "Nieuwe link aanvragen",
+    "emptyTitle": "Geen aankoop gevonden",
+    "emptyBody": "We vonden geen aankoop bij {email}. Heb je met een ander adres betaald? Probeer dat adres — anders neem contact met ons op met je Stripe-ontvangstbewijs.",
+    "restoredTitle": "Toegang hersteld!",
+    "restoredBody": "Alles wat je gekocht hebt, is opnieuw ontgrendeld op dit toestel.",
+    "goToExamens": "Bekijk mijn onbeperkte examens",
+    "goToCircuit": "Bekijk mijn circuits — {center}",
+    "goToResume": "Bekijk mijn PDF-samenvatting"
   },
   "testimonials": {
     "title": "Zij slaagden met PermisHub",

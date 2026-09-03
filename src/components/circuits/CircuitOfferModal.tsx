@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl'
 import { formatPrice } from '@/domain/centers'
 import { CIRCUITS_BUNDLE_PRICE_CENTS } from '@/content/centers/registry'
 import { createCircuitsBundleCheckoutSession } from '@/lib/circuit-payment'
+import { Link } from '@/i18n/navigation'
 
 /**
  * Offre "tous les circuits d'un centre" présentée quand un visiteur clique
@@ -27,6 +28,7 @@ export function CircuitOfferModal({
   onClose: () => void
 }) {
   const t = useTranslations('circuitOffer')
+  const tc = useTranslations('common')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
@@ -96,6 +98,9 @@ export function CircuitOfferModal({
           {t('cta')} — {formatPrice(CIRCUITS_BUNDLE_PRICE_CENTS, locale)} →
         </button>
         <p className="mt-2.5 text-center text-[11px] font-semibold text-ink/50">{t('trustLine')}</p>
+        <Link href="/restaurer-acces" className="mt-3 block text-center text-[11px] font-semibold text-ink/50 hover:text-brick">
+          {tc('restoreAccessLink')}
+        </Link>
 
         {error && <p className="mt-2 text-center text-[11px] text-brick">{error}</p>}
       </div>

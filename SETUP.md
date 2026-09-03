@@ -31,7 +31,7 @@ Copie `.env.example` en `.env.local` et remplis :
 | `DATABASE_URL` | Postgres (Prisma) | Vercel Postgres, Neon, Railway, ou une instance locale |
 | `NEXTAUTH_SECRET` / `NEXTAUTH_URL` | Sessions NextAuth | `openssl rand -base64 32` |
 | `GOOGLE_CLIENT_ID` / `GOOGLE_CLIENT_SECRET` | Connexion Google | console.cloud.google.com → Identifiants OAuth |
-| `EMAIL_SERVER` / `EMAIL_FROM` | Lien magique email | N'importe quel SMTP (Resend, Postmark…) |
+| `RESEND_API_KEY` / `EMAIL_FROM` | Lien magique email (voir "Restaurer mon accès" ci-dessous) | resend.com → API Keys |
 | `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` | Carte des circuits d'examen | console.cloud.google.com → API Maps JavaScript |
 | `STRIPE_SECRET_KEY` | Paiement à l'unité des circuits (24,99€) | dashboard.stripe.com → Développeurs → Clés API |
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Suivi Google Analytics (gtag.js, voir `[locale]/layout.tsx`) | analytics.google.com → Admin → Flux de données. Absente = pas de script GA chargé du tout. |
@@ -78,6 +78,25 @@ choses que Stripe seul ne remplace pas :**
 Dis-moi si tu veux qu'on configure l'un ou l'autre maintenant — sinon, tu
 peux déjà tester la mécanique Stripe elle-même (webhook, signature) sans
 base ni connexion, voir "Tester avec la Stripe CLI" ci-dessous.
+
+## "Restaurer mon accès" (ajouté le 2026-09-03)
+
+Les achats invités (packs, circuits) posent un flag dans le
+`localStorage` du navigateur utilisé pour payer — propre à cet
+appareil (voir `ExamAccessGate.tsx`). Cette page (`/restaurer-acces`)
+permet de le retrouver ailleurs : email → lien magique NextAuth
+(`sendVerificationRequest` via l'API Resend, voir `src/lib/auth.ts`) →
+une fois connecté, `/restaurer-acces/confirmation` relit les achats
+réels en base (`GET /api/mon-acces`, tables `AchatPack`/`AchatCircuit`)
+et repose les mêmes flags localStorage sur ce nouvel appareil.
+
+**État au 2026-09-03** : `RESEND_API_KEY` / `EMAIL_FROM` /
+`NEXTAUTH_SECRET` / `NEXTAUTH_URL` sont configurés (local + prod
+Netlify). Il manque encore `DATABASE_URL` (Neon) — sans base, le
+webhook Stripe ne peut rien enregistrer et `/api/mon-acces` répond
+toujours 401 (voir `getOptionalSession()`), mais **l'achat lui-même
+n'est jamais bloqué par ça** : l'accès instantané sur `*/succes` ne
+dépend pas de la base, seulement le "restaurer sur un autre appareil".
 
 ### Ce qui a été codé
 

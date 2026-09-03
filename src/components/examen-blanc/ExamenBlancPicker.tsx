@@ -29,6 +29,7 @@ import type { ExamenBlancSummary } from '@/lib/examens-blancs'
 export function ExamenBlancPicker({ exams }: { exams: ExamenBlancSummary[] }) {
   const t = useTranslations('examenBlanc')
   const tu = useTranslations('examOffer')
+  const tc = useTranslations('common')
   const locale = useLocale() as 'fr' | 'nl'
   const [offerOpen, setOfferOpen] = useState(false)
   const [unlocked, setUnlocked] = useState(false)
@@ -77,6 +78,9 @@ export function ExamenBlancPicker({ exams }: { exams: ExamenBlancSummary[] }) {
             {tu('cta')} →
           </button>
           <p className="text-[11px] font-semibold text-ink/50">{tu('trustLine')}</p>
+          <Link href="/restaurer-acces" className="text-[11px] font-semibold text-ink/50 hover:text-brick">
+            {tc('restoreAccessLink')}
+          </Link>
         </div>
         {offerOpen && <ExamOfferModal locale={locale} onClose={() => setOfferOpen(false)} />}
       </>

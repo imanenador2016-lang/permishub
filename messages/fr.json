@@ -8,7 +8,8 @@
     "back": "Retour",
     "finish": "Terminer",
     "seeAll": "Tout voir",
-    "minutes": "min"
+    "minutes": "min",
+    "restoreAccessLink": "Tu as déjà payé ? Restaurer mon accès"
   },
   "checkoutSuccess": {
     "title": "Accès débloqué !",
@@ -32,6 +33,27 @@
     "bundleTitle": "Tous les circuits débloqués !",
     "bundleBody": "Accès illimité à tous les circuits de {center}, dès maintenant.",
     "viewCircuits": "Voir mes circuits"
+  },
+  "restoreAccess": {
+    "title": "Restaurer mon accès",
+    "subtitle": "Entre l'email utilisé pour payer — on t'envoie un lien pour retrouver ton accès sur cet appareil.",
+    "emailPlaceholder": "ton@email.be",
+    "submitCta": "Envoyer le lien",
+    "sending": "Envoi...",
+    "sentTitle": "Lien envoyé !",
+    "sentBody": "Vérifie ta boîte mail ({email}) et clique sur le lien pour retrouver ton accès ici. Pense à regarder aussi tes spams.",
+    "errorBody": "Un problème est survenu. Réessaie dans un instant.",
+    "loading": "Vérification de ton accès...",
+    "unauthTitle": "Lien invalide ou expiré",
+    "unauthBody": "Ce lien n'est plus valable. Demande un nouveau lien de connexion.",
+    "retryCta": "Redemander un lien",
+    "emptyTitle": "Aucun achat trouvé",
+    "emptyBody": "On n'a trouvé aucun achat associé à {email}. Si tu as payé avec une autre adresse, réessaie avec celle-ci — sinon contacte-nous avec ton reçu Stripe.",
+    "restoredTitle": "Accès restauré !",
+    "restoredBody": "Tout ce que tu as acheté est de nouveau débloqué sur cet appareil.",
+    "goToExamens": "Voir mes examens illimités",
+    "goToCircuit": "Voir mes circuits — {center}",
+    "goToResume": "Voir mon résumé PDF"
   },
   "testimonials": {
     "title": "Ils ont réussi avec PermisHub",

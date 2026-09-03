@@ -35,21 +35,22 @@ enum Plan {
 }
 
 model User {
-  id            String    @id @default(cuid())
-  email         String    @unique
+  id            String   @id @default(cuid())
+  email         String   @unique
   name          String?
   image         String?
   region        Region?
-  preferredLang Lang      @default(fr)
-  createdAt     DateTime  @default(now())
+  preferredLang Lang     @default(fr)
+  createdAt     DateTime @default(now())
 
-  accounts      Account[]
-  sessions      Session[]
-  progressions  ProgressionUtilisateur[]
-  testResults   TestDeNiveau[]
-  examSessions  ExamenBlancSession[]
-  subscription  Abonnement?
+  accounts       Account[]
+  sessions       Session[]
+  progressions   ProgressionUtilisateur[]
+  testResults    TestDeNiveau[]
+  examSessions   ExamenBlancSession[]
+  subscription   Abonnement?
   achatsCircuits AchatCircuit[]
+  achatsPacks    AchatPack[]
 }
 
 // --- Modèles requis par l'adapter Prisma de NextAuth ---
@@ -115,21 +116,21 @@ model CoursModule {
 }
 
 model Question {
-  id             String   @id @default(cuid())
-  themeId        String
-  theme          Theme    @relation(fields: [themeId], references: [id], onDelete: Cascade)
-  region         Region   @default(BE)
-  difficulty     Int      @default(1)
-  textFr         String
-  textNl         String
-  imageUrl       String?
-  videoUrl       String?
-  choices        Json // [{ id, textFr, textNl, correct }]
-  explanationFr  String
-  explanationNl  String
-  factRef        String? // référence à la source vérifiée (page PDF), voir docs/CONTENT_PIPELINE.md
+  id            String  @id @default(cuid())
+  themeId       String
+  theme         Theme   @relation(fields: [themeId], references: [id], onDelete: Cascade)
+  region        Region  @default(BE)
+  difficulty    Int     @default(1)
+  textFr        String
+  textNl        String
+  imageUrl      String?
+  videoUrl      String?
+  choices       Json // [{ id, textFr, textNl, correct }]
+  explanationFr String
+  explanationNl String
+  factRef       String? // référence à la source vérifiée (page PDF), voir docs/CONTENT_PIPELINE.md
 
-  examReponses   ExamenBlancReponse[]
+  examReponses ExamenBlancReponse[]
 }
 
 model TestDeNiveau {
@@ -154,10 +155,10 @@ model ProgressionUtilisateur {
 }
 
 model ExamenBlancSession {
-  id         String    @id @default(cuid())
+  id         String               @id @default(cuid())
   userId     String
-  user       User      @relation(fields: [userId], references: [id], onDelete: Cascade)
-  startedAt  DateTime  @default(now())
+  user       User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+  startedAt  DateTime             @default(now())
   finishedAt DateTime?
   score      Int?
   passed     Boolean?
@@ -165,11 +166,11 @@ model ExamenBlancSession {
 }
 
 model ExamenBlancReponse {
-  id         String              @id @default(cuid())
+  id         String             @id @default(cuid())
   sessionId  String
-  session    ExamenBlancSession  @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  session    ExamenBlancSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
   questionId String
-  question   Question            @relation(fields: [questionId], references: [id])
+  question   Question           @relation(fields: [questionId], references: [id])
   correct    Boolean
 }
 
@@ -193,13 +194,13 @@ model Circuit {
   points   PointCircuit[]
 
   // --- Brief v2 §Monétisation : vendu à l'unité, 24,99€/circuit ---
-  priceCents             Int      @default(2499)
-  distanceKm             Float?
-  attentionPointsCount   Int?
+  priceCents              Int     @default(2499)
+  distanceKm              Float?
+  attentionPointsCount    Int?
   // Placeholder en attendant une méthode de calcul réelle (voir
   // domain/centers.ts CircuitDifficulty) — volontairement une String
   // éditable en base, pas un enum figé.
-  difficulte             String?
+  difficulte              String?
   googleMapsDirectionsUrl String?
 
   achats AchatCircuit[]
@@ -219,16 +220,33 @@ enum StatutRemboursement {
 // (délai, justificatif) à définir avec l'utilisateur avant mise en prod —
 // voir SETUP.md.
 model AchatCircuit {
-  id                          String              @id @default(cuid())
-  userId                      String
-  user                        User                @relation(fields: [userId], references: [id], onDelete: Cascade)
-  circuitId                   String
-  circuit                     Circuit             @relation(fields: [circuitId], references: [id])
-  montant                     Int // centimes, snapshot du prix payé
-  dateAchat                   DateTime            @default(now())
-  statutRemboursement         StatutRemboursement @default(NON_APPLICABLE)
+  id                             String              @id @default(cuid())
+  userId                         String
+  user                           User                @relation(fields: [userId], references: [id], onDelete: Cascade)
+  circuitId                      String
+  circuit                        Circuit             @relation(fields: [circuitId], references: [id])
+  montant                        Int // centimes, snapshot du prix payé
+  dateAchat                      DateTime            @default(now())
+  statutRemboursement            StatutRemboursement @default(NON_APPLICABLE)
   dateLimiteDemandeRemboursement DateTime?
-  stripePaymentIntentId       String?
+  stripePaymentIntentId          String?
+}
+
+// Achat d'un pack (Résumé, Examens illimités, Perception des risques —
+// voir content/pricing-config.ts) — même principe qu'AchatCircuit,
+// ajouté le 2026-09-03 pour que "Restaurer mon accès" (email) puisse
+// retrouver ce qu'un client a payé, indépendamment du navigateur/appareil
+// utilisé au moment de l'achat (voir webhooks/stripe/route.ts).
+model AchatPack {
+  id                    String   @id @default(cuid())
+  userId                String
+  user                  User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  offerId               String // voir content/pricing-config.ts (ex. "offer-examens-illimites")
+  montant               Int // centimes, snapshot du prix payé
+  dateAchat             DateTime @default(now())
+  stripePaymentIntentId String?
+
+  @@index([userId, offerId])
 }
 
 // Carte "Ta ville n'est pas là ?" du carrousel circuits (brief v2) — sert à

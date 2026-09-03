@@ -28,6 +28,7 @@ export const EXAMENS_UNLOCKED_KEY = 'examens-unlocked'
  */
 export function ExamAccessGate({ free, children }: { free: boolean; children: React.ReactNode }) {
   const t = useTranslations('examenBlanc')
+  const tc = useTranslations('common')
   const locale = useLocale() as 'fr' | 'nl'
   const [unlocked, setUnlocked] = useState(free)
   const [offerOpen, setOfferOpen] = useState(false)
@@ -56,6 +57,9 @@ export function ExamAccessGate({ free, children }: { free: boolean; children: Re
       </button>
       <Link href="/examen-blanc" className="block text-xs font-semibold text-ink/60 hover:text-brick">
         {t('backToPicker')}
+      </Link>
+      <Link href="/restaurer-acces" className="mt-2 block text-[11px] font-semibold text-ink/40 hover:text-brick">
+        {tc('restoreAccessLink')}
       </Link>
 
       {offerOpen && <ExamOfferModal locale={locale} onClose={() => setOfferOpen(false)} />}

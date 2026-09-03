@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl'
 import { formatPrice } from '@/domain/centers'
 import { EXAMENS_ILLIMITES_OFFER } from '@/content/pricing-config'
 import { createCheckoutSession } from '@/lib/payment'
+import { Link } from '@/i18n/navigation'
 
 /**
  * Offre "tous les examens blancs" présentée avant tout achat (picker
@@ -15,6 +16,7 @@ import { createCheckoutSession } from '@/lib/payment'
  */
 export function ExamOfferModal({ locale, onClose }: { locale: 'fr' | 'nl'; onClose: () => void }) {
   const t = useTranslations('examOffer')
+  const tc = useTranslations('common')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
@@ -73,6 +75,9 @@ export function ExamOfferModal({ locale, onClose }: { locale: 'fr' | 'nl'; onClo
           {t('cta')} — {formatPrice(EXAMENS_ILLIMITES_OFFER.priceCents, locale)} →
         </button>
         <p className="mt-2.5 text-center text-[11px] font-semibold text-ink/50">{t('trustLine')}</p>
+        <Link href="/restaurer-acces" className="mt-3 block text-center text-[11px] font-semibold text-ink/50 hover:text-brick">
+          {tc('restoreAccessLink')}
+        </Link>
 
         {error && <p className="mt-2 text-center text-[11px] text-brick">{error}</p>}
       </div>

@@ -8,8 +8,10 @@ import { prisma } from './prisma'
 /**
  * Auth email + Google, comme demandé dans le brief. Ne fonctionne qu'une
  * fois les variables d'environnement renseignées (voir SETUP.md) :
- * GOOGLE_CLIENT_ID / GOOGLE_CLIENT_SECRET, et EMAIL_SERVER / EMAIL_FROM
- * pour les liens magiques (n'importe quel SMTP, ex. Resend/Postmark).
+ * GOOGLE_CLIENT_ID / GOOGLE_CLIENT_SECRET, et RESEND_API_KEY / EMAIL_FROM
+ * pour les liens magiques (voir "Restaurer mon accès" du 2026-09-03 —
+ * envoi via l'API Resend directement plutôt que SMTP/nodemailer, plus
+ * fiable et pas de dépendance nodemailer supplémentaire).
  */
 export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma),
@@ -19,8 +21,41 @@ export const authOptions: NextAuthOptions = {
       clientSecret: process.env.GOOGLE_CLIENT_SECRET ?? '',
     }),
     EmailProvider({
-      server: process.env.EMAIL_SERVER ?? '',
-      from: process.env.EMAIL_FROM ?? 'PermisHub <no-reply@permishub.be>',
+      from: process.env.EMAIL_FROM ?? 'PermisHub <onboarding@resend.dev>',
+      sendVerificationRequest: async ({ identifier: email, url, provider }) => {
+        const apiKey = process.env.RESEND_API_KEY
+        if (!apiKey) throw new Error('RESEND_API_KEY manquante — impossible d’envoyer le lien de connexion.')
+
+        const res = await fetch('https://api.resend.com/emails', {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${apiKey}`,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            from: provider.from,
+            to: email,
+            subject: 'Ton lien de connexion — PermisHub',
+            html: `
+              <div style="font-family: sans-serif; max-width: 480px; margin: 0 auto;">
+                <h1 style="font-size: 20px;">Connexion à PermisHub</h1>
+                <p>Clique sur le bouton ci-dessous pour te connecter et retrouver ton accès. Ce lien est valable 24h et ne peut servir qu'une fois.</p>
+                <p style="margin: 24px 0;">
+                  <a href="${url}" style="background:#F5B400;color:#1F1A14;padding:12px 20px;border-radius:6px;text-decoration:none;font-weight:bold;display:inline-block;">
+                    Me connecter
+                  </a>
+                </p>
+                <p style="color:#666;font-size:13px;">Si tu n'as pas demandé ce lien, tu peux ignorer cet email.</p>
+              </div>
+            `,
+          }),
+        })
+
+        if (!res.ok) {
+          const body = await res.text().catch(() => '')
+          throw new Error(`Échec de l'envoi Resend (${res.status}): ${body}`)
+        }
+      },
     }),
   ],
   session: { strategy: 'database' },
