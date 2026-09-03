@@ -23,6 +23,7 @@ export const authOptions: NextAuthOptions = {
     EmailProvider({
       from: process.env.EMAIL_FROM ?? 'PermisHub <onboarding@resend.dev>',
       sendVerificationRequest: async ({ identifier: email, url, provider }) => {
+        if (process.env.NODE_ENV !== 'production') console.log('[DEV] Lien magique:', url)
         const apiKey = process.env.RESEND_API_KEY
         if (!apiKey) throw new Error('RESEND_API_KEY manquante — impossible d’envoyer le lien de connexion.')
 

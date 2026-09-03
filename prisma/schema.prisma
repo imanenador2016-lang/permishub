@@ -35,13 +35,19 @@ enum Plan {
 }
 
 model User {
-  id            String   @id @default(cuid())
-  email         String   @unique
+  id            String    @id @default(cuid())
+  email         String    @unique
+  // Requis par @auth/prisma-adapter pour le provider Email (lien magique) —
+  // posé automatiquement par NextAuth à la première connexion par ce biais.
+  // Absent jusqu'ici (schéma initial pensé pour Google d'abord), ce qui
+  // faisait échouer prisma.user.create() avec "Unknown argument
+  // `emailVerified`" — trouvé en testant "Restaurer mon accès" le 2026-09-03.
+  emailVerified DateTime?
   name          String?
   image         String?
   region        Region?
-  preferredLang Lang     @default(fr)
-  createdAt     DateTime @default(now())
+  preferredLang Lang      @default(fr)
+  createdAt     DateTime  @default(now())
 
   accounts       Account[]
   sessions       Session[]
