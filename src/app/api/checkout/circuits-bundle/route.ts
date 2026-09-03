@@ -32,7 +32,10 @@ export async function POST(request: Request) {
 
   const checkoutSession = await stripe.checkout.sessions.create({
     mode: 'payment',
-    payment_method_types: ['card'],
+    // Bancontact : très utilisé en Belgique, ajouté le 2026-09-03 — n'apparaît
+    // vraiment au client que si Bancontact est aussi activé côté Dashboard
+    // Stripe (Paramètres > Moyens de paiement).
+    payment_method_types: ['card', 'bancontact'],
     customer_email: session?.user?.email ?? undefined,
     line_items: [
       {
