@@ -2,8 +2,16 @@
 // Bilingue en colonnes Fr/Nl séparées — cohérent avec domain/content.ts
 // (LocalizedText) côté application. Voir SETUP.md pour DATABASE_URL.
 
+// binaryTargets : "native" pour le dev local (Windows), "rhel-openssl-3.0.x"
+// pour le runtime Netlify Functions (Linux) — le déploiement se fait via
+// `netlify deploy --prod` qui build en local (voir SETUP.md), donc le
+// moteur généré doit couvrir les deux plateformes. Sans ça, la fonction en
+// prod plante avec "Prisma Client could not locate the Query Engine for
+// runtime rhel-openssl-3.0.x" (trouvé en testant "Restaurer mon accès" en
+// prod le 2026-09-03).
 generator client {
-  provider = "prisma-client-js"
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "rhel-openssl-3.0.x"]
 }
 
 datasource db {
