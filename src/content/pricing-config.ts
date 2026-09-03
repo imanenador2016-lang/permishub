@@ -5,12 +5,14 @@
  * (domain/centers.ts). `title` sert de nom de produit Stripe et de libellé
  * sur la page de confirmation (api/checkout/pack, packs/succes).
  */
-// PRIX TEMPORAIRE (25 centimes) pour valider le tout premier vrai paiement
-// live + webhook — voir conversation du 2026-09-03. À remettre à 999 juste
-// après ce test, ne JAMAIS laisser ce prix en prod au-delà du test.
+// PRIX TEMPORAIRE (50 centimes, minimum absolu accepté par Stripe pour l'EUR
+// — 25 centimes a été refusé avec "amount_too_small") pour valider le tout
+// premier vrai paiement live + webhook — voir conversation du 2026-09-03. À
+// remettre à 999 juste après ce test, ne JAMAIS laisser ce prix en prod
+// au-delà du test.
 export const RESUME_OFFER = {
   id: 'offer-resume-sans-blabla',
-  priceCents: 25,
+  priceCents: 50,
   title: { fr: 'Résumé sans blabla', nl: 'Samenvatting zonder blabla' },
 }
 
