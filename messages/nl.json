@@ -9,7 +9,8 @@
     "finish": "Afronden",
     "seeAll": "Alles bekijken",
     "minutes": "min",
-    "restoreAccessLink": "Al betaald? Mijn toegang herstellen"
+    "restoreAccessLink": "Al betaald? Mijn toegang herstellen",
+    "redirecting": "Doorverwijzen..."
   },
   "checkoutSuccess": {
     "title": "Toegang ontgrendeld!",

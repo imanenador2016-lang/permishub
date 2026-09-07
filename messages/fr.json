@@ -9,7 +9,8 @@
     "finish": "Terminer",
     "seeAll": "Tout voir",
     "minutes": "min",
-    "restoreAccessLink": "Tu as déjà payé ? Restaurer mon accès"
+    "restoreAccessLink": "Tu as déjà payé ? Restaurer mon accès",
+    "redirecting": "Redirection..."
   },
   "checkoutSuccess": {
     "title": "Accès débloqué !",

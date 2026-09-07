@@ -43,15 +43,22 @@ export function OfferCard({
   comingSoon?: boolean
 }) {
   const locale = useLocale() as 'fr' | 'nl'
+  const tc = useTranslations('common')
   const [message, setMessage] = useState<string | null>(null)
+  // Sans ça, le bouton restait identique pendant les 2-3s d'appel à Stripe —
+  // certains clients recliquaient en pensant que rien ne se passait (doublons
+  // vus dans Stripe le 2026-09-07), d'où ce retour visuel immédiat.
+  const [loading, setLoading] = useState(false)
 
   async function handleClick() {
     if (!offer) return
+    setLoading(true)
     try {
       const { url } = await createCheckoutSession(offer)
       window.location.href = url
     } catch (err) {
       setMessage(err instanceof Error ? err.message : 'Une erreur est survenue.')
+      setLoading(false)
     }
   }
 
@@ -94,8 +101,12 @@ export function OfferCard({
           {ctaLabel} →
         </a>
       ) : (
-        <button onClick={handleClick} className="btn-comic block w-full px-4 py-3 text-sm">
-          {ctaLabel} →
+        <button
+          onClick={handleClick}
+          disabled={loading}
+          className="btn-comic block w-full px-4 py-3 text-sm disabled:opacity-60"
+        >
+          {loading ? tc('redirecting') : `${ctaLabel} →`}
         </button>
       )}
 
