@@ -23,12 +23,15 @@ export const EXAM_CENTERS: ExamCenter[] = [
   // (remplace l'ancienne approximation centre-ville).
   { id: 'anderlecht', slug: 'anderlecht', name: 'Anderlecht', region: 'BRUXELLES', priceCents: 2499, lat: 50.8201738, lng: 4.3100693 },
   { id: 'schaerbeek', slug: 'schaerbeek', name: 'Schaerbeek', region: 'BRUXELLES', priceCents: 2499, lat: 50.8676, lng: 4.3737 },
-  // Verrouillés "Bientôt" le 2026-08-29 à la demande du client — seuls
-  // Anderlecht et Schaerbeek ont un vrai tracé prêt pour l'instant, voir
-  // conversation du 2026-08-29. Repasser comingSoon à false/l'enlever une
-  // fois leurs circuits réels ajoutés.
-  { id: 'louvain-la-neuve', slug: 'louvain-la-neuve', name: 'Louvain-la-Neuve', region: 'WALLONIE', priceCents: 2499, lat: 50.6681, lng: 4.6118, comingSoon: true },
-  { id: 'couillet', slug: 'couillet', name: 'Couillet', region: 'WALLONIE', priceCents: 2499, lat: 50.4028, lng: 4.4696, comingSoon: true },
+  // Louvain-la-Neuve et Couillet activés le 2026-09-08 — vrais tracés (4
+  // circuits chacun) + photo fournis par le client, voir conversation.
+  // lat/lng restent l'approximation centre-ville d'origine (voir
+  // Anderlecht ci-dessus pour l'exemple d'une adresse confirmée via le
+  // point de départ réel d'un circuit) — à affiner si besoin plus tard.
+  { id: 'louvain-la-neuve', slug: 'louvain-la-neuve', name: 'Louvain-la-Neuve', region: 'WALLONIE', priceCents: 2499, lat: 50.6681, lng: 4.6118 },
+  { id: 'couillet', slug: 'couillet', name: 'Couillet', region: 'WALLONIE', priceCents: 2499, lat: 50.4028, lng: 4.4696 },
+  // Verrouillés "Bientôt" le 2026-08-29 à la demande du client — pas encore
+  // de vrai tracé pour ceux-ci, voir conversation du 2026-08-29.
   { id: 'mariembourg', slug: 'mariembourg', name: 'Mariembourg', region: 'WALLONIE', priceCents: 2499, lat: 50.0965, lng: 4.5211, comingSoon: true },
   { id: 'braine-le-comte', slug: 'braine-le-comte', name: 'Braine-le-Comte', region: 'WALLONIE', priceCents: 2499, lat: 50.6094, lng: 4.1447, comingSoon: true },
   { id: 'cuesmes', slug: 'cuesmes', name: 'Cuesmes', region: 'WALLONIE', priceCents: 2499, lat: 50.44, lng: 3.9333, comingSoon: true },
