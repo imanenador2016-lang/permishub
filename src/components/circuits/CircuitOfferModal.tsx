@@ -95,7 +95,7 @@ export function CircuitOfferModal({
         </ul>
 
         <button onClick={handleUnlock} disabled={loading} className="btn-comic block w-full px-4 py-3.5 text-base disabled:opacity-60">
-          {t('cta')} — {formatPrice(CIRCUITS_BUNDLE_PRICE_CENTS, locale)} →
+          {loading ? tc('redirecting') : `${t('cta')} — ${formatPrice(CIRCUITS_BUNDLE_PRICE_CENTS, locale)} →`}
         </button>
         <p className="mt-2.5 text-center text-[11px] font-semibold text-ink/50">{t('trustLine')}</p>
         <Link href="/restaurer-acces" className="mt-3 block text-center text-[11px] font-semibold text-ink/50 hover:text-brick">

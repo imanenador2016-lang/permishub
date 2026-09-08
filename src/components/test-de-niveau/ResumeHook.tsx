@@ -32,9 +32,15 @@ export function ResumeHook({
 }) {
   const t = useTranslations('testDeNiveau')
   const to = useTranslations('offers')
+  const tc = useTranslations('common')
   const locale = useLocale() as 'fr' | 'nl'
   const [primaryMessage, setPrimaryMessage] = useState<string | null>(null)
   const [secondaryMessage, setSecondaryMessage] = useState<string | null>(null)
+  // Aucun retour visuel pendant l'appel à Stripe sur ces deux boutons — même
+  // bug que OfferCard.tsx, jamais corrigé ici (signalé le 2026-09-08 :
+  // "il faut un truc de redirection sur tout, pas juste le résumé").
+  const [primaryLoading, setPrimaryLoading] = useState(false)
+  const [secondaryLoading, setSecondaryLoading] = useState(false)
 
   const clampedScore = Math.min(10, Math.max(0, Math.round(score10)))
   const copy = RESUME_HOOK_MESSAGES[clampedScore]
@@ -47,16 +53,22 @@ export function ResumeHook({
     return formatPrice(offer.priceCents, locale)
   }
 
-  async function unlock(offer: { id: string; priceCents: number }, setMsg: (m: string | null) => void) {
+  async function unlock(
+    offer: { id: string; priceCents: number },
+    setMsg: (m: string | null) => void,
+    setLoading: (l: boolean) => void,
+  ) {
     if (RESUME_FREE_FOR_TESTING && offer.id === RESUME_OFFER.id) {
       window.open(RESUME_PDF_URL, '_blank', 'noopener,noreferrer')
       return
     }
+    setLoading(true)
     try {
       const { url } = await createCheckoutSession(offer)
       window.location.href = url
     } catch (err) {
       setMsg(err instanceof Error ? err.message : 'Une erreur est survenue.')
+      setLoading(false)
     }
   }
 
@@ -117,17 +129,22 @@ export function ResumeHook({
           🔥 {t('recommendedBadge')}
         </span>
       )}
-      <button onClick={() => unlock(primaryOffer, setPrimaryMessage)} className="btn-comic block w-full px-5 py-4 text-base">
-        {copy.ctaLabel[locale]} — {offerPriceLabel(primaryOffer)} →
+      <button
+        onClick={() => unlock(primaryOffer, setPrimaryMessage, setPrimaryLoading)}
+        disabled={primaryLoading}
+        className="btn-comic block w-full px-5 py-4 text-base disabled:opacity-60"
+      >
+        {primaryLoading ? tc('redirecting') : `${copy.ctaLabel[locale]} — ${offerPriceLabel(primaryOffer)} →`}
       </button>
       {!examensIsPrimary && <p className="mt-2 text-center font-hand text-sm text-forest">{to('resumeRefund')}</p>}
       {primaryMessage && <p className="mt-1.5 text-center text-xs text-ink/60">{primaryMessage}</p>}
 
       <button
-        onClick={() => unlock(secondaryOffer, setSecondaryMessage)}
-        className="mt-5 block w-full text-center text-xs font-semibold text-ink/70 underline decoration-2 underline-offset-4 hover:text-brick"
+        onClick={() => unlock(secondaryOffer, setSecondaryMessage, setSecondaryLoading)}
+        disabled={secondaryLoading}
+        className="mt-5 block w-full text-center text-xs font-semibold text-ink/70 underline decoration-2 underline-offset-4 hover:text-brick disabled:opacity-60"
       >
-        {secondaryPrefix} {secondaryTitle} — {offerPriceLabel(secondaryOffer)} →
+        {secondaryLoading ? tc('redirecting') : `${secondaryPrefix} ${secondaryTitle} — ${offerPriceLabel(secondaryOffer)} →`}
       </button>
       {examensIsPrimary && <p className="mt-1.5 text-center font-hand text-sm text-forest">{to('resumeRefund')}</p>}
       {secondaryMessage && <p className="mt-1.5 text-center text-xs text-ink/60">{secondaryMessage}</p>}

@@ -143,6 +143,7 @@ type SpeechState = 'idle' | 'playing' | 'paused'
 export function ExamenBlanc({ questions, hideCorrection = false }: { questions: ExamenPhotoQuestion[]; hideCorrection?: boolean }) {
   const t = useTranslations('examenBlanc')
   const to = useTranslations('offers')
+  const tc = useTranslations('common')
   const locale = useLocale() as 'fr' | 'nl'
   const [phase, setPhase] = useState<Phase>('intro')
   const [index, setIndex] = useState(0)
@@ -151,6 +152,12 @@ export function ExamenBlanc({ questions, hideCorrection = false }: { questions: 
   const [checkoutMessage, setCheckoutMessage] = useState<string | null>(null)
   const [checkoutMessageSecondary, setCheckoutMessageSecondary] = useState<string | null>(null)
   const [checkoutMessageCorrection, setCheckoutMessageCorrection] = useState<string | null>(null)
+  // Aucun retour visuel pendant l'appel à Stripe sur ces 4 boutons — même bug
+  // que OfferCard.tsx, jamais corrigé ici (signalé le 2026-09-08 : "il faut
+  // un truc de redirection sur tout, pas juste le résumé").
+  const [checkoutLoading, setCheckoutLoading] = useState(false)
+  const [checkoutLoadingSecondary, setCheckoutLoadingSecondary] = useState(false)
+  const [checkoutLoadingCorrection, setCheckoutLoadingCorrection] = useState(false)
   // État du bouton audio (écouter / pause / reprendre) — voir conversation du 2026-08-28.
   const [speechState, setSpeechState] = useState<SpeechState>('idle')
   // null = lecture audio pas encore terminée (chrono pas démarré) — voir conversation du 2026-08-27.
@@ -295,12 +302,18 @@ export function ExamenBlanc({ questions, hideCorrection = false }: { questions: 
     setPhase('intro')
   }
 
-  async function unlock(offer: { id: string; priceCents: number }, setMsg: (m: string | null) => void) {
+  async function unlock(
+    offer: { id: string; priceCents: number },
+    setMsg: (m: string | null) => void,
+    setLoading: (l: boolean) => void,
+  ) {
+    setLoading(true)
     try {
       const { url } = await createCheckoutSession(offer)
       window.location.href = url
     } catch (err) {
       setMsg(err instanceof Error ? err.message : 'Une erreur est survenue.')
+      setLoading(false)
     }
   }
 
@@ -500,18 +513,24 @@ export function ExamenBlanc({ questions, hideCorrection = false }: { questions: 
               <h3 className="mb-3 font-display text-lg leading-snug">{t('failOfferTitle')}</h3>
 
               <button
-                onClick={() => unlock(EXAMENS_ILLIMITES_OFFER, setCheckoutMessage)}
-                className="btn-comic block w-full px-5 py-4 text-base"
+                onClick={() => unlock(EXAMENS_ILLIMITES_OFFER, setCheckoutMessage, setCheckoutLoading)}
+                disabled={checkoutLoading}
+                className="btn-comic block w-full px-5 py-4 text-base disabled:opacity-60"
               >
-                {to('cta')} {to('examensTitle')} — {formatPrice(EXAMENS_ILLIMITES_OFFER.priceCents, locale)} →
+                {checkoutLoading
+                  ? tc('redirecting')
+                  : `${to('cta')} ${to('examensTitle')} — ${formatPrice(EXAMENS_ILLIMITES_OFFER.priceCents, locale)} →`}
               </button>
               {checkoutMessage && <p className="mt-1.5 text-center text-xs text-ink/60">{checkoutMessage}</p>}
 
               <button
-                onClick={() => unlock(RESUME_OFFER, setCheckoutMessageSecondary)}
-                className="mt-4 block w-full text-center text-xs font-semibold text-ink/70 underline decoration-2 underline-offset-4 hover:text-brick"
+                onClick={() => unlock(RESUME_OFFER, setCheckoutMessageSecondary, setCheckoutLoadingSecondary)}
+                disabled={checkoutLoadingSecondary}
+                className="mt-4 block w-full text-center text-xs font-semibold text-ink/70 underline decoration-2 underline-offset-4 hover:text-brick disabled:opacity-60"
               >
-                {t('resumeSecondaryPrefix')} {to('resumeTitle')} — {formatPrice(RESUME_OFFER.priceCents, locale)} →
+                {checkoutLoadingSecondary
+                  ? tc('redirecting')
+                  : `${t('resumeSecondaryPrefix')} ${to('resumeTitle')} — ${formatPrice(RESUME_OFFER.priceCents, locale)} →`}
               </button>
               {checkoutMessageSecondary && <p className="mt-1.5 text-center text-xs text-ink/60">{checkoutMessageSecondary}</p>}
             </div>
@@ -520,10 +539,11 @@ export function ExamenBlanc({ questions, hideCorrection = false }: { questions: 
               <h3 className="mb-2 font-display text-base leading-snug">{t('passOfferTitle')}</h3>
               <p className="mb-3 text-sm text-ink/70">{t('passOfferBody')}</p>
               <button
-                onClick={() => unlock(RESUME_OFFER, setCheckoutMessage)}
-                className="block w-full text-center text-sm font-semibold text-ink underline decoration-2 underline-offset-4 hover:text-brick"
+                onClick={() => unlock(RESUME_OFFER, setCheckoutMessage, setCheckoutLoading)}
+                disabled={checkoutLoading}
+                className="block w-full text-center text-sm font-semibold text-ink underline decoration-2 underline-offset-4 hover:text-brick disabled:opacity-60"
               >
-                {to('resumeTitle')} — {formatPrice(RESUME_OFFER.priceCents, locale)} →
+                {checkoutLoading ? tc('redirecting') : `${to('resumeTitle')} — ${formatPrice(RESUME_OFFER.priceCents, locale)} →`}
               </button>
               {checkoutMessage && <p className="mt-1.5 text-center text-xs text-ink/60">{checkoutMessage}</p>}
             </div>
@@ -541,10 +561,13 @@ export function ExamenBlanc({ questions, hideCorrection = false }: { questions: 
             <h2 className="mb-2 font-display text-lg">{t('correctionLockedTitle')}</h2>
             <p className="mx-auto mb-4 max-w-md text-sm text-ink/70">{t('correctionLockedBody')}</p>
             <button
-              onClick={() => unlock(EXAMENS_ILLIMITES_OFFER, setCheckoutMessageCorrection)}
-              className="btn-comic mx-auto block w-full max-w-sm px-5 py-4 text-base"
+              onClick={() => unlock(EXAMENS_ILLIMITES_OFFER, setCheckoutMessageCorrection, setCheckoutLoadingCorrection)}
+              disabled={checkoutLoadingCorrection}
+              className="btn-comic mx-auto block w-full max-w-sm px-5 py-4 text-base disabled:opacity-60"
             >
-              {to('cta')} {to('examensTitle')} — {formatPrice(EXAMENS_ILLIMITES_OFFER.priceCents, locale)} →
+              {checkoutLoadingCorrection
+                ? tc('redirecting')
+                : `${to('cta')} ${to('examensTitle')} — ${formatPrice(EXAMENS_ILLIMITES_OFFER.priceCents, locale)} →`}
             </button>
             {checkoutMessageCorrection && <p className="mt-1.5 text-center text-xs text-ink/60">{checkoutMessageCorrection}</p>}
           </div>
