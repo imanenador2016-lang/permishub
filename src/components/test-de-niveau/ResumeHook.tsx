@@ -6,6 +6,7 @@ import { formatPrice } from '@/domain/centers'
 import { createCheckoutSession } from '@/lib/payment'
 import { RESUME_OFFER, EXAMENS_ILLIMITES_OFFER, RESUME_FREE_FOR_TESTING, RESUME_PDF_URL } from '@/content/pricing-config'
 import { RESUME_HOOK_MESSAGES } from '@/content/resume-hook-messages'
+import { RadarChart, type RadarDatum } from './RadarChart'
 
 /**
  * Le vrai hook de conversion après le test de niveau. Message (accroche +
@@ -20,10 +21,13 @@ import { RESUME_HOOK_MESSAGES } from '@/content/resume-hook-messages'
 export function ResumeHook({
   score10,
   weakThemeLabels,
+  radarData,
   onSkip,
 }: {
   score10: number
   weakThemeLabels: string[]
+  /** Un point par thème testé (0-100) — voir RadarChart.tsx. Vide = pas de radar affiché (ancien appelant). */
+  radarData: RadarDatum[]
   onSkip: () => void
 }) {
   const t = useTranslations('testDeNiveau')
@@ -67,12 +71,37 @@ export function ResumeHook({
         {t('hookEyebrow')}
       </span>
 
-      <p className="mb-3 font-display text-4xl text-ink">{t('scoreOutOf10', { score: clampedScore })}</p>
+      {/* Le radar (voir RadarChart.tsx) est le vrai "accroche visuelle" —
+          avant, cet écran de résultat n'était que du texte (score en
+          chiffres + liste de badges), signalé comme peu convaincant par
+          l'utilisateur le 2026-09-08. Le score reste affiché, mais
+          superposé au centre du radar plutôt qu'en paragraphe séparé —
+          un seul repère visuel fort plutôt que deux stats qui se
+          concurrencent. */}
+      {radarData.length > 0 ? (
+        <div className="relative mx-auto mb-4 w-full max-w-[300px]">
+          <RadarChart data={radarData} size={220} />
+          {/* Plaque opaque derrière le score : sans ça, un score faible (le
+              polygone s'approche alors du centre) traverse visuellement le
+              texte et le rend illisible — trouvé en testant sur mobile le
+              2026-09-08. */}
+          <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center">
+            <div className="flex h-16 w-16 flex-col items-center justify-center rounded-full border-2 border-ink/15 bg-cream">
+              <span className="font-display text-2xl leading-none text-ink">{clampedScore}</span>
+              <span className="font-display text-[10px] text-ink/60">/ 10</span>
+            </div>
+          </div>
+        </div>
+      ) : (
+        // Repli si jamais radarData est vide (pas assez de thèmes couverts) —
+        // garde l'ancien affichage texte plutôt que de ne rien montrer.
+        <p className="mb-3 font-display text-4xl text-ink">{t('scoreOutOf10', { score: clampedScore })}</p>
+      )}
 
       <h3 className="mb-3 font-display text-2xl leading-snug">{copy.accroche[locale]}</h3>
 
       {weakThemeLabels.length > 0 && (
-        <ul className="mb-4 flex flex-wrap gap-2">
+        <ul className="mb-4 flex flex-wrap justify-center gap-2">
           {weakThemeLabels.map((label) => (
             <li key={label} className="border-2 border-brick px-3 py-1 text-xs font-semibold text-brick">
               {label}

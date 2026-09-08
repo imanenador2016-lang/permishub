@@ -46,7 +46,19 @@ export function RadarChart({ data, size = 280 }: { data: RadarDatum[]; size?: nu
     .join(' ')
 
   return (
-    <svg viewBox={`0 0 ${canvas} ${canvas}`} width={canvas} height={canvas} role="img" aria-label="Radar de compétences">
+    <svg
+      viewBox={`0 0 ${canvas} ${canvas}`}
+      // width/height en % (pas en px figés) : le viewBox garde le radar
+      // proportionné, mais il se réduit vraiment sur petit écran plutôt que
+      // de forcer un débordement horizontal (voir conversation du
+      // 2026-09-08, priorité mobile).
+      width="100%"
+      height="100%"
+      style={{ maxWidth: canvas, maxHeight: canvas }}
+      className="mx-auto"
+      role="img"
+      aria-label="Radar de compétences"
+    >
       {rings.map((r) => (
         <circle key={r} cx={center} cy={center} r={maxRadius * r} fill="none" stroke="#1F1A14" strokeOpacity={0.15} strokeWidth={1.5} />
       ))}

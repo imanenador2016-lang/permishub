@@ -225,6 +225,15 @@ export function TestDeNiveau({
     ? result.weakestThemeSlugs.map((slug) => themeLabels.find((th) => th.slug === slug)?.label ?? slug)
     : []
 
+  // Un point par thème couvert par le test — voir RadarChart.tsx (composant
+  // déjà construit mais jamais branché ici avant le 2026-09-08).
+  const radarData = result
+    ? Object.entries(result.scoreByTheme).map(([slug, value]) => ({
+        label: themeLabels.find((th) => th.slug === slug)?.label ?? slug,
+        value,
+      }))
+    : []
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/80 p-4">
       <motion.div
@@ -331,7 +340,7 @@ export function TestDeNiveau({
 
         {isResult && result && (
           <div className="p-6 sm:p-8">
-            <ResumeHook score10={result.score10} weakThemeLabels={weakThemeLabels} onSkip={onClose} />
+            <ResumeHook score10={result.score10} weakThemeLabels={weakThemeLabels} radarData={radarData} onSkip={onClose} />
           </div>
         )}
       </motion.div>
