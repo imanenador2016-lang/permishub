@@ -368,10 +368,7 @@
     "noSpamNote": "Geen spam. Je e-mail dient enkel om je resultaat te versturen.",
     "emailInvalid": "Dit e-mailadres lijkt niet geldig.",
     "consentRequired": "Vink het vakje aan om verder te gaan.",
-    "sending": "Versturen...",
-    "placeholderTestTitle": "De test komt hier 👇",
-    "placeholderTestBody": "Dit onderdeel (de 12 vragen en je resultaat) is in opbouw — je e-mail is goed geregistreerd, je ontvangt je test zodra die klaar is.",
-    "placeholderSegmentDebug": "Berekend segment (debug): {segment}"
+    "sending": "Versturen..."
   },
   "privacyPage": {
     "title": "Privacy",

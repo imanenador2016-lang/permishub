@@ -1,6 +1,4 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server'
-import { getThemes } from '@/content/repository'
-import { getTestDeNiveauQuestions } from '@/lib/test-de-niveau'
 import { Navbar } from '@/components/site/Navbar'
 import { Footer } from '@/components/site/Footer'
 import { Hero } from '@/components/home/Hero'
@@ -17,16 +15,13 @@ export default async function HomePage({ params: { locale } }: { params: { local
   setRequestLocale(locale)
   const tc = await getTranslations('circuits')
 
-  const themes = getThemes()
-  const questions = getTestDeNiveauQuestions('BE')
-  const themeLabels = themes.map((th) => ({ slug: th.slug, label: th.title[locale] }))
-
   return (
     <>
       <Navbar />
       <main>
-        {/* 1. Hero (test de niveau) */}
-        <Hero questions={questions} themeLabels={themeLabels} />
+        {/* 1. Hero — le CTA mène au tunnel /test-de-niveau (qualification +
+            email avant le vrai test), voir Hero.tsx. */}
+        <Hero />
 
         {/* 2. Circuits d'examen pratique — remonté juste après le hero
             (section Cours retirée de la home, pas encore de contenu). */}

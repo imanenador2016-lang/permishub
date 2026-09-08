@@ -2,8 +2,10 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
-import { Link } from '@/i18n/navigation'
+import type { Question } from '@/domain/quiz'
+import { Link, useRouter } from '@/i18n/navigation'
 import { ProgressBar } from '@/components/ui/ProgressBar'
+import { TestDeNiveau } from '@/components/test-de-niveau/TestDeNiveau'
 import { trackEvent } from '@/lib/analytics'
 import { computeSegment } from '@/lib/quiz-segment'
 import {
@@ -52,14 +54,22 @@ function isValidEmail(value: string): boolean {
 }
 
 /**
- * Tunnel qualification (Q1-Q3) → capture email → test (placeholder, voir
- * quiz-funnel-config.ts pour FUNNEL_STEPS/EMAIL_GATE_POSITION). Le vrai test
- * et l'écran de résultat ne sont pas construits ici (brief en 2 temps, voir
- * conversation du 2026-09-08) — 'test' n'affiche qu'un écran d'attente.
+ * Tunnel qualification (région, Q1-Q3) → capture email → vrai test
+ * (`TestDeNiveau`, voir quiz-funnel-config.ts pour FUNNEL_STEPS/
+ * EMAIL_GATE_POSITION) — voir conversation du 2026-09-08/09. Le test lui
+ * s'affiche en overlay plein écran (comportement propre à `TestDeNiveau`,
+ * inchangé depuis son usage précédent en modal sur la home).
  */
-export function QuizFunnel() {
+export function QuizFunnel({
+  questions,
+  themeLabels,
+}: {
+  questions: Question[]
+  themeLabels: { slug: string; label: string }[]
+}) {
   const t = useTranslations('quizFunnel')
   const locale = useLocale() as 'fr' | 'nl'
+  const router = useRouter()
 
   const [stepIndex, setStepIndex] = useState(0)
   const [answers, setAnswers] = useState<QualifAnswers>(EMPTY_QUALIF_ANSWERS)
@@ -287,16 +297,7 @@ export function QuizFunnel() {
       )}
 
       {step === 'test' && (
-        <div className="text-center">
-          <span className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full border-[3px] border-ink bg-yellow text-2xl">
-            🚧
-          </span>
-          <h2 className="mb-2 font-display text-xl">{t('placeholderTestTitle')}</h2>
-          <p className="text-sm text-ink/70">{t('placeholderTestBody')}</p>
-          {process.env.NODE_ENV !== 'production' && (
-            <p className="mt-4 text-[11px] text-ink/40">{t('placeholderSegmentDebug', { segment })}</p>
-          )}
-        </div>
+        <TestDeNiveau questions={questions} themeLabels={themeLabels} onClose={() => router.push('/')} />
       )}
     </div>
   )

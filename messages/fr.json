@@ -368,10 +368,7 @@
     "noSpamNote": "Pas de spam. Ton email sert à t'envoyer ton résultat.",
     "emailInvalid": "Cette adresse email ne semble pas valide.",
     "consentRequired": "Coche la case pour continuer.",
-    "sending": "Envoi...",
-    "placeholderTestTitle": "Le test arrive juste ici 👇",
-    "placeholderTestBody": "Cette partie (les 12 questions et ton résultat) est en construction — ton email est bien enregistré, tu recevras ton test dès qu'il sera prêt.",
-    "placeholderSegmentDebug": "Segment calculé (debug) : {segment}"
+    "sending": "Envoi..."
   },
   "privacyPage": {
     "title": "Confidentialité",

@@ -1,24 +1,20 @@
 'use client'
 
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
-import type { Question } from '@/domain/quiz'
-import { Button } from '@/components/ui/Button'
-import { TestDeNiveau } from '@/components/test-de-niveau/TestDeNiveau'
 import { Link } from '@/i18n/navigation'
 import { HeroProof } from './HeroProof'
 
-export function Hero({
-  questions,
-  themeLabels,
-}: {
-  questions: Question[]
-  themeLabels: { slug: string; label: string }[]
-}) {
+/**
+ * Le CTA mène au tunnel de qualification (/test-de-niveau), qui pose les
+ * questions région/examen/échéance puis capture l'email AVANT d'ouvrir le
+ * vrai test — voir conversation du 2026-09-08/09. Avant cette date, ce
+ * bouton ouvrait `TestDeNiveau` directement en modal depuis ici, sans aucune
+ * qualification ni email ; ce composant ne l'importe donc plus.
+ */
+export function Hero() {
   const t = useTranslations('home')
   const tt = useTranslations('testimonials')
-  const [open, setOpen] = useState(false)
 
   return (
     <section className="px-4 pt-4 sm:px-6 sm:pt-6">
@@ -58,9 +54,9 @@ export function Hero({
             </ul>
 
             <div>
-              <Button size="lg" onClick={() => setOpen(true)}>
+              <Link href="/test-de-niveau" className="btn-comic inline-flex px-7 py-4 text-base sm:text-lg">
                 {t('ctaPrimary')} →
-              </Button>
+              </Link>
             </div>
           </motion.div>
 
@@ -82,8 +78,6 @@ export function Hero({
           </motion.div>
         </div>
       </div>
-
-      {open && <TestDeNiveau questions={questions} themeLabels={themeLabels} onClose={() => setOpen(false)} />}
     </section>
   )
 }
