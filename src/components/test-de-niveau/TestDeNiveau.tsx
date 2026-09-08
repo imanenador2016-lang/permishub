@@ -90,20 +90,31 @@ function speakQuestion(question: Question, locale: 'fr' | 'nl', onEnd: () => voi
   // Pas de préfixe "A, B, C" devant chaque réponse : les boutons à l'écran
   // n'affichent aucune lettre, et pour des questions comme "Voiture A / B /
   // C" le texte de la réponse contient déjà l'identifiant — le préfixe
-  // redondant rendait l'audio confus ("A, Voiture A. B, Voiture B...",
-  // signalé par l'utilisateur le 2026-09-08 comme "il dit voiture A B" au
-  // lieu de marquer une vraie pause entre les choix).
+  // redondant rendait l'audio confus (signalé le 2026-09-08).
+  //
+  // Chaque partie (question, puis chaque réponse) est lue comme un énoncé
+  // séparé plutôt que jointe par de simples points dans un seul texte : la
+  // pause entre deux appels à speak() est nette et fiable, alors qu'un
+  // point de fin de phrase à l'intérieur d'un même énoncé était parfois
+  // quasi inaudible avec certaines voix ("Voiture A. Voiture B." collé en
+  // "Voiture A Voiture B" — toujours signalé après le premier correctif).
   const parts = [cleanForSpeech(question.prompt[locale], locale)]
   question.options.forEach((opt) => parts.push(cleanForSpeech(opt.text[locale], locale)))
-  const utterance = new SpeechSynthesisUtterance(parts.join('. '))
-  utterance.lang = locale === 'nl' ? 'nl-BE' : 'fr-FR'
+  const lang = locale === 'nl' ? 'nl-BE' : 'fr-FR'
   const voice = pickLivelyVoice(locale)
-  if (voice) utterance.voice = voice
-  utterance.rate = 0.88
-  utterance.pitch = 0.92
-  utterance.onend = onEnd
-  utterance.onerror = onEnd
-  window.speechSynthesis.speak(utterance)
+
+  parts.forEach((part, i) => {
+    const utterance = new SpeechSynthesisUtterance(part)
+    utterance.lang = lang
+    if (voice) utterance.voice = voice
+    utterance.rate = 0.88
+    utterance.pitch = 0.92
+    if (i === parts.length - 1) {
+      utterance.onend = onEnd
+      utterance.onerror = onEnd
+    }
+    window.speechSynthesis.speak(utterance)
+  })
 }
 
 type SpeechState = 'idle' | 'playing' | 'paused'
