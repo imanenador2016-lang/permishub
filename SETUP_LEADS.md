@@ -29,7 +29,6 @@ var COLUMNS = [
   'date',
   'email',
   'locale',
-  'region',
   'examen_vise',
   'echeance',
   'tentatives',
@@ -39,6 +38,7 @@ var COLUMNS = [
   'utm_campaign',
   'user_agent',
   'a_achete',
+  'region',
 ];
 
 function doPost(e) {
@@ -104,12 +104,15 @@ premier, avant "Tu passes quoi". Le code envoie déjà un champ `region` à
 `/api/lead`, mais **le Sheet et le script déjà déployés ne le savent pas
 encore** — 3 actions manuelles à faire une seule fois :
 
-1. **Dans le Sheet** : ajoute manuellement une colonne `region` (en-tête)
-   entre `locale` et `examen_vise` — les en-têtes existantes ne se
-   régénèrent pas toutes seules une fois écrites.
-2. **Dans l'éditeur Apps Script** : mets à jour le tableau `COLUMNS` en
-   haut de `Code.gs` pour qu'il corresponde exactement à celui de cette
-   page (avec `'region'` ajouté après `'locale'`).
+1. **Dans le Sheet** : ajoute `region` comme en-tête de la **colonne
+   suivant la dernière existante** (après `a_achete`, donc colonne M si tu
+   es parti du modèle ci-dessus) — pas besoin d'insérer une colonne au
+   milieu des données existantes, l'ordre des colonnes est décidé
+   uniquement par le tableau `COLUMNS` du script, pas par l'ordre des
+   champs envoyés par le site.
+2. **Dans l'éditeur Apps Script** : ajoute `'region'` **à la fin** du
+   tableau `COLUMNS` en haut de `Code.gs` (après `'a_achete'`), pour que
+   ça corresponde exactement à celui de cette page.
 3. **Republie** : **Déployer** → **Gérer les déploiements** → icône crayon
    ✏️ sur le déploiement existant → **Nouvelle version** → **Déployer**.
    Ne crée surtout pas un *nouveau* déploiement (ça générerait une nouvelle
