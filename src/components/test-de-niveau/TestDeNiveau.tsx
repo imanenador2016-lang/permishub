@@ -87,10 +87,14 @@ function speakQuestion(question: Question, locale: 'fr' | 'nl', onEnd: () => voi
     return
   }
   window.speechSynthesis.cancel()
+  // Pas de préfixe "A, B, C" devant chaque réponse : les boutons à l'écran
+  // n'affichent aucune lettre, et pour des questions comme "Voiture A / B /
+  // C" le texte de la réponse contient déjà l'identifiant — le préfixe
+  // redondant rendait l'audio confus ("A, Voiture A. B, Voiture B...",
+  // signalé par l'utilisateur le 2026-09-08 comme "il dit voiture A B" au
+  // lieu de marquer une vraie pause entre les choix).
   const parts = [cleanForSpeech(question.prompt[locale], locale)]
-  question.options.forEach((opt, i) =>
-    parts.push(`${String.fromCharCode(65 + i)}, ${cleanForSpeech(opt.text[locale], locale)}`),
-  )
+  question.options.forEach((opt) => parts.push(cleanForSpeech(opt.text[locale], locale)))
   const utterance = new SpeechSynthesisUtterance(parts.join('. '))
   utterance.lang = locale === 'nl' ? 'nl-BE' : 'fr-FR'
   const voice = pickLivelyVoice(locale)
