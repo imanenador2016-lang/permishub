@@ -322,7 +322,7 @@
     "passed": "Réussi ✅",
     "failed": "Raté ❌",
     "faultsBreakdown": "{graves} faute(s) grave(s), {normales} faute(s) normale(s)",
-    "adaptedThresholdNote": "Seuil de réussite adapté au nombre de questions de ce pool (voir détail dans le code) — indicatif, à aligner sur une source officielle si besoin.",
+    "adaptedThresholdNote": "Seuil de réussite adapté au nombre de questions de ce pool — indicatif, à aligner sur une source officielle si besoin.",
     "failOfferEyebrow": "Tu n'es pas loin",
     "failOfferTitle": "Entraîne-toi sans limite jusqu'à la réussite.",
     "resumeSecondaryPrefix": "Ou cible tes points faibles avec le",

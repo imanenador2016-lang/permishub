@@ -161,7 +161,7 @@
     "question": "Une ligne jaune discontinue au bord de la chaussée.Cette voiture peut s’arrêter pour faire descendre quelqu’un.Mais le conducteur peut-il aussi y stationner ?",
     "choix": [],
     "reponse": "NON",
-    "explication": "LEÇON 26 – ‘Arrêt et stationnement’.Lashune ligne jaune discontinue est peinte au bord de la chaussée, vous ne pouvez que vous arrêter.Le stationnement sur la chaussée est interdit.",
+    "explication": "LEÇON 26 – ‘Arrêt et stationnement’.Lorsqu’une ligne jaune discontinue est peinte au bord de la chaussée, vous ne pouvez que vous arrêter.Le stationnement sur la chaussée est interdit.",
     "image": "/examen-blanc/examen-5/q13.jpg"
   },
   {
@@ -217,7 +217,7 @@
       "B. Non."
     ],
     "reponse": "A",
-    "explication": "LEÇONOui. Lorsque le véhicule est à l’arrêt pour faire monter ou descendre des passagers, le conducteur peut tenir son gsm en main.Cela est considéré comme un “arrêt” au sens du code de la route.Attention : s’arrêter à un feu rouge, à un passage à niveau ou dans un embouteillage n’est pas considéré comme un arrêt dans ce sens. Dans ces cas, il est interdit de tenir son gsm en main.",
+    "explication": "LEÇON Oui. Lorsque le véhicule est à l’arrêt pour faire monter ou descendre des passagers, le conducteur peut tenir son gsm en main.Cela est considéré comme un “arrêt” au sens du code de la route.Attention : s’arrêter à un feu rouge, à un passage à niveau ou dans un embouteillage n’est pas considéré comme un arrêt dans ce sens. Dans ces cas, il est interdit de tenir son gsm en main.",
     "image": "/examen-blanc/examen-5/q18.jpg"
   },
   {
@@ -361,7 +361,7 @@
       "C. Stationner et s’arrêter."
     ],
     "reponse": "C",
-    "explication": "LEÇON 26À moins de 15 mètres avant et après un arrêt de bus, il est interdit de stationer sur a chaussée. En revanche, il est autorisé de s’arrêter brièvement pour faire monter ou descendre un passager.",
+    "explication": "LEÇON 26À moins de 15 mètres avant et après un arrêt de bus, il est interdit de stationner sur la chaussée. En revanche, il est autorisé de s’arrêter brièvement pour faire monter ou descendre un passager.",
     "image": "/examen-blanc/examen-5/q29.jpg"
   },
   {
@@ -404,10 +404,10 @@
     "id": 33,
     "type": "oui_non",
     "gravite": "normale",
-    "question": "La voiture brune roule à 35 km/h en Wallonnie.La voiture bleue peut-elle la dépasser par la gauche ?",
+    "question": "La voiture brune roule à 35 km/h en Wallonie.La voiture bleue peut-elle la dépasser par la gauche ?",
     "choix": [],
     "reponse": "OUI",
-    "explication": "LEÇON 15+16 – ‘Le dépassement’.La vitesse maximale dans une agglomération en Wallonnie est de 50 km/h.",
+    "explication": "LEÇON 15+16 – ‘Le dépassement’.La vitesse maximale dans une agglomération en Wallonie est de 50 km/h.",
     "image": "/examen-blanc/examen-5/q33.jpg"
   },
   {
@@ -617,7 +617,7 @@
       "C. Pneus diagonaux avant et radiaux arrière."
     ],
     "reponse": "B",
-    "explication": "- LES PNEUS RADIAUX sont autorisés à l'avant et à l'arrière.- Les PNEUS DIAGONAUX sont autorisés à l'avant et à l'arrière.- DIAGONAL à l'avant et RADIAL à l'arrière est autorisé.- RADIAL à l'avant et DIAGINAL à l'arrière ne sont PAS autorisés.(parce que: vous ne pouvez placer des pneus radiaux à l'avant que s'il y a aussi des pneus radiaux à l'arrière.",
+    "explication": "- LES PNEUS RADIAUX sont autorisés à l'avant et à l'arrière.- Les PNEUS DIAGONAUX sont autorisés à l'avant et à l'arrière.- DIAGONAL à l'avant et RADIAL à l'arrière est autorisé.- RADIAL à l'avant et DIAGONAL à l'arrière ne sont PAS autorisés.(parce que: vous ne pouvez placer des pneus radiaux à l'avant que s'il y a aussi des pneus radiaux à l'arrière.",
     "image": "/examen-blanc/examen-5/q49.jpg"
   },
   {
