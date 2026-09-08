@@ -343,6 +343,10 @@
   },
   "quizFunnel": {
     "back": "← Terug",
+    "regionTitle": "In welke regio ben je?",
+    "regionWallonie": "Wallonië",
+    "regionBruxelles": "Brussel",
+    "regionFlandre": "Vlaanderen",
     "q1Title": "Wat ga je afleggen?",
     "q1Theorique": "Het theoretisch examen",
     "q1Pratique": "Het praktisch examen",

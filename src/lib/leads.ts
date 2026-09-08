@@ -8,6 +8,8 @@
 export interface LeadData {
   email: string
   locale: string
+  /** Wallonie/Bruxelles/Flandre — ajouté le 2026-09-08, voir SETUP_LEADS.md pour l'ajout de la colonne dans le Sheet existant. */
+  region: string
   examenVise: string
   echeance: string
   tentatives: string
@@ -30,6 +32,7 @@ export async function saveLead(data: LeadData): Promise<void> {
     date: new Date().toISOString(),
     email: data.email,
     locale: data.locale,
+    region: data.region,
     examen_vise: data.examenVise,
     echeance: data.echeance,
     tentatives: data.tentatives,

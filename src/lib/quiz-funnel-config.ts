@@ -5,18 +5,21 @@
  * viennent après, remplaceront le step "test" ci-dessous).
  */
 
+export type RegionAnswer = 'wallonie' | 'bruxelles' | 'flandre'
 export type ExamenVise = 'theorique' | 'pratique' | 'les_deux'
 export type Echeance = 'urgent' | 'bientot' | 'froid'
 export type Tentatives = '0' | '1' | '2plus'
 export type Segment = 'prioritaire' | 'chaud' | 'standard'
 
 export interface QualifAnswers {
+  region: RegionAnswer | null
   examenVise: ExamenVise | null
   echeance: Echeance | null
   tentatives: Tentatives | null
 }
 
 export const EMPTY_QUALIF_ANSWERS: QualifAnswers = {
+  region: null,
   examenVise: null,
   echeance: null,
   tentatives: null,
@@ -38,7 +41,11 @@ export const EMAIL_GATE_POSITION: 'before_test' | 'after_test' = 'before_test'
  * 'test' est un placeholder (voir QuizFunnel.tsx) : sera remplacé par le
  * vrai composant de test quand il sera construit, sans toucher à cet ordre.
  */
-export type FunnelStep = 'q1' | 'q2' | 'q3' | 'email' | 'test'
+export type FunnelStep = 'region' | 'q1' | 'q2' | 'q3' | 'email' | 'test'
 
+// 'region' ajoutée en tête le 2026-09-08 (Wallonie/Bruxelles/Flandre) — sert
+// à savoir où l'examen sera passé, avant même les autres questions.
 export const FUNNEL_STEPS: FunnelStep[] =
-  EMAIL_GATE_POSITION === 'before_test' ? ['q1', 'q2', 'q3', 'email', 'test'] : ['q1', 'q2', 'q3', 'test', 'email']
+  EMAIL_GATE_POSITION === 'before_test'
+    ? ['region', 'q1', 'q2', 'q3', 'email', 'test']
+    : ['region', 'q1', 'q2', 'q3', 'test', 'email']

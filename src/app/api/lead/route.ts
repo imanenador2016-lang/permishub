@@ -47,6 +47,7 @@ export async function POST(request: Request) {
     await saveLead({
       email,
       locale: typeof body?.locale === 'string' ? body.locale : '',
+      region: typeof body?.region === 'string' ? body.region : '',
       examenVise: typeof body?.examenVise === 'string' ? body.examenVise : '',
       echeance: typeof body?.echeance === 'string' ? body.echeance : '',
       tentatives: typeof body?.tentatives === 'string' ? body.tentatives : '',

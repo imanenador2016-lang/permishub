@@ -29,6 +29,7 @@ var COLUMNS = [
   'date',
   'email',
   'locale',
+  'region',
   'examen_vise',
   'echeance',
   'tentatives',
@@ -89,12 +90,35 @@ Depuis un terminal, sans passer par le site :
 ```bash
 curl -X POST "TON_URL_ICI" \
   -H "Content-Type: application/json" \
-  -d '{"date":"test","email":"test@example.com","locale":"fr","examen_vise":"theorique","echeance":"urgent","tentatives":"0","segment":"chaud","consentement":"oui","utm_source":"","utm_campaign":"","user_agent":"curl","a_achete":""}'
+  -d '{"date":"test","email":"test@example.com","locale":"fr","region":"wallonie","examen_vise":"theorique","echeance":"urgent","tentatives":"0","segment":"chaud","consentement":"oui","utm_source":"","utm_campaign":"","user_agent":"curl","a_achete":""}'
 ```
 
 Une nouvelle ligne doit apparaître dans le Sheet. Si rien n'apparaît :
 revérifie que "Qui a accès" est bien sur **Tout le monde**, et que tu as
 copié l'URL qui se termine par `/exec` (pas celle de l'éditeur du script).
+
+## Mise à jour du 2026-09-08 : ajout de la question "région"
+
+Le tunnel pose maintenant une 4e question (Wallonie/Bruxelles/Flandre) en
+premier, avant "Tu passes quoi". Le code envoie déjà un champ `region` à
+`/api/lead`, mais **le Sheet et le script déjà déployés ne le savent pas
+encore** — 3 actions manuelles à faire une seule fois :
+
+1. **Dans le Sheet** : ajoute manuellement une colonne `region` (en-tête)
+   entre `locale` et `examen_vise` — les en-têtes existantes ne se
+   régénèrent pas toutes seules une fois écrites.
+2. **Dans l'éditeur Apps Script** : mets à jour le tableau `COLUMNS` en
+   haut de `Code.gs` pour qu'il corresponde exactement à celui de cette
+   page (avec `'region'` ajouté après `'locale'`).
+3. **Republie** : **Déployer** → **Gérer les déploiements** → icône crayon
+   ✏️ sur le déploiement existant → **Nouvelle version** → **Déployer**.
+   Ne crée surtout pas un *nouveau* déploiement (ça générerait une nouvelle
+   URL et casserait `GOOGLE_SHEET_WEBHOOK_URL`, déjà configuré en local et
+   sur Netlify).
+
+Tant que ces 3 étapes ne sont pas faites, les nouveaux leads arriveront
+quand même dans le Sheet, juste sans la colonne `region` remplie (le
+script actuel ignore silencieusement les champs qu'il ne connaît pas).
 
 ## Retoucher le script plus tard
 

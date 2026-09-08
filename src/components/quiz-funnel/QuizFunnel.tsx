@@ -12,10 +12,13 @@ import {
   type QualifAnswers,
   type Echeance,
   type ExamenVise,
+  type RegionAnswer,
   type Tentatives,
 } from '@/lib/quiz-funnel-config'
 
-const STORAGE_KEY = 'permishub:quiz-funnel:v1'
+// v2 : ajout du champ "region" le 2026-09-08 — bump pour ne pas restaurer un
+// vieux state (session en cours) qui ne l'aurait pas.
+const STORAGE_KEY = 'permishub:quiz-funnel:v2'
 
 interface StoredState {
   stepIndex: number
@@ -97,6 +100,12 @@ export function QuizFunnel() {
     setStepIndex((i) => Math.max(i - 1, 0))
   }
 
+  function answerRegion(value: RegionAnswer) {
+    setAnswers((a) => ({ ...a, region: value }))
+    trackEvent('quiz_region_answered', { value })
+    goNext()
+  }
+
   function answerQ1(value: ExamenVise) {
     setAnswers((a) => ({ ...a, examenVise: value }))
     trackEvent('quiz_q1_answered', { value })
@@ -141,6 +150,7 @@ export function QuizFunnel() {
         body: JSON.stringify({
           email,
           locale,
+          region: answers.region,
           examenVise: answers.examenVise,
           echeance: answers.echeance,
           tentatives: answers.tentatives,
@@ -181,6 +191,18 @@ export function QuizFunnel() {
         <button onClick={goBack} className="mb-4 text-xs font-semibold text-ink/60 hover:text-brick">
           {t('back')}
         </button>
+      )}
+
+      {step === 'region' && (
+        <QualifScreen
+          title={t('regionTitle')}
+          options={[
+            { value: 'wallonie' as const, label: t('regionWallonie') },
+            { value: 'bruxelles' as const, label: t('regionBruxelles') },
+            { value: 'flandre' as const, label: t('regionFlandre') },
+          ]}
+          onSelect={answerRegion}
+        />
       )}
 
       {step === 'q1' && (

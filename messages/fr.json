@@ -343,6 +343,10 @@
   },
   "quizFunnel": {
     "back": "← Retour",
+    "regionTitle": "Tu es dans quelle région ?",
+    "regionWallonie": "Wallonie",
+    "regionBruxelles": "Bruxelles",
+    "regionFlandre": "Flandre",
     "q1Title": "Tu passes quoi ?",
     "q1Theorique": "Le théorique",
     "q1Pratique": "Le pratique",
