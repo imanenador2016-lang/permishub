@@ -17,6 +17,8 @@ const ILLUSTRATIONS: Record<string, () => React.JSX.Element> = {
 const PHOTOS: Record<string, string> = {
   anderlecht: '/images/centers/anderlecht.jpg',
   schaerbeek: '/images/centers/schaerbeek.jpg',
+  couillet: '/images/centers/couillet.webp',
+  'louvain-la-neuve': '/images/centers/louvain-la-neuve.jpg',
 }
 
 const DIFFICULTY_STYLES: Record<string, string> = {

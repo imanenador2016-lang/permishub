@@ -11,10 +11,12 @@ import type { ExamCenter, PracticeCircuit } from '@/domain/centers'
  * Prix du déblocage "tous les circuits" d'un centre — un seul paiement,
  * accès illimité à tous les circuits actuels ET à venir de ce centre
  * (remplace l'ancien prix par circuit à 24,99 €, voir conversation du
- * 2026-08-30). Jamais d'abonnement — voir api/checkout/circuits-bundle et
- * CircuitOfferModal.tsx.
+ * 2026-08-30 ; passé de 9,99 € à 17,99 € le 2026-09-08). Jamais
+ * d'abonnement — voir api/checkout/circuits-bundle et CircuitOfferModal.tsx.
+ * Le texte "circuitPriceLabel" (messages/fr.json, nl.json) répète ce prix
+ * en dur pour l'affichage — à garder synchronisé si ce prix rechange.
  */
-export const CIRCUITS_BUNDLE_PRICE_CENTS = 999
+export const CIRCUITS_BUNDLE_PRICE_CENTS = 1799
 export const EXAM_CENTERS: ExamCenter[] = [
   // lat/lng = adresse réelle du centre d'examen GOCA (Rue du Labeur, 1070 Anderlecht),
   // confirmée via le point de départ du parcours 1 fourni par le client le 2026-08-29
@@ -166,11 +168,51 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
       fr: 'Itinéraire à parcourir en voiture autour du centre, avec les manœuvres typiquement testées à l’examen pratique.',
       nl: 'Route om met de auto rond het centrum te rijden, met de manoeuvres die typisch getest worden bij het praktijkexamen.',
     },
+    // Vrai tracé fourni par le client le 2026-09-08 — Louvain-la-Neuve reste
+    // `comingSoon: true` tant que les autres circuits n'ont pas aussi leur
+    // vrai tracé (voir note sur couillet-1).
+    mapsUrl: 'https://maps.app.goo.gl/6HC7qKgEAhQnHoHd7',
     durationMinutes: 20,
     priceCents: 2499,
     distanceKm: 3.8,
     attentionPointsCount: 4,
     difficulty: 'moyen',
+  },
+  {
+    id: 'louvain-la-neuve-2',
+    centerSlug: 'louvain-la-neuve',
+    title: { fr: 'Circuit d’entraînement 2', nl: 'Trainingscircuit 2' },
+    description: {
+      fr: 'Deuxième itinéraire, avec un enchaînement de carrefours et de changements de bande différent du premier circuit.',
+      nl: 'Tweede route, met een andere opeenvolging van kruispunten en rijstrookwissels dan het eerste circuit.',
+    },
+    // Vrai tracé fourni par le client le 2026-09-08 — voir note sur louvain-la-neuve-1.
+    mapsUrl: 'https://maps.app.goo.gl/XvmS3FGYGYHuqeW69',
+    durationMinutes: 20,
+  },
+  {
+    id: 'louvain-la-neuve-3',
+    centerSlug: 'louvain-la-neuve',
+    title: { fr: 'Circuit d’entraînement 3', nl: 'Trainingscircuit 3' },
+    description: {
+      fr: 'Troisième itinéraire, pour varier les conditions de circulation rencontrées avant le jour J.',
+      nl: 'Derde route, om de verkeersomstandigheden vóór de grote dag te variëren.',
+    },
+    // Vrai tracé fourni par le client le 2026-09-08 — voir note sur louvain-la-neuve-1.
+    mapsUrl: 'https://maps.app.goo.gl/HbdaxTLzLE3646kS8',
+    durationMinutes: 20,
+  },
+  {
+    id: 'louvain-la-neuve-4',
+    centerSlug: 'louvain-la-neuve',
+    title: { fr: 'Circuit d’entraînement 4', nl: 'Trainingscircuit 4' },
+    description: {
+      fr: 'Quatrième itinéraire, pour varier encore les conditions de circulation rencontrées avant le jour J.',
+      nl: 'Vierde route, om de verkeersomstandigheden vóór de grote dag verder te variëren.',
+    },
+    // Vrai tracé fourni par le client le 2026-09-08 — voir note sur louvain-la-neuve-1.
+    mapsUrl: 'https://maps.app.goo.gl/8VcTU3aGkbcrSEvw8',
+    durationMinutes: 20,
   },
   {
     id: 'couillet-1',
@@ -180,11 +222,51 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
       fr: 'Itinéraire à parcourir en voiture autour du centre — plusieurs pièges classiques signalés autour de ce centre, à surveiller particulièrement.',
       nl: 'Route om met de auto rond het centrum te rijden — verschillende klassieke valkuilen rond dit centrum, extra aandacht vereist.',
     },
+    // Vrai tracé fourni par le client le 2026-09-08 — Couillet reste
+    // `comingSoon: true` (voir EXAM_CENTERS ci-dessus) tant que les autres
+    // circuits de ce centre n'ont pas aussi leur vrai tracé.
+    mapsUrl: 'https://maps.app.goo.gl/bGhRkbWzofXcUJd68',
     durationMinutes: 20,
     priceCents: 2499,
     distanceKm: 4.6,
     attentionPointsCount: 6,
     difficulty: 'difficile',
+  },
+  {
+    id: 'couillet-2',
+    centerSlug: 'couillet',
+    title: { fr: 'Circuit d’entraînement 2', nl: 'Trainingscircuit 2' },
+    description: {
+      fr: 'Deuxième itinéraire, avec un enchaînement de carrefours et de changements de bande différent du premier circuit.',
+      nl: 'Tweede route, met een andere opeenvolging van kruispunten en rijstrookwissels dan het eerste circuit.',
+    },
+    // Vrai tracé fourni par le client le 2026-09-08 — voir note sur couillet-1.
+    mapsUrl: 'https://maps.app.goo.gl/FTGfgVzZYNWi1re48',
+    durationMinutes: 20,
+  },
+  {
+    id: 'couillet-3',
+    centerSlug: 'couillet',
+    title: { fr: 'Circuit d’entraînement 3', nl: 'Trainingscircuit 3' },
+    description: {
+      fr: 'Troisième itinéraire, pour varier les conditions de circulation rencontrées avant le jour J.',
+      nl: 'Derde route, om de verkeersomstandigheden vóór de grote dag te variëren.',
+    },
+    // Vrai tracé fourni par le client le 2026-09-08 — voir note sur couillet-1.
+    mapsUrl: 'https://maps.app.goo.gl/oRyZtsxLRzgommvd9',
+    durationMinutes: 20,
+  },
+  {
+    id: 'couillet-4',
+    centerSlug: 'couillet',
+    title: { fr: 'Circuit d’entraînement 4', nl: 'Trainingscircuit 4' },
+    description: {
+      fr: 'Quatrième itinéraire, pour varier encore les conditions de circulation rencontrées avant le jour J.',
+      nl: 'Vierde route, om de verkeersomstandigheden vóór de grote dag verder te variëren.',
+    },
+    // Vrai tracé fourni par le client le 2026-09-08 — voir note sur couillet-1.
+    mapsUrl: 'https://maps.app.goo.gl/2VBqFyWGJcBB93iD9',
+    durationMinutes: 20,
   },
   {
     id: 'mariembourg-1',
