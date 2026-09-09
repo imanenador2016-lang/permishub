@@ -297,7 +297,7 @@ export function QuizFunnel({
       )}
 
       {step === 'test' && (
-        <TestDeNiveau questions={questions} themeLabels={themeLabels} onClose={() => router.push('/')} />
+        <TestDeNiveau questions={questions} themeLabels={themeLabels} onClose={() => router.push('/')} email={email} />
       )}
     </div>
   )

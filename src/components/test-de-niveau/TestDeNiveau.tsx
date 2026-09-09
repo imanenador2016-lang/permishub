@@ -123,10 +123,13 @@ export function TestDeNiveau({
   questions,
   themeLabels,
   onClose,
+  email,
 }: {
   questions: Question[]
   themeLabels: ThemeLabel[]
   onClose: () => void
+  /** Email capturé par le tunnel de qualification (voir QuizFunnel.tsx) — si présent, le résultat lui est envoyé par email dès qu'il est calculé (voir plus bas). */
+  email?: string
 }) {
   const t = useTranslations('testDeNiveau')
   const locale = useLocale() as 'fr' | 'nl'
@@ -239,6 +242,26 @@ export function TestDeNiveau({
   const weakThemeLabels = result
     ? result.weakestThemeSlugs.map((slug) => themeLabels.find((th) => th.slug === slug)?.label ?? slug)
     : []
+
+  // Envoie le résultat par email dès qu'il est calculé — voir
+  // api/test-result-email et conversation du 2026-09-09 (le site promettait
+  // "on t'envoie ton résultat" sans jamais l'envoyer réellement). `sentRef`
+  // évite un second envoi si le composant se re-rend une fois `isResult`
+  // déjà vrai. Jamais bloquant pour l'affichage du résultat : une erreur ici
+  // est juste loguée, pas montrée au visiteur.
+  const resultEmailSentRef = useRef(false)
+  useEffect(() => {
+    if (!result || !email || resultEmailSentRef.current) return
+    resultEmailSentRef.current = true
+    fetch('/api/test-result-email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, locale, score10: result.score10, weakThemeLabels }),
+    }).catch((err) => {
+      console.error('Échec de l’envoi du résultat par email (non bloquant) :', err)
+    })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [result, email, locale])
 
   // Un point par thème couvert par le test — voir RadarChart.tsx (composant
   // déjà construit mais jamais branché ici avant le 2026-09-08).
