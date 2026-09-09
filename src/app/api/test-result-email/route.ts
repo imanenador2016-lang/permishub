@@ -25,7 +25,8 @@ function getClientIp(request: Request): string {
  */
 export async function POST(request: Request) {
   const ip = getClientIp(request)
-  if (isRateLimited(ip, RATE_LIMIT_MAX, RATE_LIMIT_WINDOW_MS)) {
+  // Clé préfixée par route — voir api/lead/route.ts pour le pourquoi.
+  if (isRateLimited(`result-email:${ip}`, RATE_LIMIT_MAX, RATE_LIMIT_WINDOW_MS)) {
     return NextResponse.json({ error: 'Trop de requêtes, réessaie dans quelques minutes.' }, { status: 429 })
   }
 

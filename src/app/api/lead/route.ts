@@ -28,7 +28,13 @@ function getClientIp(request: Request): string {
  */
 export async function POST(request: Request) {
   const ip = getClientIp(request)
-  if (isRateLimited(ip, RATE_LIMIT_MAX, RATE_LIMIT_WINDOW_MS)) {
+  // Clé préfixée par route — sans ça, isRateLimited() (Map partagée par IP
+  // seule, voir rate-limit.ts) mélange les compteurs de /api/lead et
+  // /api/test-result-email : un visiteur qui teste plusieurs fois peut se
+  // faire bloquer silencieusement sur l'une à cause de l'autre (trouvé le
+  // 2026-09-09 : aucun email reçu après un vrai test complet, alors que
+  // l'envoi fonctionnait — c'était juste rate-limité sans le signaler).
+  if (isRateLimited(`lead:${ip}`, RATE_LIMIT_MAX, RATE_LIMIT_WINDOW_MS)) {
     return NextResponse.json({ error: 'Trop de requêtes, réessaie dans quelques minutes.' }, { status: 429 })
   }
 

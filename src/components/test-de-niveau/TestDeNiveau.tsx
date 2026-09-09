@@ -257,9 +257,18 @@ export function TestDeNiveau({
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, locale, score10: result.score10, weakThemeLabels }),
-    }).catch((err) => {
-      console.error('Échec de l’envoi du résultat par email (non bloquant) :', err)
     })
+      .then((res) => {
+        // fetch() ne rejette que sur une erreur réseau — une réponse 4xx/5xx
+        // (ex. rate limit, échec Resend) est un succès du point de vue de la
+        // promesse et passait inaperçue sans ce contrôle explicite (trouvé
+        // le 2026-09-09 : aucun email reçu après un vrai test complet, sans
+        // aucune trace d'erreur nulle part).
+        if (!res.ok) console.error('Échec de l’envoi du résultat par email (non bloquant), statut', res.status)
+      })
+      .catch((err) => {
+        console.error('Échec de l’envoi du résultat par email (non bloquant) :', err)
+      })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [result, email, locale])
 
