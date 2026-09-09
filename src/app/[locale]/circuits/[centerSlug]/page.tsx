@@ -105,13 +105,8 @@ export default async function CenterCircuitsPage({
                 <div className="flex flex-1 flex-col gap-3 p-5">
                   <p className="font-display text-xl leading-tight">{t('circuitLabel', { n: i + 1 })}</p>
 
-                  {circuit.distanceKm != null && circuit.attentionPointsCount != null && (
-                    <p className="text-xs font-semibold text-ink/70">
-                      {t('kmPoints', {
-                        km: circuit.distanceKm.toLocaleString(locale === 'nl' ? 'nl-BE' : 'fr-BE'),
-                        points: circuit.attentionPointsCount,
-                      })}
-                    </p>
+                  {circuit.durationMinutes != null && (
+                    <p className="text-xs font-semibold text-ink/70">{t('durationLabel', { min: circuit.durationMinutes })}</p>
                   )}
                   {circuit.difficulty && (
                     <span

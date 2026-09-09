@@ -146,9 +146,9 @@
   "circuits": {
     "eyebrow": "Trouve ton centre",
     "title": "Les circuits d'examen, ville par ville",
-    "lead": "Fais glisser pour voir les points d'attention réels de chaque centre — avant d'y mettre les pieds.",
+    "lead": "Fais glisser pour voir les circuits réels de chaque centre — avant d'y mettre les pieds.",
     "availableBadge": "{count} centres disponibles — d'autres arrivent chaque mois",
-    "kmPoints": "{km} km · {points} points d'attention",
+    "durationLabel": "{min} minutes",
     "ctaUnlock": "Débloquer",
     "ctaViewCircuits": "Voir les circuits",
     "refundNote": "remboursé si tu échoues à l'examen",

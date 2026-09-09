@@ -7,6 +7,7 @@ import { Link } from '@/i18n/navigation'
 import { getCenters, getFeaturedCircuit } from '@/content/centers/registry'
 import { REGION_LABELS } from '@/domain/region'
 import { CircuitIllustrationAnderlecht, CircuitIllustrationSchaerbeek, CircuitIllustrationGeneric } from './CircuitIllustration'
+import { CircuitUnlockCta } from './CircuitUnlockCta'
 
 const ILLUSTRATIONS: Record<string, () => React.JSX.Element> = {
   anderlecht: CircuitIllustrationAnderlecht,
@@ -33,14 +34,13 @@ const DIFFICULTY_STYLES: Record<string, string> = {
  * content/centers/registry.ts. La dernière carte collecte un email pour
  * prioriser les prochaines villes.
  *
- * Chaque carte mène vers la liste des circuits du centre
- * (circuits/[centerSlug]/page.tsx) plutôt que directement vers l'achat —
- * voir conversation du 2026-08-29 : les circuits sont temporairement
- * gratuits (CIRCUITS_FREE_FOR_TESTING dans content/centers/registry.ts)
- * pendant que le client crée plusieurs parcours par centre. L'ancien
- * bouton "Débloquer" → Stripe (UnlockButton/createCircuitCheckoutSession)
- * reste disponible dans lib/circuit-payment.ts pour être réactivé plus
- * tard sur la page de liste.
+ * Chaque carte débloque directement (CircuitUnlockCta → CircuitOfferModal →
+ * Stripe) au lieu de renvoyer d'abord vers la liste des circuits du centre
+ * (circuits/[centerSlug]/page.tsx) — voir conversation du 2026-09-09 :
+ * l'étape intermédiaire "Voir les circuits" faisait perdre des clients avant
+ * même qu'ils voient le prix. La page de liste reste accessible (SEO,
+ * utilisateurs déjà débloqués qui veulent un circuit précis) mais n'est plus
+ * le chemin d'achat principal.
  */
 export function CircuitsCarousel() {
   const t = useTranslations('circuits')
@@ -89,10 +89,8 @@ export function CircuitsCarousel() {
                 <p className="font-display text-lg">
                   {REGION_LABELS[center.region][locale]} — {center.name}
                 </p>
-                {circuit?.distanceKm != null && circuit.attentionPointsCount != null && (
-                  <p className="mb-2.5 text-xs font-semibold text-ink/70">
-                    {t('kmPoints', { km: circuit.distanceKm.toLocaleString(locale === 'nl' ? 'nl-BE' : 'fr-BE'), points: circuit.attentionPointsCount })}
-                  </p>
+                {circuit?.durationMinutes != null && (
+                  <p className="mb-2.5 text-xs font-semibold text-ink/70">{t('durationLabel', { min: circuit.durationMinutes })}</p>
                 )}
                 {circuit?.difficulty && (
                   <span className={`mb-3 inline-block border-2 border-ink px-2.5 py-1 text-[10.5px] font-extrabold ${DIFFICULTY_STYLES[circuit.difficulty]}`}>
@@ -115,11 +113,15 @@ export function CircuitsCarousel() {
                   >
                     {t('circuitComingSoon')}
                   </Link>
-                ) : (
-                  <Link href={`/circuits/${center.slug}`} className="btn-comic block w-full px-4 py-2.5 text-center text-sm">
-                    {t('ctaViewCircuits')} →
-                  </Link>
-                )}
+                ) : circuit?.mapsUrl ? (
+                  <CircuitUnlockCta
+                    mapsUrl={circuit.mapsUrl}
+                    centerSlug={center.slug}
+                    centerName={center.name}
+                    locale={locale}
+                    unlockLabel={t('ctaUnlock')}
+                  />
+                ) : null}
               </div>
             </div>
           )

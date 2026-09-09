@@ -146,9 +146,9 @@
   "circuits": {
     "eyebrow": "Vind je centrum",
     "title": "De examencircuits, stad per stad",
-    "lead": "Swipe om de echte aandachtspunten van elk centrum te zien — voor je er staat.",
+    "lead": "Swipe om de echte circuits van elk centrum te zien — voor je er staat.",
     "availableBadge": "{count} centra beschikbaar — er komen er elke maand bij",
-    "kmPoints": "{km} km · {points} aandachtspunten",
+    "durationLabel": "{min} minuten",
     "ctaUnlock": "Ontgrendel",
     "ctaViewCircuits": "Bekijk de circuits",
     "refundNote": "terugbetaald als je niet slaagt voor het examen",

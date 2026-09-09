@@ -59,7 +59,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
     // Dr Huet → Av. Nellie Melba → Rue Claude Debussy → Av. Guillaume
     // Stassart → Bd Théo Lambert → Bd Maurice Carême → Rue du Charroi.
     mapsUrl: 'https://maps.app.goo.gl/KH3mQf9WqmVmYxd97',
-    durationMinutes: 20,
+    durationMinutes: 30,
     // Circuit "vitrine" affiché sur le carrousel de la home (brief v2). Prix
     // réel confirmé (24,99€). distanceKm/attentionPointsCount/difficulty
     // restent les valeurs d'exemple du mockup de référence (pas encore
@@ -80,7 +80,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
     },
     // Vrai tracé fourni par le client le 2026-08-29 — voir note sur anderlecht-1.
     mapsUrl: 'https://maps.app.goo.gl/XjELyouuBK1F3Aud9',
-    durationMinutes: 20,
+    durationMinutes: 30,
   },
   {
     id: 'anderlecht-3',
@@ -92,7 +92,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
     },
     // Vrai tracé fourni par le client le 2026-08-29 — voir note sur anderlecht-1.
     mapsUrl: 'https://maps.app.goo.gl/cxrhoee2AB2vctq56',
-    durationMinutes: 20,
+    durationMinutes: 30,
   },
   {
     id: 'anderlecht-4',
@@ -104,7 +104,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
     },
     // Vrai tracé fourni par le client le 2026-08-29 — voir note sur anderlecht-1.
     mapsUrl: 'https://maps.app.goo.gl/CrVtteMgvbt4vJHs7',
-    durationMinutes: 20,
+    durationMinutes: 30,
   },
   {
     id: 'schaerbeek-1',
@@ -116,7 +116,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
     },
     // Vrai tracé fourni par le client le 2026-08-29 — voir note sur anderlecht-1.
     mapsUrl: 'https://maps.app.goo.gl/esT5LVveGjwS1fyp8',
-    durationMinutes: 20,
+    durationMinutes: 30,
     // Circuit "vitrine" affiché sur le carrousel de la home — voir note sur anderlecht-1.
     priceCents: 2499,
     distanceKm: 3.6,
@@ -133,7 +133,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
     },
     // Vrai tracé fourni par le client le 2026-08-29 — voir note sur anderlecht-1.
     mapsUrl: 'https://maps.app.goo.gl/ksBSgHgB7rurF5JD9',
-    durationMinutes: 20,
+    durationMinutes: 30,
   },
   {
     id: 'schaerbeek-3',
@@ -145,7 +145,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
     },
     // Vrai tracé fourni par le client le 2026-08-29 — voir note sur anderlecht-1.
     mapsUrl: 'https://maps.app.goo.gl/uqHTa9QMZ9aQ7V6d9',
-    durationMinutes: 20,
+    durationMinutes: 30,
   },
   {
     id: 'schaerbeek-4',
@@ -157,7 +157,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
     },
     // Vrai tracé fourni par le client le 2026-08-29 — voir note sur anderlecht-1.
     mapsUrl: 'https://maps.app.goo.gl/KKMXpEpMEm15gjjq8',
-    durationMinutes: 20,
+    durationMinutes: 30,
   },
 
   // --- Centres wallons ajoutés le 2026-08-21 (difficulté donnée par le
@@ -175,7 +175,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
     // `comingSoon: true` tant que les autres circuits n'ont pas aussi leur
     // vrai tracé (voir note sur couillet-1).
     mapsUrl: 'https://maps.app.goo.gl/6HC7qKgEAhQnHoHd7',
-    durationMinutes: 20,
+    durationMinutes: 30,
     priceCents: 2499,
     distanceKm: 3.8,
     attentionPointsCount: 4,
@@ -191,7 +191,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
     },
     // Vrai tracé fourni par le client le 2026-09-08 — voir note sur louvain-la-neuve-1.
     mapsUrl: 'https://maps.app.goo.gl/XvmS3FGYGYHuqeW69',
-    durationMinutes: 20,
+    durationMinutes: 30,
   },
   {
     id: 'louvain-la-neuve-3',
@@ -203,7 +203,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
     },
     // Vrai tracé fourni par le client le 2026-09-08 — voir note sur louvain-la-neuve-1.
     mapsUrl: 'https://maps.app.goo.gl/HbdaxTLzLE3646kS8',
-    durationMinutes: 20,
+    durationMinutes: 30,
   },
   {
     id: 'louvain-la-neuve-4',
@@ -215,7 +215,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
     },
     // Vrai tracé fourni par le client le 2026-09-08 — voir note sur louvain-la-neuve-1.
     mapsUrl: 'https://maps.app.goo.gl/8VcTU3aGkbcrSEvw8',
-    durationMinutes: 20,
+    durationMinutes: 30,
   },
   {
     id: 'couillet-1',
@@ -229,7 +229,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
     // `comingSoon: true` (voir EXAM_CENTERS ci-dessus) tant que les autres
     // circuits de ce centre n'ont pas aussi leur vrai tracé.
     mapsUrl: 'https://maps.app.goo.gl/bGhRkbWzofXcUJd68',
-    durationMinutes: 20,
+    durationMinutes: 30,
     priceCents: 2499,
     distanceKm: 4.6,
     attentionPointsCount: 6,
@@ -245,7 +245,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
     },
     // Vrai tracé fourni par le client le 2026-09-08 — voir note sur couillet-1.
     mapsUrl: 'https://maps.app.goo.gl/FTGfgVzZYNWi1re48',
-    durationMinutes: 20,
+    durationMinutes: 30,
   },
   {
     id: 'couillet-3',
@@ -257,7 +257,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
     },
     // Vrai tracé fourni par le client le 2026-09-08 — voir note sur couillet-1.
     mapsUrl: 'https://maps.app.goo.gl/oRyZtsxLRzgommvd9',
-    durationMinutes: 20,
+    durationMinutes: 30,
   },
   {
     id: 'couillet-4',
@@ -269,7 +269,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
     },
     // Vrai tracé fourni par le client le 2026-09-08 — voir note sur couillet-1.
     mapsUrl: 'https://maps.app.goo.gl/2VBqFyWGJcBB93iD9',
-    durationMinutes: 20,
+    durationMinutes: 30,
   },
   {
     id: 'mariembourg-1',
@@ -279,7 +279,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
       fr: 'Itinéraire à parcourir en voiture autour du centre, avec les manœuvres typiquement testées à l’examen pratique.',
       nl: 'Route om met de auto rond het centrum te rijden, met de manoeuvres die typisch getest worden bij het praktijkexamen.',
     },
-    durationMinutes: 20,
+    durationMinutes: 30,
     priceCents: 2499,
     distanceKm: 3.5,
     attentionPointsCount: 4,
@@ -293,7 +293,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
       fr: 'Itinéraire à parcourir en voiture autour du centre, avec les manœuvres typiquement testées à l’examen pratique.',
       nl: 'Route om met de auto rond het centrum te rijden, met de manoeuvres die typisch getest worden bij het praktijkexamen.',
     },
-    durationMinutes: 20,
+    durationMinutes: 30,
     priceCents: 2499,
     distanceKm: 3.7,
     attentionPointsCount: 4,
@@ -307,7 +307,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
       fr: 'Itinéraire à parcourir en voiture autour du centre, avec les manœuvres typiquement testées à l’examen pratique.',
       nl: 'Route om met de auto rond het centrum te rijden, met de manoeuvres die typisch getest worden bij het praktijkexamen.',
     },
-    durationMinutes: 20,
+    durationMinutes: 30,
     priceCents: 2499,
     distanceKm: 2.8,
     attentionPointsCount: 2,
@@ -321,7 +321,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
       fr: 'Itinéraire à parcourir en voiture autour du centre, avec les manœuvres typiquement testées à l’examen pratique.',
       nl: 'Route om met de auto rond het centrum te rijden, met de manoeuvres die typisch getest worden bij het praktijkexamen.',
     },
-    durationMinutes: 20,
+    durationMinutes: 30,
     priceCents: 2499,
     distanceKm: 2.6,
     attentionPointsCount: 2,

@@ -23,11 +23,14 @@ export function CircuitUnlockCta({
   centerSlug,
   centerName,
   locale,
+  unlockLabel,
 }: {
   mapsUrl: string
   centerSlug: string
   centerName: string
   locale: 'fr' | 'nl'
+  /** Libellé du bouton verrouillé — "Voir l'itinéraire" par défaut (page centre), "Débloquer" sur la carte home (voir CircuitsCarousel.tsx). */
+  unlockLabel?: string
 }) {
   const t = useTranslations('circuits')
   const [unlocked, setUnlocked] = useState(false)
@@ -52,7 +55,7 @@ export function CircuitUnlockCta({
   return (
     <>
       <button onClick={() => setModalOpen(true)} className="btn-comic block w-full px-4 py-3 text-center text-sm">
-        {t('viewItinerary')} →
+        {unlockLabel ?? t('viewItinerary')} →
       </button>
       {modalOpen && (
         <CircuitOfferModal centerName={centerName} centerSlug={centerSlug} locale={locale} onClose={() => setModalOpen(false)} />
