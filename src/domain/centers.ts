@@ -23,6 +23,8 @@ export interface ExamCenter {
   lng?: number
   /** Centre pas encore ouvert à la vente (circuits pas encore prêts) — affiché verrouillé "Bientôt". */
   comingSoon?: boolean
+  /** Affiche un badge "Populaire" sur la carte du carrousel home — décision manuelle du client (2026-09-10), pas calculé depuis de vraies ventes. */
+  popular?: boolean
 }
 
 /**

@@ -4,7 +4,7 @@ import { useRef, useState } from 'react'
 import Image from 'next/image'
 import { useTranslations, useLocale } from 'next-intl'
 import { Link } from '@/i18n/navigation'
-import { getCenters, getFeaturedCircuit } from '@/content/centers/registry'
+import { getCenters, getFeaturedCircuit, getCircuitsByCenter } from '@/content/centers/registry'
 import { REGION_LABELS } from '@/domain/region'
 import { CircuitIllustrationAnderlecht, CircuitIllustrationSchaerbeek, CircuitIllustrationGeneric } from './CircuitIllustration'
 import { CircuitUnlockCta } from './CircuitUnlockCta'
@@ -72,10 +72,11 @@ export function CircuitsCarousel() {
       >
         {centers.map((center, i) => {
           const circuit = getFeaturedCircuit(center.slug)
+          const circuitsCount = getCircuitsByCenter(center.slug).length
           const Illustration = ILLUSTRATIONS[center.slug]
           const photo = PHOTOS[center.slug]
           return (
-            <div key={center.id} className="panel w-[84%] flex-none !p-0 [scroll-snap-align:center] sm:w-[320px]">
+            <div key={center.id} className="panel flex w-[84%] flex-none flex-col !p-0 [scroll-snap-align:center] sm:w-[320px]">
               <div className="relative h-[150px] border-b-[3px] border-ink sm:border-b-4">
                 {photo ? (
                   <Image src={photo} alt={center.name} fill className="object-cover" sizes="(min-width: 640px) 320px, 84vw" />
@@ -84,44 +85,56 @@ export function CircuitsCarousel() {
                 ) : (
                   <CircuitIllustrationGeneric seed={i} />
                 )}
+                {center.popular && (
+                  <span className="absolute left-2.5 top-2.5 -rotate-2 border-2 border-ink bg-brick px-2 py-1 text-[10.5px] font-extrabold text-cream shadow-hard-xs">
+                    {t('popularBadge')}
+                  </span>
+                )}
               </div>
-              <div className="p-4">
+              <div className="flex flex-1 flex-col p-4">
                 <p className="font-display text-lg">
                   {REGION_LABELS[center.region][locale]} — {center.name}
                 </p>
                 {circuit?.durationMinutes != null && (
-                  <p className="mb-2.5 text-xs font-semibold text-ink/70">{t('durationLabel', { min: circuit.durationMinutes })}</p>
+                  <p className="mb-2.5 text-xs font-semibold text-ink/70">
+                    {t('circuitsCount', { count: circuitsCount, min: circuit.durationMinutes })}
+                  </p>
                 )}
                 {circuit?.difficulty && (
-                  <span className={`mb-3 inline-block border-2 border-ink px-2.5 py-1 text-[10.5px] font-extrabold ${DIFFICULTY_STYLES[circuit.difficulty]}`}>
+                  <span className={`mb-3 inline-block w-fit border-2 border-ink px-2.5 py-1 text-[10.5px] font-extrabold ${DIFFICULTY_STYLES[circuit.difficulty]}`}>
                     {t(`difficulty.${circuit.difficulty}`)}
                   </span>
                 )}
                 {!center.comingSoon && (
-                  <p className="mb-2.5 inline-block border-2 border-ink bg-sky px-2 py-1 text-xs font-bold">{t('realMapsBadge')}</p>
+                  <>
+                    <p className="mb-2.5 inline-block w-fit border-2 border-ink bg-sky px-2 py-1 text-xs font-bold">{t('realMapsBadge')}</p>
+                    <p className="mb-2.5 text-xs font-extrabold text-brick">{t('limitedOfferBadge')}</p>
+                  </>
                 )}
-                {center.comingSoon ? (
-                  // Vrai <Link href> (pas un <span>) avec preventDefault : même
-                  // comportement clic qu'avant (rien ne se passe), mais l'URL
-                  // du centre redevient crawlable — voir audit SEO du
-                  // 2026-09-01, ces 6 pages n'avaient aucun lien réel les
-                  // pointant, seulement le sitemap.
-                  <Link
-                    href={`/circuits/${center.slug}`}
-                    onClick={(e) => e.preventDefault()}
-                    className="block w-full cursor-not-allowed border-[3px] border-ink/25 px-4 py-2.5 text-center text-sm font-bold text-ink/40"
-                  >
-                    {t('circuitComingSoon')}
-                  </Link>
-                ) : circuit?.mapsUrl ? (
-                  <CircuitUnlockCta
-                    mapsUrl={circuit.mapsUrl}
-                    centerSlug={center.slug}
-                    centerName={center.name}
-                    locale={locale}
-                    unlockLabel={t('ctaUnlock')}
-                  />
-                ) : null}
+                <div className="mt-auto">
+                  {center.comingSoon ? (
+                    // Vrai <Link href> (pas un <span>) avec preventDefault : même
+                    // comportement clic qu'avant (rien ne se passe), mais l'URL
+                    // du centre redevient crawlable — voir audit SEO du
+                    // 2026-09-01, ces 6 pages n'avaient aucun lien réel les
+                    // pointant, seulement le sitemap.
+                    <Link
+                      href={`/circuits/${center.slug}`}
+                      onClick={(e) => e.preventDefault()}
+                      className="block w-full cursor-not-allowed border-[3px] border-ink/25 px-4 py-2.5 text-center text-sm font-bold text-ink/40"
+                    >
+                      {t('circuitComingSoon')}
+                    </Link>
+                  ) : circuit?.mapsUrl ? (
+                    <CircuitUnlockCta
+                      mapsUrl={circuit.mapsUrl}
+                      centerSlug={center.slug}
+                      centerName={center.name}
+                      locale={locale}
+                      unlockLabel={t('ctaUnlock')}
+                    />
+                  ) : null}
+                </div>
               </div>
             </div>
           )

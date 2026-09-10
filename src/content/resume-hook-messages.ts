@@ -18,6 +18,18 @@ export interface ScoreMessage {
   /** Texte du bouton principal, sans le prix (le prix est ajouté séparément via formatPrice). */
   ctaLabel: LocalizedText
   primaryOffer: 'resume' | 'examens'
+  /**
+   * Phrase choc juste avant le bouton d'achat — ton spontané/piquant,
+   * délibérément différent de `accroche`/`message` (plus sérieux, brief CRO
+   * du 2026-08-28) : le but ici est de piquer juste avant la décision
+   * d'achat, pas d'expliquer. Choisie par l'utilisateur le 2026-09-10 parmi
+   * plusieurs propositions, une par tranche de score (0-3, 4-6, 7-9, 10) —
+   * jamais un examinateur (ce test porte sur l'examen THÉORIQUE, un QCM,
+   * pas la conduite) ; l'argument pour les bons scores s'appuie sur le
+   * contraste réel 11 questions ici vs 50 le jour de l'examen (voir
+   * TEST_DE_NIVEAU_PHOTO_QUESTIONS, test-de-niveau-questions.ts).
+   */
+  punchLine: LocalizedText
 }
 
 export const RESUME_HOOK_MESSAGES: Record<number, ScoreMessage> = {
@@ -32,6 +44,10 @@ export const RESUME_HOOK_MESSAGES: Record<number, ScoreMessage> = {
     },
     ctaLabel: { fr: 'Apprendre les bases en 20 min', nl: 'Leer de basis in 20 min' },
     primaryOffer: 'resume',
+    punchLine: {
+      fr: 'Aïe aïe aïe... Heureusement que c’est pas le vrai examen théorique, hein 😅',
+      nl: 'Auw auw auw... Gelukkig is dit niet het echte theorie-examen, hè 😅',
+    },
   },
   1: {
     accroche: {
@@ -44,6 +60,10 @@ export const RESUME_HOOK_MESSAGES: Record<number, ScoreMessage> = {
     },
     ctaLabel: { fr: 'Poser mes premières bases', nl: 'Leg mijn eerste basis' },
     primaryOffer: 'resume',
+    punchLine: {
+      fr: 'Aïe aïe aïe... Heureusement que c’est pas le vrai examen théorique, hein 😅',
+      nl: 'Auw auw auw... Gelukkig is dit niet het echte theorie-examen, hè 😅',
+    },
   },
   2: {
     accroche: {
@@ -56,6 +76,10 @@ export const RESUME_HOOK_MESSAGES: Record<number, ScoreMessage> = {
     },
     ctaLabel: { fr: 'Structurer mes connaissances', nl: 'Structureer mijn kennis' },
     primaryOffer: 'resume',
+    punchLine: {
+      fr: 'Aïe aïe aïe... Heureusement que c’est pas le vrai examen théorique, hein 😅',
+      nl: 'Auw auw auw... Gelukkig is dit niet het echte theorie-examen, hè 😅',
+    },
   },
   3: {
     accroche: {
@@ -68,6 +92,10 @@ export const RESUME_HOOK_MESSAGES: Record<number, ScoreMessage> = {
     },
     ctaLabel: { fr: 'Verrouiller mes acquis', nl: 'Zet mijn kennis vast' },
     primaryOffer: 'resume',
+    punchLine: {
+      fr: 'Aïe aïe aïe... Heureusement que c’est pas le vrai examen théorique, hein 😅',
+      nl: 'Auw auw auw... Gelukkig is dit niet het echte theorie-examen, hè 😅',
+    },
   },
   4: {
     accroche: {
@@ -80,6 +108,10 @@ export const RESUME_HOOK_MESSAGES: Record<number, ScoreMessage> = {
     },
     ctaLabel: { fr: 'M’entraîner pour progresser', nl: 'Oefenen om vooruit te gaan' },
     primaryOffer: 'examens',
+    punchLine: {
+      fr: 'Une question sur deux. Sympa à pile ou face, beaucoup moins sur 50 vraies questions chronométrées.',
+      nl: 'Eén op de twee. Leuk bij kop of munt, veel minder geruststellend bij 50 echte vragen tegen de klok.',
+    },
   },
   5: {
     accroche: {
@@ -92,6 +124,10 @@ export const RESUME_HOOK_MESSAGES: Record<number, ScoreMessage> = {
     },
     ctaLabel: { fr: 'Faire basculer mon score', nl: 'Laat mijn score kantelen' },
     primaryOffer: 'examens',
+    punchLine: {
+      fr: 'Une question sur deux. Sympa à pile ou face, beaucoup moins sur 50 vraies questions chronométrées.',
+      nl: 'Eén op de twee. Leuk bij kop of munt, veel minder geruststellend bij 50 echte vragen tegen de klok.',
+    },
   },
   6: {
     accroche: {
@@ -104,6 +140,10 @@ export const RESUME_HOOK_MESSAGES: Record<number, ScoreMessage> = {
     },
     ctaLabel: { fr: 'Repérer mes erreurs qui reviennent', nl: 'Spoor mijn terugkerende fouten op' },
     primaryOffer: 'examens',
+    punchLine: {
+      fr: 'Une question sur deux. Sympa à pile ou face, beaucoup moins sur 50 vraies questions chronométrées.',
+      nl: 'Eén op de twee. Leuk bij kop of munt, veel minder geruststellend bij 50 echte vragen tegen de klok.',
+    },
   },
   7: {
     accroche: {
@@ -116,6 +156,10 @@ export const RESUME_HOOK_MESSAGES: Record<number, ScoreMessage> = {
     },
     ctaLabel: { fr: 'Confirmer mon niveau', nl: 'Bevestig mijn niveau' },
     primaryOffer: 'examens',
+    punchLine: {
+      fr: 'Pas mal ! Mais on parle de 11 questions ici — l’examen réel en a 50, sur bien plus de sujets que t’as pas encore vus.',
+      nl: 'Niet slecht! Maar dit zijn 11 vragen — het echte examen heeft er 50, over veel meer onderwerpen die je nog niet gezien hebt.',
+    },
   },
   8: {
     accroche: {
@@ -128,6 +172,10 @@ export const RESUME_HOOK_MESSAGES: Record<number, ScoreMessage> = {
     },
     ctaLabel: { fr: 'Enchaîner les examens blancs', nl: 'Doorlopend oefenexamens afleggen' },
     primaryOffer: 'examens',
+    punchLine: {
+      fr: 'Pas mal ! Mais on parle de 11 questions ici — l’examen réel en a 50, sur bien plus de sujets que t’as pas encore vus.',
+      nl: 'Niet slecht! Maar dit zijn 11 vragen — het echte examen heeft er 50, over veel meer onderwerpen die je nog niet gezien hebt.',
+    },
   },
   9: {
     accroche: {
@@ -140,6 +188,10 @@ export const RESUME_HOOK_MESSAGES: Record<number, ScoreMessage> = {
     },
     ctaLabel: { fr: 'Vérifier ma régularité', nl: 'Controleer mijn consistentie' },
     primaryOffer: 'examens',
+    punchLine: {
+      fr: 'Pas mal ! Mais on parle de 11 questions ici — l’examen réel en a 50, sur bien plus de sujets que t’as pas encore vus.',
+      nl: 'Niet slecht! Maar dit zijn 11 vragen — het echte examen heeft er 50, over veel meer onderwerpen die je nog niet gezien hebt.',
+    },
   },
   10: {
     accroche: {
@@ -152,5 +204,9 @@ export const RESUME_HOOK_MESSAGES: Record<number, ScoreMessage> = {
     },
     ctaLabel: { fr: 'Répéter la performance', nl: 'Herhaal de prestatie' },
     primaryOffer: 'examens',
+    punchLine: {
+      fr: 'Perfect ici. La théorie, le jour J, se joue sur un tout autre volume de questions — vérifie que ça tient la distance.',
+      nl: 'Perfect hier. Op de echte examendag draait het om een heel ander aantal vragen — check of het ook dan standhoudt.',
+    },
   },
 }

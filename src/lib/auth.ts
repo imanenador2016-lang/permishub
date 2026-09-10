@@ -77,18 +77,29 @@ export const authOptions: NextAuthOptions = {
 
 /**
  * Session optionnelle pour le checkout invité (api/checkout/pack,
- * api/checkout/circuit) — ne doit JAMAIS bloquer un achat, que
- * l'utilisateur soit connecté ou non. Sans ce garde-fou,
- * getServerSession() (stratégie 'database') tente une vraie connexion
- * Prisma à chaque appel ; si DATABASE_URL est vide ou la base
+ * api/checkout/circuit, api/checkout/circuits-bundle) — ne doit JAMAIS
+ * ralentir un achat, que l'utilisateur soit connecté ou non. Sans ce
+ * garde-fou, getServerSession() (stratégie 'database') tente une vraie
+ * connexion Prisma à chaque appel ; si DATABASE_URL est vide ou la base
  * injoignable, la requête reste bloquée indéfiniment au lieu d'échouer
  * vite, ce qui bloque tout achat (trouvé en testant le paiement en
  * production le 2026-08-28, DATABASE_URL pas encore configurée).
+ *
+ * Le délai de 4000ms d'origine réglait bien le cas "base injoignable",
+ * mais Neon (base serverless, voir SETUP.md) peut mettre 1 à plusieurs
+ * secondes à répondre à une connexion à froid même quand tout va bien —
+ * le client attendait ce délai en entier avant même que Stripe soit
+ * appelé (signalé le 2026-09-09 : "ça prend beaucoup de temps pour
+ * arriver au lien Stripe"). Cette session ne sert qu'à pré-remplir
+ * l'email et relier l'achat au compte tout de suite ; ce n'est jamais
+ * indispensable, le webhook Stripe (api/webhooks/stripe) relie de toute
+ * façon l'achat par email si aucun userId n'a pu être récupéré à temps —
+ * un délai court est donc largement préférable à un achat qui traîne.
  */
 export async function getOptionalSession() {
   if (!process.env.DATABASE_URL) return null
   try {
-    const timeout = new Promise<null>((resolve) => setTimeout(() => resolve(null), 4000))
+    const timeout = new Promise<null>((resolve) => setTimeout(() => resolve(null), 300))
     return await Promise.race([getServerSession(authOptions), timeout])
   } catch {
     return null

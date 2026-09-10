@@ -74,6 +74,12 @@ export function ResumeHook({
 
   const primaryOffer = examensIsPrimary ? EXAMENS_ILLIMITES_OFFER : RESUME_OFFER
   const secondaryOffer = examensIsPrimary ? RESUME_OFFER : EXAMENS_ILLIMITES_OFFER
+  // Nom réel de l'offre (pas juste le verbe d'accroche `copy.ctaLabel`) —
+  // affiché sur le bouton principal pour que le client sache toujours ce
+  // qu'il achète (Examens illimités vs Résumé), voir conversation du
+  // 2026-09-10 : le bouton ne disait avant que "Faire basculer mon score",
+  // sans jamais nommer le produit.
+  const primaryTitle = examensIsPrimary ? to('examensTitle') : to('resumeTitle')
   const secondaryTitle = examensIsPrimary ? to('resumeTitle') : to('examensTitle')
   const secondaryPrefix = examensIsPrimary ? t('secondaryOfferPrefixResume') : t('secondaryOfferPrefix')
 
@@ -122,19 +128,45 @@ export function ResumeHook({
         </ul>
       )}
 
-      <p className="mb-5 text-sm leading-relaxed text-ink/80">{copy.message[locale]}</p>
+      <p className="mb-4 text-sm leading-relaxed text-ink/80">{copy.message[locale]}</p>
 
-      {examensIsPrimary && (
-        <span className="mb-2 inline-block w-fit -rotate-1 border-2 border-forest bg-forest/10 px-2.5 py-1 font-display text-[11px] uppercase tracking-wide text-forest">
-          🔥 {t('recommendedBadge')}
+      {/* Phrase choc juste avant l'achat — ton volontairement piquant/spontané,
+          différent de `message` ci-dessus (le brief CRO sérieux du
+          2026-08-28) : le but ici est de piquer juste avant la décision, pas
+          d'expliquer. Voir resume-hook-messages.ts (`punchLine`) et la
+          conversation du 2026-09-10. */}
+      <p className="mb-5 -rotate-1 border-2 border-ink bg-yellow/50 px-3.5 py-2.5 text-center font-hand text-base leading-snug text-ink">
+        {copy.punchLine[locale]}
+      </p>
+
+      <div className="mb-2 flex flex-wrap items-center gap-2">
+        {examensIsPrimary && (
+          <span className="inline-block w-fit -rotate-1 border-2 border-forest bg-forest/10 px-2.5 py-1 font-display text-[11px] uppercase tracking-wide text-forest">
+            🔥 {t('recommendedBadge')}
+          </span>
+        )}
+        <span className="inline-block w-fit rotate-1 border-2 border-brick bg-brick/10 px-2.5 py-1 font-display text-[11px] uppercase tracking-wide text-brick">
+          {t('limitedOfferNotice')}
         </span>
-      )}
+      </div>
       <button
         onClick={() => unlock(primaryOffer, setPrimaryMessage, setPrimaryLoading)}
         disabled={primaryLoading}
         className="btn-comic block w-full px-5 py-4 text-base disabled:opacity-60"
       >
-        {primaryLoading ? tc('redirecting') : `${copy.ctaLabel[locale]} — ${offerPriceLabel(primaryOffer)} →`}
+        {primaryLoading ? (
+          tc('redirecting')
+        ) : (
+          <>
+            <span className="block">{copy.ctaLabel[locale]}</span>
+            {/* Nom réel de l'offre + prix — toujours visible sur le bouton
+                lui-même, jamais seulement dans l'accroche personnalisée
+                ci-dessus (voir `primaryTitle`). */}
+            <span className="mt-0.5 block text-sm font-semibold opacity-90">
+              {primaryTitle} — {offerPriceLabel(primaryOffer)} →
+            </span>
+          </>
+        )}
       </button>
       {!examensIsPrimary && <p className="mt-2 text-center font-hand text-sm text-forest">{to('resumeRefund')}</p>}
       {primaryMessage && <p className="mt-1.5 text-center text-xs text-ink/60">{primaryMessage}</p>}

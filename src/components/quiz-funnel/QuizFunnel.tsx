@@ -136,8 +136,9 @@ export function QuizFunnel({
 
   const segment = useMemo(() => computeSegment(answers), [answers])
 
-  async function handleEmailSubmit(e: React.FormEvent) {
+  function handleEmailSubmit(e: React.FormEvent) {
     e.preventDefault()
+    if (submitting) return
     if (!isValidEmail(email)) {
       setEmailError(t('emailInvalid'))
       return
@@ -149,38 +150,40 @@ export function QuizFunnel({
     setEmailError(null)
     setSubmitting(true)
 
-    // Le test doit démarrer même si l'enregistrement du lead échoue (voir
-    // brief) — on tente, on log une éventuelle erreur, mais on avance dans
-    // tous les cas.
-    try {
-      const params = new URLSearchParams(window.location.search)
-      const res = await fetch('/api/lead', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          email,
-          locale,
-          region: answers.region,
-          examenVise: answers.examenVise,
-          echeance: answers.echeance,
-          tentatives: answers.tentatives,
-          segment,
-          consentement: consent,
-          utmSource: params.get('utm_source') ?? '',
-          utmCampaign: params.get('utm_campaign') ?? '',
-        }),
+    // Le test doit démarrer tout de suite, sans attendre l'enregistrement du
+    // lead (voir brief) — cet appel part en arrière-plan, jamais attendu :
+    // avant ce correctif, `await` bloquait l'affichage du test le temps que
+    // le webhook Google Sheets réponde (souvent plusieurs secondes, parfois
+    // beaucoup plus), voir conversation du 2026-09-09 ("ça doit être rapide
+    // sur place").
+    const params = new URLSearchParams(window.location.search)
+    fetch('/api/lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        email,
+        locale,
+        region: answers.region,
+        examenVise: answers.examenVise,
+        echeance: answers.echeance,
+        tentatives: answers.tentatives,
+        segment,
+        consentement: consent,
+        utmSource: params.get('utm_source') ?? '',
+        utmCampaign: params.get('utm_campaign') ?? '',
+      }),
+    })
+      .then((res) => {
+        if (res.ok) trackEvent('quiz_email_submitted', { segment })
+        else trackEvent('quiz_email_error')
       })
-      if (res.ok) trackEvent('quiz_email_submitted', { segment })
-      else trackEvent('quiz_email_error')
-    } catch (err) {
-      // Erreur réseau ou autre — jamais bloquant pour le visiteur (voir
-      // brief), on avance quand même vers le test dans le `finally`.
-      console.error('Échec de l’enregistrement du lead (non bloquant) :', err)
-      trackEvent('quiz_email_error')
-    } finally {
-      setSubmitting(false)
-      goNext()
-    }
+      .catch((err) => {
+        // Erreur réseau ou autre — jamais bloquant pour le visiteur (voir brief).
+        console.error('Échec de l’enregistrement du lead (non bloquant) :', err)
+        trackEvent('quiz_email_error')
+      })
+
+    goNext()
   }
 
   useEffect(() => {

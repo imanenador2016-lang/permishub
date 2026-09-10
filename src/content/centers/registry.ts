@@ -21,8 +21,8 @@ export const EXAM_CENTERS: ExamCenter[] = [
   // lat/lng = adresse réelle du centre d'examen GOCA (Rue du Labeur, 1070 Anderlecht),
   // confirmée via le point de départ du parcours 1 fourni par le client le 2026-08-29
   // (remplace l'ancienne approximation centre-ville).
-  { id: 'anderlecht', slug: 'anderlecht', name: 'Anderlecht', region: 'BRUXELLES', priceCents: 2499, lat: 50.8201738, lng: 4.3100693 },
-  { id: 'schaerbeek', slug: 'schaerbeek', name: 'Schaerbeek', region: 'BRUXELLES', priceCents: 2499, lat: 50.8676, lng: 4.3737 },
+  { id: 'anderlecht', slug: 'anderlecht', name: 'Anderlecht', region: 'BRUXELLES', priceCents: 2499, lat: 50.8201738, lng: 4.3100693, popular: true },
+  { id: 'schaerbeek', slug: 'schaerbeek', name: 'Schaerbeek', region: 'BRUXELLES', priceCents: 2499, lat: 50.8676, lng: 4.3737, popular: true },
   // Louvain-la-Neuve et Couillet activés le 2026-09-08 — vrais tracés (4
   // circuits chacun) + photo fournis par le client, voir conversation.
   // lat/lng restent l'approximation centre-ville d'origine (voir
