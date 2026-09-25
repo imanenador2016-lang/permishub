@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useRef, useState } from 'react'
 import Image from 'next/image'
@@ -14,12 +14,16 @@ const ILLUSTRATIONS: Record<string, () => React.JSX.Element> = {
   schaerbeek: CircuitIllustrationSchaerbeek,
 }
 
-/** Vraie photo du centre — remplace l'illustration dessinée quand elle est disponible (fournie par le client). */
+/** Vraie photo du centre — remplace l'illustration dessinÃ©e quand elle est disponible (fournie par le client). */
 const PHOTOS: Record<string, string> = {
   anderlecht: '/images/centers/anderlecht.jpg',
   schaerbeek: '/images/centers/schaerbeek.jpg',
   couillet: '/images/centers/couillet.webp',
   'louvain-la-neuve': '/images/centers/louvain-la-neuve.jpg',
+  'braine-le-comte': '/images/centers/braine-le-comte.png',
+  cuesmes: '/images/centers/cuesmes.png',
+  lobbes: '/images/centers/lobbes.webp',
+  mariembourg: '/images/centers/mariembourg.png',
 }
 
 const DIFFICULTY_STYLES: Record<string, string> = {
@@ -30,16 +34,16 @@ const DIFFICULTY_STYLES: Record<string, string> = {
 
 /**
  * Carrousel horizontal en scroll-snap — reproduit apercu-circuits-swipe.html
- * (brief v2 §Section circuits). Données réelles uniquement : voir
- * content/centers/registry.ts. La dernière carte collecte un email pour
+ * (brief v2 Â§Section circuits). DonnÃ©es rÃ©elles uniquement : voir
+ * content/centers/registry.ts. La derniÃ¨re carte collecte un email pour
  * prioriser les prochaines villes.
  *
- * Chaque carte débloque directement (CircuitUnlockCta → CircuitOfferModal →
+ * Chaque carte dÃ©bloque directement (CircuitUnlockCta → CircuitOfferModal →
  * Stripe) au lieu de renvoyer d'abord vers la liste des circuits du centre
  * (circuits/[centerSlug]/page.tsx) — voir conversation du 2026-09-09 :
- * l'étape intermédiaire "Voir les circuits" faisait perdre des clients avant
- * même qu'ils voient le prix. La page de liste reste accessible (SEO,
- * utilisateurs déjà débloqués qui veulent un circuit précis) mais n'est plus
+ * l'Ã©tape intermÃ©diaire "Voir les circuits" faisait perdre des clients avant
+ * mÃªme qu'ils voient le prix. La page de liste reste accessible (SEO,
+ * utilisateurs dÃ©jÃ  dÃ©bloquÃ©s qui veulent un circuit prÃ©cis) mais n'est plus
  * le chemin d'achat principal.
  */
 export function CircuitsCarousel() {
@@ -48,7 +52,7 @@ export function CircuitsCarousel() {
   const trackRef = useRef<HTMLDivElement>(null)
   const centers = getCenters()
   const availableCount = centers.filter((c) => !c.comingSoon).length
-  const cardCount = centers.length + 1 // + carte "ta ville n'est pas là"
+  const cardCount = centers.length + 1 // + carte "ta ville n'est pas lÃ "
   const [activeIndex, setActiveIndex] = useState(0)
 
   function handleScroll() {
@@ -113,10 +117,10 @@ export function CircuitsCarousel() {
                 )}
                 <div className="mt-auto">
                   {center.comingSoon ? (
-                    // Vrai <Link href> (pas un <span>) avec preventDefault : même
+                    // Vrai <Link href> (pas un <span>) avec preventDefault : mÃªme
                     // comportement clic qu'avant (rien ne se passe), mais l'URL
                     // du centre redevient crawlable — voir audit SEO du
-                    // 2026-09-01, ces 6 pages n'avaient aucun lien réel les
+                    // 2026-09-01, ces 6 pages n'avaient aucun lien rÃ©el les
                     // pointant, seulement le sitemap.
                     <Link
                       href={`/circuits/${center.slug}`}
@@ -125,9 +129,8 @@ export function CircuitsCarousel() {
                     >
                       {t('circuitComingSoon')}
                     </Link>
-                  ) : circuit?.mapsUrl ? (
+                  ) : circuit?.hasMaps ? (
                     <CircuitUnlockCta
-                      mapsUrl={circuit.mapsUrl}
                       centerSlug={center.slug}
                       centerName={center.name}
                       locale={locale}
@@ -201,3 +204,5 @@ function Dots({ count, active }: { count: number; active: number }) {
     </div>
   )
 }
+
+

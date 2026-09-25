@@ -10,11 +10,11 @@ export interface PurchasableItem {
   priceCents: number
 }
 
-export async function createCheckoutSession(item: PurchasableItem): Promise<{ url: string }> {
+export async function createCheckoutSession(item: PurchasableItem, options?: { email?: string }): Promise<{ url: string }> {
   const res = await fetch('/api/checkout/pack', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ offerId: item.id }),
+    body: JSON.stringify({ offerId: item.id, email: options?.email }),
   })
 
   if (!res.ok) {

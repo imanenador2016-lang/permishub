@@ -1,4 +1,4 @@
-import type { ExamCenter, PracticeCircuit } from '@/domain/centers'
+﻿import type { ExamCenter, PracticeCircuit } from '@/domain/centers'
 
 /**
  * Catalogue des centres d'examen pris en charge. Liste volontairement
@@ -32,10 +32,10 @@ export const EXAM_CENTERS: ExamCenter[] = [
   { id: 'couillet', slug: 'couillet', name: 'Couillet', region: 'WALLONIE', priceCents: 2499, lat: 50.4028, lng: 4.4696 },
   // Verrouillés "Bientôt" le 2026-08-29 à la demande du client — pas encore
   // de vrai tracé pour ceux-ci, voir conversation du 2026-08-29.
-  { id: 'mariembourg', slug: 'mariembourg', name: 'Mariembourg', region: 'WALLONIE', priceCents: 2499, lat: 50.0965, lng: 4.5211, comingSoon: true },
-  { id: 'braine-le-comte', slug: 'braine-le-comte', name: 'Braine-le-Comte', region: 'WALLONIE', priceCents: 2499, lat: 50.6094, lng: 4.1447, comingSoon: true },
-  { id: 'cuesmes', slug: 'cuesmes', name: 'Cuesmes', region: 'WALLONIE', priceCents: 2499, lat: 50.44, lng: 3.9333, comingSoon: true },
-  { id: 'lobbes', slug: 'lobbes', name: 'Lobbes', region: 'WALLONIE', priceCents: 2499, lat: 50.3486, lng: 4.2664, comingSoon: true },
+  { id: 'mariembourg', slug: 'mariembourg', name: 'Mariembourg', region: 'WALLONIE', priceCents: 2499, lat: 50.0965, lng: 4.5211 },
+  { id: 'braine-le-comte', slug: 'braine-le-comte', name: 'Braine-le-Comte', region: 'WALLONIE', priceCents: 2499, lat: 50.6094, lng: 4.1447 },
+  { id: 'cuesmes', slug: 'cuesmes', name: 'Cuesmes', region: 'WALLONIE', priceCents: 2499, lat: 50.44, lng: 3.9333 },
+  { id: 'lobbes', slug: 'lobbes', name: 'Lobbes', region: 'WALLONIE', priceCents: 2499, lat: 50.3486, lng: 4.2664 },
 ]
 
 /**
@@ -54,11 +54,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
       fr: 'Itinéraire à parcourir en voiture autour du centre, avec les manœuvres typiquement testées à l’examen pratique (créneau, rond-point, priorité de droite).',
       nl: 'Route om met de auto rond het centrum te rijden, met de manoeuvres die typisch getest worden bij het praktijkexamen (parkeren, rotonde, voorrang van rechts).',
     },
-    // Vrai tracé fourni par le client le 2026-08-29 : Centre d'examen
-    // Anderlecht (Rue du Labeur) → Bd International → Rue du Sillon → Rue
-    // Dr Huet → Av. Nellie Melba → Rue Claude Debussy → Av. Guillaume
-    // Stassart → Bd Théo Lambert → Bd Maurice Carême → Rue du Charroi.
-    mapsUrl: 'https://maps.app.goo.gl/KH3mQf9WqmVmYxd97',
+    hasMaps: true,
     durationMinutes: 30,
     // Circuit "vitrine" affiché sur le carrousel de la home (brief v2). Prix
     // réel confirmé (24,99€). distanceKm/attentionPointsCount/difficulty
@@ -79,7 +75,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
       nl: 'Tweede route, met een andere opeenvolging van kruispunten en rijstrookwissels dan het eerste circuit.',
     },
     // Vrai tracé fourni par le client le 2026-08-29 — voir note sur anderlecht-1.
-    mapsUrl: 'https://maps.app.goo.gl/XjELyouuBK1F3Aud9',
+    hasMaps: true,
     durationMinutes: 30,
   },
   {
@@ -91,7 +87,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
       nl: 'Derde route, om de verkeersomstandigheden vóór de grote dag te variëren.',
     },
     // Vrai tracé fourni par le client le 2026-08-29 — voir note sur anderlecht-1.
-    mapsUrl: 'https://maps.app.goo.gl/cxrhoee2AB2vctq56',
+    hasMaps: true,
     durationMinutes: 30,
   },
   {
@@ -103,7 +99,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
       nl: 'Vierde route, om de verkeersomstandigheden vóór de grote dag verder te variëren.',
     },
     // Vrai tracé fourni par le client le 2026-08-29 — voir note sur anderlecht-1.
-    mapsUrl: 'https://maps.app.goo.gl/CrVtteMgvbt4vJHs7',
+    hasMaps: true,
     durationMinutes: 30,
   },
   {
@@ -115,7 +111,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
       nl: 'Route om met de auto rond het centrum te rijden, met de manoeuvres die typisch getest worden bij het praktijkexamen.',
     },
     // Vrai tracé fourni par le client le 2026-08-29 — voir note sur anderlecht-1.
-    mapsUrl: 'https://maps.app.goo.gl/esT5LVveGjwS1fyp8',
+    hasMaps: true,
     durationMinutes: 30,
     // Circuit "vitrine" affiché sur le carrousel de la home — voir note sur anderlecht-1.
     priceCents: 2499,
@@ -132,7 +128,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
       nl: 'Tweede route, met een andere opeenvolging van kruispunten dan het eerste circuit.',
     },
     // Vrai tracé fourni par le client le 2026-08-29 — voir note sur anderlecht-1.
-    mapsUrl: 'https://maps.app.goo.gl/ksBSgHgB7rurF5JD9',
+    hasMaps: true,
     durationMinutes: 30,
   },
   {
@@ -144,7 +140,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
       nl: 'Derde route, om de verkeersomstandigheden vóór de grote dag te variëren.',
     },
     // Vrai tracé fourni par le client le 2026-08-29 — voir note sur anderlecht-1.
-    mapsUrl: 'https://maps.app.goo.gl/uqHTa9QMZ9aQ7V6d9',
+    hasMaps: true,
     durationMinutes: 30,
   },
   {
@@ -156,7 +152,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
       nl: 'Vierde route, om de verkeersomstandigheden vóór de grote dag verder te variëren.',
     },
     // Vrai tracé fourni par le client le 2026-08-29 — voir note sur anderlecht-1.
-    mapsUrl: 'https://maps.app.goo.gl/KKMXpEpMEm15gjjq8',
+    hasMaps: true,
     durationMinutes: 30,
   },
 
@@ -174,7 +170,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
     // Vrai tracé fourni par le client le 2026-09-08 — Louvain-la-Neuve reste
     // `comingSoon: true` tant que les autres circuits n'ont pas aussi leur
     // vrai tracé (voir note sur couillet-1).
-    mapsUrl: 'https://maps.app.goo.gl/6HC7qKgEAhQnHoHd7',
+    hasMaps: true,
     durationMinutes: 30,
     priceCents: 2499,
     distanceKm: 3.8,
@@ -190,7 +186,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
       nl: 'Tweede route, met een andere opeenvolging van kruispunten en rijstrookwissels dan het eerste circuit.',
     },
     // Vrai tracé fourni par le client le 2026-09-08 — voir note sur louvain-la-neuve-1.
-    mapsUrl: 'https://maps.app.goo.gl/XvmS3FGYGYHuqeW69',
+    hasMaps: true,
     durationMinutes: 30,
   },
   {
@@ -202,7 +198,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
       nl: 'Derde route, om de verkeersomstandigheden vóór de grote dag te variëren.',
     },
     // Vrai tracé fourni par le client le 2026-09-08 — voir note sur louvain-la-neuve-1.
-    mapsUrl: 'https://maps.app.goo.gl/HbdaxTLzLE3646kS8',
+    hasMaps: true,
     durationMinutes: 30,
   },
   {
@@ -214,7 +210,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
       nl: 'Vierde route, om de verkeersomstandigheden vóór de grote dag verder te variëren.',
     },
     // Vrai tracé fourni par le client le 2026-09-08 — voir note sur louvain-la-neuve-1.
-    mapsUrl: 'https://maps.app.goo.gl/8VcTU3aGkbcrSEvw8',
+    hasMaps: true,
     durationMinutes: 30,
   },
   {
@@ -228,7 +224,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
     // Vrai tracé fourni par le client le 2026-09-08 — Couillet reste
     // `comingSoon: true` (voir EXAM_CENTERS ci-dessus) tant que les autres
     // circuits de ce centre n'ont pas aussi leur vrai tracé.
-    mapsUrl: 'https://maps.app.goo.gl/bGhRkbWzofXcUJd68',
+    hasMaps: true,
     durationMinutes: 30,
     priceCents: 2499,
     distanceKm: 4.6,
@@ -244,7 +240,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
       nl: 'Tweede route, met een andere opeenvolging van kruispunten en rijstrookwissels dan het eerste circuit.',
     },
     // Vrai tracé fourni par le client le 2026-09-08 — voir note sur couillet-1.
-    mapsUrl: 'https://maps.app.goo.gl/FTGfgVzZYNWi1re48',
+    hasMaps: true,
     durationMinutes: 30,
   },
   {
@@ -256,7 +252,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
       nl: 'Derde route, om de verkeersomstandigheden vóór de grote dag te variëren.',
     },
     // Vrai tracé fourni par le client le 2026-09-08 — voir note sur couillet-1.
-    mapsUrl: 'https://maps.app.goo.gl/oRyZtsxLRzgommvd9',
+    hasMaps: true,
     durationMinutes: 30,
   },
   {
@@ -268,7 +264,7 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
       nl: 'Vierde route, om de verkeersomstandigheden vóór de grote dag verder te variëren.',
     },
     // Vrai tracé fourni par le client le 2026-09-08 — voir note sur couillet-1.
-    mapsUrl: 'https://maps.app.goo.gl/2VBqFyWGJcBB93iD9',
+    hasMaps: true,
     durationMinutes: 30,
   },
   {
@@ -284,7 +280,11 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
     distanceKm: 3.5,
     attentionPointsCount: 4,
     difficulty: 'moyen',
+    hasMaps: true,
   },
+  { id: 'mariembourg-2', centerSlug: 'mariembourg', title: { fr: 'Circuit d’entraînement 2', nl: 'Trainingscircuit 2' }, description: { fr: 'Deuxième itinéraire autour du centre de Mariembourg.', nl: 'Tweede route rond het centrum van Mariembourg.' }, hasMaps: true, durationMinutes: 30 },
+  { id: 'mariembourg-3', centerSlug: 'mariembourg', title: { fr: 'Circuit d’entraînement 3', nl: 'Trainingscircuit 3' }, description: { fr: 'Troisième itinéraire autour du centre de Mariembourg.', nl: 'Derde route rond het centrum van Mariembourg.' }, hasMaps: true, durationMinutes: 30 },
+  { id: 'mariembourg-4', centerSlug: 'mariembourg', title: { fr: 'Circuit d’entraînement 4', nl: 'Trainingscircuit 4' }, description: { fr: 'Quatrième itinéraire autour du centre de Mariembourg.', nl: 'Vierde route rond het centrum van Mariembourg.' }, hasMaps: true, durationMinutes: 30 },
   {
     id: 'braine-le-comte-1',
     centerSlug: 'braine-le-comte',
@@ -298,7 +298,11 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
     distanceKm: 3.7,
     attentionPointsCount: 4,
     difficulty: 'moyen',
+    hasMaps: true,
   },
+  { id: 'braine-le-comte-2', centerSlug: 'braine-le-comte', title: { fr: 'Circuit d’entraînement 2', nl: 'Trainingscircuit 2' }, description: { fr: 'Deuxième itinéraire autour du centre de Braine-le-Comte.', nl: 'Tweede route rond het centrum van Braine-le-Comte.' }, hasMaps: true, durationMinutes: 30 },
+  { id: 'braine-le-comte-3', centerSlug: 'braine-le-comte', title: { fr: 'Circuit d’entraînement 3', nl: 'Trainingscircuit 3' }, description: { fr: 'Troisième itinéraire autour du centre de Braine-le-Comte.', nl: 'Derde route rond het centrum van Braine-le-Comte.' }, hasMaps: true, durationMinutes: 30 },
+  { id: 'braine-le-comte-4', centerSlug: 'braine-le-comte', title: { fr: 'Circuit d’entraînement 4', nl: 'Trainingscircuit 4' }, description: { fr: 'Quatrième itinéraire autour du centre de Braine-le-Comte.', nl: 'Vierde route rond het centrum van Braine-le-Comte.' }, hasMaps: true, durationMinutes: 30 },
   {
     id: 'cuesmes-1',
     centerSlug: 'cuesmes',
@@ -312,10 +316,15 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
     distanceKm: 2.8,
     attentionPointsCount: 2,
     difficulty: 'facile',
+    hasMaps: true,
   },
+  { id: 'cuesmes-2', centerSlug: 'cuesmes', title: { fr: 'Circuit d’entraînement 2', nl: 'Trainingscircuit 2' }, description: { fr: 'Deuxième itinéraire autour du centre de Cuesmes.', nl: 'Tweede route rond het centrum van Cuesmes.' }, hasMaps: true, durationMinutes: 30 },
+  { id: 'cuesmes-3', centerSlug: 'cuesmes', title: { fr: 'Circuit d’entraînement 3', nl: 'Trainingscircuit 3' }, description: { fr: 'Troisième itinéraire autour du centre de Cuesmes.', nl: 'Derde route rond het centrum van Cuesmes.' }, hasMaps: true, durationMinutes: 30 },
+  { id: 'cuesmes-4', centerSlug: 'cuesmes', title: { fr: 'Circuit d’entraînement 4', nl: 'Trainingscircuit 4' }, description: { fr: 'Quatrième itinéraire autour du centre de Cuesmes.', nl: 'Vierde route rond het centrum van Cuesmes.' }, hasMaps: true, durationMinutes: 30 },
   {
     id: 'lobbes-1',
     centerSlug: 'lobbes',
+    hasMaps: true,
     title: { fr: 'Circuit d’entraînement 1', nl: 'Trainingscircuit 1' },
     description: {
       fr: 'Itinéraire à parcourir en voiture autour du centre, avec les manœuvres typiquement testées à l’examen pratique.',
@@ -327,6 +336,9 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
     attentionPointsCount: 2,
     difficulty: 'facile',
   },
+  { id: 'lobbes-2', centerSlug: 'lobbes', title: { fr: 'Circuit d’entraînement 2', nl: 'Trainingscircuit 2' }, description: { fr: 'Deuxième itinéraire autour du centre de Lobbes.', nl: 'Tweede route rond het centrum van Lobbes.' }, hasMaps: true, durationMinutes: 30 },
+  { id: 'lobbes-3', centerSlug: 'lobbes', title: { fr: 'Circuit d’entraînement 3', nl: 'Trainingscircuit 3' }, description: { fr: 'Troisième itinéraire autour du centre de Lobbes.', nl: 'Derde route rond het centrum van Lobbes.' }, hasMaps: true, durationMinutes: 30 },
+  { id: 'lobbes-4', centerSlug: 'lobbes', title: { fr: 'Circuit d’entraînement 4', nl: 'Trainingscircuit 4' }, description: { fr: 'Quatrième itinéraire autour du centre de Lobbes.', nl: 'Vierde route rond het centrum van Lobbes.' }, hasMaps: true, durationMinutes: 30 },
 ]
 
 export function getCenters(): ExamCenter[] {
@@ -350,3 +362,13 @@ export function getFeaturedCircuit(centerSlug: string): PracticeCircuit | undefi
 export function getCircuitById(id: string): PracticeCircuit | undefined {
   return PRACTICE_CIRCUITS.find((c) => c.id === id)
 }
+
+
+
+
+
+
+
+
+
+

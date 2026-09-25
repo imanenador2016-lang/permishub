@@ -2,6 +2,10 @@ import { NextResponse } from 'next/server'
 import Stripe from 'stripe'
 import { stripe } from '@/lib/stripe'
 import { prisma } from '@/lib/prisma'
+import { getCenter } from '@/content/centers/registry'
+import { sendCircuitPurchaseEmail } from '@/lib/circuit-purchase-email'
+import { sendLaunchBundleEmail } from '@/lib/launch-bundle-email'
+import { LAUNCH_BUNDLE_OFFER } from '@/content/pricing-config'
 
 /**
  * Confirmation de paiement Stripe — la SEULE porte d'entrée qui débloque
@@ -26,8 +30,13 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Signature invalide' }, { status: 400 })
   }
 
-  if (event.type === 'checkout.session.completed') {
+  // Certains moyens configurés dans Stripe confirment le paiement après la
+  // fin de Checkout. N'enregistrer/débloquer l'achat qu'une fois payé.
+  if (event.type === 'checkout.session.completed' || event.type === 'checkout.session.async_payment_succeeded') {
     const session = event.data.object as Stripe.Checkout.Session
+    if (session.payment_status !== 'paid') {
+      return NextResponse.json({ received: true })
+    }
     const circuitId = session.metadata?.circuitId
     const centerSlug = session.metadata?.kind === 'circuits-bundle' ? session.metadata?.centerSlug : undefined
     // Le déblocage "tous les circuits d'un centre" (api/checkout/circuits-bundle)
@@ -69,7 +78,10 @@ export async function POST(request: Request) {
       typeof session.payment_intent === 'string' ? session.payment_intent : (session.payment_intent?.id ?? null)
 
     if (circuitId) {
-      await prisma.achatCircuit.create({
+      const existingPurchase = paymentIntentId
+        ? await prisma.achatCircuit.findFirst({ where: { stripePaymentIntentId: paymentIntentId } })
+        : null
+      if (!existingPurchase) await prisma.achatCircuit.create({
         data: {
           userId,
           circuitId,
@@ -78,7 +90,10 @@ export async function POST(request: Request) {
         },
       })
     } else if (offerId) {
-      await prisma.achatPack.create({
+      const existingPurchase = paymentIntentId
+        ? await prisma.achatPack.findFirst({ where: { stripePaymentIntentId: paymentIntentId } })
+        : null
+      if (!existingPurchase) await prisma.achatPack.create({
         data: {
           userId,
           offerId,
@@ -86,6 +101,32 @@ export async function POST(request: Request) {
           stripePaymentIntentId: paymentIntentId,
         },
       })
+    }
+
+    // Confirmation par email avec les vrais liens Google Maps — voir
+    // lib/circuit-purchase-email.ts pour le pourquoi (localStorage seul ne
+    // suffit pas sur un nouvel appareil). Jamais bloquant : une erreur
+    // d'envoi ne doit surtout pas faire échouer ce webhook, sinon Stripe le
+    // réessaie et recrée une seconde ligne AchatPack pour le même paiement.
+    if (centerSlug && email) {
+      const center = getCenter(centerSlug)
+      if (center) {
+        try {
+          await sendCircuitPurchaseEmail({ email, centerSlug: center.slug, centerName: center.name })
+        } catch (err) {
+          console.error('Échec de l’envoi de la confirmation circuits (non bloquant) :', err instanceof Error ? err.message : err)
+        }
+      }
+    }
+
+    // Pack complet (offre de lancement) : même principe, voir
+    // lib/launch-bundle-email.ts.
+    if (offerId === LAUNCH_BUNDLE_OFFER.id && email) {
+      try {
+        await sendLaunchBundleEmail({ email })
+      } catch (err) {
+        console.error('Échec de l’envoi de la confirmation pack complet (non bloquant) :', err instanceof Error ? err.message : err)
+      }
     }
   }
 

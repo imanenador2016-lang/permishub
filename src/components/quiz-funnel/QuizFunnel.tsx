@@ -119,6 +119,17 @@ export function QuizFunnel({
   function answerQ1(value: ExamenVise) {
     setAnswers((a) => ({ ...a, examenVise: value }))
     trackEvent('quiz_q1_answered', { value })
+    // Le test qui suit (Q2-Q3 + les 11 questions) ne porte que sur la
+    // théorie — inutile pour quelqu'un qui prépare uniquement la pratique.
+    // Voir conversation du 2026-09-12 : on l'envoie directement vers les
+    // circuits d'entraînement plutôt que de le faire répondre à un tunnel
+    // qui ne le concerne pas. "les_deux" continue normalement (la théorie
+    // reste pertinente pour lui aussi).
+    if (value === 'pratique') {
+      trackEvent('quiz_redirect_circuits_pratique')
+      router.push('/#circuits')
+      return
+    }
     goNext()
   }
 

@@ -13,7 +13,9 @@ dist-ssr
 *.local
 
 # Next.js
-.next
+/.next/
+/.next-*/
+/tmp/
 out
 next-env.d.ts.bak
 
@@ -36,3 +38,6 @@ prisma/dev.db
 
 # Local Netlify folder
 .netlify
+
+# Private circuit itineraries (the GitHub repository is public)
+/src/content/centers/circuit-maps.server.ts

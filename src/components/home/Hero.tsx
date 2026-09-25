@@ -5,13 +5,6 @@ import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import { HeroProof } from './HeroProof'
 
-/**
- * Le CTA mène au tunnel de qualification (/test-de-niveau), qui pose les
- * questions région/examen/échéance puis capture l'email AVANT d'ouvrir le
- * vrai test — voir conversation du 2026-09-08/09. Avant cette date, ce
- * bouton ouvrait `TestDeNiveau` directement en modal depuis ici, sans aucune
- * qualification ni email ; ce composant ne l'importe donc plus.
- */
 export function Hero() {
   const t = useTranslations('home')
   const tt = useTranslations('testimonials')
@@ -20,12 +13,6 @@ export function Hero() {
     <section className="px-4 pt-4 sm:px-6 sm:pt-6">
       <div className="mx-auto max-w-6xl">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-[1.15fr_0.85fr] md:items-stretch">
-          {/* Panneau de contenu — grid-cols-1 explicite nécessaire en dessous
-              de md : sans colonnes définies, la piste implicite grandit selon
-              le contenu (titre non wrappé) au lieu de rester bornée à la
-              largeur de l'écran, ce qui faisait déborder le titre à
-              l'horizontale sur mobile au lieu de passer à la ligne — voir
-              conversation du 2026-08-28 (titre coupé, besoin de défiler). */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -60,8 +47,6 @@ export function Hero() {
             </div>
           </motion.div>
 
-          {/* Preuve sociale : vraies photos de candidats, à la place de
-              l'illustration retirée — mise en avant des avis dès le hero. */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}

@@ -1,0 +1,28 @@
+import type { LearningLesson } from './types'
+
+export const LESSON_9: LearningLesson = {
+  id: 'la-priorite-de-droite',
+  moduleId: 'priorities-intersections',
+  title: 'La priorité de droite',
+  description: 'Observer un carrefour simple et déterminer qui doit céder le passage.',
+  xp: 20,
+  steps: [
+    { type: 'scenario', visualId: 'M2_PRIORITY_RIGHT_01', title: 'Observe le carrefour', body: 'Aucun agent, feu ou signal de priorité n’organise ce carrefour.', question: 'Une voiture arrive de ta droite. Qui passe en premier ?', options: ['Moi', 'La voiture venant de droite', 'Celui qui s’engage le premier'], correct: 1, explanation: 'Dans cette situation, tu dois céder le passage au conducteur qui vient de ta droite.' },
+    { type: 'text', visualId: 'M2_PRIORITY_RIGHT_01', title: 'Comprendre la règle', body: 'À un carrefour où la circulation n’est pas réglée par un agent, des feux ou une signalisation de priorité applicable, vérifie toujours ce qui arrive de ta droite.', callout: 'TA DROITE → À VÉRIFIER' },
+    { type: 'scenario', visualId: 'M2_PRIORITY_RIGHT_02', title: 'Change de point de vue', body: 'Le carrefour n’est toujours organisé ni par un agent, ni par des feux, ni par une signalisation de priorité.', question: 'Cette fois, tu arrives à droite de l’autre voiture. Qui doit céder ?', options: ['Moi', 'L’autre conducteur', 'Les deux doivent s’arrêter'], correct: 1, explanation: 'Tu arrives à sa droite : c’est donc l’autre conducteur qui doit te céder le passage dans cette situation.' },
+    { type: 'text', visualId: 'M2_PRIORITY_RIGHT_02', title: 'Ne regarde pas uniquement devant', body: 'À l’approche d’un carrefour, cherche d’abord un agent, puis des feux, puis une signalisation de priorité. Vérifie ensuite les véhicules venant de droite lorsque la règle s’applique.', callout: 'AGENT → FEUX → SIGNALISATION → DROITE' },
+    { type: 'scenario', visualId: 'M2_PRIORITY_RIGHT_03', title: 'Plusieurs véhicules', body: 'La scène ne montre aucun feu, agent ou panneau de priorité. Observe les deux véhicules avant de t’engager.', question: 'Quel véhicule dois-tu surveiller en priorité pour appliquer la règle étudiée ?', options: ['Le véhicule venant de droite', 'Le véhicule venant de gauche', 'Seulement celui qui est le plus proche'], correct: 0, explanation: 'Lorsque la priorité de droite s’applique, vérifie d’abord le conducteur arrivant de ta droite.' },
+    { type: 'text', visualId: 'M2_PRIORITY_RIGHT_01', title: 'Le piège', body: 'Ne réponds pas automatiquement « priorité à droite » dès que tu vois un carrefour. Avant de l’appliquer, vérifie si une autre règle organise déjà le passage.', callout: 'PIÈGE D’EXAMEN : agent → feux → signalisation de priorité → priorité de droite si elle s’applique.' },
+    { type: 'scenario', visualId: 'M2_PRIORITY_RIGHT_01', title: 'Test rapide', body: 'Regarde à nouveau la même scène, mais applique cette fois la méthode complète.', question: 'Quelle vérification dois-tu faire avant d’appliquer la règle étudiée ?', options: ['Vérifier s’il y a un agent, des feux ou une signalisation applicable', 'Regarder seulement la voiture la plus proche', 'S’engager avant les autres'], correct: 0, explanation: 'La priorité de droite intervient seulement lorsqu’aucune règle supérieure n’organise déjà le passage.' },
+    { type: 'summary', title: 'À retenir', items: ['Observe la signalisation avant d’appliquer la règle.', 'Quand la priorité de droite s’applique, surveille le conducteur venant de droite.', 'Une voiture venant de droite n’est pas automatiquement prioritaire dans toutes les situations.', 'Les exceptions seront étudiées dans la prochaine leçon.'] },
+  ],
+  quiz: [
+    { visualId: 'M2_PRIORITY_RIGHT_01', question: 'Dans cette scène, quel véhicule dois-tu laisser passer ?', options: ['Le véhicule venant de droite', 'Le véhicule venant de gauche', 'Aucun, je passe toujours en premier'], correct: 0, explanation: 'Sans règle supérieure, tu cèdes au véhicule qui vient de ta droite.' },
+    { visualId: 'M2_PRIORITY_RIGHT_02', question: 'Dans cette scène, qui doit céder le passage ?', options: ['Moi', 'L’autre conducteur', 'Les deux véhicules'], correct: 1, explanation: 'Tu arrives à droite de l’autre conducteur : il doit donc te céder le passage.' },
+    { visualId: 'M2_PRIORITY_RIGHT_03', question: 'Quelle direction vérifies-tu d’abord dans cette situation ?', options: ['La droite', 'La gauche', 'Uniquement devant moi'], correct: 0, explanation: 'Quand la règle s’applique, le premier contrôle porte sur ce qui arrive de droite.' },
+    { visualId: 'M2_PRIORITY_RIGHT_01', question: 'Avant d’utiliser la priorité de droite, que recherches-tu ?', options: ['Un agent, des feux ou une signalisation applicable', 'La couleur de la voiture', 'La voiture la plus rapide'], correct: 0, explanation: 'Une règle supérieure peut organiser le carrefour avant la priorité de droite.' },
+    { visualId: 'M2_PRIORITY_RIGHT_02', question: 'Quelle affirmation est correcte ?', options: ['Une voiture venant de droite est toujours prioritaire', 'La priorité de droite s’applique seulement si aucune règle supérieure n’organise le passage', 'Le premier véhicule engagé passe toujours'], correct: 1, explanation: 'La présence d’un agent, de feux ou d’une signalisation peut changer la règle à appliquer.' },
+  ],
+  nextLessonLabel: 'Suivant : Les exceptions à la priorité de droite',
+  resultMessages: { perfect: 'Excellent. Tu sais observer avant d’appliquer la priorité de droite.', good: 'Bon début. Revois les contrôles à faire avant de décider qui passe.', low: 'Reprends la méthode : agent, feux, signalisation, puis priorité de droite si elle s’applique.' },
+}

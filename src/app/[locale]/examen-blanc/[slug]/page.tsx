@@ -7,7 +7,8 @@ import { Container } from '@/components/ui/Container'
 import { ExamenBlanc } from '@/components/examen-blanc/ExamenBlanc'
 import { ExamAccessGate } from '@/components/examen-blanc/ExamAccessGate'
 import { EXAMENS_BLANCS, getExamenBlanc } from '@/lib/examens-blancs'
-import { LOCALES, type AppLocale } from '@/i18n/request'
+import type { AppLocale } from '@/i18n/request'
+import { pageMetadata } from '@/lib/seo'
 
 export function generateStaticParams() {
   return EXAMENS_BLANCS.map((exam) => ({ slug: exam.slug }))
@@ -20,15 +21,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const exam = getExamenBlanc(slug)
   const t = await getTranslations({ locale, namespace: 'examenBlanc' })
-  if (!exam) return { title: t('pickerTitle') }
-  return {
-    title: `${exam.title} — ${t('title')}`,
-    description: t('introPhoto', { total: exam.questions.length }),
-    alternates: {
-      canonical: `/${locale}/examen-blanc/${slug}`,
-      languages: Object.fromEntries(LOCALES.map((l) => [l, `/${l}/examen-blanc/${slug}`])),
-    },
-  }
+  if (!exam) return { title: t('pickerTitle'), robots: { index: false, follow: true } }
+  return pageMetadata({ locale, path: `/examen-blanc/${slug}`, title: `${exam.title} — ${t('title')}`, description: t('introPhoto', { total: exam.questions.length }), indexable: false })
 }
 
 /**

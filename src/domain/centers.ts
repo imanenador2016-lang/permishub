@@ -41,8 +41,8 @@ export interface PracticeCircuit {
   centerSlug: ExamCenter['slug']
   title: LocalizedText
   description: LocalizedText
-  /** Lien Google Maps vers le tracé — absent tant que le contenu réel n'a pas été préparé. */
-  mapsUrl?: string
+  /** Indique qu'un tracé est disponible, sans exposer son URL dans le catalogue public. */
+  hasMaps?: boolean
   durationMinutes?: number
   /** Vendu à l'unité (brief v2 §Monétisation) — en centimes, comme ExamCenter.priceCents. */
   priceCents?: number

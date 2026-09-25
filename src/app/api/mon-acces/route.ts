@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server'
 import { getOptionalSession } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { EXAMENS_ILLIMITES_OFFER, RESUME_OFFER } from '@/content/pricing-config'
+import { LAUNCH_BUNDLE_OFFER } from '@/content/pricing-config'
+import { getCenters } from '@/content/centers/registry'
 
 /**
  * "Restaurer mon accès" (voir conversation du 2026-09-03) : une fois
@@ -38,6 +40,9 @@ export async function GET() {
   const centerSlugsFromBundles = [...offerIds]
     .filter((id) => id.startsWith('circuits-bundle:'))
     .map((id) => id.slice('circuits-bundle:'.length))
+  if (offerIds.has(LAUNCH_BUNDLE_OFFER.id)) {
+    centerSlugsFromBundles.push(...getCenters().filter((center) => !center.comingSoon).map((center) => center.slug))
+  }
   const centerSlugsFromLegacyCircuits = circuits.map((c) => c.circuitId.replace(/-\d+$/, ''))
   const circuitCenters = [...new Set([...centerSlugsFromBundles, ...centerSlugsFromLegacyCircuits])]
 

@@ -1,8 +1,8 @@
-import type { Config } from 'tailwindcss'
+﻿import type { Config } from 'tailwindcss'
 
 /**
- * Direction artistique v2 — "ligne claire" belge (verrouillée, voir
- * reference-design-hero.html et docs/DESIGN_SYSTEM.md). Ne pas dévier de
+ * Direction artistique v2 â€” "ligne claire" belge (verrouillÃ©e, voir
+ * reference-design-hero.html et docs/DESIGN_SYSTEM.md). Ne pas dÃ©vier de
  * cette palette/typo sans nouvelle validation explicite.
  */
 const config: Config = {
@@ -49,3 +49,4 @@ const config: Config = {
 }
 
 export default config
+

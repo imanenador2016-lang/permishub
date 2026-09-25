@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 import { getOptionalSession } from '@/lib/auth'
-import { stripe } from '@/lib/stripe'
+import { createStripeCheckoutSession } from '@/lib/stripe-checkout-error'
 import { getFeaturedCircuit, getCenters } from '@/content/centers/registry'
 
 /**
@@ -37,12 +37,11 @@ export async function POST(request: Request) {
 
   const origin = request.headers.get('origin') ?? process.env.NEXTAUTH_URL ?? 'http://localhost:3000'
 
-  const checkoutSession = await stripe.checkout.sessions.create({
+  const checkoutResult = await createStripeCheckoutSession({
     mode: 'payment',
     // Bancontact : très utilisé en Belgique, ajouté le 2026-09-03 — n'apparaît
     // vraiment au client que si Bancontact est aussi activé côté Dashboard
     // Stripe (Paramètres > Moyens de paiement).
-    payment_method_types: ['card', 'bancontact'],
     // Pas de customer_email forcé si invité : Stripe Checkout demande
     // l'email lui-même pendant le paiement (obligatoire en mode "payment").
     customer_email: session?.user?.email ?? undefined,
@@ -70,7 +69,10 @@ export async function POST(request: Request) {
     // débloquer quoi que ce soit. Accès instantané, pas d'email à attendre.
     success_url: `${origin}/fr/circuits/succes?session_id={CHECKOUT_SESSION_ID}`,
     cancel_url: `${origin}/fr/circuits?achat=annule`,
-  })
+  }, `circuit:${circuit.id}`)
+
+  if (!checkoutResult.ok) return checkoutResult.response
+  const checkoutSession = checkoutResult.session
 
   if (!checkoutSession.url) {
     return NextResponse.json({ error: 'Impossible de créer la session de paiement.' }, { status: 500 })

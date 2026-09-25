@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 import { CircuitOfferModal } from './CircuitOfferModal'
 
 /** Clé localStorage marquant un centre comme débloqué — posée par circuits/succes après paiement vérifié. */
@@ -10,22 +11,15 @@ export function circuitsUnlockedKey(centerSlug: string) {
 }
 
 /**
- * CTA d'un circuit dans circuits/[centerSlug]/page.tsx : ouvre directement
- * le tracé si le centre est débloqué (localStorage, posé après paiement
- * vérifié côté serveur — voir circuits/succes/page.tsx), sinon ouvre
- * l'offre de déblocage (CircuitOfferModal) au lieu d'aller sur Google Maps.
- * Pas de base de données : le seul "vrai" état est Stripe (vérifié une fois
- * sur la page de succès) ; localStorage n'est qu'un confort pour ne pas
- * repayer à chaque visite sur ce même navigateur.
+ * localStorage ne sert qu'à proposer la navigation vers la page circuits.
+ * Les URLs ne sont rendues que par le serveur après vérification Prisma.
  */
 export function CircuitUnlockCta({
-  mapsUrl,
   centerSlug,
   centerName,
   locale,
   unlockLabel,
 }: {
-  mapsUrl: string
   centerSlug: string
   centerName: string
   locale: 'fr' | 'nl'
@@ -33,22 +27,22 @@ export function CircuitUnlockCta({
   unlockLabel?: string
 }) {
   const t = useTranslations('circuits')
-  const [unlocked, setUnlocked] = useState(false)
+  const [unlockedHint, setUnlockedHint] = useState(false)
   const [modalOpen, setModalOpen] = useState(false)
 
   useEffect(() => {
     try {
-      setUnlocked(localStorage.getItem(circuitsUnlockedKey(centerSlug)) === '1')
+      setUnlockedHint(localStorage.getItem(circuitsUnlockedKey(centerSlug)) === '1')
     } catch {
-      // localStorage indisponible (navigation privée, etc.) — reste verrouillé, jamais bloquant.
+      setUnlockedHint(false)
     }
   }, [centerSlug])
 
-  if (unlocked) {
+  if (unlockedHint) {
     return (
-      <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="btn-comic block w-full px-4 py-3 text-center text-sm">
-        {t('openInGoogleMaps')} →
-      </a>
+      <Link href={`/circuits/${centerSlug}` as never} className="btn-comic block w-full px-4 py-3 text-center text-sm">
+        {t('viewCircuits')} →
+      </Link>
     )
   }
 

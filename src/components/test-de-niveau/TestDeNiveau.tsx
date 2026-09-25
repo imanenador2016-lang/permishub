@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -7,7 +7,7 @@ import type { Question } from '@/domain/quiz'
 import { computeTestResult, type TestAnswer } from '@/lib/test-de-niveau'
 import { ProgressBar } from '@/components/ui/ProgressBar'
 import { ResumeHook } from './ResumeHook'
-import { X } from 'lucide-react'
+import { X, Check } from 'lucide-react'
 
 type ThemeLabel = { slug: string; label: string }
 
@@ -45,7 +45,7 @@ function cleanForSpeech(text: string, locale: 'fr' | 'nl'): string {
     .replace(/\bkm\/u\b/gi, 'kilometer per uur')
     .replace(/\(\s*(?:\.{2,}|…)\s*\)/g, ', ')
     .replace(/\.{2,}|…/g, ', ')
-    .replace(/([a-zàâäéèêëïîôöùûüç])\.([A-ZÀÂÄÉÈÊËÏÎÔÖÙÛÜÇ])/g, '$1. $2')
+    .replace(/([a-zÃ Ã¢Ã¤Ã©Ã¨ÃªÃ«Ã¯Ã®Ã´Ã¶Ã¹Ã»Ã¼Ã§])\.([A-ZÃ€Ã‚Ã„Ã‰ÃˆÃŠÃ‹ÃÃŽÃ”Ã–Ã™Ã›ÃœÃ‡])/g, '$1. $2')
     .replace(/[()[\]{}]/g, ' ')
     .replace(/[«»""'']/g, '')
     .replace(/[^\p{L}\p{N}\s.,!?;:'’\-]/gu, ' ')
@@ -135,6 +135,12 @@ export function TestDeNiveau({
   const locale = useLocale() as 'fr' | 'nl'
   const [step, setStep] = useState(0) // index de question, ou questions.length pour le résultat
   const [answers, setAnswers] = useState<TestAnswer[]>([])
+  // Correction immédiate après chaque question (demande du 2026-09-14) — au
+  // lieu d'avancer automatiquement 380ms après le clic, on affiche la bonne
+  // réponse + l'explication et on attend un clic explicite sur "Suivant".
+  // Reste vrai aussi en cas de timeout (voir plus bas) : même sans réponse,
+  // autant montrer la bonne réponse plutôt que de juste passer à la suite.
+  const [showCorrection, setShowCorrection] = useState(false)
   const [speechState, setSpeechState] = useState<SpeechState>('idle')
   // null = lecture audio pas encore terminée (chrono pas démarré).
   const [secondsLeft, setSecondsLeft] = useState<number | null>(null)
@@ -205,12 +211,13 @@ export function TestDeNiveau({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [current?.id, isResult, locale])
 
-  // Chrono de réponse : décompte à la seconde, passe automatiquement à la question suivante à 0
-  // si l'utilisateur n'a pas encore répondu — ne bloque jamais indéfiniment.
+  // Chrono de réponse : décompte à la seconde, révèle la correction à 0 si
+  // l'utilisateur n'a pas encore répondu (au lieu d'avancer directement) —
+  // ne bloque jamais indéfiniment, mais montre quand même la bonne réponse.
   useEffect(() => {
     if (isResult || secondsLeft === null) return
     if (secondsLeft <= 0) {
-      setStep((s) => s + 1)
+      setShowCorrection(true)
       return
     }
     const id = window.setTimeout(() => setSecondsLeft((s) => (s !== null ? s - 1 : null)), 1000)
@@ -235,8 +242,14 @@ export function TestDeNiveau({
   }
 
   function selectOption(optionId: string) {
+    if (showCorrection) return
     setAnswers((prev) => [...prev.filter((a) => a.questionId !== current.id), { questionId: current.id, optionId }])
-    window.setTimeout(() => setStep((s) => s + 1), 380)
+    setShowCorrection(true)
+  }
+
+  function goToNextQuestion() {
+    setShowCorrection(false)
+    setStep((s) => s + 1)
   }
 
   const weakThemeLabels = result
@@ -309,7 +322,7 @@ export function TestDeNiveau({
                   {t('questionOf', { current: step + 1, total: questions.length })}
                 </span>
               </div>
-              {secondsLeft !== null && (
+              {secondsLeft !== null && !showCorrection && (
                 <span
                   className={`border-[3px] border-ink px-3 py-1 font-display text-xs tabular-nums ${
                     secondsLeft <= 5 ? 'bg-brick text-cream' : 'bg-ink text-cream'
@@ -367,19 +380,45 @@ export function TestDeNiveau({
                 <div className="grid gap-3">
                   {current.options.map((opt) => {
                     const selected = answers.find((a) => a.questionId === current.id)?.optionId === opt.id
+                    // Avant réponse (ou pendant l'affichage) : jaune si sélectionnée, neutre sinon. Une fois
+                    // `showCorrection` vrai : la bonne réponse ressort en vert (toujours), le choix erroné de
+                    // l'utilisateur en rouge, le reste s'efface (ni vrai ni faux, pas d'intérêt à le souligner).
+                    let stateClasses = selected ? 'border-ink bg-yellow' : 'border-ink/25 hover:border-ink'
+                    if (showCorrection) {
+                      if (opt.correct) stateClasses = 'border-forest bg-forest/15'
+                      else if (selected) stateClasses = 'border-brick bg-brick/10'
+                      else stateClasses = 'border-ink/15 text-ink/40'
+                    }
                     return (
                       <button
                         key={opt.id}
+                        type="button"
                         onClick={() => selectOption(opt.id)}
-                        className={`border-[3px] px-4 py-3.5 text-left text-sm font-semibold transition-colors ${
-                          selected ? 'border-ink bg-yellow' : 'border-ink/25 hover:border-ink'
-                        }`}
+                        disabled={showCorrection}
+                        className={`flex items-center justify-between gap-2 border-[3px] px-4 py-3.5 text-left text-sm font-semibold transition-colors ${stateClasses}`}
                       >
-                        {opt.text[locale]}
+                        <span>{opt.text[locale]}</span>
+                        {showCorrection && opt.correct && <Check size={16} className="flex-none text-forest" />}
+                        {showCorrection && selected && !opt.correct && <X size={16} className="flex-none text-brick" />}
                       </button>
                     )
                   })}
                 </div>
+
+                {showCorrection && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.25 }}
+                    className="mt-4 border-[3px] border-ink bg-cream p-4"
+                  >
+                    <p className="mb-1.5 font-display text-[11px] uppercase tracking-wide text-forest">{t('correctionLabel')}</p>
+                    <p className="mb-4 text-sm leading-relaxed text-ink/80">{current.explanation[locale]}</p>
+                    <button onClick={goToNextQuestion} className="btn-comic w-full px-4 py-3 text-sm">
+                      {t('next')} →
+                    </button>
+                  </motion.div>
+                )}
               </motion.div>
             </AnimatePresence>
           </div>
@@ -387,10 +426,23 @@ export function TestDeNiveau({
 
         {isResult && result && (
           <div className="p-6 sm:p-8">
-            <ResumeHook score10={result.score10} weakThemeLabels={weakThemeLabels} radarData={radarData} onSkip={onClose} />
+            <ResumeHook
+              score10={result.score10}
+              answerStates={questions.map((question) => {
+                const answer = answers.find((item) => item.questionId === question.id)
+                return Boolean(answer && question.options.find((option) => option.id === answer.optionId)?.correct)
+              })}
+              diagnostics={Object.entries(result.scoreByTheme).map(([slug, value]) => {
+                const total = questions.filter((question) => question.themeSlug === slug).length
+                return { label: themeLabels.find((theme) => theme.slug === slug)?.label ?? slug, errors: total - Math.round((value / 100) * total), total }
+              }).filter((item) => item.errors > 0).sort((a, b) => b.errors - a.errors)}
+              radarData={radarData}
+              onSkip={onClose}
+            />
           </div>
         )}
       </motion.div>
     </div>
   )
 }
+

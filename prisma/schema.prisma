@@ -220,6 +220,17 @@ model Circuit {
   achats AchatCircuit[]
 }
 
+// Liens d'itinéraires vendus séparés du catalogue public. Les identifiants
+// correspondent aux IDs du catalogue applicatif (`anderlecht-1`, etc.) afin
+// que les URLs ne soient jamais publiées dans le dépôt ou dans le navigateur
+// avant le contrôle d'accès serveur.
+model CircuitPremiumLink {
+  circuitId String   @id
+  mapsUrl   String   @db.Text
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
 enum StatutRemboursement {
   NON_APPLICABLE
   DEMANDE

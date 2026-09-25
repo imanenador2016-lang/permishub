@@ -65,6 +65,7 @@ export default async function CircuitSuccessPage({
             </div>
           ) : result?.kind === 'circuit' ? (
             <div className="panel p-6 text-center sm:p-8">
+              <UnlockCenterEffect centerSlug={result.centerSlug} />
               <span className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full border-[3px] border-ink bg-forest text-2xl text-cream">
                 ✓
               </span>
@@ -76,11 +77,12 @@ export default async function CircuitSuccessPage({
               <div className="panel !shadow-hard-xs mb-5 p-4 text-left">
                 <p className="mb-1 font-display text-sm">{t('mapsPendingTitle')}</p>
                 <p className="mb-3 text-sm text-ink/75">{t('mapsPendingBody')}</p>
-                {result.mapsUrl && (
-                  <a href={result.mapsUrl} target="_blank" rel="noopener noreferrer" className="btn-comic inline-flex px-4 py-2.5 text-sm">
-                    {t('openMaps')} →
-                  </a>
-                )}
+                <Link href={`/circuits/${result.centerSlug}`} className="btn-comic mr-2 inline-flex px-4 py-2.5 text-sm">
+                  {t('viewCircuits')} →
+                </Link>
+                <Link href="/restaurer-acces" className="btn-comic inline-flex px-4 py-2.5 text-sm">
+                  {locale === 'fr' ? 'Restaurer mon accès' : 'Mijn toegang herstellen'} →
+                </Link>
               </div>
 
               <p className="text-xs text-ink/50">{t('receiptNote')}</p>
@@ -132,16 +134,11 @@ async function verifyAndResolve(sessionId: string) {
   if (!circuit) return null
 
   const center = getCenter(circuit.centerSlug)
-  const mapsUrl =
-    circuit.mapsUrl ??
-    (center?.lat != null && center?.lng != null
-      ? `https://www.google.com/maps/search/?api=1&query=${center.lat},${center.lng}`
-      : undefined)
-
   return {
     kind: 'circuit' as const,
-    circuitTitle: center ? `${center.name}` : circuit.title.fr,
+    centerSlug: circuit.centerSlug,
+    centerName: center?.name ?? circuit.title.fr,
+    circuitTitle: circuit.title.fr,
     amountCents: session.amount_total ?? circuit.priceCents ?? 0,
-    mapsUrl,
   }
 }

@@ -3,18 +3,12 @@ import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { Navbar } from '@/components/site/Navbar'
 import { Footer } from '@/components/site/Footer'
 import { Container } from '@/components/ui/Container'
-import { LOCALES, type AppLocale } from '@/i18n/request'
+import type { AppLocale } from '@/i18n/request'
+import { pageMetadata } from '@/lib/seo'
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: AppLocale } }): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'privacyPage' })
-  return {
-    title: t('title'),
-    description: t('intro'),
-    alternates: {
-      canonical: `/${locale}/confidentialite`,
-      languages: Object.fromEntries(LOCALES.map((l) => [l, `/${l}/confidentialite`])),
-    },
-  }
+  return pageMetadata({ locale, path: '/confidentialite', title: t('title'), description: t('intro') })
 }
 
 /**

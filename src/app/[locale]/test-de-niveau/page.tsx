@@ -6,17 +6,12 @@ import { Navbar } from '@/components/site/Navbar'
 import { Footer } from '@/components/site/Footer'
 import { Container } from '@/components/ui/Container'
 import { QuizFunnel } from '@/components/quiz-funnel/QuizFunnel'
-import { LOCALES, type AppLocale } from '@/i18n/request'
+import type { AppLocale } from '@/i18n/request'
+import { pageMetadata } from '@/lib/seo'
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: AppLocale } }): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'quizFunnel' })
-  return {
-    title: t('emailTitle'),
-    alternates: {
-      canonical: `/${locale}/test-de-niveau`,
-      languages: Object.fromEntries(LOCALES.map((l) => [l, `/${l}/test-de-niveau`])),
-    },
-  }
+  return pageMetadata({ locale, path: '/test-de-niveau', title: t('emailTitle'), description: locale === 'fr' ? 'Commence le test de niveau PermisHub pour évaluer tes connaissances du permis théorique belge.' : 'Start de PermisHub-niveautest om je kennis van het Belgische theorie-examen te beoordelen.', indexable: false })
 }
 
 /**

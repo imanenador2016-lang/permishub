@@ -1,51 +1,49 @@
 import type { MetadataRoute } from 'next'
-import { LOCALES } from '@/i18n/request'
-import { EXAM_CENTERS } from '@/content/centers/registry'
-import { EXAMENS_BLANCS } from '@/lib/examens-blancs'
+import { LOCALES, type AppLocale } from '@/i18n/request'
+import { EXAM_CENTERS, getCircuitsByCenter } from '@/content/centers/registry'
+import { SITE_URL } from '@/lib/seo'
 
-/**
- * SEO : ne référence QUE des routes qui existent réellement. Avant l'audit
- * du 2026-08-22, ce fichier listait /cours, /examen-blanc, /pricing et
- * /cours/[slug] pour chaque thème — aucune de ces pages n'était construite,
- * ce qui envoyait Google crawler des 404 et gaspillait le budget de crawl.
- * Complété le 2026-08-31 (voir conversation) pour lister enfin toutes les
- * pages réellement construites depuis — routes statiques + routes générées
- * depuis les mêmes registres que le reste du site (EXAM_CENTERS,
- * EXAMENS_BLANCS), jamais une liste dupliquée à la main qui pourrait dériver.
- */
-function withLocales(base: string, path: string, priority: number, changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency']) {
-  return LOCALES.map((locale) => ({
+const PUBLIC_PATHS = [
+  { path: '', priority: 1, changeFrequency: 'weekly' },
+  { path: '/blog', priority: 0.7, changeFrequency: 'monthly' },
+  { path: '/centres-examen', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/confidentialite', priority: 0.2, changeFrequency: 'yearly' },
+  { path: '/coaching', priority: 0.7, changeFrequency: 'monthly' },
+  { path: '/examen-blanc', priority: 0.7, changeFrequency: 'monthly' },
+  { path: '/faq', priority: 0.6, changeFrequency: 'monthly' },
+  { path: '/resume', priority: 0.6, changeFrequency: 'monthly' },
+  { path: '/roadbook', priority: 0.6, changeFrequency: 'monthly' },
+] as const satisfies ReadonlyArray<{ path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency'] }>
+
+function withLocales(base: string, path: string, priority: number, changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency'], locales: readonly AppLocale[] = LOCALES) {
+  return locales.map((locale) => ({
     url: `${base}/${locale}${path}`,
-    lastModified: new Date(),
     changeFrequency,
     priority,
     alternates: {
-      languages: Object.fromEntries(LOCALES.map((l) => [l, `${base}/${l}${path}`])),
+      languages: Object.fromEntries(locales.map((l) => [l, `${base}/${l}${path}`])),
     },
   }))
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://permishub.be'
+  const base = SITE_URL
+  const staticPages = PUBLIC_PATHS.flatMap(({ path, priority, changeFrequency }) => {
+    const locales = path === '/coaching' || path === '/centres-examen' || path === '/faq' ? (['fr'] as const) : LOCALES
+    return withLocales(base, path, priority, changeFrequency, locales)
+  })
+  const editorialArticle = withLocales(base, '/centres-examen-permis-pratique-plus-faciles-belgique', 0.7, 'monthly', ['fr'])
+  const centerAnderlecht = withLocales(base, '/centres-examen/anderlecht', 0.7, 'monthly', ['fr'])
+  const centerCuesmes = withLocales(base, '/centres-examen/cuesmes', 0.7, 'monthly', ['fr'])
+  const centerMariembourg = withLocales(base, '/centres-examen/mariembourg', 0.7, 'monthly', ['fr'])
+  const centerLobbes = withLocales(base, '/centres-examen/lobbes', 0.7, 'monthly', ['fr'])
+  const centerSchaerbeek = withLocales(base, '/centres-examen/schaerbeek', 0.7, 'monthly', ['fr'])
+  const centerBraineLeComte = withLocales(base, '/centres-examen/braine-le-comte', 0.7, 'monthly', ['fr'])
+  const centerCouillet = withLocales(base, '/centres-examen/couillet', 0.7, 'monthly', ['fr'])
+  const centerLouvainLaNeuve = withLocales(base, '/centres-examen/louvain-la-neuve', 0.7, 'monthly', ['fr'])
+  const circuitPages = EXAM_CENTERS
+    .filter((center) => !center.comingSoon && getCircuitsByCenter(center.slug).some((circuit) => Boolean(circuit.hasMaps)))
+    .flatMap((center) => withLocales(base, `/circuits/${center.slug}`, 0.6, 'monthly'))
 
-  const homepages = withLocales(base, '', 1, 'weekly')
-  const staticPages = [
-    ...withLocales(base, '/resume', 0.8, 'monthly'),
-    ...withLocales(base, '/roadbook', 0.7, 'monthly'),
-    ...withLocales(base, '/examen-blanc', 0.8, 'weekly'),
-    ...withLocales(base, '/blog', 0.7, 'weekly'),
-  ]
-
-  const examPages = EXAMENS_BLANCS.flatMap((exam) => withLocales(base, `/examen-blanc/${exam.slug}`, 0.6, 'monthly'))
-
-  // Centres "Bientôt" inclus quand même : ce sont de vraies pages qui
-  // répondent 200 (verrouillées, pas des 404) — voir circuits/[centerSlug].
-  const circuitPages = EXAM_CENTERS.flatMap((center) => withLocales(base, `/circuits/${center.slug}`, 0.7, 'monthly'))
-
-  // Article SEO "centres d'examen les plus faciles" (conversation du
-  // 2026-08-31) — contenu FR uniquement, mais la route existe sous les 2
-  // locales (voir page.tsx), donc listée pour les 2.
-  const article = withLocales(base, '/centres-examen-permis-pratique-plus-faciles-belgique', 0.8, 'monthly')
-
-  return [...homepages, ...staticPages, ...examPages, ...circuitPages, ...article]
+  return [...staticPages, ...editorialArticle, ...centerAnderlecht, ...centerCuesmes, ...centerMariembourg, ...centerLobbes, ...centerSchaerbeek, ...centerBraineLeComte, ...centerCouillet, ...centerLouvainLaNeuve, ...circuitPages]
 }

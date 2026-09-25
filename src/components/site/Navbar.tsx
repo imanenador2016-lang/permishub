@@ -22,7 +22,7 @@ export async function Navbar() {
   ]
   const pratiqueLinks = [
     { href: '/#circuits', label: t('circuits') },
-    { href: '/#packs', label: t('perception') },
+    { href: '/perception-risques', label: `${t('perception')} · ${locale === 'fr' ? 'bientôt' : 'binnenkort'}` },
     { href: '/roadbook', label: t('roadbook') },
   ]
 
@@ -37,6 +37,9 @@ export async function Navbar() {
           <nav className="hidden items-center gap-6 text-sm font-medium text-ink md:flex">
             <Link href="/" className="hover:text-brick">
               {t('home')}
+            </Link>
+            <Link href="/apprendre" className="hover:text-brick">
+              {locale === 'fr' ? 'Apprendre · bientôt' : 'Leren · binnenkort'}
             </Link>
             <NavDropdown label={t('theorieB')} links={theorieLinks} />
             <NavDropdown label={t('pratiqueB')} links={pratiqueLinks} />
@@ -61,12 +64,31 @@ export async function Navbar() {
               ))}
             </div>
             <MobileMenu
-              leadingLink={{ href: '/', label: t('home') }}
+              locale={locale as 'fr' | 'nl'}
+              labels={{
+                open: locale === 'fr' ? 'Ouvrir le menu' : 'Menu openen',
+                close: locale === 'fr' ? 'Fermer le menu' : 'Menu sluiten',
+                navigation: locale === 'fr' ? 'Navigation principale' : 'Hoofdnavigatie',
+                account: locale === 'fr' ? 'Mon acc\u00e8s' : 'Mijn toegang',
+                signIn: locale === 'fr' ? 'Se connecter / Mon compte' : 'Inloggen / Mijn account',
+              }}
               groups={[
-                { label: t('theorieB'), children: theorieLinks },
-                { label: t('pratiqueB'), children: pratiqueLinks },
+                { label: locale === 'fr' ? 'Accueil' : 'Home', children: [{ href: '/', label: t('home'), icon: 'home' }] },
+                { label: locale === 'fr' ? 'Apprendre' : 'Leren', children: [{ href: '/apprendre', label: locale === 'fr' ? 'Le\u00e7ons interactives · bientôt' : 'Interactieve lessen · binnenkort', icon: 'learn' }] },
+                { label: t('theorieB'), children: [
+                  { href: '/resume', label: t('resume'), icon: 'summary' },
+                  { href: '/examen-blanc', label: t('examens'), icon: 'exams' },
+                  { href: '/coaching', label: t('coaching'), icon: 'coaching' },
+                ] },
+                { label: t('pratiqueB'), children: [
+                  { href: '/centres-examen', label: t('circuits'), icon: 'circuits' },
+                  { href: '/perception-risques', label: `${t('perception')} · ${locale === 'fr' ? 'bientôt' : 'binnenkort'}`, icon: 'risks' },
+                ] },
+                { label: locale === 'fr' ? 'Aide' : 'Hulp', children: [
+                  ...(locale === 'fr' ? [{ href: '/faq', label: 'FAQ', icon: 'help' as const }] : []),
+                  { href: '/blog', label: t('blog'), icon: 'blog' },
+                ] },
               ]}
-              trailingLink={{ href: '/blog', label: t('blog') }}
             />
           </div>
         </header>

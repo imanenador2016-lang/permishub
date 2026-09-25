@@ -27,10 +27,10 @@
 }
 
 @layer components {
-  /* Motif de base "ligne claire" : bordure noire épaisse + ombre portée
-     dure décalée, jamais de flou. Remplace les "cards" SaaS classiques —
-     voir docs/DESIGN_SYSTEM.md. En dessous de 640px, l'épaisseur et
-     l'offset sont réduits plutôt que supprimés (brief §Mobile-first). */
+  /* Motif de base "ligne claire" : bordure noire Ã©paisse + ombre portÃ©e
+     dure dÃ©calÃ©e, jamais de flou. Remplace les "cards" SaaS classiques â€”
+     voir docs/DESIGN_SYSTEM.md. En dessous de 640px, l'Ã©paisseur et
+     l'offset sont rÃ©duits plutÃ´t que supprimÃ©s (brief Â§Mobile-first). */
   .panel {
     @apply relative border-[3px] border-ink bg-cream shadow-hard-xs sm:border-4 sm:shadow-hard;
   }
@@ -41,9 +41,9 @@
 }
 
 /*
- * Technique d'annotation — élément signature à réutiliser partout où une
+ * Technique d'annotation â€” Ã©lÃ©ment signature Ã  rÃ©utiliser partout oÃ¹ une
  * illustration accompagne un contenu (voir reference-design-hero.html et
- * components/annotation/PinnedCard.tsx). Punaise + flèche "queue" pointue,
+ * components/annotation/PinnedCard.tsx). Punaise + flÃ¨che "queue" pointue,
  * jamais une simple juxtaposition carte/illustration sans lien visuel.
  */
 .annotation-pin {
@@ -84,3 +84,4 @@
   stroke-width: 4;
   stroke-dasharray: 6 6;
 }
+

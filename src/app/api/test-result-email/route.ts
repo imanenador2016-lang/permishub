@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import { sendTestResultEmail } from '@/lib/test-result-email'
+import { saveTestScore } from '@/lib/leads'
 import { isRateLimited } from '@/lib/rate-limit'
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -41,6 +42,13 @@ export async function POST(request: Request) {
   if (!EMAIL_REGEX.test(email) || Number.isNaN(score10)) {
     return NextResponse.json({ error: 'Paramètres invalides.' }, { status: 400 })
   }
+
+  // Enregistrée en parallèle, jamais bloquant pour l'email ni pour l'autre :
+  // un Sheet mal configuré ou en erreur ne doit jamais empêcher le visiteur
+  // de recevoir son résultat (voir api/lead pour le même principe).
+  saveTestScore({ email, score10, weakThemeLabels }).catch((err) => {
+    console.error('Échec enregistrement note dans le Sheet pour', maskEmail(email), ':', err instanceof Error ? err.message : err)
+  })
 
   try {
     await sendTestResultEmail({ email, locale, score10, weakThemeLabels })

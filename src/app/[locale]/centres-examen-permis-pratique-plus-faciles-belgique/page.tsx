@@ -5,8 +5,8 @@ import { Footer } from '@/components/site/Footer'
 import { Container } from '@/components/ui/Container'
 import { Link } from '@/i18n/navigation'
 import type { AppLocale } from '@/i18n/request'
+import { pageMetadata, SITE_URL } from '@/lib/seo'
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://permishub.be'
 const SLUG = 'centres-examen-permis-pratique-plus-faciles-belgique'
 const TITLE = 'Les 5 centres d’examen les plus faciles pour le permis pratique en Belgique'
 const DESCRIPTION =
@@ -29,15 +29,7 @@ const PUBLISHED_AT = '2026-08-31'
  * qu'un 404.
  */
 export async function generateMetadata({ params: { locale } }: { params: { locale: AppLocale } }): Promise<Metadata> {
-  return {
-    title: TITLE,
-    description: DESCRIPTION,
-    alternates: {
-      canonical: `/${locale}/${SLUG}`,
-      languages: Object.fromEntries(['fr', 'nl'].map((l) => [l, `/${l}/${SLUG}`])),
-    },
-    robots: { index: true, follow: true },
-  }
+  return pageMetadata({ locale, path: `/${SLUG}`, title: TITLE, description: DESCRIPTION, indexable: locale === 'fr', languageAlternates: false, openGraphType: 'article' })
 }
 
 const TOC = [
@@ -410,6 +402,11 @@ export default async function CentresExamenPermisPratiqueArticle({ params: { loc
             Mais le choix du centre ne fait pas tout. Une bonne préparation, la connaissance des parcours et la maîtrise des situations
             de circulation restent essentielles pour réussir son <strong>examen pratique du permis B</strong>.
           </p>
+
+          <aside className="panel mb-6 flex flex-col gap-3 p-5 sm:flex-row sm:items-center sm:justify-between">
+            <div><p className="font-display text-lg">Tu passes ton examen pratique à Anderlecht ?</p><p className="mt-1 text-sm text-ink/70">Consulte les informations disponibles sur le centre et ses parcours d’entraînement.</p></div>
+            <Link href="/centres-examen/anderlecht" className="btn-comic min-h-11 px-4 py-2.5 text-center text-sm">Voir la fiche d’Anderlecht <span aria-hidden>→</span></Link>
+          </aside>
 
           <div className="panel flex flex-col items-start gap-3 bg-forest p-5 text-cream sm:flex-row sm:items-center sm:justify-between sm:p-6">
             <p className="font-display text-lg leading-snug sm:text-xl">Vous préparez votre examen pratique ?</p>
