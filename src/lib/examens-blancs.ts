@@ -1,14 +1,19 @@
-import examen1Raw from '../../data/examen-blanc.json'
-import examen2Raw from '../../data/examens-blancs/examen-2.json'
 import examen3Raw from '../../data/examens-blancs/examen-3.json'
 import examen4Raw from '../../data/examens-blancs/examen-4.json'
 import examen5Raw from '../../data/examens-blancs/examen-5.json'
 import examen6Raw from '../../data/examens-blancs/examen-6.json'
 import examen7Raw from '../../data/examens-blancs/examen-7.json'
+import examen8Raw from '../../data/examens-blancs/examen-8.json'
+import examen9Raw from '../../data/examens-blancs/examen-9.json'
+import examen10Raw from '../../data/examens-blancs/examen-10.json'
+import examen11Raw from '../../data/examens-blancs/examen-11.json'
+import examen12Raw from '../../data/examens-blancs/examen-12.json'
+import examen13Raw from '../../data/examens-blancs/examen-13.json'
+import examen14Raw from '../../data/examens-blancs/examen-14.json'
 import type { ExamenPhotoQuestion } from '@/domain/examen-photo'
 
 /**
- * Registre des examens blancs "photo" du site — tous réservés au pack
+ * Registre des examens blancs "photo" du site — examens 3 à 14, tous réservés au pack
  * "Examens illimités" (voir src/content/pricing-config.ts), plus aucun
  * gratuit (voir conversation du 2026-08-30 : le client a retiré le teaser
  * examen-1, jugé pas assez incitatif à l'achat).
@@ -36,13 +41,18 @@ export interface ExamenBlancEntry {
 }
 
 export const EXAMENS_BLANCS: ExamenBlancEntry[] = [
-  { slug: 'examen-1', title: 'Examen 1', free: false, hideCorrection: true, questions: examen1Raw as ExamenPhotoQuestion[] },
-  { slug: 'examen-2', title: 'Examen 2', free: false, questions: examen2Raw as ExamenPhotoQuestion[] },
   { slug: 'examen-3', title: 'Examen 3', free: false, questions: examen3Raw as ExamenPhotoQuestion[] },
   { slug: 'examen-4', title: 'Examen 4', free: false, questions: examen4Raw as ExamenPhotoQuestion[] },
   { slug: 'examen-5', title: 'Examen 5', free: false, questions: examen5Raw as ExamenPhotoQuestion[] },
   { slug: 'examen-6', title: 'Examen 6', free: false, questions: examen6Raw as ExamenPhotoQuestion[] },
   { slug: 'examen-7', title: 'Examen 7', free: false, questions: examen7Raw as ExamenPhotoQuestion[] },
+  { slug: 'examen-8', title: 'Examen 8', free: false, questions: examen8Raw as ExamenPhotoQuestion[] },
+  { slug: 'examen-9', title: 'Examen 9', free: false, questions: examen9Raw as ExamenPhotoQuestion[] },
+  { slug: 'examen-10', title: 'Examen 10', free: false, questions: examen10Raw as ExamenPhotoQuestion[] },
+  { slug: 'examen-11', title: 'Examen 11', free: false, questions: examen11Raw as ExamenPhotoQuestion[] },
+  { slug: 'examen-12', title: 'Examen 12', free: false, questions: examen12Raw as ExamenPhotoQuestion[] },
+  { slug: 'examen-13', title: 'Examen 13', free: false, questions: examen13Raw as ExamenPhotoQuestion[] },
+  { slug: 'examen-14', title: 'Examen 14', free: false, questions: examen14Raw as ExamenPhotoQuestion[] },
 ]
 
 export function getExamenBlanc(slug: string): ExamenBlancEntry | undefined {

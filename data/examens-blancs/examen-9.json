@@ -1,0 +1,645 @@
+[
+  {
+    "id": 1,
+    "type": "numerique",
+    "gravite": "normale",
+    "question": "Quelle est la vitesse maximale à laquelle cette voiture peut rouler en Wallonie, hors agglomération ? Introduisez un nombre.",
+    "choix": [],
+    "reponse": "90",
+    "explication": "En Wallonie, hors agglomération, la vitesse maximale est de 90 km/h lorsque aucun autre signal ne fixe une limitation différente.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-9/q01.webp"
+  },
+  {
+    "id": 2,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Une ligne jaune continue sur le bord de la chaussée signifie que vous pouvez y garer votre voiture.",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "La réponse NON correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-9/q02.webp"
+  },
+  {
+    "id": 3,
+    "type": "choix_multiple",
+    "gravite": "grave",
+    "question": "* Un véhicule de police arrive avec le gyrophare bleu et la sirène allumés. Que faites-vous?",
+    "choix": [
+      "A. Vous cédez le passage.",
+      "B. Vous accélérez, pour rester devant lui.",
+      "C. Vous continuez votre route mine de rien."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : C’est un véhicule prioritaire et vous devez donner la priorité.",
+    "image": "/examen-blanc/examen-9/q03.webp"
+  },
+  {
+    "id": 4,
+    "type": "choix_multiple",
+    "gravite": "grave",
+    "question": "* Sur l'autoroute, le conducteur de cette voiture a remarqué trop tard qu'il a raté la sortie.",
+    "choix": [
+      "A. Il peut inverser un peu.",
+      "B. Il peut seulement inverser un peu sur la bande d’arrêt d’urgence.",
+      "C. Il doit conduire plus loin."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : autoroute’.",
+    "image": "/examen-blanc/examen-9/q04.webp"
+  },
+  {
+    "id": 5,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Les cyclomoteurs peuvent-ils franchir ce signal d’obligation?",
+    "choix": [
+      "A. Uniquement les cyclomoteurs de classe A.",
+      "B. Uniquement les cyclomoteurs de classe B.",
+      "C. Ni les cyclomoteurs de classe A ni ceux de classe B."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : Sont les piétons et les cyclistes sur le dessus entre eux, les cyclomoteurs ne peuvent pas franchir ce signal d'obligation.",
+    "image": "/examen-blanc/examen-9/q05.webp"
+  },
+  {
+    "id": 6,
+    "type": "numerique",
+    "gravite": "normale",
+    "question": "Introduisez un nombre. Sur l’autoroute, si les conditions le permettent, vous devez rouler à une vitesse minimale de (...) km/h.",
+    "choix": [],
+    "reponse": "70",
+    "explication": "Règle applicable : Sur une autoroute: au moins 70 km / h.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-9/q06-clean.webp"
+  },
+  {
+    "id": 7,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Dans cette situation, êtes-vous autorisé à stationner votre voiture au-delà de ce panneau ?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "Règle applicable : M.M.A. max. 3,5 ton.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-9/q07.webp"
+  },
+  {
+    "id": 8,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Il est 16 h 05 lorsque la voiture s’arrête. Le conducteur demande au passager de régler le disque de stationnement. Sur quelle heure doit-on placer la flèche?",
+    "choix": [
+      "A. À 16 h 00.",
+      "B. À 16 h 15.",
+      "C. À 16 h 30."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : Sur le disque de stationnement, tu places la flèche sur le premier repère qui suit l’heure d’arrivée. Tu peux alors stationner pendant deux heures, à compter de l’heure indiquée par la flèche, sauf si un signal routier indique une autre durée. Ensuite, tu dois déplacer le véhicule; la règle interdit de modifier l’heure sur le disque. ➡️ Le premier repère qui suit 16 h 05 est 16 h 30.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-9/q08.webp"
+  },
+  {
+    "id": 9,
+    "type": "choix_multiple",
+    "gravite": "grave",
+    "question": "* Qui doit s'arrêter?",
+    "choix": [
+      "A. Le véhicule bleue.",
+      "B. Tout le monde.",
+      "C. Le véhicule brune et la motocyclette."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : La motocyclette conduit vers le ventre et la voiture brune vers le dos.",
+    "image": "/examen-blanc/examen-9/q09.webp"
+  },
+  {
+    "id": 10,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Lorsque vous roulez derrière ce bus, vous savez...",
+    "choix": [
+      "A. ... que des enfants peuvent aussi se trouver dans ce bus.",
+      "B. ... qu’il s’agit d’un bus scolaire."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : Les véhicules de transport scolaire sont reconnaissables à un panneau jaune (au moins 0,40 m), bien visible à l’avant et à l’arrière du véhicule. Ce signal est obligatoirement enlevé ou recouvert lorsque le véhicule n’est pas utilisé pour le transport scolaire. Soyez particulièrement prudent et réduisez votre vitesse. Arrêtez-vous si nécessaire lorsque vous voyez un véhicule de transport scolaire qui allume ses indicateurs de direction, ce qui signifie que des enfants vont monter ou descendre. Cela vaut aussi bien pour les véhicules à l’arrêt que pour ceux qui s’arrêtent sur la chaussée.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-9/q10.webp"
+  },
+  {
+    "id": 11,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Dans une zone 30, la priorité de droite s’applique partout.",
+    "choix": [
+      "A. Vrai.",
+      "B. Faux."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : Ce n’est pas une règle du code de la route. La priorité de droite s’applique sauf si un signal modifie la règle. Le signal de zone 30 affecte la vitesse maximale mais pas la règle de priorité",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-9/q11.webp"
+  },
+  {
+    "id": 12,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Ce jeune homme sort d’un café et veut monter dans la voiture. Que peut lui demander l’agent?",
+    "choix": [
+      "A. Un test d’alcool.",
+      "B. Un test salivaire.",
+      "C. Un test d’alcool et un test salivaire."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : La police peut toujours soumettre un conducteur à un test d’alcool. Un test salivaire ne peut être effectué que s’il existe un soupçon objectif d’usage de drogues, basé sur des constatations concrètes. En cas d’accident, le test salivaire est toujours autorisé.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-9/q12.webp"
+  },
+  {
+    "id": 13,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Il y a un embouteillage. Quand faut-il former un couloir de secours?",
+    "choix": [
+      "A. Uniquement sur les autoroutes lorsque les services de secours approchent.",
+      "B. Toujours sur toutes les routes, comptant au moins 2 voies dans le même sens de circulation."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : En cas d’embouteillage, les conducteurs circulant sur une chaussée comportant deux voies ou plus dans leur direction doivent former préventivement un couloir de secours pour les services de secours. Cela est obligatoirement fait avant que la circulation ne s’immobilise. Sur une chaussée à deux voies: entre la voie de gauche et la voie de droite. Sur une chaussée à trois voies: entre la voie de gauche et la voie du milieu. Les conducteurs de la voie de droite ne peuvent pas se déporter sur la bande d’arrêt d’urgence, la bande réservée aux bus ou la voie réservée spéciale pour bus.",
+    "image": "/examen-blanc/examen-9/q13.webp"
+  },
+  {
+    "id": 14,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Au-delà de ce panneau vous circulez dans une Zone 30.",
+    "choix": [
+      "A. Vrai.",
+      "B. Faux."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : Ce n'est pas une zone. La limite de vitesse est de 30 km par heure jusqu'a la prochaine intersection.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-9/q14.webp"
+  },
+  {
+    "id": 15,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Une voie à sens unique dans une agglomération. Que peut faire la voiture à cet endroit?",
+    "choix": [
+      "A. S’arrêter.",
+      "B. S’arrêter et stationner.",
+      "C. Ni s’arrêter ni stationner."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : Sur une chaussée à sens unique, la voiture peut être arrêtée ou stationnée aussi bien à droite qu’à gauche, sauf bien sûr si d’autres panneaux ou marquages au sol l’interdisent.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-9/q15.webp"
+  },
+  {
+    "id": 16,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Lorsque vous voyez ce signal routier, vous savez que...",
+    "choix": [
+      "A. ... Il faut vous arrêter.",
+      "B. ... vous avez priorité.",
+      "C. ... Il faut céder le passage et vous arrêter si nécessaire."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : Signification: donner la priorité et si nécessaire arrêt.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-9/q16.webp"
+  },
+  {
+    "id": 17,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Ce fermier qui marche à côté de ses vaches, est un...",
+    "choix": [
+      "A. ... conducteur.",
+      "B. ... piéton."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : Quelqu’un qui mène ou surveille des animaux de trait, de charge ou de montre sur la voie publique est un conducteur.",
+    "image": "/examen-blanc/examen-9/q17.webp"
+  },
+  {
+    "id": 18,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Vous avez un permis de conduire provisoire de catégorie B. Votre père a un minibus. Pouvez-vous apprendre à conduire avec son véhicule?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "Règle applicable : Un minibus est un bus dans lequel un maximum de 8 passagers peuvent prendre place. il peut être conduit avec un permis B.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-9/q18.webp"
+  },
+  {
+    "id": 19,
+    "type": "numerique",
+    "gravite": "normale",
+    "question": "Introduisez un nombre: Quel numéro indique le bouchon du liquide de frein?",
+    "choix": [],
+    "reponse": "2",
+    "explication": "Règle applicable : 1 = huile. 2 = liquide de frein 3 = liquide de refroidissement. 4 = jauge d'huile. 5 = essuie-glaces.",
+    "image": "/examen-blanc/examen-9/q19.webp"
+  },
+  {
+    "id": 20,
+    "type": "numerique",
+    "gravite": "normale",
+    "question": "Introduisez un nombre. Jusqu'à quelle distance du carrefour ne pouvez-vous ni vous arrêter ni stationner? (…) mètres.",
+    "choix": [],
+    "reponse": "5",
+    "explication": "Règle applicable : Sur la chaussée et l’accotement vous ne pouvez ni vous arrêter ni stationner dans un carrefour à moins de 5 mètres du bord dajacent de la voie transversale.",
+    "image": "/examen-blanc/examen-9/q20-clean.webp"
+  },
+  {
+    "id": 21,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "La police peut demander à tout conducteur de passer un test d’alcoolémie. Est-ce aussi le cas pour un test salivaire?",
+    "choix": [
+      "A. Oui, un test salivaire peut être imposé à tout conducteur.",
+      "B. Oui, s’il existe, sur la base de constatations objectives, une suspicion de consommation de drogues."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : En Belgique, il existe une tolérance zéro pour les drogues au volant. La police effectue régulièrement des contrôles de drogue afin de vérifier si vous avez certaines substances interdites dans l’organisme. Mais un test salivaire ne peut être effectué que si la police soupçonne que vous êtes sous l’influence de drogues, et ce soupçon est obligatoirement basé sur des constatations objectives.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-9/q21.webp"
+  },
+  {
+    "id": 22,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Parmi les signaux présentés, lequel routiers annonce une bande de circulation réservée aux autobus ?",
+    "choix": [
+      "A. Uniquement le Panneau 1.",
+      "B. Uniquement les signaux 1 et 2.",
+      "C. Signaux 1, 2 et 3."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : Signal 1: bande de circulation réservée aux autobus. Signaux 2+3: tram-bus site spécial franchissable.",
+    "image": "/examen-blanc/examen-9/q22-f17.webp"
+  },
+  {
+    "id": 23,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Au-delà du signal routier, je peux rouler à maximum 20 km/h en Région wallonne.",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "Règle applicable : Le signal routier indique le début d’une zone résidentielle. La vitesse maximale autorisée y est de 20 km/h.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-9/q23.webp"
+  },
+  {
+    "id": 24,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Un blessé inconscient a des difficultés à respirer et des vomissures visibles obstruent sa bouche. Que faites-vous?",
+    "choix": [
+      "A. Vous appelez le 112, maintenez ses voies respiratoires ouvertes et retirez seulement les vomissures visibles dans sa bouche.",
+      "B. Vous attendez l'ambulance sans intervenir.",
+      "C. Vous lui donnez à boire."
+    ],
+    "reponse": "A",
+    "explication": "Appelez immédiatement le 112. Une victime inconsciente doit garder les voies respiratoires ouvertes : retirez prudemment uniquement les vomissures ou corps étrangers clairement visibles dans la bouche, puis surveillez sa respiration jusqu'à l'arrivée des secours. N'introduisez pas les doigts à l'aveugle dans sa bouche et ne lui donnez rien à boire.",
+    "image": "/examen-blanc/examen-9/q24.webp"
+  },
+  {
+    "id": 25,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Quelle vitesse maximale pouvez-vous conduire sur les voies de cette autoroute?",
+    "choix": [
+      "A. 70 km / heure.",
+      "B. 90 km / heure.",
+      "C. 120 km / heure."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : autoroute'. La limite de vitesse s'applique uniquement à la sortie et non aux voies de l'autoroute.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-9/q25.webp"
+  },
+  {
+    "id": 26,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Ne retenez que les éléments décrits. Dans quel ordre les véhicules peuvent-ils franchir cette intersection ?",
+    "choix": [
+      "A. Le véhicule rouge.",
+      "B. Le véhicule blanche.",
+      "C. Le véhicule bleue."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : Panneau de signalisation: carrefour où la priorité de droite est applicable.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-9/q26.webp"
+  },
+  {
+    "id": 27,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "L’arrêt ou le stationnement sur les voies d’un passage à niveau est une infraction …",
+    "choix": [
+      "A. … du deuxième degré.",
+      "B. … du troisième degré",
+      "C. … du quatrième degré."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : LEÇON – INFRACTIONS GRAVES la règle interdit de laisser un véhicule à l’arrêt ou en stationnement sur un passage à niveau.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-9/q27.webp"
+  },
+  {
+    "id": 28,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Où mettez-vous votre pied gauche après avoir changé de vitesse?",
+    "choix": [
+      "A. Juste au-dessus de la pédale d’embrayage.",
+      "B. Juste en dessous de la pédale d’embrayage.",
+      "C. À gauche de la pédale d’embrayage."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : À gauche de la pédale d’embrayage.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-9/q28.webp"
+  },
+  {
+    "id": 29,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Vous vous arrêtez derrière une voiture qui est arrêtée à un feu rouge. Quand gardez-vous une distance de sécurité suffisante?",
+    "choix": [
+      "A. Lorsque vous voyez encore la plaque d’immatriculation.",
+      "B. Lorsque vous voyez encore les pneus arrière.",
+      "C. La distance de sécurité n’a pas d’importance."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : Il est toujours prudent de garder une distance suffisante. Dans les auto-écoles, on enseigne qu’il est sûr de s’arrêter de façon à voir encore les pneus arrière du véhicule qui vous précède.",
+    "image": "/examen-blanc/examen-9/q29.webp"
+  },
+  {
+    "id": 30,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Vous pouvez passer cette colonne par la gauche et par la droite.",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "Règle applicable : La flèche indique que vous pouvez conduire par la gauche ou par la droite.",
+    "image": "/examen-blanc/examen-9/q30.webp"
+  },
+  {
+    "id": 31,
+    "type": "numerique",
+    "gravite": "grave",
+    "question": "* Introduisez un nombre. Quelle est la vitesse maximale à laquelle vous pouvez rouler en voiture dans ce carrefour?",
+    "choix": [],
+    "reponse": "30",
+    "explication": "Règle applicable : La vitesse maximale sur un dispositif surélevé est de 30 km / h.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-9/q31.webp"
+  },
+  {
+    "id": 32,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Pour freiner avec un système ABS, vous devez enfoncer la pédale de frein à fond.",
+    "choix": [
+      "A. Vrai.",
+      "B. Faux."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : Explication Vous devez appuyer fermement sur la pédale de frein et la maintenir enfoncée. Lorsque le système ABS entre en action, vous pouvez sentir des vibrations dans la pédale de frein et entendre un bruit de claquement ou de grésillement. C'est tout à fait normal. Continuez à maintenir la pédale de frein enfoncée.",
+    "image": "/examen-blanc/examen-9/q32.webp"
+  },
+  {
+    "id": 33,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Quelle limitation de vitesse la voiture blanche doit-elle respecter sur cette route pour automobiles dans la Région flamande ?",
+    "choix": [
+      "A. 70 km/h.",
+      "B. 90 km/h.",
+      "C. 120 km/h."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : Il s’agit d’une chaussée ordinaire divisée en deux bandes de circulation. La vitesse maximale autorisée dans les Régions flamande et bruxelloise est de 70 km/h. Dans la Région wallonne, elle est de 90 km/h.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-9/q33.webp"
+  },
+  {
+    "id": 34,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Examinez les positions des usagers. Quelle règle ce signal impose-t-il aux usagers ?",
+    "choix": [
+      "A. Pollution sonore.",
+      "B. Danger."
+    ],
+    "reponse": "B",
+    "explication": "La réponse B correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-9/q34.webp"
+  },
+  {
+    "id": 35,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Rouler avec les fenêtres ouvertes consomme moins de carburant que de rouler avec les fenêtres fermées.",
+    "choix": [
+      "A. Vrai.",
+      "B. Faux."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : Rouler avec les fenêtres fermées consomme moins de carburant que de rouler avec les fenêtres ouvertes.",
+    "image": "/examen-blanc/examen-9/q35.webp"
+  },
+  {
+    "id": 36,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Le conducteur de cette voiture se rend compte qu'il s'est trompé. Peut-il encore conduire en arrière?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "Règle applicable : Conduire en arrière sur une autoroute est une infraction grave.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-9/q36.webp"
+  },
+  {
+    "id": 37,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Après avoir franchi ces signaux routiers, vous pouvez rouler à une vitesse maximale de 90 km/h, jusqu’à ce que vous quittiez la commune.",
+    "choix": [
+      "A. Vrai.",
+      "B. Faux."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : 90 km/heure jusqu’au prochain croisement.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-9/q37.webp"
+  },
+  {
+    "id": 38,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "À cet endroit, cette voiture peut...",
+    "choix": [
+      "A. ... s'arrêter.",
+      "B. ... s'arrêter et stationner.",
+      "C. ... ni s'arrêter ni stationner."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : La réglementation interdit de stationner, mais vous pouvez vous arrêter devant l’accès carrossable d’une propriété.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-9/q38.webp"
+  },
+  {
+    "id": 39,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Lors d’un contrôle de police, tu remarques que tu as oublié ton portefeuille avec ton permis de conduire à la maison. Quelles sont les conséquences?",
+    "choix": [
+      "A. Tu ne peux plus continuer à rouler.",
+      "B. Tu reçois seulement une amende pour une infraction de premier degré.",
+      "C. Tu dois présenter ton permis de conduire dans un commissariat dans les 5 jours."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : INFO -PERMIS DE CONDUIRE Le fait de ne pas avoir son permis de conduire sur soi n’est pas une infraction grave. Tu recevras une amende administrative limitée et tu peux en principe continuer à circuler. Cependant, tu dois présenter ton permis dans un commissariat dans les 5 jours. En cas de perte ou de vol, tu ne peux pas conduire tant que tu n’as pas reçu ton nouveau permis. L’attestation de perte ou de vol n’est pas suffisante pour conduire.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-9/q39.webp"
+  },
+  {
+    "id": 40,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Dans cette situation, êtes-vous autorisé à franchir ce signal routier en voiture ?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "Règle applicable : Sens interdit pour tout conducteur. Signal d’interdiction.",
+    "signRef": "C3",
+    "image": "/examen-blanc/examen-9/q40.webp"
+  },
+  {
+    "id": 41,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "On parle d’aquaplanage lorsque, en raison de l’eau, les quatre pneus ne peuvent pas toucher la surface de la route.",
+    "choix": [
+      "A. Vrai.",
+      "B. Faux."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : Le résultat est que la voiture va « flotter ». En effet, la voiture est temporairement ingérable.",
+    "image": "/examen-blanc/examen-9/q41.webp"
+  },
+  {
+    "id": 42,
+    "type": "numerique",
+    "gravite": "normale",
+    "question": "Sur autoroute, après un arrêt sur la bande d’arrêt d’urgence, le triangle doit être placé à environ 100 mètres du véhicule. À quelle distance minimale doit-il déjà être visible par les conducteurs qui s’approchent? Introduisez le nombre de mètres.",
+    "choix": [],
+    "reponse": "50",
+    "explication": "Sur autoroute, le triangle est placé à environ 100 mètres en amont du véhicule immobilisé et doit être visible à au moins 50 mètres par les conducteurs qui s’approchent. Le conducteur qui quitte son véhicule sur une autoroute ou une route pour automobiles doit porter sa veste rétroréfléchissante.",
+    "image": "/examen-blanc/examen-9/q42-clean.webp"
+  },
+  {
+    "id": 43,
+    "type": "numerique",
+    "gravite": "normale",
+    "question": "Introduisez un nombre: Les enfants d'une taille supérieure à (...) cm ne doivent pas être transportés dans un siège-enfant spécial.",
+    "choix": [],
+    "reponse": "135",
+    "explication": "Règle applicable : Les enfants d'une taille supérieure à (...) cm ne doivent pas être transportés dans un siège-enfant adapté.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-9/q43-clean.webp"
+  },
+  {
+    "id": 44,
+    "type": "numerique",
+    "gravite": "normale",
+    "question": "Introduisez un nombre. Si à l’arrière d’une voiture il y a 2 ceintures de sécurité, alors (...) personnes peuvent s’installer à l’arrière.",
+    "choix": [],
+    "reponse": "2",
+    "explication": "Règle applicable : Une ceinture de sécurité par personne.",
+    "image": "/examen-blanc/examen-9/q44.webp"
+  },
+  {
+    "id": 45,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Ces signaux routiers ont-ils la même signification?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "Règle applicable : Ils ont la même signification.",
+    "image": "/examen-blanc/examen-9/q45.webp"
+  },
+  {
+    "id": 46,
+    "type": "numerique",
+    "gravite": "normale",
+    "question": "Entrez un nombre: Sur l’autoroute, la vitesse maximale autorisée est de (...) km/h.",
+    "choix": [],
+    "reponse": "120",
+    "explication": "Règle applicable : autoroute’. Sur l’autoroute on peut rouler jusqu’à 120 km/h. Vous devez rouler à une vitesse minimale de 70 km/h quand les conditions le permettent.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-9/q46-clean.webp"
+  },
+  {
+    "id": 47,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Vous passez devant ce signal en voiture. Pouvez-vous dépasser une moto par la gauche ici?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "Règle applicable : Le signal se trouve à 150 mètres du passage à niveau. Vous roulez ici sur une chaussée ordinaire.",
+    "image": "/examen-blanc/examen-9/q47.webp"
+  },
+  {
+    "id": 48,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Cette fille a 15 ans. Elle roule à vélo sur la chaussée dans une agglomération. Peut-elle aussi rouler sur le trottoir surélevé?",
+    "choix": [
+      "A. Oui, cette action est permise.",
+      "B. Non, cette action est interdite."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : Lorsqu’il existe une piste cyclable, le cycliste est obligé de l’emprunter (sauf si elle est impraticable). la règle interdit de circuler sur le trottoir à vélo en agglomération, sauf pour les enfants de moins de 10 ans, qui peuvent toujours rouler sur le trottoir ou sur la berme surélevée. Hors agglomération, les cyclistes peuvent, s’il n’existe pas de piste cyclable praticable et à condition de rouler à droite dans le sens de la circulation, circuler sur le trottoir ou sur la berme surélevée.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-9/q48.webp"
+  },
+  {
+    "id": 49,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Les speed pedelecs peuvent-ils circuler dans les deux sens dans cette rue?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "Règle applicable : Le signal routier supérieur signifie qu’il est interdit aux conducteurs de passer dans ce sens au-delà du signal. Le signal additionnel indique que les cyclistes et les speed pedelecs (P) peuvent quand même passer. Dans le sens opposé, tous les conducteurs peuvent circuler.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-9/q49.webp"
+  },
+  {
+    "id": 50,
+    "type": "choix_multiple",
+    "gravite": "grave",
+    "question": "* Cette limite de vitesse ne s’applique...",
+    "choix": [
+      "A. ... qu’aux véhicules avec une remorque.",
+      "B. ... qu’à la sortie.",
+      "C. ... qu’au moment de s’incorporer à l’autoroute."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : Cette combinaison de panneaux signifie que sur cette sortie vous ne pouvez rouler qu’à 50 km/h maximum.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-9/q50.webp"
+  }
+]

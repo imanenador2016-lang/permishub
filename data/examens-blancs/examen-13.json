@@ -1,0 +1,715 @@
+[
+  {
+    "id": 1,
+    "image": "/examen-blanc/examen-13/q01.webp",
+    "type": "numerique",
+    "gravite": "normale",
+    "question": "Introduisez un nombre. Après avoir franchi ces panneaux, en voiture, vous pouvez rouler à une vitesse maximale de (...) km/h.",
+    "choix": [],
+    "reponse": "70",
+    "explication": "Règle applicable : Jusqu'à 70 km/heure jusqu’au prochain croisement.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, introduisez un nombre. Après avoir franchi ces panneaux, en voiture, vous pouvez rouler à une vitesse maximale de (...) km/h.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 2,
+    "image": "/examen-blanc/examen-13/q02.webp",
+    "type": "choix_multiple",
+    "gravite": "grave",
+    "question": "* Vous voyez ce feu à votre droite. Que pouvez-vous faire?",
+    "choix": [
+      "A. Uniquement tourner à droite.",
+      "B. Continuer tout droit ou tourner à droite."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : La flèche verte indique que vous pouvez tourner à droite. Mais vous devez donner la priorité aux conducteurs venant des autres directions et aussi aux piétons.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, *** Question de 5 points *** Vous voyez ce feu à votre droite. Que pouvez-vous faire.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 3,
+    "image": "/examen-blanc/examen-13/q03.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "25 septembre. Un tapis de neige recouvre la Flandre. Ce conducteur peut-il rouler avec des pneus à clous?",
+    "choix": [
+      "A. Oui, cette action est permise.",
+      "B. Non, cette action est interdite."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : Les pneus à clous ne peuvent être utilisés qu’entre le 1er novembre et le 31 mars sur les véhicules dont la M.M.A. ne dépasse pas 3,5 tonnes. Vitesses maximales autorisées: - Sur routes ordinaires: 60 km/h - Sur autoroutes et routes à 2x2 bandes: 90 km/h Les chaînes à neige peuvent être utilisées lorsqu’il y a de la neige ou du verglas sur la chaussée.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Observez précisément la configuration. Analysez le cas suivant: 25 septembre. Un tapis de neige recouvre la Flandre. Ce conducteur peut-il rouler avec des pneus à clous.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 4,
+    "image": "/examen-blanc/examen-13/q04.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Combien de distance approximative devez-vous laisser entre vous et la voiture devant vous?",
+    "choix": [
+      "A. La moitié de la vitesse à laquelle vous roulez.",
+      "B. 50 m.",
+      "C. 1 seconde."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : arrêt’."
+  },
+  {
+    "id": 5,
+    "image": "/examen-blanc/examen-13/q05.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Cette fille a 12 ans et mesure 1,45 mètre. Elle est assise à l’arrière de la voiture et porte la ceinture de sécurité. Est-ce correct?",
+    "choix": [
+      "A. Oui, car elle mesure 1,45 mètre.",
+      "B. Non, elle doit être installée dans un siège pour enfant, car elle n’a que 12 ans."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : Les enfants de moins de 18 ans et mesurant moins de 1,35 m sont obligatoirement transportés dans un dispositif de retenue pour enfants conforme aux normes prescrites. Un enfant de plus de 1,35 m peut encore être transporté dans un siège pour enfant spécial. Les enfants de moins de 18 ans ne peuvent pas être transportés à l’avant dans un siège orienté vers l’arrière, sauf s’il n’y a pas d’airbag à l’avant ou si celui-ci peut être désactivé.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, cette fille a 12 ans et mesure 1,45 mètre. Elle est assise à l’arrière de la voiture et porte la ceinture de sécurité. Est-ce correct.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 6,
+    "image": "/examen-blanc/examen-13/q06.webp",
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Des pneus en bon état constituent-ils l’élément le plus important pour obtenir une distance de freinage aussi courte que possible?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "Règle applicable : Explication: Même si vous êtes très attentif et freinez immédiatement avec force, des pneus en mauvais état offrent moins d’adhérence sur la chaussée et allongent la distance de freinage."
+  },
+  {
+    "id": 7,
+    "image": "/examen-blanc/examen-13/q07.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Le test de salive est positif. Combien d’heures d’interdiction temporaire de conduire recevez-vous immédiatement?",
+    "choix": [
+      "A. 6 heures.",
+      "B. 12 heures.",
+      "C. 24 heures."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : Lors d’un test salivaire, on prélève de la salive dans la bouche avec un coton-tige pour déterminer la présence éventuelle de drogues. Si le résultat dépasse la valeur autorisée: vous devez immédiatement remettre votre permis de conduire pour 12 heures. Un retrait immédiat du permis est également possible. Après les 12 heures, un nouveau test salivaire est effectué. Les contrevenants risquent en outre de lourdes amendes et une déchéance du droit de conduire pouvant aller jusqu’à 5 ans. Refuser le test salivaire = 12 heures d’interdiction de conduire immédiatement. Le test salivaire ne peut être effectué que si la police soupçonne une consommation de drogue."
+  },
+  {
+    "id": 8,
+    "image": "/examen-blanc/examen-13/q08.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "À quelle catégorie appartient ce signal?",
+    "choix": [
+      "A. Panneau de danger.",
+      "B. Panneau d’indication.",
+      "C. Panneau d’obligation."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : Signal annonçant des flèches sur la chaussée et prescrivant le choix d’une bande de circulation. Ce signal peut indiquer les différentes directions auxquelles chacune des bandes donnent accès.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, à quelle catégorie appartient ce signal.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 9,
+    "image": "/examen-blanc/examen-13/q09.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "C'est le 2 juillet 2026. Suite à une analyse d’haleine, tu es contrôlé à 0,25 mg/l. Que se passe-t-il?",
+    "choix": [
+      "A. Tu peux repartir car c’est en dessous de la limite.",
+      "B. Tu as une interdiction de conduire de 3 heures.",
+      "C. Tu as une interdiction de conduire de 12 heures."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : Lors d’une analyse d’haleine, tu souffles dans un appareil qui mesure la concentration d’alcool dans l’air alvéolaire expiré. Le résultat exact apparaît sur l’écran (par ex. 0,25 mg/l). - Moins de 0,22 mg/l: tu peux partir. - De 0,22 à moins de 0,35 mg/l: interdiction de conduire pendant 12 heures. C’est une infraction et tu recevras une amende. - 0,35 mg/l ou plus: interdiction de conduire pendant 15 jours.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 10,
+    "image": "/examen-blanc/examen-13/q10.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Le résultat d'un test de l'haleine est de 0,5 ‰. Quelle est la conséquence?",
+    "choix": [
+      "A. Il est permis de poursuivre votre route.",
+      "B. Vous recevez une interdiction immédiate de conduire pendant 3 heures.",
+      "C. Vous recevez une interdiction immédiate de conduire pendant 12 heures."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : Explication: Un résultat de 0,5 ‰ au test de l'haleine entraîne une interdiction immédiate de conduire de 12 heures. Un résultat de 0,8 ‰ entraîne une interdiction immédiate de conduire de 15 jours.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 11,
+    "image": "/examen-blanc/examen-13/q11.webp",
+    "type": "numerique",
+    "gravite": "normale",
+    "question": "Entrez un nombre. Lors d’une panne ou d’un accident sur cette route pour automobiles, vous placerez le triangle de danger à quelle distance minimale (...) mètres en deçà du véhicule, de manière à ce qu’il soit bien visible des usagers qui s’en approchent à minimum 50 mètres.",
+    "choix": [],
+    "reponse": "30",
+    "explication": "Règle applicable : Autoroute: 100 mètres. Route pour automobiles: 30 mètres.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Observez précisément la configuration. Selon la réglementation belge, entrez un nombre. Lors d’une panne ou d’un accident sur cette route pour automobiles, vous placerez le triangle de danger à quelle distance minimale (...) mètres en deçà du véhicule, de manière à ce qu’il soit bien visible des usagers qui s’en approchent à minimum 50 mètres."
+  },
+  {
+    "id": 12,
+    "image": "/examen-blanc/examen-13/q12.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Quelle partie de la route est indiquée par la ligne jaune?",
+    "choix": [
+      "A. La voie publique.",
+      "B. La chaussée.",
+      "C. La bande de circulation."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : La chaussée est la partie de la voie publique aménagée pour la circulations des véhicules comme les voitures, les camions, les bus et les motocyclettes.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Analysez le cas suivant: quelle partie de la route est indiquée par la ligne jaune."
+  },
+  {
+    "id": 13,
+    "image": "/examen-blanc/examen-13/q13.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Quelle est la largeur maximale d’un véhicule avec sa charge?",
+    "choix": [
+      "A. 2.45 mètres.",
+      "B. 2.50 mètres.",
+      "C. 2.55 mètres."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : Un véhicule ainsi que son chargement ne peuvent pas être plus large que 2,55 mètres. (plus large = « transport exceptionnel »).",
+    "needsLegalReview": true
+  },
+  {
+    "id": 14,
+    "image": "/examen-blanc/examen-13/q14.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Quelle limitation de vitesse cette voiture peut-elle rouler après ce signal routier dans la Région de Bruxelles-Capitale ?",
+    "choix": [
+      "A. 30 km/h.",
+      "B. 50 km/h.",
+      "C. 70 km/h."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : Le signal routier indique la fin d’une agglomération. La vitesse maximale en dehors des agglomérations est: - dans les Régions flamande et bruxelloise: 70 km/h - dans la Région wallonne: 90 km/h",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Observez précisément la configuration. Quelle limitation de vitesse cette voiture peut-elle rouler après ce signal routier dans la Région de Bruxelles-Capitale.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 15,
+    "image": "/examen-blanc/examen-13/q15.webp",
+    "type": "oui_non",
+    "gravite": "grave",
+    "question": "* Pouvez-vous envoyer un SMS pendant que vous attendez dans la voiture à un feu rouge?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "Règle applicable : C'est interdit.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Analysez le cas suivant: *** Question de 5 points *** Pouvez-vous envoyer un SMS pendant que vous attendez dans la voiture à un feu rouge.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 16,
+    "image": "/examen-blanc/examen-13/q16.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Un piéton (flèche orange) peut-il traverser la chaussée à cet endroit?",
+    "choix": [
+      "A. Oui, cette action est permise.",
+      "B. Non, il doit utiliser le passage pour piétons."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : LECON 7 Le signal routier indique qu’un passage pour piétons se trouve à 100 mètres. Un piéton doit obligatoirement l’utiliser s’il se trouve à moins de 20 mètres du passage. Ce n’est pas le cas ici.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, un piéton (flèche orange) peut-il traverser la chaussée à cet endroit.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 17,
+    "image": "/examen-blanc/examen-13/q17.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "La voiture rouge roule sur l'autoroute. La voiture A roule à droite devant lui et la voiture B à gauche. La voiture rouge veut dépasser la voiture A.",
+    "choix": [
+      "A. Le conducteur ralentit, roule derrière Le véhicule B et klaxonne brièvement pour que Le véhicule B dévie vers la droite.",
+      "B. Le conducteur dépasse Le véhicule A.",
+      "C. Le conducteur roule derrière Le véhicule B et attend qu'elle vire à droite."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : Lors du dépassement d'un conducteur, vous pouvez donner un bref avertissement avec le klaxon si nécessaire. Ici, vous ne dépassez pas, mais vous voulez forcer quelqu'un à changer de voie avec le klaxon, ce qui peut entraîner une agression de la circulation.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, la voiture rouge roule sur l'autoroute. La voiture A roule à droite devant lui et la voiture B à gauche. La voiture rouge veut dépasser la voiture A.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 18,
+    "image": "/examen-blanc/examen-13/q18.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Sur l'autoroute, vous voyez qu'il y a un accident dans l'autre sens de circulation. Que faites-vous?",
+    "choix": [
+      "A. Vous prenez contact avec 112.",
+      "B. Vous vous arrêtez sur la bande d'arrêt d'urgence, vous prenez votre kit de premiers secours et vous allez les aider."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : (B) est interdit."
+  },
+  {
+    "id": 19,
+    "image": "/examen-blanc/examen-13/q19.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "A partir de combien de cyclistes dans un groupe ces cyclistes ne sont-ils pas obligés de rouler sur la piste cyclable?",
+    "choix": [
+      "A. À partir de 10.",
+      "B. A partir de 15.",
+      "C. A partir de 20."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : Les groupes de 15 à 50 cyclistes ne sont pas obligés d'emprunter les pistes cyclables. Ils sont autorisés à rouler à deux côte à côte sur la chaussée. A condition qu'ils restent ensemble (groupés). Les groupes de moins de 15 cyclistes doivent suivre les mêmes règles que les cyclistes individuels. Information: Vous n’aurez en principe pas cette question lors de l’examen pour le permis B mais c’est utile de le savoir vu les obligations que vous aurez vis-à-vis des cyclistes et que vous apprendrez dans un autre leçon.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, a partir de combien de cyclistes dans un groupe ces cyclistes ne sont-ils pas obligés de rouler sur la piste cyclable.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 20,
+    "image": "/examen-blanc/examen-13/q20.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "L’alternateur a pour but de: 1. fournir de l’électricité électrique pendant que la voiture roule. 2. recharger la batterie de la voiture.",
+    "choix": [
+      "A. Uniquement 1.",
+      "B. Uniquement 2.",
+      "C. Les deux propositions : 1 et 2.."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : L’alternateur a pour but de fournir de l’électricité électrique pendant que la voiture roule et de recharger la batterie de la voiture."
+  },
+  {
+    "id": 21,
+    "image": "/examen-blanc/examen-13/q21.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Vous roulez et il y a un brouillard épais. Quels phares doivent obligatoirement 'être allumés?",
+    "choix": [
+      "A. Les feux de brouillard avant et arrière.",
+      "B. Les feux de brouillard avant.",
+      "C. Les feux de brouillard arrière."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : Les feux de brouillard avant ne doit pas être sur une voiture."
+  },
+  {
+    "id": 22,
+    "image": "/examen-blanc/examen-13/q22.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Vous approchez d'une intersection et vous voyez un de ces signaux. À quelle intersection pouvez-vous dépasser un cycliste par la gauche?",
+    "choix": [
+      "A. Intersection 1.",
+      "B. Intersection 2.",
+      "C. Intersection 1 et 2."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : +16 – ‘Le dépassement’. Dépasser un vélo par la gauche n’est pas interdit aux intersections où vous devez donner la priorité.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Observez précisément la configuration. Dans la situation décrite, vous approchez d'une intersection et vous voyez un de ces signaux. À quelle intersection pouvez-vous dépasser un cycliste par la gauche.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 23,
+    "image": "/examen-blanc/examen-13/q23.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "S'engager sur un passage à niveau lorsque le feu rouge clignote et que la barrière descend est une infraction du …",
+    "choix": [
+      "A. … deuxième degré.",
+      "B. … troisième degré.",
+      "C. … quatrième degré."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : / Infractions Les infractions du quatrième degré sont les plus graves. Elles mettent directement en danger la sécurité des personnes et, en cas d’accident, provoquent presque inévitablement des dommages corporels. Exemples: - ignorer les injonctions d’une personne compétente, - ne pas respecter la signalisation d’un passage à niveau, - stationner ou arrêter son véhicule sur un passage à niveau, - inciter à une vitesse excessive, - organiser des courses de vitesse sur la voie publique, - dépasser par la gauche dans une côte ou un virage lorsqu’un tel dépassement est interdit, - faire marche arrière ou circuler en sens inverse sur une autoroute ou une route pour automobiles.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, s'engager sur un passage à niveau lorsque le feu rouge clignote et que la barrière descend est une infraction du …",
+    "needsLegalReview": true
+  },
+  {
+    "id": 24,
+    "image": "/examen-blanc/examen-13/q24.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Ce signal routier signifie: « Vous approchez d’un carrefour. »",
+    "choix": [
+      "A. Vrai.",
+      "B. Faux."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : Explication: Signal routier de priorité B17. Signification: vous approchez d’un carrefour où la priorité de droite est applicable.",
+    "needsNewImage": true,
+    "imageBrief": "Afficher le signal belge officiel B17, isolé et parfaitement lisible. Conserver strictement sa forme, ses couleurs et son symbole réglementaires.",
+    "signRef": "B17"
+  },
+  {
+    "id": 25,
+    "image": "/examen-blanc/examen-13/q25.webp",
+    "type": "oui_non",
+    "gravite": "grave",
+    "question": "* Au-delà de ce signal routier, le conducteur d’une motocyclette peut-il dépasser une voiture par la gauche?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "Règle applicable : +16 – ‘Le dépassement’. Le signal d’interdiction interdit aux conducteurs de dépasser par la gauche:. un véhicule attelé.. ou un véhicule à plus de deux roues.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, *** Question de 5 points *** Au-delà de ce signal routier, le conducteur d’une motocyclette peut-il dépasser une voiture par la gauche.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 26,
+    "image": "/examen-blanc/examen-13/q26.webp",
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Le conducteur de la voiture bleue peut-il traverser le carrefour?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "Règle applicable : Le signal rouge indique qu'la règle interdit de conduire après le signe dans cette direction.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, le conducteur de la voiture bleue peut-il traverser le carrefour.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 27,
+    "image": "/examen-blanc/examen-13/q27.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Ce signal d’interdiction s’applique:",
+    "choix": [
+      "A. Uniquement aux camions.",
+      "B. Uniquement aux camions et aux autocars.",
+      "C. À tous les types de véhicules."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : Accès interdit aux conducteurs de véhicules ou trains de véhicules ayant, chargement compris, une longueur supérieure à celle indiquée.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Observez précisément la configuration. Analysez le cas suivant: ce signal d’interdiction s’applique:",
+    "needsLegalReview": true
+  },
+  {
+    "id": 28,
+    "image": "/examen-blanc/examen-13/q28.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Quelle est la conséquence si vous refusez un test salivaire?",
+    "choix": [
+      "A. Vous recevez une interdiction temporaire de conduire de 6 heures.",
+      "B. Vous recevez une interdiction temporaire de conduire de 10 heures.",
+      "C. Vous recevez une interdiction temporaire de conduire de 12 heures."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : Le test salivaire ne peut être effectué que si la police a un soupçon de consommation de drogues. Bien que la loi belge permette de refuser le test salivaire, il est fortement recommandé de coopérer. Si vous refusez, la police doit appeler un médecin pour évaluer vos motifs. Si celui-ci estime que vous n’avez aucune raison légale valable, vous devrez payer les frais de son intervention et vous recevrez une interdiction de conduire de 12 heures. Lors d’un test salivaire, un écouvillon est utilisé pour prélever un peu de salive dans la bouche afin de mesurer la présence éventuelle de drogues. Si le résultat dépasse la valeur autorisée: – vous devez remettre immédiatement votre permis pour 12 heures – un retrait immédiat du permis est possible – après 12 heures, un nouveau test salivaire est requis Les contrevenants risquent en plus de lourdes amendes et une déchéance du droit de conduire pouvant aller jusqu’à 5 ans."
+  },
+  {
+    "id": 29,
+    "image": "/examen-blanc/examen-13/q29.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Certaines voitures sont équipées d’un système de freinage automatique.",
+    "choix": [
+      "A. Je peux faire confiance à ce système à 100 %.",
+      "B. Cela me permet d’être moins concentré pendant la conduite.",
+      "C. Je dois rester attentif et conduire de manière anticipative."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : On ne peut pas se fier à 100 % aux systèmes de freinage automatique, car ils peuvent encore freiner de manière intempestive ou, au contraire, ne pas s’activer quand il le faudrait. Ces technologies réduisent le risque d’accident mais ne remplacent pas la vigilance du conducteur, qui doit rester attentif et anticiper, car la technologie ne gère pas encore toutes les complexités de la route."
+  },
+  {
+    "id": 30,
+    "image": "/examen-blanc/examen-13/q30.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "La voiture rouge peut-elle stationner à cet endroit en agglomération?",
+    "choix": [
+      "A. Oui, cette action est permise.",
+      "B. Non, cette action est interdite."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : Le signal (E1) indique qu’la règle interdit de stationner sur la chaussée et sur l’accotement de ce côté de la route. La flèche blanche sous le panneau indique que l’interdiction commence à partir d’ici.",
+    "needsNewImage": true,
+    "imageBrief": "Afficher le signal belge officiel E1, isolé et parfaitement lisible. Conserver strictement sa forme, ses couleurs et son symbole réglementaires.",
+    "signRef": "E1"
+  },
+  {
+    "id": 31,
+    "image": "/examen-blanc/examen-13/q31.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Le conducteur de la voiture bleue peut-il dépasser la voiture blanche pendant que celle-ci dépasse un cyclomoteur?",
+    "choix": [
+      "A. Oui, cette action est permise.",
+      "B. Non, cette action est interdite."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : Sur une chaussée à double sens, il est autorisé de dépasser une voiture qui dépasse un cyclomoteur ou une moto. MAIS: la règle interdit de dépasser une voiture qui est elle-même en train de dépasser une autre voiture.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, le conducteur de la voiture bleue peut-il dépasser la voiture blanche pendant que celle-ci dépasse un cyclomoteur.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 32,
+    "image": "/examen-blanc/examen-13/q32.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Quelle distance devez-vous laisser hors agglomération lorsque vous stationnez derrière un véhicule?",
+    "choix": [
+      "A. 1 mètre.",
+      "B. 1,5 mètre.",
+      "C. Une distance suffisante."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : Tant en agglomération qu’hors agglomération, vous devez laisser une distance d’au moins 1 mètre entre deux véhicules stationnés. Cette distance permet aux autres conducteurs de manœuvrer plus facilement pour quitter ou prendre une place de stationnement. Il s’agit donc d’une distance minimale fixe de 1 mètre."
+  },
+  {
+    "id": 33,
+    "image": "/examen-blanc/examen-13/q33.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Que faites-vous en cas de feu intense dans un tunnel?",
+    "choix": [
+      "A. Vous faites marche arrière pour sortir du tunnel.",
+      "B. Vous quittez le tunnel par une sortie de secours."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : Vous quittez le tunnel par une sortie de secours. Vous devez laisser la clef sur le contact.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Analysez le cas suivant: que faites-vous en cas de feu intense dans un tunnel."
+  },
+  {
+    "id": 34,
+    "image": "/examen-blanc/examen-13/q34.webp",
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Le feu de circulation est rouge. Êtes-vous autorisé à lire les messages sur votre téléphone portable pendant que vous attendez?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "La réponse NON correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, le feu de circulation est rouge. Êtes-vous autorisé à lire les messages sur votre téléphone portable pendant que vous attendez.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 35,
+    "image": "/examen-blanc/examen-13/q35.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Ne retenez que les éléments décrits. Quel usager bénéficie du passage prioritaire ?",
+    "choix": [
+      "A. Le piéton.",
+      "B. Le véhicule."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : Carrefour où la priorité de droite est applicable. Un piéton n’est pas un conducteur mais il y a un passage pour piétons."
+  },
+  {
+    "id": 36,
+    "image": "/examen-blanc/examen-13/q36.webp",
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Des voitures peuvent-elles arriver du sens inverse?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "Règle applicable : Sens interdit pour tout conducteur. Signal d’interdiction.",
+    "signRef": "C3"
+  },
+  {
+    "id": 37,
+    "image": "/examen-blanc/examen-13/q37.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Qui peut s’engager en premier dans ce carrefour?",
+    "choix": [
+      "A. Le véhicule brune.",
+      "B. Le véhicule bleue.",
+      "C. La moto."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : L’agent dit que la voiture bleue doit s’arrêter. Le conducteur qui désire conduire tout droit a la priorité. Le conducteur qui veut tourner à gauche, doit donner la priorité.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Observez précisément la configuration. Dans la situation décrite, qui peut s’engager en premier dans ce carrefour.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 38,
+    "image": "/examen-blanc/examen-13/q38.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Je circule sur cette voirie au dessus de laquelle il y a 3 flèches au dessus des bandes de circulation. Je peux choisir ma bande de circulation.",
+    "choix": [
+      "A. Vrai.",
+      "B. Faux."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : Je dois rouler à droite, il n'y a pas de choix de la bande ni de la file.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, je circule sur cette voirie au dessus de laquelle il y a 3 flèches au dessus des bandes de circulation. Je peux choisir ma bande de circulation."
+  },
+  {
+    "id": 39,
+    "image": "/examen-blanc/examen-13/q39.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Vous pouvez vous arrêter sur la chaussée d'une voie prioritaire...",
+    "choix": [
+      "A. ... en agglomération.",
+      "B. ... hors agglomération.",
+      "C. ... en agglomération et hors agglomération."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : Hors agglomération sur la chaussée d’une voie prioritaire vous ne pouvez pas stationner. Mais vous pouvez vous arrêter."
+  },
+  {
+    "id": 40,
+    "image": "/examen-blanc/examen-13/q40.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Une chaussée à double sens de circulation. Le conducteur de la voiture blanche veut tourner à gauche. Il se place le plus près possible de l’axe central de la chaussée. Agit-il correctement?",
+    "choix": [
+      "A. Oui, cette action est permise.",
+      "B. Non, il doit se placer à gauche sur la chaussée."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : La chaussée sur laquelle circule la voiture blanche n’est pas une voie à sens unique. - Pour tourner à gauche, le conducteur se place le plus près possible de l’axe central de la chaussée. - Pour tourner à droite, il doit se placer le plus à droite possible sur la chaussée. ➡️ Sur une voie à sens unique, le conducteur qui veut tourner à gauche doit se placer tout à gauche.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, une chaussée à double sens de circulation. Le conducteur de la voiture blanche veut tourner à gauche. Il se place le plus près possible de l’axe central de la chaussée. Agit-il correctement.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 41,
+    "image": "/examen-blanc/examen-13/q41.webp",
+    "type": "numerique",
+    "gravite": "normale",
+    "question": "Introduisez un nombre. Si à l’arrière d’une voiture il y a 2 ceintures de sécurité, alors (...) personnes peuvent s’installer à l’arrière.",
+    "choix": [],
+    "reponse": "2",
+    "explication": "Règle applicable : Une ceinture de sécurité par personne."
+  },
+  {
+    "id": 42,
+    "image": "/examen-blanc/examen-13/q42.webp",
+    "type": "oui_non",
+    "gravite": "grave",
+    "question": "* En présence un obstacle sur la chaussée, pouvez-vous dépasser un tram par la gauche?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "Règle applicable : C’est autorisé, à condition que vous ne dérangiez pas les conducteurs venant en sens inverse."
+  },
+  {
+    "id": 43,
+    "image": "/examen-blanc/examen-13/q43.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Désignez la réponse la plus correcte. Sur un dispositif surélevé, le conducteur d’une voiture...",
+    "choix": [
+      "A. ... ne peut pas dépasser une voiture par la gauche.",
+      "B. ... ne peut ni dépasser une voiture ni un cyclomoteur par la gauche.",
+      "C. ... ne peut ni dépasser une voiture, ni un cyclomoteur, ni un cycliste par la gauche."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : +16 – ‘Le dépassement’. Sur un dispositif surélevé, un conducteur peut dépasser un cycliste par la gauche."
+  },
+  {
+    "id": 44,
+    "image": "/examen-blanc/examen-13/q44.webp",
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Vous pouvez passer cette colonne par la gauche et par la droite.",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "Règle applicable : La flèche indique que vous pouvez conduire par la gauche ou par la droite.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Observez précisément la configuration. Selon la réglementation belge, vous pouvez passer cette colonne par la gauche et par la droite."
+  },
+  {
+    "id": 45,
+    "image": "/examen-blanc/examen-13/q45.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Quel conducteur a priorité lors d’un rétrécissement de la chaussée?",
+    "choix": [
+      "A. Celui qui voit le panneau rouge.",
+      "B. Celui qui voit le panneau bleu."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : Panneau rouge: céder le passage. Panneau bleu: priorité.",
+    "signRef": "B1"
+  },
+  {
+    "id": 46,
+    "image": "/examen-blanc/examen-13/q46.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Lorsque vous stationnez à un endroit où cela est interdit, vous devez allumer vos quatre feux indicateurs de direction.",
+    "choix": [
+      "A. Vrai.",
+      "B. Faux."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : Si vous faites cela, vous commettez une double infraction: le stationnement illégal et l’usage abusif des feux",
+    "needsLegalReview": true
+  },
+  {
+    "id": 47,
+    "image": "/examen-blanc/examen-13/q47.webp",
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Un passage à niveau avec barrières et lumières. Mais les lumières sont éteintes. Êtes-vous autorisé à dépasser un véhicule à gauche?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "Règle applicable : Les lumières sont éteintes, mais il y a des barrières."
+  },
+  {
+    "id": 48,
+    "image": "/examen-blanc/examen-13/q48.webp",
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Il pleut des cordes, mais la visibilité est encore largement suffisante. Le feu de brouillard arrière...",
+    "choix": [
+      "A. ... doit être allumé.",
+      "B. ... doit être allumé dès que la visibilité est insuffisante.",
+      "C. ... ne doit pas être allumé."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : Lors de fortes pluies, le ou les feux de brouillard arrière sont obligatoirement allumés.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Analysez le cas suivant: il pleut des cordes, mais la visibilité est encore largement suffisante. Le feu de brouillard arrière..."
+  },
+  {
+    "id": 49,
+    "image": "/examen-blanc/examen-13/q49.webp",
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Dans cette situation, êtes-vous autorisé à passer ce signal routier en voiture ?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "Règle applicable : Les emblèmes sur le panneau montrent quels usagers peuvent emprunter cette route.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Observez précisément la configuration. Dans cette situation, êtes-vous autorisé à passer ce signal routier en voiture."
+  },
+  {
+    "id": 50,
+    "image": "/examen-blanc/examen-13/q50.webp",
+    "type": "numerique",
+    "gravite": "grave",
+    "question": "* Introduisez un nombre: Vous devez allumer vos feux de croisement du coucher au lever du soleil, ou de jour en cas de pluie, brouillard, neige ou autres circonstances qui limitent la visibilité à (...) mètres.",
+    "choix": [],
+    "reponse": "200",
+    "explication": "Règle applicable : 200 mètres."
+  }
+]

@@ -3,37 +3,53 @@
     "id": 1,
     "type": "oui_non",
     "gravite": "normale",
-    "question": "La moto peut-elle dépasser la moto par la gauche ?",
+    "question": "La moto peut-elle dépasser la moto par la gauche?",
     "choix": [],
     "reponse": "OUI",
-    "explication": "LEÇON 16Le signal routier rond rouge indique qu’il est interdit aux conducteurs de :- dépasser un attelage, ou- dépasser un véhicule ayant plus de deux roues.L’interdiction de dépasser est valable :- jusqu’au prochain carrefour inclus, ou- elle se termine plus tôt si vous rencontrez le panneau de fin d’interdiction.Un automobiliste peut donc dépasser une motocyclette à deux roues.Mais le conducteur de la moto ne peut pas dépasser une voiture, car une voiture a plus de deux roues.",
-    "image": "/examen-blanc/examen-3/q01.jpg"
+    "explication": "Règle applicable : Le signal routier rond rouge indique qu’il est interdit aux conducteurs de:- dépasser un attelage, ou- dépasser un véhicule ayant plus de deux roues.L’interdiction de dépasser est valable:- jusqu’au prochain carrefour inclus, ou- elle se termine plus tôt si vous rencontrez le panneau de fin d’interdiction.Un automobiliste peut donc dépasser une motocyclette à deux roues.Mais le conducteur de la moto ne peut pas dépasser une voiture, car une voiture a plus de deux roues.",
+    "image": "/examen-blanc/examen-3/q01-new.png",
+    "needsNewImage": false
   },
   {
     "id": 2,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Vous êtes en panne sur une autoroute.Quand le conducteur doit-il porter le gilet de sécurité ?",
+    "question": "Vous êtes en panne sur une autoroute.Quand le conducteur doit-il porter le gilet de sécurité?",
     "choix": [
       "A. Toujours.",
       "B. À partir de la tombée de la nuit jusqu’au lever du jour."
     ],
     "reponse": "A",
-    "explication": "LEÇON 4Le conducteur doit porter un gilet fluorescent dès qu’il sort du véhicule.C’est pourquoi le gilet doit se trouver à l’intérieur de l’habitacle (et non dans le coffre).Les passagers ne sont pas obligés de le porter, mais c’est vivement conseillé.",
-    "image": "/examen-blanc/examen-3/q02.jpg"
+    "explication": "Règle applicable : Le conducteur doit porter un gilet fluorescent dès qu’il sort du véhicule.C’est pourquoi le gilet doit se trouver à l’intérieur de l’habitacle (et non dans le coffre).Les passagers ne sont pas obligés de le porter, mais c’est vivement conseillé.",
+    "image": "/examen-blanc/examen-3/q02-new.png",
+    "needsNewImage": false
   },
   {
     "id": 3,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Quel signal de danger indique une montée à forte inclinaison ?",
+    "question": "Quel signal de danger indique une montée à forte inclinaison?",
     "choix": [
-      "A. Signal 1.",
-      "B. Signal 2."
+      "A. Panneau 1.",
+      "B. Panneau 2."
     ],
     "reponse": "A",
-    "explication": "LEÇON 1 – ‘La voie publique’.La signification du deuxième signal routier : descente dangereuse.Les signaux de danger sont placés à une distance approximative de 150 m de l'endroit dangereux, sauf mention contraire sur un panneau bleu placé sous le signal.",
-    "image": "/examen-blanc/examen-3/q03.jpg"
+    "explication": "Règle applicable : La signification du deuxième signal routier: descente dangereuse.Les signaux de danger sont placés à une distance approximative de 150 m de l'endroit dangereux, sauf mention contraire sur un panneau bleu placé sous le signal.",
+    "visualAnnotations": [
+      {
+        "label": "1",
+        "x": 34,
+        "y": 25
+      },
+      {
+        "label": "2",
+        "x": 73,
+        "y": 25
+      }
+    ],
+    "needsNewImage": false,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, quel signal de danger indique une montée à forte inclinaison.",
+    "image": "/examen-blanc/examen-3/q03-new.png"
   },
   {
     "id": 4,
@@ -41,13 +57,16 @@
     "gravite": "normale",
     "question": "Un carrefour sans signalisation.Le conducteur de la voiture blanche s’arrête un instant au carrefour et veut ensuite continuer tout droit. Mais la voiture grise tourne soudain à gauche.",
     "choix": [
-      "A. C’est permis, car la voiture grise vient de droite.",
-      "B. C’est permis, car la voiture blanche s’est arrêtée.",
-      "C. Ce n’est pas permis, car la voiture blanche continue tout droit."
+      "A. C’est permis, car Le véhicule grise vient de droite.",
+      "B. C’est permis, car Le véhicule blanche s’est arrêtée.",
+      "C. Ce n’est pas permis, car Le véhicule blanche continue tout droit."
     ],
     "reponse": "C",
-    "explication": "LEÇON 21Le trafic qui continue tout droit a la priorité sur le trafic qui tourne.Même si le conducteur de la voiture blanche s’arrête un instant, il garde sa priorité.",
-    "image": "/examen-blanc/examen-3/q04.jpg"
+    "explication": "Règle applicable : Le trafic qui continue tout droit a la priorité sur le trafic qui tourne.Même si le conducteur de la voiture blanche s’arrête un instant, il garde sa priorité.",
+    "needsNewImage": false,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Analysez le cas suivant: un carrefour sans signalisation.Le conducteur de la voiture blanche s’arrête un instant au carrefour et veut ensuite continuer tout droit. Mais la voiture grise tourne soudain à gauche.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-3/q04-new.png"
   },
   {
     "id": 5,
@@ -59,197 +78,246 @@
       "B. Circuler, s’arrêter et stationner."
     ],
     "reponse": "B",
-    "explication": "LEÇON 22Une bande de bus ne fait plus partie de la chaussée. Il est donc interdit d’y circuler, de s’y arrêter et d’y stationner. Vous pouvez uniquement l’emprunter quelques mètres avant le carrefour pour tourner à gauche ou à droite.",
-    "image": "/examen-blanc/examen-3/q05.jpg"
+    "explication": "Règle applicable : Une bande de bus ne fait plus partie de la chaussée. Il est donc interdit d’y circuler, de s’y arrêter et d’y stationner. La réglementation autorise à uniquement l’emprunter quelques mètres avant le carrefour pour tourner à gauche ou à droite.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-3/q05-new.png",
+    "needsNewImage": false
   },
   {
     "id": 6,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Je suis sur la bande intérieure d’un rond-point à deux bandes. Que dois-je faire pour en sortir ?",
+    "question": "Je suis sur la bande intérieure d’un rond-point à deux bandes. Que dois-je faire pour en sortir?",
     "choix": [
       "A. M’arrêter et attendre que les voitures sur la bande extérieure soient passées.",
       "B. Passer, j’ai priorité sur les voitures de la bande extérieure.",
       "C. Continuer à tourner jusqu’à ce que la bande extérieure soit libre pour sortir."
     ],
     "reponse": "C",
-    "explication": "LEÇON 19Pour sortir d’un rond-point à deux bandes en étant sur la bande intérieure, vous devez d’abord vous déporter vers la bande extérieure en utilisant votre clignotant droit. Vous devez céder le passage aux véhicules déjà engagés sur la bande extérieure. Si vous n’y parvenez pas à temps, il est plus sûr de faire un tour supplémentaire afin de ne pas bloquer la circulation et d’éviter une situation dangereuse.",
-    "image": "/examen-blanc/examen-3/q06.jpg"
+    "explication": "Règle applicable : Pour sortir d’un rond-point à deux bandes en étant sur la bande intérieure, vous devez d’abord vous déporter vers la bande extérieure en utilisant votre clignotant droit. Vous devez céder le passage aux véhicules déjà engagés sur la bande extérieure. Si vous n’y parvenez pas à temps, il est plus sûr de faire un tour supplémentaire afin de ne pas bloquer la circulation et d’éviter une situation dangereuse.",
+    "needsNewImage": false,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, je suis sur la bande intérieure d’un rond-point à deux bandes. Que dois-je faire pour en sortir.",
+    "image": "/examen-blanc/examen-3/q06-new.png"
   },
   {
     "id": 7,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "La conductrice de cette voiture attend son amie en agglomération.La voiture est-elle bien stationnée ?",
+    "question": "La conductrice de cette voiture attend son amie en agglomération.La voiture est-elle bien stationnée?",
     "choix": [
-      "A. Oui, car la voiture est devant le signal routier.",
-      "B. Non."
+      "A. Oui, car Le véhicule est devant le Panneau routier.",
+      "B. Non, cette action est interdite."
     ],
     "reponse": "A",
-    "explication": "LEÇON 26À cet endroit, cette voiture peut stationner ou s'arrêter sur la chaussée.Attendre quelqu’un, c’est du stationnement.",
-    "image": "/examen-blanc/examen-3/q07.jpg"
+    "explication": "Règle applicable : À cet endroit, cette voiture peut stationner ou s'arrêter sur la chaussée.Attendre quelqu’un, c’est du stationnement.",
+    "needsNewImage": false,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Analysez le cas suivant: la conductrice de cette voiture attend son amie en agglomération.La voiture est-elle bien stationnée.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-3/q07-new.png"
   },
   {
     "id": 8,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Une chaussée qui n’est pas divisée en bandes de circulation.La voiture bleue est-elle correctement stationnée ?",
+    "question": "Une chaussée qui n’est pas divisée en bandes de circulation.La voiture bleue est-elle correctement stationnée?",
     "choix": [
-      "A. Oui.",
-      "B. Non."
+      "A. Oui, cette action est permise.",
+      "B. Non, cette action est interdite."
     ],
     "reponse": "B",
-    "explication": "LEÇON 25Le signal routier bleu indique une rue à sens unique.La voiture bleue est stationnée dans le sens opposé à la circulation.Dans une rue à sens unique, on doit stationner dans le sens de la circulation.",
-    "image": "/examen-blanc/examen-3/q08.jpg"
+    "explication": "Règle applicable : Le signal routier bleu indique une rue à sens unique.La voiture bleue est stationnée dans le sens opposé à la circulation.Dans une rue à sens unique, on doit stationner dans le sens de la circulation.",
+    "needsNewImage": false,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, une chaussée qui n’est pas divisée en bandes de circulation.La voiture bleue est-elle correctement stationnée.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-3/q08-new.png"
   },
   {
     "id": 9,
     "type": "numerique",
     "gravite": "grave",
-    "question": "Introduisez un nombre.Quelle est la vitesse maximale (... km/h) à laquelle ces voitures peuvent rouler à cet endroit dans la région wallonne ?",
+    "question": "Introduisez un nombre.Quelle est la vitesse maximale (... km/h) à laquelle ces voitures peuvent rouler à cet endroit dans la région wallonne?",
     "choix": [],
     "reponse": "90",
-    "explication": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 12 – ‘La vitesse’.La vitesse maximale sur une route ordinaire est…… en Wallonne: 90 km/h;… en Flandre: 70 km/h.",
-    "image": "/examen-blanc/examen-3/q09.jpg"
+    "explication": "Règle applicable : La vitesse maximale sur une route ordinaire est…… en Wallonne: 90 km/h;… en Flandre: 70 km/h.",
+    "needsNewImage": false,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, introduisez un nombre.Quelle est la vitesse maximale (... km/h) à laquelle ces voitures peuvent rouler à cet endroit dans la région wallonne.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-3/q09-new.png"
   },
   {
     "id": 10,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Le signal d’indication indique qu’il s’agit d’une rue à sens unique.Mais à quoi se rapporte le signal d’interdiction ?",
+    "question": "Le signal d’indication indique qu’il s’agit d’une rue à sens unique.Mais à quoi se rapporte le signal d’interdiction?",
     "choix": [
       "A. La Masse Maximale Autorisée (M.M.A.).",
       "B. La Masse en Charge (M.E.C.)."
     ],
     "reponse": "B",
-    "explication": "LEÇON 9Interdiction d’accès aux conducteurs de véhicules dont la masse en charge est supérieure à celle indiquée sur le signal routier.",
-    "image": "/examen-blanc/examen-3/q10.jpg"
+    "explication": "Règle applicable : Interdiction d’accès aux conducteurs de véhicules dont la masse en charge est supérieure à celle indiquée sur le signal routier.",
+    "needsNewImage": false,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Analysez le cas suivant: le signal d’indication indique qu’il s’agit d’une rue à sens unique.Mais à quoi se rapporte le signal d’interdiction.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-3/q10-new.png"
   },
   {
     "id": 11,
     "type": "oui_non",
     "gravite": "grave",
-    "question": "La voiture rouge peut-elle s'engager dans le carrefour ?",
+    "question": "La voiture rouge peut-elle s'engager dans le carrefour?",
     "choix": [],
     "reponse": "NON",
-    "explication": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 17Lorsqu'un agent tend un bras ou les deux bras horizontalement : Les usagers qui se dirigent vers son ventre ou son dos doivent s'arrêter. Ceux qui approchent de son côté (ou de la main tendue) peuvent s'engager dans le carrefour pour continuer tout droit ou tourner à gauche ou à droite. Un agent qui tend les deux bras horizontalement donne la même injonction que s'il tend un seul bras horizontalement.",
-    "image": "/examen-blanc/examen-3/q11.jpg"
+    "explication": "Règle applicable : Lorsqu'un agent tend un bras ou les deux bras horizontalement: Les usagers qui se dirigent vers son ventre ou son dos doivent s'arrêter. Ceux qui approchent de son côté (ou de la main tendue) peuvent s'engager dans le carrefour pour continuer tout droit ou tourner à gauche ou à droite. Un agent qui tend les deux bras horizontalement donne la même injonction que s'il tend un seul bras horizontalement.",
+    "needsNewImage": false,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, la voiture rouge peut-elle s'engager dans le carrefour.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-3/q11-new.png"
   },
   {
     "id": 12,
     "type": "oui_non",
     "gravite": "grave",
-    "question": "Pouvez-vous franchir ce signal routier en voiture ?",
+    "question": "Dans cette situation, êtes-vous autorisé à franchir ce signal routier en voiture ?",
     "choix": [],
     "reponse": "NON",
-    "explication": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 23 – ‘Sens interdits’.Sens interdit pour tout conducteur.Sauf pour les vélos et les vélos électriques (pedelecs) et cyclomoteurs classe A.Signal d’interdiction.",
-    "image": "/examen-blanc/examen-3/q12.jpg"
+    "explication": "Règle applicable : Sens interdit pour tout conducteur.Sauf pour les vélos et les vélos électriques (pedelecs) et cyclomoteurs classe A.Signal d’interdiction.",
+    "needsNewImage": false,
+    "imageBrief": "Afficher le signal belge officiel C3, isolé et parfaitement lisible. Conserver strictement sa forme, ses couleurs et son symbole réglementaires.",
+    "signRef": "C3",
+    "image": "/examen-blanc/examen-3/q12-new.png"
   },
   {
     "id": 13,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Où trouvez-vous la norme EURO de votre voiture ?",
+    "question": "Où trouvez-vous la norme EURO de votre voiture?",
     "choix": [
-      "A. Dans la porte droite de la voiture.",
+      "A. Dans la porte droite de Le véhicule.",
       "B. Sur la facture d’achat.",
       "C. Sur le certificat d’immatriculation."
     ],
     "reponse": "C",
-    "explication": "LEÇON 31La norme EURO se trouve sur le certificat d’immatriculation du véhicule. Plus la norme est élevée, plus la voiture est respectueuse de l’environnement.Pour la trouver, consultez la case V9 de votre certificat d’immatriculation (carte grise). Pour une voiture d’occasion, elle figure aussi sur le Car-Pass.",
-    "image": "/examen-blanc/examen-3/q13.jpg"
+    "explication": "Règle applicable : La norme EURO se trouve sur le certificat d’immatriculation du véhicule. Plus la norme est élevée, plus la voiture est respectueuse de l’environnement.Pour la trouver, consultez la case V9 de votre certificat d’immatriculation (carte grise). Pour une voiture d’occasion, elle figure aussi sur le Car-Pass.",
+    "image": "/examen-blanc/examen-3/q13-new.png",
+    "needsNewImage": false
   },
   {
     "id": 14,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Qui peut s'engager en premier dans ce carrefour ?",
+    "question": "Tenez compte de toute la signalisation. Dans quel ordre les véhicules peuvent-ils franchir cette intersection ?",
     "choix": [
       "A. Voiture A.",
       "B. Voiture B."
     ],
     "reponse": "B",
-    "explication": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Le signal routier à côté de la voiture B indique que le conducteur a la priorité à ce carrefour.",
-    "image": "/examen-blanc/examen-3/q14.jpg"
+    "explication": "Règle applicable : Le signal routier à côté de la voiture B indique que le conducteur a la priorité à ce carrefour.",
+    "needsNewImage": false,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Tenez compte de toute la signalisation. Dans quel ordre les véhicules peuvent-ils franchir cette intersection.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-3/q14-new.png",
+    "imageWidth": 1448,
+    "imageHeight": 1086,
+    "visualAnnotations": [
+      { "label": "A", "x": 18, "y": 41 },
+      { "label": "B", "x": 59, "y": 68 }
+    ]
   },
   {
     "id": 15,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "De quel type de signal s’agit-il ?",
+    "question": "De quel type de signal s’agit-il?",
     "choix": [
-      "A. Un signal de danger.",
-      "B. Un signal d’indication.",
-      "C. Un signal qui concerne les véhicules sur rails."
+      "A. Un Panneau de danger.",
+      "B. Un Panneau d’indication.",
+      "C. Un Panneau qui concerne les véhicules sur rails."
     ],
     "reponse": "A",
-    "explication": "LEÇON 22 – ‘Train – tram -autobus’.Signal de danger : un passage à niveau à deux ou plusieurs voies.",
-    "image": "/examen-blanc/examen-3/q15.jpg"
+    "explication": "Règle applicable : Signal de danger: un passage à niveau à deux ou plusieurs voies.",
+    "needsNewImage": false,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, de quel type de signal s’agit-il.",
+    "image": "/examen-blanc/examen-3/q15-new.png"
   },
   {
     "id": 16,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Deux voitures veulent se croiser sur un chemin de terre. Quelle est la distance latérale minimale réglementaire ?",
+    "question": "Deux voitures veulent se croiser sur un chemin de terre. Quelle est la distance latérale minimale réglementaire?",
     "choix": [
       "A. 1 mètre.",
       "B. 1,5 mètre.",
       "C. Suffisamment de distance."
     ],
     "reponse": "C",
-    "explication": "LEÇON 14 – ‘Le croisement des véhicules’.Le code de la route ne définit pas « combien » cela doit être.Il mentionne : « suffisamment de distance ».On doit donc adapter sa vitesse pour se croiser sans se toucher.Attention, si c’était un vélo ou un cyclomoteur, la réponse aurait été A en agglomération et B hors agglomération. Si la distance ne peut être respectée, la voiture doit s’arrêter mais le cycliste ou le cyclomoteur peut continuer, car lui doit respecter « C »",
-    "image": "/examen-blanc/examen-3/q16.jpg"
+    "explication": "Règle applicable : Le code de la route ne définit pas « combien » cela est obligatoirement.Il mentionne: « suffisamment de distance ».On doit donc adapter sa vitesse pour se croiser sans se toucher.Attention, si c’était un vélo ou un cyclomoteur, la réponse aurait été A en agglomération et B hors agglomération. Si la distance ne peut être respectée, la voiture doit s’arrêter mais le cycliste ou le cyclomoteur peut continuer, car lui doit respecter « C »",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-3/q16-new.png",
+    "needsNewImage": false
   },
   {
     "id": 17,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Comment s’appelle la partie de la voie publique où vous voyez le point d’interrogation ?",
+    "question": "Comment s’appelle la partie de la voie publique où vous voyez le point d’interrogation?",
     "choix": [
       "A. La voie publique.",
       "B. La bande de circulation.",
       "C. La chaussée."
     ],
     "reponse": "C",
-    "explication": "LEÇON 1 – ‘La voie publique’.La chaussée est une partie de la voie publique.Le code de la route s’applique sur la voie publique.",
-    "image": "/examen-blanc/examen-3/q17.jpg"
+    "explication": "Règle applicable : La chaussée est une partie de la voie publique.Le code de la route s’applique sur la voie publique.",
+    "image": "/examen-blanc/examen-3/q17-new.png",
+    "needsNewImage": false
   },
   {
     "id": 18,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Qui doit céder le passage ?",
+    "question": "Quel conducteur est tenu de laisser passer l'autre ?",
     "choix": [
       "A. Voiture A.",
       "B. Voiture B."
     ],
     "reponse": "B",
-    "explication": "LEÇON 19 – ‘Une intersection et les signaux routiers’.A droite du véhicule B est un signal routier qui indique que le conducteur doit donner la priorité.",
-    "image": "/examen-blanc/examen-3/q18.jpg"
+    "explication": "Règle applicable : A droite du véhicule B est un signal routier qui indique que le conducteur doit donner la priorité.",
+    "signRef": "B1",
+    "image": "/examen-blanc/examen-3/q18-new.png",
+    "imageWidth": 1448,
+    "imageHeight": 1086,
+    "visualAnnotations": [
+      { "label": "A", "x": 5, "y": 47 },
+      { "label": "B", "x": 72, "y": 61 }
+    ],
+    "needsNewImage": false
   },
   {
     "id": 19,
     "type": "oui_non",
     "gravite": "normale",
-    "question": "Peut-on dépasser un cycliste par la gauche avec une voiture sur un dispositif surélevé ?",
+    "question": "Le Code de la route permet-il de dépasser un cycliste par la gauche avec une voiture sur un dispositif surélevé ?",
     "choix": [],
     "reponse": "OUI",
-    "explication": "Depuis des années, on a le droit de dépasser par la droite un cycliste qui s'apprête à tourner à gauche.Depuis 2023, le dépassement d'un cycliste par la gauche est également autorisé.",
-    "image": "/examen-blanc/examen-3/q19.jpg"
+    "explication": "Règle applicable : Depuis des années, on a le droit de dépasser par la droite un cycliste qui s'apprête à tourner à gauche.Depuis 2023, le dépassement d'un cycliste par la gauche est également autorisé.",
+    "image": "/examen-blanc/examen-3/q19-new.png",
+    "needsNewImage": false
   },
   {
     "id": 20,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Que peut faire le conducteur de cette voiture à cet endroit ?",
+    "question": "Que peut faire le conducteur de cette voiture à cet endroit?",
     "choix": [
       "A. Il ne peut ni s’arrêter ni stationner.",
       "B. Il ne peut pas stationner, mais peut s’arrêter.",
       "C. Il peut stationner et s’arrêter."
     ],
     "reponse": "B",
-    "explication": "LEÇON 26Il est interdit de stationner, mais autorisé de s’arrêter,dans les 15 mètres avant et aprèsun signal indiquant un arrêt de bus, de trolleybus ou de tram.",
-    "image": "/examen-blanc/examen-3/q20.jpg"
+    "explication": "Règle applicable : la règle interdit de stationner, mais autorisé de s’arrêter,dans les 15 mètres avant et aprèsun signal indiquant un arrêt de bus, de trolleybus ou de tram.",
+    "needsNewImage": false,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, que peut faire le conducteur de cette voiture à cet endroit.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-3/q20-new.png"
   },
   {
     "id": 21,
@@ -261,58 +329,69 @@
       "B. Tous les conducteurs."
     ],
     "reponse": "B",
-    "explication": "LEÇON 19Le signal de priorité indique que vous devez céder le passage aux conducteurs circulant sur la chaussée transversale.Si nécessaire, vous vous arrêtez devant les triangles inversés tracés sur la chaussée, appelés aussi « dents de requin ».",
-    "image": "/examen-blanc/examen-3/q21.jpg"
+    "explication": "Règle applicable : Le signal de priorité indique que vous devez céder le passage aux conducteurs circulant sur la chaussée transversale.Si nécessaire, vous vous arrêtez devant les triangles inversés tracés sur la chaussée, appelés aussi « dents de requin ».",
+    "needsNewImage": false,
+    "imageBrief": "Afficher le signal belge officiel B1, isolé et parfaitement lisible. Conserver strictement sa forme, ses couleurs et son symbole réglementaires.",
+    "signRef": "B1",
+    "image": "/examen-blanc/examen-3/q21-new.png"
   },
   {
     "id": 22,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Celui qui pousse un cyclomoteur est un ...",
+    "question": "Celui qui pousse un cyclomoteur est un...",
     "choix": [
       "A. ... piéton.",
       "B. ... conducteur."
     ],
     "reponse": "A",
-    "explication": "LEÇON 7 – ‘Les piétons’.Qui pousse un cyclomoteur est un piéton.Il devrait se déplacer sur le trottoir.Qui pousse une moto ou une voiture, est un conducteur.8.1. Tout véhicule ou train de véhicules en mouvement doit avoir un conducteur.Le cyclomoteur à deux roues non monté n'est pas considéré comme véhicule (idem pour un vélo mais pas Celui qui pousse un cyclomoteur est un piéton.Il doit se déplacer sur le trottoir.Celui qui pousse une moto ou une voiture, est un conducteur.pour une moto).Il en découle que quand on pousse un cyclomoteur ou un vélo, on demeure piéton (et on circule sur le trottoir) alors qu'on est conducteur quand on pousse une moto (et on circule sur la chaussée)",
-    "image": "/examen-blanc/examen-3/q22.jpg"
+    "explication": "Règle applicable : Qui pousse un cyclomoteur est un piéton.Il devrait se déplacer sur le trottoir.Qui pousse une moto ou une voiture, est un conducteur.8.1. Tout véhicule ou train de véhicules en mouvement doit avoir un conducteur.Le cyclomoteur à deux roues non monté n'est pas considéré comme véhicule (idem pour un vélo mais pas Celui qui pousse un cyclomoteur est un piéton.Il doit se déplacer sur le trottoir.Celui qui pousse une moto ou une voiture, est un conducteur.pour une moto).Il en découle que quand on pousse un cyclomoteur ou un vélo, on demeure piéton (et on circule sur le trottoir) alors qu'on est conducteur quand on pousse une moto (et on circule sur la chaussée)",
+    "image": "/examen-blanc/examen-3/q22-new.png",
+    "needsNewImage": false
   },
   {
     "id": 23,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Vous conduisez et plusieurs passagers sont dans la voiture.Pouvez-vous, en tant que conducteur, les obliger à mettre la ceinture de sécurité ?",
+    "question": "Vous conduisez et plusieurs passagers sont dans la voiture.Pouvez-vous, en tant que conducteur, les obliger à mettre la ceinture de sécurité?",
     "choix": [
       "A. Non, vous ne pouvez pas.",
-      "B. Oui, vous devez le faire."
+      "B. Oui, Il faut le faire."
     ],
     "reponse": "B",
-    "explication": "LEÇON 10Tout le monde doit porter la ceinture de sécurité dans la voiture ou être installé dans un siège pour enfants adapté.",
-    "image": "/examen-blanc/examen-3/q23.jpg"
+    "explication": "Règle applicable : Tout le monde doit porter la ceinture de sécurité dans la voiture ou être installé dans un siège pour enfants adapté.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-3/q23-new.png",
+    "needsNewImage": false
   },
   {
     "id": 24,
     "type": "oui_non",
     "gravite": "normale",
-    "question": "Vous avez garé votre voiture.Pouvez-vous envoyer un message avec votre téléphone portable ?",
+    "question": "Vous avez garé votre voiture.Pouvez-vous envoyer un message avec votre téléphone portable?",
     "choix": [],
     "reponse": "OUI",
-    "explication": "",
-    "image": "/examen-blanc/examen-3/q24.jpg"
+    "explication": "La réponse OUI correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-3/q24-new.png",
+    "needsNewImage": false
   },
   {
     "id": 25,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Cette fille a 14 ans. Il n’y a pas de piste cyclable.Peut-elle rouler sur le trottoir ?",
+    "question": "Cette fille a 14 ans. Il n’y a pas de piste cyclable.Peut-elle rouler sur le trottoir?",
     "choix": [
       "A. Oui, uniquement en agglomération.",
       "B. Oui, uniquement hors agglomération.",
       "C. Jamais."
     ],
     "reponse": "B",
-    "explication": "LEÇON 3Lorsqu’il existe une piste cyclable, le cycliste est obligé de l’emprunter (sauf si elle est impraticable).Il est interdit de circuler sur le trottoir à vélo en agglomération, sauf pour les enfants de moins de 10 ans, qui peuvent toujours rouler sur le trottoir ou sur la berme surélevée.Hors agglomération, les cyclistes peuvent, s’il n’existe pas de piste cyclable praticable et à condition de rouler à droite dans le sens de la circulation, circuler sur le trottoir ou sur la berme surélevée.",
-    "image": "/examen-blanc/examen-3/q25.jpg"
+    "explication": "Règle applicable : Lorsqu’il existe une piste cyclable, le cycliste est obligé de l’emprunter (sauf si elle est impraticable).la règle interdit de circuler sur le trottoir à vélo en agglomération, sauf pour les enfants de moins de 10 ans, qui peuvent toujours rouler sur le trottoir ou sur la berme surélevée.Hors agglomération, les cyclistes peuvent, s’il n’existe pas de piste cyclable praticable et à condition de rouler à droite dans le sens de la circulation, circuler sur le trottoir ou sur la berme surélevée.",
+    "needsNewImage": false,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Analysez le cas suivant: cette fille a 14 ans. Il n’y a pas de piste cyclable.Peut-elle rouler sur le trottoir.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-3/q25-new.png"
   },
   {
     "id": 26,
@@ -324,21 +403,27 @@
       "B. Faux."
     ],
     "reponse": "B",
-    "explication": "LEÇON 20 – ‘La priorité de droite’.Le panneau de signalisation indique que vous avez priorité.",
-    "image": "/examen-blanc/examen-3/q26.jpg"
+    "explication": "Règle applicable : Le signal de signalisation indique que vous avez priorité.",
+    "needsNewImage": false,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, la priorité de droite s'applique dans ce carrefour.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-3/q26-new.png"
   },
   {
     "id": 27,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Vous avez le permis de conduire provisoire B.Vous franchissez ce panneau à 48 km/h. Quelles sont les conséquences ?",
+    "question": "Vous avez le permis de conduire provisoire B.Vous franchissez ce panneau à 48 km/h. Quelles sont les conséquences?",
     "choix": [
       "A. Vous devrez payer une amende.",
       "B. Le juge vous condamnera probablement à repasser votre examen théorique et pratique."
     ],
     "reponse": "A",
-    "explication": "LEÇON 6 – ‘Endroits particuliers’.La limite était de 30 km/h. Vous êtes 18 km/h au-dessus de la limite. C’est plus de 30 km/h en agglomération.Conseil d’examen : lisez très bien dans la leçon la différence entre un retrait immédiat, une interdiction temporaire et une déchéance du droit de conduire un véhicule à moteur (leçon 12).",
-    "image": "/examen-blanc/examen-3/q27.jpg"
+    "explication": "Règle applicable : La limite était de 30 km/h. Vous êtes 18 km/h au-dessus de la limite. C’est plus de 30 km/h en agglomération.Conseil d’examen: lisez très bien dans la leçon la différence entre un retrait immédiat, une interdiction temporaire et une déchéance du droit de conduire un véhicule à moteur ().",
+    "needsNewImage": false,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, vous avez le permis de conduire provisoire B.Vous franchissez ce panneau à 48 km/h. Quelles sont les conséquences.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-3/q27-new.png"
   },
   {
     "id": 28,
@@ -350,8 +435,10 @@
       "B. Faux."
     ],
     "reponse": "A",
-    "explication": "LEÇON 18 – ‘les feux de circulation’.Il y a densité et donc choix de la file.",
-    "image": "/examen-blanc/examen-3/q28.jpg"
+    "explication": "Règle applicable : Il y a densité et donc choix de la file.",
+    "needsNewImage": false,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Analysez le cas suivant: je circule à mon retour du travail sur cette voirie. Le trafic est dense et il y a 3 flèches au dessus des bandes de circulation.Je peux choisir ma bande de circulation.",
+    "image": "/examen-blanc/examen-3/q28-new.png"
   },
   {
     "id": 29,
@@ -364,8 +451,11 @@
       "C. 1 mètre."
     ],
     "reponse": "C",
-    "explication": "LEÇON 10Une charge peut dépasser à l’arrière du véhicule de maximum 1 mètre.Si tu dois transporter une charge indivisible ou qui ne peut pas être raccourcie ou repliée, elle peut dépasser jusqu’à 3 mètres à l’arrière, à condition d’y placer un panneau de signalisation.",
-    "image": "/examen-blanc/examen-3/q29.jpg"
+    "explication": "Règle applicable : Une charge peut dépasser à l’arrière du véhicule de maximum 1 mètre.Si tu dois transporter une charge indivisible ou qui ne peut pas être raccourcie ou repliée, elle peut dépasser jusqu’à 3 mètres à l’arrière, à condition d’y placer un panneau de signalisation.",
+    "needsNewImage": false,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, jusqu’à quelle distance ce tube peut-il dépasser à l’arrière du véhicule.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-3/q29-new.png"
   },
   {
     "id": 30,
@@ -377,22 +467,26 @@
       "B. Faux."
     ],
     "reponse": "B",
-    "explication": "LEÇON 6 – ‘Endroits particuliers’.Le signal routier jaune à bord rouge indique seulement la frontière administrative d’une commune et n’a aucune signification au niveau du code de la route.",
-    "image": "/examen-blanc/examen-3/q30.jpg"
+    "explication": "Règle applicable : Le signal routier jaune à bord rouge indique seulement la frontière administrative d’une commune et n’a aucune signification au niveau du code de la route.",
+    "needsNewImage": false,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, ce signal routier indique le commencement d’une agglomération.",
+    "image": "/examen-blanc/examen-3/q30-new.png"
   },
   {
     "id": 31,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "La voiture devant vous roule à 90 km/h. La route est sèche.À combien s’élève la distance de sécurité ?",
+    "question": "La voiture devant vous roule à 90 km/h. La route est sèche.À combien s’élève la distance de sécurité?",
     "choix": [
       "A. 45 mètres.",
       "B. 55 mètres.",
       "C. 65 mètres."
     ],
     "reponse": "A",
-    "explication": "LEÇON 13 – ‘La distance d’arrêt’.Avec une formule simple, vous pouvez calculer cette distance : la vitesse à laquelle vous roulez, divisé par deux.",
-    "image": "/examen-blanc/examen-3/q31.jpg"
+    "explication": "Règle applicable : arrêt’.Avec une formule simple, vous pouvez calculer cette distance: la vitesse à laquelle vous roulez, divisé par deux.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-3/q31-new.png",
+    "needsNewImage": false
   },
   {
     "id": 32,
@@ -404,8 +498,9 @@
       "B. ... un piéton."
     ],
     "reponse": "A",
-    "explication": "LEÇON 8 – ‘Les conducteurs’.Quelqu’un qui mène ou surveille des animaux de trait, de charge ou de montre sur la voie publique est un conducteur.",
-    "image": "/examen-blanc/examen-3/q32.jpg"
+    "explication": "Règle applicable : Quelqu’un qui mène ou surveille des animaux de trait, de charge ou de montre sur la voie publique est un conducteur.",
+    "image": "/examen-blanc/examen-3/q32-new.png",
+    "needsNewImage": false
   },
   {
     "id": 33,
@@ -414,8 +509,10 @@
     "question": "Introduisez un nombre:Les enfants d'une taille supérieure à (...) cm ne doivent pas être transportés dans un siège-enfant spécial.",
     "choix": [],
     "reponse": "135",
-    "explication": "LEÇON 10 – ‘Chargement de véhicules’.Les enfants d'une taille supérieure à (...) cm ne doivent pas être transportés dans un siège-enfant adapté.",
-    "image": "/examen-blanc/examen-3/q33.jpg"
+    "explication": "Règle applicable : Les enfants d'une taille supérieure à (...) cm ne doivent pas être transportés dans un siège-enfant adapté.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-3/q33-new.png",
+    "needsNewImage": false
   },
   {
     "id": 34,
@@ -424,151 +521,179 @@
     "question": "Introduisez un nombre.Sur une route ordinaire, un triangle de danger doit être placé à (…) mètres derrière le véhicule.",
     "choix": [],
     "reponse": "30",
-    "explication": "LEÇON 29 – ‘Accident’.Route ordinaire : à une distance d’au moins 30 mètres de l’accident.Autoroute : à une distance d’au moins 100 mètres.Il doit être visible à une distance de 50 mètres.",
-    "image": "/examen-blanc/examen-3/q34.jpg"
+    "explication": "Règle applicable : Route ordinaire: à une distance d’au moins 30 mètres de l’accident.Autoroute: à une distance d’au moins 100 mètres.Il est obligatoirement visible à une distance de 50 mètres.",
+    "image": "/examen-blanc/examen-3/q34-new.png",
+    "needsNewImage": false
   },
   {
     "id": 35,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Tu as garé ta voiture dans une rue et tu passes la nuit chez tes grands-parents.Le lendemain matin, tu veux repartir, mais la rue est devenue une rue scolaire.Peux-tu encore partir ?",
+    "question": "Tu as garé ta voiture dans une rue et tu passes la nuit chez tes grands-parents.Le lendemain matin, tu veux repartir, mais la rue est devenue une rue scolaire.Peux-tu encore partir?",
     "choix": [
       "A. Oui, mais au pas.",
-      "B. Non."
+      "B. Non, cette action est interdite."
     ],
     "reponse": "A",
-    "explication": "Pour réduire l’affluence au début et à la fin de la journée scolaire, une rue proche d’une école peut être fermée deux fois par jour à la circulation des véhicules motorisés. Dans ce cas, elle devient une rue scolaire.La fermeture se fait à l’aide d’un signal routier C3 (accès interdit) complété par un panneau portant la mention RUE SCOLAIRE.Qui peut entrer dans une rue scolaire ?– Les piétons, cyclistes et speed pedelecs.– Les habitants de la rue ou les conducteurs ayant un garage dans cette rue (avec permis d’accès).– Les véhicules prioritaires.– Les véhicules disposant d’une autorisation spéciale.",
-    "image": "/examen-blanc/examen-3/q35.jpg"
+    "explication": "Règle applicable : Pour réduire l’affluence au début et à la fin de la journée scolaire, une rue proche d’une école peut être fermée deux fois par jour à la circulation des véhicules motorisés. Dans ce cas, elle devient une rue scolaire.La fermeture se fait à l’aide d’un signal routier C3 (accès interdit) complété par un panneau portant la mention RUE SCOLAIRE.Qui peut entrer dans une rue scolaire?– Les piétons, cyclistes et speed pedelecs.– Les habitants de la rue ou les conducteurs ayant un garage dans cette rue (avec permis d’accès).– Les véhicules prioritaires.– Les véhicules disposant d’une autorisation spéciale.",
+    "signRef": "C3",
+    "image": "/examen-blanc/examen-3/q35-new.png",
+    "needsNewImage": false
   },
   {
     "id": 36,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Lors d’un contrôle, la police demande le certificat d’immatriculation du véhicule.Sous quelle forme ce document doit-il être présenté ?",
+    "question": "Lors d’un contrôle, la police demande le certificat d’immatriculation du véhicule.Sous quelle forme ce document doit-il être présenté?",
     "choix": [
       "A. L’original.",
-      "B: L'original ou une copie en couleur.",
+      "B. L'original ou une copie en couleur.",
       "C. Une copie suffit, à condition de se présenter ultérieurement avec l’original."
     ],
     "reponse": "A",
-    "explication": "LEÇON 9Doivent se trouver dans le véhicule :- Certificat d’immatriculation (original)- Certificat de conformité (original)- Attestation d’assurance (original, copie ou version numérique sur smartphone)- Certificat de contrôle technique (original), dès que le véhicule a 4 ans",
-    "image": "/examen-blanc/examen-3/q36.jpg"
+    "explication": "Règle applicable : Doivent se trouver dans le véhicule:- Certificat d’immatriculation (original)- Certificat de conformité (original)- Attestation d’assurance (original, copie ou version numérique sur smartphone)- Certificat de contrôle technique (original), dès que le véhicule a 4 ans",
+    "needsNewImage": false,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, lors d’un contrôle, la police demande le certificat d’immatriculation du véhicule.Sous quelle forme ce document doit-il être présenté.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-3/q36-new.png"
   },
   {
     "id": 37,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Quelle est la vitesse maximale autorisée sur un dispositif surélevé à l’intérieur d’une agglomération dans la Région de Bruxelles-Capitale ?",
+    "question": "Quelle est la vitesse maximale autorisée sur un dispositif surélevé à l’intérieur d’une agglomération dans la Région de Bruxelles-Capitale?",
     "choix": [
       "A. 20 km/h.",
       "B. 30 km/h.",
       "C. 50 km/h."
     ],
     "reponse": "B",
-    "explication": "LEÇON 12Dans tout le pays, la vitesse maximale autorisée sur un dispositif surélevé est de 30 km/h, à condition qu’il soit signalé réglementairement.",
-    "image": "/examen-blanc/examen-3/q37.jpg"
+    "explication": "Règle applicable : Dans tout le pays, la vitesse maximale autorisée sur un dispositif surélevé est de 30 km/h, à condition qu’il soit signalé réglementairement.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-3/q37-new.png",
+    "needsNewImage": false
   },
   {
     "id": 38,
     "type": "oui_non",
     "gravite": "normale",
-    "question": "Des voitures peuvent-elles arriver du sens inverse ?",
+    "question": "Des voitures peuvent-elles arriver du sens inverse?",
     "choix": [],
     "reponse": "OUI",
-    "explication": "LEÇON 23 – ‘Sens interdits’.Sens interdit pour tout conducteur.Signal d’interdiction.",
-    "image": "/examen-blanc/examen-3/q38.jpg"
+    "explication": "Règle applicable : Sens interdit pour tout conducteur.Signal d’interdiction.",
+    "signRef": "C3",
+    "image": "/examen-blanc/examen-3/q38-new.png",
+    "needsNewImage": false
   },
   {
     "id": 39,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Que signifie ce signal de danger ?",
+    "question": "Quel danger précis ce panneau annonce-t-il ?",
     "choix": [
       "A. Passage à niveau.",
       "B. Passage à niveau avec barrières.",
       "C. Passage à niveau fermé."
     ],
     "reponse": "B",
-    "explication": "LEÇON 22 – ‘Train – tram -autobus’.Signal de danger : passage à niveau avec barrières.",
-    "image": "/examen-blanc/examen-3/q39.jpg"
+    "explication": "Règle applicable : Signal de danger: passage à niveau avec barrières.",
+    "needsNewImage": false,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Quel danger précis ce panneau annonce-t-il.",
+    "image": "/examen-blanc/examen-3/q39-new.png"
   },
   {
     "id": 40,
     "type": "choix_multiple",
     "gravite": "grave",
-    "question": "Qui peut s'engager dans le carrefour ?",
+    "question": "Qui peut s'engager dans le carrefour?",
     "choix": [
-      "A. La voiture bleue.",
-      "B. La voiture brune.",
-      "C. Ni la voiture bleue ni la voiture brune."
+      "A. Le véhicule bleue.",
+      "B. Le véhicule brune.",
+      "C. Ni Le véhicule bleue ni Le véhicule brune."
     ],
     "reponse": "B",
-    "explication": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 17Lorsqu'un agent tend un bras ou les deux bras horizontalement : Les usagers qui se dirigent vers son ventre ou son dos doivent s'arrêter. Ceux qui approchent de son côté (ou de la main tendue) peuvent s'engager dans le carrefour pour continuer tout droit ou tourner à gauche ou à droite. Un agent qui tend les deux bras horizontalement donne la même injonction que s'il tend un seul bras horizontalement.Les voitures bleue et vertes se dirigent vers le coté de l’agent.",
-    "image": "/examen-blanc/examen-3/q40.jpg"
+    "explication": "Règle applicable : Lorsqu'un agent tend un bras ou les deux bras horizontalement: Les usagers qui se dirigent vers son ventre ou son dos doivent s'arrêter. Ceux qui approchent de son côté (ou de la main tendue) peuvent s'engager dans le carrefour pour continuer tout droit ou tourner à gauche ou à droite. Un agent qui tend les deux bras horizontalement donne la même injonction que s'il tend un seul bras horizontalement.Les voitures bleue et vertes se dirigent vers le coté de l’agent.",
+    "needsNewImage": false,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Analysez le cas suivant: qui peut s'engager dans le carrefour.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-3/q40-new.png"
   },
   {
     "id": 41,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Que pouvez-vous faire sous ce pont ?",
+    "question": "Que pouvez-vous faire sous ce pont?",
     "choix": [
       "A. Vous arrêter et stationner sur la chaussée.",
       "B. Vous arrêter et stationner sur l’accotement.",
       "C. Ni vous arrêter ni stationner."
     ],
     "reponse": "C",
-    "explication": "LEÇON 26Sous un pont, il est interdit de s’arrêter et de stationner sur la chaussée, mais c’est permis sur l’accotement s’il existe.Devant ce pont, un signal routier interdit cependant tout arrêt et stationnement de ce côté, aussi bien sur la chaussée que sur l’accotement.",
-    "image": "/examen-blanc/examen-3/q41.jpg"
+    "explication": "Règle applicable : Sous un pont, la règle interdit de s’arrêter et de stationner sur la chaussée, mais c’est permis sur l’accotement s’il existe.Devant ce pont, un signal routier interdit cependant tout arrêt et stationnement de ce côté, aussi bien sur la chaussée que sur l’accotement.",
+    "needsNewImage": false,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, que pouvez-vous faire sous ce pont.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-3/q41-new.png"
   },
   {
     "id": 42,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Que signifie ce signal routier ?",
+    "question": "Quelle règle ce signal impose-t-il aux usagers ?",
     "choix": [
       "A. Descente dangereuse.",
       "B. Montée à forte inclinaison."
     ],
     "reponse": "A",
-    "explication": "LEÇON 1 – ‘La voie publique’.Le signal avec un % vers le bas: descente dangereuse.C'est un signal de danger.Pour info, le pourcentage indique qu’on descend de 10m de haut sur une distance de 100m (on ne vous interroge pas sur cet aspect).",
-    "image": "/examen-blanc/examen-3/q42.jpg"
+    "explication": "Règle applicable : Le signal avec un % vers le bas: descente dangereuse.C'est un signal de danger.Pour info, le pourcentage indique qu’on descend de 10m de haut sur une distance de 100m (on ne vous interroge pas sur cet aspect).",
+    "needsNewImage": false,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Observez précisément la configuration. Quelle règle ce signal impose-t-il aux usagers.",
+    "image": "/examen-blanc/examen-3/q42-new.png"
   },
   {
     "id": 43,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Quel signal routier rencontres-tu lorsque tu t’engages sur la chaussée d’une autoroute par une bretelle d’accès ?",
+    "question": "Lorsque vous vous engagez sur une autoroute par une bretelle d’accès, quel signal visible vous oblige à céder le passage aux conducteurs qui circulent déjà sur l’autoroute?",
     "choix": [
-      "A. Signal 1.",
-      "B. Signal 2.",
-      "C. Signal 3."
+      "A. Le panneau bleu indiquant le début de l’autoroute.",
+      "B. Le triangle inversé « Cédez le passage »."
     ],
-    "reponse": "C",
-    "explication": "LEÇON 4- Le signal 1 indique le début d’une autoroute.- Le signal 2 indique le début d’une route pour automobiles.- Le signal 3 est placé lorsque tu arrives sur l’autoroute par une bretelle d’accès.- Ce signal signifie que tu dois céder la priorité aux véhicules circulant déjà sur l’autoroute.- Si nécessaire, tu dois t’arrêter et attendre sur la bretelle d’accès avant de t’insérer.",
-    "image": "/examen-blanc/examen-3/q43.jpg"
+    "reponse": "B",
+    "explication": "Le triangle inversé « Cédez le passage » impose au conducteur qui emprunte la bretelle de céder le passage aux conducteurs circulant déjà sur l’autoroute. Le panneau bleu indique le début de l’autoroute, mais ne donne pas la priorité au conducteur qui s’insère.",
+    "needsNewImage": false,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Analysez le cas suivant: quel signal routier rencontres-tu lorsque tu t’engages sur la chaussée d’une autoroute par une bretelle d’accès.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-3/q43-new.png"
   },
   {
     "id": 44,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Cette fille a 12 ans et mesure 1,45 mètre.Elle est assise à l’arrière de la voiture et porte la ceinture de sécurité.Est-ce correct ?",
+    "question": "Cette fille a 12 ans et mesure 1,45 mètre.Elle est assise à l’arrière de la voiture et porte la ceinture de sécurité.Est-ce correct?",
     "choix": [
       "A. Oui, car elle mesure 1,45 mètre.",
       "B. Non, elle doit être installée dans un siège pour enfant, car elle n’a que 12 ans."
     ],
     "reponse": "A",
-    "explication": "LEÇON 10Les enfants de moins de 18 ans et mesurant moins de 1,35 m doivent être transportés dans un dispositif de retenue pour enfants conforme aux normes prescrites.Un enfant de plus de 1,35 m peut encore être transporté dans un siège pour enfant spécial.Les enfants de moins de 18 ans ne peuvent pas être transportés à l’avant dans un siège orienté vers l’arrière, sauf s’il n’y a pas d’airbag à l’avant ou si celui-ci peut être désactivé.",
-    "image": "/examen-blanc/examen-3/q44.jpg"
+    "explication": "Règle applicable : Les enfants de moins de 18 ans et mesurant moins de 1,35 m sont obligatoirement transportés dans un dispositif de retenue pour enfants conforme aux normes prescrites.Un enfant de plus de 1,35 m peut encore être transporté dans un siège pour enfant spécial.Les enfants de moins de 18 ans ne peuvent pas être transportés à l’avant dans un siège orienté vers l’arrière, sauf s’il n’y a pas d’airbag à l’avant ou si celui-ci peut être désactivé.",
+    "needsNewImage": false,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, cette fille a 12 ans et mesure 1,45 mètre.Elle est assise à l’arrière de la voiture et porte la ceinture de sécurité.Est-ce correct.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-3/q44-new.png"
   },
   {
     "id": 45,
     "type": "numerique",
     "gravite": "grave",
-    "question": "Entrez un nombre.À quelle vitesse maximale (... km/h) une voiture peut-elle rouler sur cette route pour automobiles dans une agglomération en Flandre ?",
+    "question": "Entrez un nombre.À quelle vitesse maximale (... km/h) une voiture peut-elle rouler sur cette route pour automobiles dans une agglomération en Flandre?",
     "choix": [],
     "reponse": "50",
-    "explication": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 5 – ‘La route pour automobiles’.Dans une agglomération : 50 km/h.Bruxelles-capitale: 30 km/h.",
-    "image": "/examen-blanc/examen-3/q45.jpg"
+    "explication": "Règle applicable : Dans une agglomération: 50 km/h.Bruxelles-capitale: 30 km/h.",
+    "needsNewImage": false,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, entrez un nombre.À quelle vitesse maximale (... km/h) une voiture peut-elle rouler sur cette route pour automobiles dans une agglomération en Flandre.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-3/q45-new.png"
   },
   {
     "id": 46,
@@ -577,28 +702,35 @@
     "question": "Le camion peut-il stationner à cet endroit?",
     "choix": [],
     "reponse": "NON",
-    "explication": "LEÇON 27 – ‘Arrêt et stationnement’.Stationnement réservé aux motocyclettes, aux voitures, voitures mixtes et minibus.",
-    "image": "/examen-blanc/examen-3/q46.jpg"
+    "explication": "Règle applicable : Stationnement réservé aux motocyclettes, aux voitures, voitures mixtes et minibus.",
+    "needsNewImage": false,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Analysez le cas suivant: le camion peut-il stationner à cet endroit.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-3/q46-new.png"
   },
   {
     "id": 47,
     "type": "oui_non",
     "gravite": "normale",
-    "question": "La voiture bleue peut-elle dépasser la brune par la gauche ?",
+    "question": "La voiture bleue peut-elle dépasser la brune par la gauche?",
     "choix": [],
     "reponse": "NON",
-    "explication": "LEÇON 15+16 – ‘Le dépassement’.Il est interdit aux intersections où vous devez donner la priorité.",
-    "image": "/examen-blanc/examen-3/q47.jpg"
+    "explication": "Règle applicable : +16 – ‘Le dépassement’.Il est interdit aux intersections où vous devez donner la priorité.",
+    "needsNewImage": false,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, la voiture bleue peut-elle dépasser la brune par la gauche.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-3/q47-new.png"
   },
   {
     "id": 48,
     "type": "oui_non",
     "gravite": "normale",
-    "question": "Pouvez-vous vous arrêter sur la bande d’arrêt d’urgence pour offrir de l’aide si un accident s’est produit dans l’autre sens de circulation ?",
+    "question": "Dans cette situation, êtes-vous autorisé à arrêter sur la bande d’arrêt d’urgence pour offrir de l’aide si un accident s’est produit dans l’autre sens de circulation ?",
     "choix": [],
     "reponse": "NON",
-    "explication": "LEÇON 4 – ‘L’autoroute’.Non, il est interdit de marcher sur les bandes de circulation d’une autoroute, ou de traverser la berme.",
-    "image": "/examen-blanc/examen-3/q48.jpg"
+    "explication": "Règle applicable : autoroute’.Non, la règle interdit de marcher sur les bandes de circulation d’une autoroute, ou de traverser la berme.",
+    "image": "/examen-blanc/examen-3/q48-new.png",
+    "needsNewImage": false
   },
   {
     "id": 49,
@@ -607,7 +739,10 @@
     "question": "Dans ce carrefour, vous devez céder le passage, sauf aux cyclistes et aux cyclomoteurs.",
     "choix": [],
     "reponse": "NON",
-    "explication": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Vous devez également donner la priorité aux cyclistes et aux motocyclistes qui peuvent venir dans les deux directions.",
-    "image": "/examen-blanc/examen-3/q49.jpg"
+    "explication": "Règle applicable : Vous devez également donner la priorité aux cyclistes et aux motocyclistes qui peuvent venir dans les deux directions.",
+    "needsNewImage": false,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Analysez le cas suivant: dans ce carrefour, vous devez céder le passage, sauf aux cyclistes et aux cyclomoteurs.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-3/q49-new.png"
   }
 ]

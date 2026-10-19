@@ -1,0 +1,661 @@
+[
+  {
+    "id": 1,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Cette photo a été prise en agglomération. Pouvez-vous stationner sur la chaussée au-delà de ce panneau?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "Règle applicable : Hors agglomération sur la chaussée d’une voie prioritaire vous ne pouvez pas stationner. Mais vous pouvez vous arrêter.",
+    "image": "/examen-blanc/examen-10/q01.webp"
+  },
+  {
+    "id": 2,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "À quelle intersection pouvez-vous dépasser une moto à deux roues par la gauche?",
+    "choix": [
+      "A. Uniquement après le panneau routier 1.",
+      "B. Uniquement après le panneau routier 2.",
+      "C. Après tous ces signaux."
+    ],
+    "reponse": "B",
+    "explication": "Le panneau 2 indique une route prioritaire. Les panneaux 1 et 3 annoncent un carrefour où la priorité de droite s'applique. Le dépassement par la gauche d'une motocyclette à deux roues est interdit à l'approche d'un carrefour où le conducteur doit céder le passage; il n'est donc permis ici que dans la situation 2, à condition de pouvoir l'effectuer sans danger.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-10/q02.webp"
+  },
+  {
+    "id": 3,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Un petit accident sans blessés à un carrefour. Que faites-vous?",
+    "choix": [
+      "A. Vous avertissez la police.",
+      "B. Vous placez un triangle de danger et vous laissez les voitures sur place.",
+      "C. Vous garez les voitures dans un endroit sûr."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : En cas de petit accident sans blessés à un carrefour, vous devez essayer de libérer le carrefour.",
+    "image": "/examen-blanc/examen-10/q03.webp"
+  },
+  {
+    "id": 4,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "À quelle catégorie appartient ce signal routier?",
+    "choix": [
+      "A. Un Panneau de danger.",
+      "B. Un Panneau d’obligation.",
+      "C. Un Panneau d’interdiction."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : Signification: accès interdit aux conducteurs de motocyclettes. Signal d’interdiction.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-10/q04.webp"
+  },
+  {
+    "id": 5,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Quel signal de danger indique une montée à forte inclinaison?",
+    "choix": [
+      "A. Panneau 1.",
+      "B. Panneau 2."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : La signification du deuxième signal routier: descente dangereuse. Les signaux de danger sont placés à une distance approximative de 150 m de l'endroit dangereux. sauf mention contraire sur un panneau bleu placé sous le signal.",
+    "image": "/examen-blanc/examen-10/q05.webp"
+  },
+  {
+    "id": 6,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Qui doit s’arrêter?",
+    "choix": [
+      "A. Le véhicule brune.",
+      "B. Le véhicule bleue.",
+      "C. Le véhicule brune et Le véhicule bleue."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : Les ordres d'un officier de police, sont plus importants que les feux de signalisation.",
+    "image": "/examen-blanc/examen-10/q06.webp"
+  },
+  {
+    "id": 7,
+    "type": "oui_non",
+    "gravite": "grave",
+    "question": "* Vous avez le permis de conduire provisoire B. En voiture, pouvez-vous dépasser par la gauche un cheval attelé?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "Règle applicable : +16 – ‘Le dépassement’. Le signal d’interdiction interdit aux conducteurs de dépasser par la gauche:. un véhicule attelé.. ou un véhicule à plus de deux roues.",
+    "image": "/examen-blanc/examen-10/q07.webp"
+  },
+  {
+    "id": 8,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Une chaussée qui n’est pas divisée en bandes de circulation. La voiture bleue est-elle correctement stationnée?",
+    "choix": [
+      "A. Oui, cette action est permise.",
+      "B. Non, cette action est interdite."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : Le signal routier bleu indique une rue à sens unique. La voiture bleue est stationnée dans le sens opposé à la circulation. Dans une rue à sens unique, on doit stationner dans le sens de la circulation.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-10/q08.webp"
+  },
+  {
+    "id": 9,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "En voyant ce panneau, vous savez que...",
+    "choix": [
+      "A. … à cet endroit les rails du tram croisent la route.",
+      "B. … à 150 mètres les rails du tram croiseront la route."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : Un signe de danger est à 150 mètres d'un danger.",
+    "image": "/examen-blanc/examen-10/q09.webp"
+  },
+  {
+    "id": 10,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Dans cette situation, êtes-vous autorisé à arrêter sur la bande bus pour laisser descendre un passager ?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "Règle applicable : La bande bus ne fait pas partie de la chaussée. La réglementation interdit de y circuler (sauf cas particuliers (cfr leçon) et donc l’arrêt n’y est pas autorisé vu qu’il faut y circuler pour pouvoir s’arrêter.",
+    "image": "/examen-blanc/examen-10/q10.webp"
+  },
+  {
+    "id": 11,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Que devez-vous faire si vous remarquez une fuite d’huile sous votre voiture?",
+    "choix": [
+      "A. Continuer à rouler jusqu’à la prochaine révision.",
+      "B. Vous rendre au garage dès que possible.",
+      "C. Vérifier le niveau d’huile avant chaque trajet et en rajouter si nécessaire."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : Une fuite d’huile peut endommager gravement le moteur. Même si vous ajoutez de l’huile régulièrement, le problème persiste. Il faut faire réparer la fuite dans un garage au plus vite.",
+    "image": "/examen-blanc/examen-10/q11.webp"
+  },
+  {
+    "id": 12,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Vous avez le permis de conduire provisoire B. C’est le jour de l’an et vous avez dormi jusque midi. Pouvez-vous ensuite vous rendre en voiture chez vos grands parents seul si vous avez le M12 ou avec votre guide si vous avez le M36?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "Règle applicable : La réglementation interdit de conduire avec un permis provisoire sur la voie publique:. De vendredi soir 22h00 à samedi matin 6h00;. De samedi soir 22h00 à dimanche matin 6h00;. De dimanche soir 22h00 à lundi matin 6h00;. Le soir avant un jour férié 22h00 au matin de ce jour férié 6h00;. Le soir du jour férié 22h00 au matin du lendemain 6h00. Nous sommes un jour férié et donc la conduite est autorisée entre 6h00 et 22h00 mais il faut être accompagné de notre guide en M36, alors que rouler seul(e) est autorisé en M18. Le M12 (permis avec guide) requiert aussi la présence du guide. Ce permis est obtenu après 6h d’auto-école après expiration (depuis moins de 3 ans) du M18 ou du M36.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-10/q12.webp"
+  },
+  {
+    "id": 13,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Qu'est-ce qui est interdit sous un pont ou dans un tunnel?",
+    "choix": [
+      "A. Stationner sur la chaussée et sur l'accotement.",
+      "B. S'arrêter et stationner sur la chaussée et sur l'accotement.",
+      "C. S'arrêter et stationner sur la chaussée."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : S'arrêter et stationner sur la chaussée.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-10/q13.webp"
+  },
+  {
+    "id": 14,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Quelle limitation de vitesse êtes-vous autorisé à circuler dans une agglomération en Wallonie après le signal routier indiquant un passage pour piétons ?",
+    "choix": [
+      "A. Maximum 20 km/h.",
+      "B. Maximum 30 km/h.",
+      "C. Maximum 50 km/h."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : Le signal indiquant un passage pour piétons ne fixe pas de limitation de vitesse. Dans les agglomérations: - Flandre et Wallonie: maximum 50 km/h. - Région de Bruxelles-Capitale: maximum 30 km/h.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-10/q14.webp"
+  },
+  {
+    "id": 15,
+    "type": "choix_multiple",
+    "gravite": "grave",
+    "question": "* Il n'y a pas d'obstacle et il n'y a pas de trafic venant en sens inverse. Par quel côté la voiture blanche doit-elle dépasser ce tram ?",
+    "choix": [
+      "A. En suivant la flèche A.",
+      "B. En suivant la flèche B.",
+      "C. Elle peut choisir la flèche A ou la flèche B."
+    ],
+    "reponse": "B",
+    "explication": "La réponse B correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "image": "/examen-blanc/examen-10/q15.webp"
+  },
+  {
+    "id": 16,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "La sonnette ne retentit pas. Quand pouvez-vous dépasser un véhicule par la gauche à ce passage à niveau?",
+    "choix": [
+      "A. Uniquement si la barrière est ouverte ET que la lumière blanche lunaire brûle en même temps.",
+      "B. Si la barrière est ouverte et que la lumière blanche lunaire ne brûle pas, parce qu’elle est défectueuse."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : La réglementation autorise à dépasser un véhicule par la gauche à ce passage à niveau lorsque la barrière est complètement ouverte et que la lumière blanche lunaire brûle en même temps. Mais si la sonnette ne retentit pas, que la barrière est ouverte, mais que les feux sont défectueux, vous pouvez aussi dépasser un véhicule par la gauche.",
+    "image": "/examen-blanc/examen-10/q16.webp"
+  },
+  {
+    "id": 17,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Organiser une course de vitesse sur la voie publique constitue une infraction …",
+    "choix": [
+      "A. … du deuxième degré.",
+      "B. … du troisième degré.",
+      "C. … du quatrième degré."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : LEÇON – INFRACTIONS GRAVES Sauf autorisation spéciale de l’autorité légalement compétente, toutes les courses de vitesse et compétitions sportives sont interdites sur la voie publique, notamment les courses de vitesse, de régularité ou d’adresse. Il s’agit d’une infraction du quatrième degré.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-10/q17.webp"
+  },
+  {
+    "id": 18,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Sur ces marques routières, vous ne pouvez ni circuler, ni vous arrêter ni stationner. Comment appelle-t-on ces marquages routiers?",
+    "choix": [
+      "A. Zone d’évitement.",
+      "B. Marques en damier.",
+      "C. Zone d’interdiction."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : Sur une zone d’évitement vous ne pouvez pas circuler, vous arrêter ou stationner.",
+    "image": "/examen-blanc/examen-10/q18.webp"
+  },
+  {
+    "id": 19,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "À la maison, vous voyez que vous avez oublié un panneau sur le constat européen d’accident. Pouvez-vous encore modifier le constat?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "Règle applicable : La réglementation interdit de changer quoi que ce soit.",
+    "image": "/examen-blanc/examen-10/q19.webp"
+  },
+  {
+    "id": 20,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Examinez les positions des usagers. Quel usager bénéficie du passage prioritaire ?",
+    "choix": [
+      "A. Voiture A.",
+      "B. Voiture B."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : le signal B19 donne la priorité au conducteur qui rencontre la grande flèche blanche. Dans cette situation, la voiture A circule dans le sens de cette flèche et passe avant la voiture B.",
+    "image": "/examen-blanc/examen-10/q20.webp"
+  },
+  {
+    "id": 21,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "La voiture noire peut-elle dépasser la voiture grise par la gauche?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "Règle applicable : +16 – ‘Le dépassement’. Aux intersections où on a la priorité de droite, le dépassement par la gauche est interdit",
+    "image": "/examen-blanc/examen-10/q21.webp"
+  },
+  {
+    "id": 22,
+    "type": "choix_multiple",
+    "gravite": "grave",
+    "question": "* La voiture bleue peut-elle empiéter un petit peu sur la piste cyclable, pour dépasser par la droite la voiture qui veut tourner?",
+    "choix": [
+      "A. Non, cette action est interdite.",
+      "B. Tant qu’elle ne gêne aucun cycliste.",
+      "C. Oui, mais elle ne peut pas utiliser plus de 50%."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : La piste cyclable est une partie de la voie publique. Elle ne fait toutefois pas partie de la chaussée. Le code vous oblige a circuler sur la chaussée. Cela signifie que vous ne pouvez pas circuler en voiture sur la piste cyclable. La réglementation interdit de non plus y stationner ou vos y arrêter pour embarquer ou désembarquer un passager.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-10/q22.webp"
+  },
+  {
+    "id": 23,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Tenez compte de toute la signalisation. Quelle information réglementaire ce panneau communique-t-il ?",
+    "choix": [
+      "A. Panneau de préavis annonçant une traversée de la berme centrale.",
+      "B. Circulation admise dans les deux sens sur une section de chaussée à sens unique.",
+      "C. Panneau de préavis annonçant la réduction du nombre de bandes de circulation."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : Signification: Circulation admise dans les deux sens sur une section de chaussée à sens unique. Signal d’indication temporaire. Explication, on se trouve déjà en double sens dans la chaussée habituellement en sens unique et en sens contraire.",
+    "image": "/examen-blanc/examen-10/q23.webp"
+  },
+  {
+    "id": 24,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "En cas d’accident, comment un conducteur doit-il avertir les autres usagers du danger?",
+    "choix": [
+      "A. Il porte sa veste rétro-réfléchissante.",
+      "B. Il place le triangle de danger.",
+      "C. Il appelle les secours."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : Toujours placer un triangle de danger.",
+    "image": "/examen-blanc/examen-10/q24.webp"
+  },
+  {
+    "id": 25,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Lors d’un accident, la tête du conducteur a heurté le pare-brise et il a perdu conscience.",
+    "choix": [
+      "A. Vous le sortez délicatement de Le véhicule.",
+      "B. Vous le laissez dans Le véhicule."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : Les déplacements inutiles de la victime sont obligatoirement évités.",
+    "image": "/examen-blanc/examen-10/q25.webp"
+  },
+  {
+    "id": 26,
+    "type": "oui_non",
+    "gravite": "grave",
+    "question": "* La voiture bleue peut-t-elle encore tourner à gauche?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "Règle applicable : Lorsqu’un agent qualifié lève un bras verticalement, tous les usagers de la route, y compris les piétons, doivent s’arrêter. Ceux qui se trouvent déjà engagé dans le carrefour doivent le quitter le plus rapidement possible.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-10/q26.webp"
+  },
+  {
+    "id": 27,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "La voiture bleue ne peut pas stationner à cet endroit. Mais peut-elle s’y arrêter?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "Règle applicable : Là où la chaussée est trop étroite, vous devez laisser au moins 3 mètres de passage libre.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-10/q27.webp"
+  },
+  {
+    "id": 28,
+    "type": "oui_non",
+    "gravite": "grave",
+    "question": "* La voiture A peut-elle se déplacer vers la gauche?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "Règle applicable : Explication Il s’agit d’un changement de bande. La réglementation interdit de franchir une ligne blanche continue. C’est une infraction grave qui implique une perte de 5 points à la théorie et une déchéance du droit de conduire pour un jeune conducteur.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-10/q28.webp"
+  },
+  {
+    "id": 29,
+    "type": "numerique",
+    "gravite": "normale",
+    "question": "Introduisez un nombre: Quel numéro indique le bouchon du liquide de frein?",
+    "choix": [],
+    "reponse": "2",
+    "explication": "Règle applicable : 1 = huile. 2 = liquide de frein 3 = liquide de refroidissement. 4 = jauge d'huile. 5 = essuie-glaces.",
+    "image": "/examen-blanc/examen-10/q29.webp"
+  },
+  {
+    "id": 30,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "L’échelle dépasse d’un mètre à l’avant du véhicule. Ce conducteur peut-il rouler ainsi?",
+    "choix": [
+      "A. Oui, car c’est au maximum 1 mètre.",
+      "B. Oui, s’il signale la charge qui dépasse.",
+      "C. Non, cette action est interdite."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : Une charge ne peut jamais dépasser à l’avant du véhicule. À l’arrière, elle peut dépasser d’un mètre maximum. Si vous devez transporter une charge plus longue, indivisible ou qui ne peut pas être réduite ou repliée, elle peut dépasser jusqu’à 3 mètres à l’arrière du véhicule, à condition d’accrocher ce panneau de signalisation à l’arrière de la charge.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-10/q30.webp"
+  },
+  {
+    "id": 31,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Ce signal routier indique le début d’une autoroute. De quel type de signal s’agit-il?",
+    "choix": [
+      "A. Un Panneau de vitesse.",
+      "B. Un Panneau d’indication.",
+      "C. Un Panneau de danger."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : autoroute’. C’est un signal d’indication. L’accès à l’autoroute fait partie de l’autoroute puisque vous avez franchi le signal de début d’autoroute. Vous n’avez toutefois pas de priorité pour vous insérer vu que vous avez toujours un triangle sur pointe dans l’accès.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-10/q31.webp"
+  },
+  {
+    "id": 32,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Vous roulez à une vitesse de 100 km/h sur sol sec. La distance d’arrêt est...",
+    "choix": [
+      "A. ... supérieure à 50 mètres.",
+      "B. ... de 50 mètres.",
+      "C. ... inférieure à 50 mètres."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : arrêt’. La distance d’arrêt est d’environ 80 mètres. Revoyez bien la leçon si vous avez mal répondu car c’est essentiel de comprendre cette matière",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-10/q32.webp"
+  },
+  {
+    "id": 33,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Quel signal routier prévient les conducteurs qu’il y a un fossé profond à côté de la route?",
+    "choix": [
+      "A. Panneau A.",
+      "B. Panneau B.",
+      "C. Ni Panneau A, ni Panneau B."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : Signal A: pont mobile. Signal B: débouché sur un quai ou une berge.",
+    "image": "/examen-blanc/examen-10/q33.webp"
+  },
+  {
+    "id": 34,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Ce feu pour un tram a la même signification qu’ …",
+    "choix": [
+      "A. … un feu rouge.",
+      "B. … un feu vert.",
+      "C. … un feu orange."
+    ],
+    "reponse": "A",
+    "explication": "La réponse A correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "image": "/examen-blanc/examen-10/q34.webp"
+  },
+  {
+    "id": 35,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Comment s’appelle l’équipement qui empêche la voiture de déraper lorsque vous devez vous dévier brutalement?",
+    "choix": [
+      "A. ESP, ou Electronic Stability Program.",
+      "B. ABS, ou Système anti blocage."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : Le correcteur électronique de trajectoire (en anglais Electronic Stability Program, ESP ou Electronic Stability Control, ESC ou Dynamic stability control, DSC) est un équipement de sécurité active d'antidérapage destiné à améliorer le contrôle de trajectoire d'un véhicule automobile.",
+    "image": "/examen-blanc/examen-10/q35.webp"
+  },
+  {
+    "id": 36,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Un feu jaune-orange clignote...",
+    "choix": [
+      "A. ... vous ne pouvez pas le franchir.",
+      "B. ... Il est permis de le franchir et vous avez priorité.",
+      "C. ... Il est permis de le franchir en respectant les règles de priorité normales."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : Cela signifie que les feux sont défectueux. Important: « double prudence » et de suivre les règles de priorité normales.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-10/q36.webp"
+  },
+  {
+    "id": 37,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Les drogues peuvent-elles empirer les effets nocifs de l’alcool?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "Règle applicable : La combinaison de drogues avec l’alcool est bien sûr plus grave que seulement de l’alcool.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-10/q37.webp"
+  },
+  {
+    "id": 38,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "À quelle intersection pouvez-vous dépasser un cycliste par la gauche?",
+    "choix": [
+      "A. Uniquement après le Panneau routier 1.",
+      "B. Uniquement après les signaux routiers 1 et 2.",
+      "C. Après tous ces signaux."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : Signal 1 = priorité au prochain carrefour. Signal 2 = route prioritaire. Signal 3 = priorité de droite.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-10/q38.webp"
+  },
+  {
+    "id": 39,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Un cycliste a été percuté à un carrefour et gît inconscient au sol. Pouvez-vous dégager le carrefour et porter le cycliste prudemment sur le côté de la route?",
+    "choix": [
+      "A. Oui, il faut dégager le carrefour.",
+      "B. Non, il faut laisser un blessé sur place."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : En cas d’accident avec blessés, vous laissez les blessés sur place et vous appelez les services de secours. S’il y a des blessés, la police doit également venir pour effectuer les constatations.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-10/q39.webp"
+  },
+  {
+    "id": 40,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Lorsque l’accotement est trop étroit, la voiture peut être stationnée un petit peu sur la piste cyclable.",
+    "choix": [
+      "A. Vrai.",
+      "B. Faux."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : La piste cyclable est une partie de la voie publique. Elle ne fait pas partie de la chaussée. Cela signifie que vous ne pouvez pas circuler en voiture sur la piste cyclable. La réglementation interdit de non plus y stationner ou vos y arrêter pour embarquer ou désembarquer un passager.",
+    "image": "/examen-blanc/examen-10/q40.webp"
+  },
+  {
+    "id": 41,
+    "type": "numerique",
+    "gravite": "normale",
+    "question": "Introduisez un nombre. Vous ne pouvez pas stationner sur la chaussée jusqu’à (...) mètres avant et après ’un panneau indiquant un arrêt de bus.",
+    "choix": [],
+    "reponse": "15",
+    "explication": "Règle applicable : Le stationnement est interdit jusqu'à 15 mètres avant et après le signe. L’arrêt est autorisé.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-10/q41-clean.webp"
+  },
+  {
+    "id": 42,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Le feu est vert, donc...",
+    "choix": [
+      "A. ... Il est permis de toujours vous engager dans le carrefour.",
+      "B. ... Il est permis de vous engager dans le carrefour s’il est dégagé."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : La réglementation autorise à passer un feu vert, si l’intersection est libre.",
+    "image": "/examen-blanc/examen-10/q42.webp"
+  },
+  {
+    "id": 43,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "En dehors d’une agglomération en Wallonie. Quelle distance doit être respectée entre deux voitures en stationnement?",
+    "choix": [
+      "A. 0,5 mètre.",
+      "B. 1 mètre.",
+      "C. 1,5 mètre."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : Que ce soit à l’intérieur ou à l’extérieur d’une agglomération, la distance à respecter est de 1 mètre. Veillez à respecter cette règle lors de l’examen pratique.",
+    "image": "/examen-blanc/examen-10/q43.webp"
+  },
+  {
+    "id": 44,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Quand y a-t-il un problème d’angle mort?",
+    "choix": [
+      "A. Toujours.",
+      "B. Uniquement si les miroirs sont mal réglés."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : Les miroirs sont obligatoirement toujours correctement ajustés avant vous partez. Mais il y a toujours un point que vous ne pouvez pas voir dans les miroirs: l’angle mort.",
+    "image": "/examen-blanc/examen-10/q44.webp"
+  },
+  {
+    "id": 45,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "La distance de freinage est un synonyme de la distance d’arrêt.",
+    "choix": [
+      "A. Vrai.",
+      "B. Faux."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : arrêt’. La distance de freinage est la distance parcourue par la véhicule, à partir du moment où le conducteur appuie sur la pédale de frein et la voiture s’arrête complètement. La distance d’arrêt est plus longue, revoyez la leçon pour bien comprendre.",
+    "image": "/examen-blanc/examen-10/q45.webp"
+  },
+  {
+    "id": 46,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "La chaussée n’est pas divisée en bandes de circulation. Que peut faire le conducteur de la voiture sous ce pont?",
+    "choix": [
+      "A. Uniquement mettre son véhicule à l’arrêt.",
+      "B. Mettre son véhicule à l’arrêt et le stationner.",
+      "C. Ni mettre son véhicule à l’arrêt ni le stationner."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : Explication: Sur la chaussée sous un pont, l’arrêt et le stationnement sont interdits.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-10/q46.webp"
+  },
+  {
+    "id": 47,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Quand pouvez-vous utiliser les pneus cloutés?",
+    "choix": [
+      "A. Lorsqu’il y a de la neige ou du verglas sur la chaussée.",
+      "B. Du 1er novembre au 31 mars compris."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : Du 1er novembre au 31 mars compris.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-10/q47.webp"
+  },
+  {
+    "id": 48,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Qui a la priorité à ce carrefour?",
+    "choix": [
+      "A. Le cycliste.",
+      "B. Le véhicule."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : Il s’agit d’un carrefour où la priorité de droite s’applique. Mais le cycliste circule sur une piste cyclable continue. La voiture qui vient de droite doit d’abord céder la priorité au cycliste.",
+    "needsLegalReview": true,
+    "image": "/examen-blanc/examen-10/q48.webp"
+  },
+  {
+    "id": 49,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Dans le carrefour suivant, vous pouvez dépasser une voiture avec votre voiture.",
+    "choix": [
+      "A. Vrai.",
+      "B. Faux."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : Il est permis, parce que vous conduisez sur une route prioritaire.",
+    "image": "/examen-blanc/examen-10/q49.webp"
+  },
+  {
+    "id": 50,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Qu'y a-t-il 1600 mètres plus loin?",
+    "choix": [
+      "A. Un échangeur autoroutier.",
+      "B. Un carrefour.",
+      "C. La fin de l'autoroute."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : autoroute’. Un échangeur autoroutier. Les échangeurs sont annoncés en blanc, les sorties en vert.",
+    "image": "/examen-blanc/examen-10/q50.webp"
+  }
+]

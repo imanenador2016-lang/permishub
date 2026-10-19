@@ -3,13 +3,14 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useTranslations, useLocale } from 'next-intl'
-import type { ExamenPhotoQuestion } from '@/domain/examen-photo'
+import type { ExamenPhotoQuestion, ExamenPhotoVisualAnnotation } from '@/domain/examen-photo'
 import { Button } from '@/components/ui/Button'
 import { ProgressBar } from '@/components/ui/ProgressBar'
 import { createCheckoutSession } from '@/lib/payment'
 import { formatPrice } from '@/domain/centers'
 import { RESUME_OFFER, EXAMENS_ILLIMITES_OFFER } from '@/content/pricing-config'
 import { computeExamenBlancResult, type ExamenBlancAnswer, type ExamenBlancResult } from '@/lib/examen-blanc'
+import { LoaderCircle } from 'lucide-react'
 
 type Phase = 'intro' | 'running' | 'result'
 
@@ -29,14 +30,61 @@ function webpOf(src: string): string {
 }
 
 /** Précharge l'image (variante webp — celle réellement servie par <picture> dans les navigateurs modernes) pour qu'elle soit déjà en cache navigateur quand la question s'affiche. */
-function preload(src: string) {
+function preload(src?: string) {
+  if (!src) return
   if (typeof window === 'undefined') return
   const img = new window.Image()
   img.src = webpOf(src)
 }
 
 /** Photo de question — <picture> webp + fallback jpg, taille intrinsèque déclarée pour ne pas faire sauter la mise en page pendant le chargement. */
-function QuestionPhoto({ src, className = '' }: { src: string; className?: string }) {
+function QuestionPhoto({
+  src,
+  className = '',
+  annotations = [],
+  imageWidth = 592,
+  imageHeight = 442,
+}: {
+  src: string
+  className?: string
+  annotations?: ExamenPhotoVisualAnnotation[]
+  imageWidth?: number
+  imageHeight?: number
+}) {
+  if (annotations.length > 0) {
+    const markerRadius = Math.min(imageWidth, imageHeight) * 0.048
+    return (
+      <svg
+        aria-hidden="true"
+        viewBox={`0 0 ${imageWidth} ${imageHeight}`}
+        preserveAspectRatio="xMidYMid meet"
+        className={`absolute inset-0 h-full w-full ${className}`}
+      >
+        <image href={src} width={imageWidth} height={imageHeight} preserveAspectRatio="xMidYMid meet" />
+        {annotations.map((annotation) => {
+          const x = imageWidth * annotation.x / 100
+          const y = imageHeight * annotation.y / 100
+          return (
+            <g key={`${annotation.label}-${annotation.x}-${annotation.y}`} transform={`translate(${x} ${y})`}>
+              <circle r={markerRadius} fill="#f5b400" stroke="#1f1a14" strokeWidth={markerRadius * 0.16} />
+              <text
+                x="0"
+                y={markerRadius * 0.36}
+                textAnchor="middle"
+                fill="#1f1a14"
+                fontFamily="Arial, sans-serif"
+                fontSize={markerRadius * 1.22}
+                fontWeight="900"
+              >
+                {annotation.label}
+              </text>
+            </g>
+          )
+        })}
+      </svg>
+    )
+  }
+
   return (
     <picture>
       <source srcSet={webpOf(src)} type="image/webp" />
@@ -47,7 +95,7 @@ function QuestionPhoto({ src, className = '' }: { src: string; className?: strin
         height={442}
         loading="eager"
         decoding="async"
-        className={`absolute inset-0 h-full w-full object-cover ${className}`}
+        className={`absolute inset-0 h-full w-full object-contain ${className}`}
       />
     </picture>
   )
@@ -337,7 +385,7 @@ export function ExamenBlanc({ questions, hideCorrection = false }: { questions: 
 
   if (phase === 'running' && current) {
     return (
-      <div className="panel p-4 sm:p-8">
+      <div className="panel p-2.5 sm:p-4">
         <div className="mb-2 flex flex-wrap items-center justify-between gap-3">
           <span className="font-display text-xs text-ink/60">{t('questionOf', { current: index + 1, total })}</span>
           {secondsLeft !== null && (
@@ -364,6 +412,7 @@ export function ExamenBlanc({ questions, hideCorrection = false }: { questions: 
         <AnimatePresence mode="wait">
           <motion.div
             key={current.id}
+            className="md:grid md:grid-cols-[minmax(360px,1.08fr)_minmax(340px,0.92fr)] md:items-start md:gap-5"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
@@ -373,11 +422,14 @@ export function ExamenBlanc({ questions, hideCorrection = false }: { questions: 
                 et pousse le reste hors écran sur les grands téléphones) —
                 l'image reste bien visible sans dominer tout l'écran, voir
                 conversation du 2026-08-28 (format de référence envoyé). */}
-            <div className="relative mb-3 h-48 w-full overflow-hidden border-[3px] border-ink bg-creamdim sm:h-64 md:h-72">
-              <QuestionPhoto src={current.image} />
-            </div>
+            {current.image && (
+              <div className="relative mx-auto mb-2 aspect-[4/3] w-full overflow-hidden border-[3px] border-ink bg-creamdim md:mb-0">
+                <QuestionPhoto src={current.image} annotations={current.visualAnnotations} imageWidth={current.imageWidth} imageHeight={current.imageHeight} />
+              </div>
+            )}
 
-            <div className="mb-3 flex items-start gap-3">
+            <div className="min-w-0 md:rounded-sm md:bg-creamdim md:p-3">
+            <div className="mb-2 flex items-start gap-2 border-l-[6px] border-yellow bg-white px-2.5 py-2 shadow-sm">
               <button
                 type="button"
                 onClick={handleAudioButtonClick}
@@ -386,7 +438,7 @@ export function ExamenBlanc({ questions, hideCorrection = false }: { questions: 
                   speechState === 'playing' ? t('audioPlaying') : speechState === 'paused' ? t('audioResume') : t('audioListen')
                 }
                 title={speechState === 'playing' ? t('audioPlaying') : speechState === 'paused' ? t('audioResume') : t('audioListen')}
-                className={`flex h-11 w-11 flex-none items-center justify-center border-[3px] border-ink text-lg transition-colors ${
+                className={`flex h-10 w-10 flex-none items-center justify-center border-[3px] border-ink text-base transition-colors ${
                   speechState === 'playing'
                     ? 'bg-forest text-cream'
                     : speechState === 'paused'
@@ -397,19 +449,19 @@ export function ExamenBlanc({ questions, hideCorrection = false }: { questions: 
                 <span aria-hidden>{speechState === 'playing' ? '⏸' : speechState === 'paused' ? '▶️' : '🔊'}</span>
               </button>
 
-              <h2 className="flex-1 pt-1.5 font-display text-base leading-snug sm:pt-1 sm:text-lg md:text-xl">
+              <h2 className="flex-1 pt-0.5 font-display text-base leading-snug sm:text-lg md:text-xl">
                 {current.question}
               </h2>
             </div>
 
             {current.gravite === 'grave' && (
-              <p className="mb-3 inline-block border-[3px] border-brick bg-cream px-2 py-1 text-xs font-bold text-brick">
+              <p className="mb-2 inline-block border-[2px] border-brick bg-cream px-2 py-0.5 text-[11px] font-bold text-brick">
                 {t('gravePill')}
               </p>
             )}
 
             {current.type === 'choix_multiple' && (
-              <div className="grid gap-2 sm:gap-3">
+              <div className="grid gap-1.5 sm:gap-2">
                 {current.choix.map((opt) => {
                   const letter = letterOf(opt)
                   const selected = currentAnswer === letter
@@ -417,7 +469,7 @@ export function ExamenBlanc({ questions, hideCorrection = false }: { questions: 
                     <button
                       key={letter}
                       onClick={() => setAnswer(letter)}
-                      className={`border-[3px] px-4 py-3.5 text-left text-sm font-semibold transition-colors ${
+                      className={`min-h-11 border-[2px] px-3 py-2 text-left text-[13px] font-semibold leading-snug transition-colors sm:text-sm ${
                         selected ? 'border-ink bg-yellow' : 'border-ink/25 hover:border-ink'
                       }`}
                     >
@@ -429,12 +481,12 @@ export function ExamenBlanc({ questions, hideCorrection = false }: { questions: 
             )}
 
             {current.type === 'oui_non' && (
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-2 gap-2">
                 {(['OUI', 'NON'] as const).map((v) => (
                   <button
                     key={v}
                     onClick={() => setAnswer(v)}
-                    className={`border-[3px] px-4 py-3.5 text-center font-display text-sm transition-colors ${
+                    className={`min-h-11 border-[2px] px-3 py-2 text-center font-display text-sm transition-colors ${
                       currentAnswer === v ? 'border-ink bg-yellow' : 'border-ink/25 hover:border-ink'
                     }`}
                   >
@@ -454,13 +506,14 @@ export function ExamenBlanc({ questions, hideCorrection = false }: { questions: 
                   setAnswer(e.target.value)
                 }}
                 placeholder={t('numericPlaceholder')}
-                className="w-full border-[3px] border-ink bg-cream px-4 py-3.5 text-sm font-semibold outline-none focus:bg-yellow/20"
+                className="min-h-11 w-full border-[2px] border-ink bg-cream px-3 py-2 text-sm font-semibold outline-none focus:bg-yellow/20"
               />
             )}
+            </div>
           </motion.div>
         </AnimatePresence>
 
-        <div className="mt-5 flex flex-wrap items-center justify-between gap-3 sm:mt-6">
+        <div className="mt-3 flex flex-wrap items-center justify-between gap-2 sm:mt-4">
           <Button variant="secondary" onClick={goPrevious} disabled={index === 0} className="px-4 sm:px-5">
             ← {t('previous')}
           </Button>
@@ -518,7 +571,7 @@ export function ExamenBlanc({ questions, hideCorrection = false }: { questions: 
                 className="btn-comic block w-full px-5 py-4 text-base disabled:opacity-60"
               >
                 {checkoutLoading
-                  ? tc('redirecting')
+                  ? <span className="inline-flex items-center justify-center gap-2"><LoaderCircle size={17} className="animate-spin" aria-hidden="true" />{tc('redirecting')}</span>
                   : `${to('cta')} ${to('examensTitle')} — ${formatPrice(EXAMENS_ILLIMITES_OFFER.priceCents, locale)} →`}
               </button>
               {checkoutMessage && <p className="mt-1.5 text-center text-xs text-ink/60">{checkoutMessage}</p>}
@@ -529,7 +582,7 @@ export function ExamenBlanc({ questions, hideCorrection = false }: { questions: 
                 className="mt-4 block w-full text-center text-xs font-semibold text-ink/70 underline decoration-2 underline-offset-4 hover:text-brick disabled:opacity-60"
               >
                 {checkoutLoadingSecondary
-                  ? tc('redirecting')
+                  ? <span className="inline-flex items-center justify-center gap-2"><LoaderCircle size={17} className="animate-spin" aria-hidden="true" />{tc('redirecting')}</span>
                   : `${t('resumeSecondaryPrefix')} ${to('resumeTitle')} — ${formatPrice(RESUME_OFFER.priceCents, locale)} →`}
               </button>
               {checkoutMessageSecondary && <p className="mt-1.5 text-center text-xs text-ink/60">{checkoutMessageSecondary}</p>}
@@ -543,7 +596,7 @@ export function ExamenBlanc({ questions, hideCorrection = false }: { questions: 
                 disabled={checkoutLoading}
                 className="block w-full text-center text-sm font-semibold text-ink underline decoration-2 underline-offset-4 hover:text-brick disabled:opacity-60"
               >
-                {checkoutLoading ? tc('redirecting') : `${to('resumeTitle')} — ${formatPrice(RESUME_OFFER.priceCents, locale)} →`}
+                {checkoutLoading ? <span className="inline-flex items-center justify-center gap-2"><LoaderCircle size={17} className="animate-spin" aria-hidden="true" />{tc('redirecting')}</span> : `${to('resumeTitle')} — ${formatPrice(RESUME_OFFER.priceCents, locale)} →`}
               </button>
               {checkoutMessage && <p className="mt-1.5 text-center text-xs text-ink/60">{checkoutMessage}</p>}
             </div>
@@ -566,7 +619,7 @@ export function ExamenBlanc({ questions, hideCorrection = false }: { questions: 
               className="btn-comic mx-auto block w-full max-w-sm px-5 py-4 text-base disabled:opacity-60"
             >
               {checkoutLoadingCorrection
-                ? tc('redirecting')
+                ? <span className="inline-flex items-center justify-center gap-2"><LoaderCircle size={17} className="animate-spin" aria-hidden="true" />{tc('redirecting')}</span>
                 : `${to('cta')} ${to('examensTitle')} — ${formatPrice(EXAMENS_ILLIMITES_OFFER.priceCents, locale)} →`}
             </button>
             {checkoutMessageCorrection && <p className="mt-1.5 text-center text-xs text-ink/60">{checkoutMessageCorrection}</p>}
@@ -582,9 +635,11 @@ export function ExamenBlanc({ questions, hideCorrection = false }: { questions: 
                     {r.question.gravite === 'grave' && <span className="ml-2 text-brick">{t('gravePill')}</span>}
                   </p>
 
-                  <div className="relative mb-3 aspect-[4/3] w-full max-w-sm overflow-hidden border-[3px] border-ink bg-creamdim">
-                    <QuestionPhoto src={r.question.image} />
-                  </div>
+                  {r.question.image && (
+                    <div className="relative mb-3 aspect-[4/3] w-full max-w-sm overflow-hidden border-[3px] border-ink bg-creamdim">
+                      <QuestionPhoto src={r.question.image} annotations={r.question.visualAnnotations} imageWidth={r.question.imageWidth} imageHeight={r.question.imageHeight} />
+                    </div>
+                  )}
 
                   <p className="mb-3 font-display text-base leading-snug">{r.question.question}</p>
 
