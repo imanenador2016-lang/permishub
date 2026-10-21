@@ -5,6 +5,10 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts')
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   distDir: process.env.PERMISHUB_LOCAL_PREVIEW === '1' ? '.next-braine-preview' : '.next',
+  experimental: {
+    // Stabilise les builds sur les environnements à mémoire limitée (local et CI).
+    cpus: 1,
+  },
   images: {
     // Autorise les images distantes des futurs contenus (illustrations de
     // panneaux, etc.) — resserrer la liste une fois l'hébergement d'images
