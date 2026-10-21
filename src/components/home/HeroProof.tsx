@@ -2,16 +2,15 @@
 
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 
 const ALL_PROOFS = [
-  { key: 'reussite1', photo: '/testimonials/reussite-3.webp' },
-  { key: 'reussite2', photo: '/testimonials/reussite-2.webp' },
-  { key: 'reussite3', photo: '/testimonials/reussite-1.jpg' },
-  { key: 'reussite4', photo: '/testimonials/avis-1.jpg' },
-  { key: 'reussite5', photo: '/testimonials/avis-2.jpg' },
-  { key: 'reussite6', photo: '/testimonials/avis-3.jpg' },
+  { key: 'reussite1', photo: '/testimonials/reussite-3-floute.webp' },
+  { key: 'reussite2', photo: '/testimonials/reussite-2-floute.webp' },
+  { key: 'reussite3', photo: '/testimonials/reussite-1-floute.jpg' },
+  { key: 'reussite4', photo: '/testimonials/avis-1-floute.jpg' },
+  { key: 'reussite5', photo: '/testimonials/avis-2-floute.jpg' },
+  { key: 'reussite6', photo: '/testimonials/avis-3-floute.jpg' },
 ] as const
 
 const VISIBLE_COUNT = 5
@@ -38,16 +37,10 @@ export function HeroProof() {
       <span className="w-fit -rotate-2 border-[3px] border-ink bg-yellow px-3 py-1.5 font-display text-xs">
         {t('heroEyebrow')}
       </span>
-      <AnimatePresence mode="popLayout" initial={false}>
-        {visible.map((item, index) => (
-          <motion.div
+      {visible.map((item, index) => (
+          <div
             key={item.key}
-            layout
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 10 }}
-            transition={{ duration: 0.4, ease: 'easeOut' }}
-            className="flex items-center gap-3 border-2 border-ink bg-cream p-2"
+            className="hero-proof-row flex items-center gap-3 border-2 border-ink bg-cream p-2"
           >
             <div className="relative h-14 w-14 flex-none overflow-hidden border-2 border-ink">
               <Image
@@ -66,9 +59,8 @@ export function HeroProof() {
               </p>
               <p className="truncate text-xs font-semibold text-ink">{t(`${item.key}.quote`)}</p>
             </div>
-          </motion.div>
-        ))}
-      </AnimatePresence>
+          </div>
+      ))}
     </div>
   )
 }

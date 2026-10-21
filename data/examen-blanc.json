@@ -3,24 +3,28 @@
     "id": 1,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Lorsque vous roulez derrière ce bus, vous savez ...",
+    "question": "Lorsque vous roulez derrière ce bus, vous savez...",
     "choix": [
       "A. ... que des enfants peuvent aussi se trouver dans ce bus.",
       "B. ... qu’il s’agit d’un bus scolaire."
     ],
     "reponse": "B",
-    "explication": "LEÇON 7 – ‘Les piétons’.Les véhicules de transport scolaire sont reconnaissables à un panneau jaune (au moins 0,40 m), bien visible à l’avant et à l’arrière du véhicule. Ce panneau doit être enlevé ou recouvert lorsque le véhicule n’est pas utilisé pour le transport scolaire.Soyez particulièrement prudent et réduisez votre vitesse.Arrêtez-vous si nécessaire lorsque vous voyez un véhicule de transport scolaire qui allume ses indicateurs de direction, ce qui signifie que des enfants vont monter ou descendre. Cela vaut aussi bien pour les véhicules à l’arrêt que pour ceux qui s’arrêtent sur la chaussée.",
-    "image": "/examen-blanc/q01.jpg"
+    "explication": "Règle applicable : Les véhicules de transport scolaire sont reconnaissables à un panneau jaune (au moins 0,40 m), bien visible à l’avant et à l’arrière du véhicule. Ce signal est obligatoirement enlevé ou recouvert lorsque le véhicule n’est pas utilisé pour le transport scolaire.Soyez particulièrement prudent et réduisez votre vitesse.Arrêtez-vous si nécessaire lorsque vous voyez un véhicule de transport scolaire qui allume ses indicateurs de direction, ce qui signifie que des enfants vont monter ou descendre. Cela vaut aussi bien pour les véhicules à l’arrêt que pour ceux qui s’arrêtent sur la chaussée.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, lorsque vous roulez derrière ce bus, vous savez...",
+    "needsLegalReview": true
   },
   {
     "id": 2,
     "type": "oui_non",
     "gravite": "normale",
-    "question": "La voiture bleue peut-elle dépasser la brune par la gauche ?",
+    "question": "La voiture bleue peut-elle dépasser la brune par la gauche?",
     "choix": [],
     "reponse": "OUI",
-    "explication": "",
-    "image": "/examen-blanc/q02.jpg"
+    "explication": "La réponse OUI correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, la voiture bleue peut-elle dépasser la brune par la gauche.",
+    "needsLegalReview": true
   },
   {
     "id": 3,
@@ -33,8 +37,8 @@
       "C. Arrêter."
     ],
     "reponse": "C",
-    "explication": "",
-    "image": "/examen-blanc/q03.jpg"
+    "explication": "La réponse C correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsLegalReview": true
   },
   {
     "id": 4,
@@ -42,13 +46,13 @@
     "gravite": "grave",
     "question": "Vous devez vous arrêter, parce que vous conduisiez dans une agglomération en Flandre 77 km par heure.Quelles sont les conséquences?",
     "choix": [
-      "A. Vous devez payer une amende à la police.",
+      "A. Il faut payer une amende à la police.",
       "B. Votre permis de conduire peut être retiré sur-le-champ.",
-      "C. Vous devez apparaître dans les 14 jours devant le juge."
+      "C. Il faut apparaître dans les 14 jours devant le juge."
     ],
     "reponse": "B",
-    "explication": "",
-    "image": "/examen-blanc/q04.jpg"
+    "explication": "La réponse B correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsLegalReview": true
   },
   {
     "id": 5,
@@ -57,8 +61,10 @@
     "question": "Ce signal signifie que vous pouvez choisir librement de stationner sur l’accotement ou sur la chaussée.",
     "choix": [],
     "reponse": "NON",
-    "explication": "",
-    "image": "/examen-blanc/q05.jpg"
+    "explication": "La réponse NON correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, ce signal signifie que vous pouvez choisir librement de stationner sur l’accotement ou sur la chaussée.",
+    "needsLegalReview": true
   },
   {
     "id": 6,
@@ -67,56 +73,61 @@
     "question": "Votre amie vit dans une zone piétonne.Pouvez-vous rendre jusque chez elle avec votre voiture?",
     "choix": [],
     "reponse": "NON",
-    "explication": "",
-    "image": "/examen-blanc/q06.jpg"
+    "explication": "La réponse NON correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsLegalReview": true
   },
   {
     "id": 7,
     "type": "numerique",
     "gravite": "normale",
-    "question": "Entrez un nombre.À quelle vitesse maximale une voiture peut-elle rouler sur cette route pour automobiles ?",
+    "question": "Entrez un nombre.À quelle vitesse maximale une voiture peut-elle rouler sur cette route pour automobiles?",
     "choix": [],
     "reponse": "120",
-    "explication": "",
-    "image": "/examen-blanc/q07.jpg"
+    "explication": "La réponse 120 correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, entrez un nombre.À quelle vitesse maximale une voiture peut-elle rouler sur cette route pour automobiles.",
+    "needsLegalReview": true
   },
   {
     "id": 8,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Qui peut s'engager en premier dans ce carrefour ?",
+    "question": "Dans quel ordre les véhicules peuvent-ils franchir cette intersection ?",
     "choix": [
       "A. Voiture A.",
       "B. Voiture B.",
       "C. Voiture C."
     ],
     "reponse": "C",
-    "explication": "",
-    "image": "/examen-blanc/q08.jpg"
+    "explication": "La réponse C correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans quel ordre les véhicules peuvent-ils franchir cette intersection.",
+    "needsLegalReview": true
   },
   {
     "id": 9,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Le cycliste et le camion veulent tourner à droite à ce carrefour.Comment réagit le cycliste ?",
+    "question": "Le cycliste et le camion veulent tourner à droite à ce carrefour.Comment réagit le cycliste?",
     "choix": [
       "A. Il se dépêche pour tourner le premier.",
       "B. Il tourne en même temps que le camion.",
       "C. Il ralentit et laisse le camion tourner en premier."
     ],
     "reponse": "C",
-    "explication": "",
-    "image": "/examen-blanc/q09.jpg"
+    "explication": "La réponse C correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Analysez le cas suivant: le cycliste et le camion veulent tourner à droite à ce carrefour.Comment réagit le cycliste.",
+    "needsLegalReview": true
   },
   {
     "id": 10,
     "type": "oui_non",
     "gravite": "normale",
-    "question": "Le code de la route s’applique-t-il aussi aux véhicules sur rails qui empruntent la voie publique ?",
+    "question": "Le code de la route s’applique-t-il aussi aux véhicules sur rails qui empruntent la voie publique?",
     "choix": [],
     "reponse": "NON",
-    "explication": "LEÇON 1 – ‘La voie publique’.Les conducteurs de tram ne doivent pas non plus tenir compte du code de la route, sauf les injonctions des agents qualifiés et les feux lumineux de circulation.",
-    "image": "/examen-blanc/q10.jpg"
+    "explication": "Règle applicable : Les conducteurs de tram ne doivent pas non plus tenir compte du code de la route, sauf les injonctions des agents qualifiés et les feux lumineux de circulation."
   },
   {
     "id": 11,
@@ -125,35 +136,41 @@
     "question": "La voiture peut-elle stationner à cet endroit?",
     "choix": [],
     "reponse": "NON",
-    "explication": "LEÇON 26 – ‘Arrêt et stationnement’.Une ligne jaune discontinue : vous ne pouvez pas stationner. Mais vous pouvez vous arrêter.",
-    "image": "/examen-blanc/q11.jpg"
+    "explication": "Règle applicable : Une ligne jaune discontinue: vous ne pouvez pas stationner. Mais vous pouvez vous arrêter.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, la voiture peut-elle stationner à cet endroit.",
+    "needsLegalReview": true
   },
   {
     "id": 12,
     "type": "choix_multiple",
     "gravite": "grave",
-    "question": "Les feux de signalisation sont en panne.Qui peut s'engager dans le carrefour ?",
+    "question": "Les feux de signalisation sont en panne.Qui peut s'engager dans le carrefour?",
     "choix": [
       "A. La motocyclette.",
-      "B. La voiture."
+      "B. Le véhicule."
     ],
     "reponse": "A",
-    "explication": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 17La voiture brune se dirige vers le ventre de l’agent et doit s’arrêter.Lorsqu'un agent tend un bras ou les deux bras horizontalement : Les usagers qui se dirigent vers son ventre ou son dos doivent s'arrêter. Ceux qui approchent de son côté (ou de la main tendue) peuvent s'engager dans le carrefour pour continuer tout droit ou tourner à gauche ou à droite. Un agent qui tend les deux bras horizontalement donne la même injonction que s'il tend un seul bras horizontalement.",
-    "image": "/examen-blanc/q12.jpg"
+    "explication": "Règle applicable : La voiture brune se dirige vers le ventre de l’agent et doit s’arrêter.Lorsqu'un agent tend un bras ou les deux bras horizontalement: Les usagers qui se dirigent vers son ventre ou son dos doivent s'arrêter. Ceux qui approchent de son côté (ou de la main tendue) peuvent s'engager dans le carrefour pour continuer tout droit ou tourner à gauche ou à droite. Un agent qui tend les deux bras horizontalement donne la même injonction que s'il tend un seul bras horizontalement.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Analysez le cas suivant: les feux de signalisation sont en panne.Qui peut s'engager dans le carrefour.",
+    "needsLegalReview": true
   },
   {
     "id": 13,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "À quelle vitesse maximale cette voiture peut-elle rouler après ce signal routier dans la Région de Bruxelles-Capitale ?",
+    "question": "À quelle vitesse maximale cette voiture peut-elle circuler après un signal d’entrée d’agglomération en Région de Bruxelles-Capitale ?",
     "choix": [
       "A. 30 km/h.",
       "B. 50 km/h.",
       "C. 70 km/h."
     ],
-    "reponse": "C",
-    "explication": "",
-    "image": "/examen-blanc/q13.jpg"
+    "reponse": "A",
+    "explication": "30 km/h. Le signal F1a indique le commencement d’une agglomération. En Région de Bruxelles-Capitale, la vitesse maximale générale en agglomération est de 30 km/h, sauf si un autre signal impose ou autorise une vitesse différente.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Quelle limitation de vitesse cette voiture peut-elle rouler après ce signal routier dans la Région de Bruxelles-Capitale.",
+    "needsLegalReview": false
   },
   {
     "id": 14,
@@ -166,35 +183,39 @@
       "C. Ne peut plus s'assoir dans un siège-enfant."
     ],
     "reponse": "B",
-    "explication": "",
-    "image": "/examen-blanc/q14.jpg"
+    "explication": "La réponse B correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsLegalReview": true
   },
   {
     "id": 15,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Le feu rouge est déjà allumé, mais la barrière est toujours ouverte.Êtes-vous autorisé à conduire plus loin ?",
+    "question": "Le feu rouge est déjà allumé, mais la barrière est toujours ouverte.Êtes-vous autorisé à conduire plus loin?",
     "choix": [
       "A. Oui, mais soigneusement.",
-      "B. Non, vous devez vous arrêter."
+      "B. Non, Il faut vous arrêter."
     ],
     "reponse": "B",
-    "explication": "",
-    "image": "/examen-blanc/q15.jpg"
+    "explication": "La réponse B correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Analysez le cas suivant: le feu rouge est déjà allumé, mais la barrière est toujours ouverte.Êtes-vous autorisé à conduire plus loin.",
+    "needsLegalReview": true
   },
   {
     "id": 16,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Cette chaussée est divisée en deux bandes de circulation.Quelle est la vitesse maximale autorisée en Région de Bruxelles-Capitale après le panneau jaune ?",
+    "question": "Cette chaussée est divisée en deux bandes de circulation.Quelle est la vitesse maximale autorisée en Région de Bruxelles-Capitale après le panneau jaune?",
     "choix": [
       "A. 60 km/h.",
       "B. 70 km/h.",
       "C. 90 km/h."
     ],
     "reponse": "B",
-    "explication": "",
-    "image": "/examen-blanc/q16.jpg"
+    "explication": "La réponse B correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, cette chaussée est divisée en deux bandes de circulation.Quelle est la vitesse maximale autorisée en Région de Bruxelles-Capitale après le panneau jaune.",
+    "needsLegalReview": true
   },
   {
     "id": 17,
@@ -206,8 +227,10 @@
       "B. C’est correct, car il laisse assez d’espace pour les cyclistes."
     ],
     "reponse": "A",
-    "explication": "",
-    "image": "/examen-blanc/q17.jpg"
+    "explication": "La réponse A correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, le conducteur de ce camion n’empiète qu’un petit peu sur la bande cyclable suggérée.",
+    "needsLegalReview": true
   },
   {
     "id": 18,
@@ -215,26 +238,30 @@
     "gravite": "normale",
     "question": "À cet endroit, la voiture bleue peut...",
     "choix": [
-      "A. Seulement s’arrêter.",
+      "A. Uniquement s’arrêter.",
       "B. S’arrêter et stationner.",
       "C. Ni stationner ni s’arrêter."
     ],
     "reponse": "A",
-    "explication": "",
-    "image": "/examen-blanc/q18.jpg"
+    "explication": "La réponse A correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Analysez le cas suivant: à cet endroit, la voiture bleue peut...",
+    "needsLegalReview": true
   },
   {
     "id": 19,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Cette combinaison d'un signal routier et un panneau concerne ...",
+    "question": "Cette combinaison d'un signal routier et un panneau concerne...",
     "choix": [
       "A. ... la M.M.A.",
       "B. ... la M.E.C."
     ],
     "reponse": "A",
-    "explication": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.À partir ce signal routier jusqu'à la prochaine intersection, il est interdit pour les véhicules avec une M.M.A. de plus de 3,5 tonnes de circuler plus rapidement que la vitesse reprise sur le signal de limitation.",
-    "image": "/examen-blanc/q19.jpg"
+    "explication": "Règle applicable : À partir ce signal routier jusqu'à la prochaine intersection, il est interdit pour les véhicules avec une M.M.A. de plus de 3,5 tonnes de circuler plus rapidement que la vitesse reprise sur le signal de limitation.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, cette combinaison d'un signal routier et un panneau concerne...",
+    "needsLegalReview": true
   },
   {
     "id": 20,
@@ -242,75 +269,83 @@
     "gravite": "normale",
     "question": "Un carrefour sans signalisation.Le conducteur de la voiture blanche s’arrête un instant au carrefour et veut ensuite continuer tout droit. Mais la voiture grise tourne soudain à gauche.",
     "choix": [
-      "A. C’est permis, car la voiture grise vient de droite.",
-      "B. C’est permis, car la voiture blanche s’est arrêtée.",
-      "C. Ce n’est pas permis, car la voiture blanche continue tout droit."
+      "A. C’est permis, car le véhicule gris vient de droite.",
+      "B. C’est permis, car le véhicule blanc s’est arrêté.",
+      "C. Ce n’est pas permis, car le véhicule blanc continue tout droit."
     ],
     "reponse": "C",
-    "explication": "LEÇON 21Le trafic qui continue tout droit a la priorité sur le trafic qui tourne.Même si le conducteur de la voiture blanche s’arrête un instant, il garde sa priorité.",
-    "image": "/examen-blanc/q20.jpg"
+    "explication": "Règle applicable : Le trafic qui continue tout droit a la priorité sur le trafic qui tourne.Même si le conducteur de la voiture blanche s’arrête un instant, il garde sa priorité.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, un carrefour sans signalisation.Le conducteur de la voiture blanche s’arrête un instant au carrefour et veut ensuite continuer tout droit. Mais la voiture grise tourne soudain à gauche.",
+    "needsLegalReview": true
   },
   {
     "id": 21,
     "type": "oui_non",
     "gravite": "normale",
-    "question": "La voiture bleue peut-elle dépasser le camion-citerne par la gauche ?",
+    "question": "La voiture bleue peut-elle dépasser le camion-citerne par la gauche?",
     "choix": [],
     "reponse": "OUI",
-    "explication": "Explication :Les deux bandes de circulation sont séparées par une ligne blanche continue et une ligne blanche discontinue. Le conducteur doit tenir compte de la ligne qui se trouve de son côté. Du côté de la voiture bleue, la ligne est discontinue. Aucun signal routier n’interdit le dépassement. La voiture bleue peut donc dépasser le camion-citerne par la gauche, si elle peut le faire en toute sécurité.",
-    "image": "/examen-blanc/q21.jpg"
+    "explication": "Règle applicable : Explication:Les deux bandes de circulation sont séparées par une ligne blanche continue et une ligne blanche discontinue. Le conducteur doit tenir compte de la ligne qui se trouve de son côté. Du côté de la voiture bleue, la ligne est discontinue. Aucun signal routier n’interdit le dépassement. La voiture bleue peut donc dépasser le camion-citerne par la gauche, si elle peut le faire en toute sécurité.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Analysez le cas suivant: la voiture bleue peut-elle dépasser le camion-citerne par la gauche.",
+    "needsLegalReview": true
   },
   {
     "id": 22,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Nous sommes le 12 février.Que peut faire la voiture à cet endroit ?",
+    "question": "Nous sommes le 12 février.Que peut faire la voiture à cet endroit?",
     "choix": [
       "A. S’arrêter et stationner.",
       "B. S’arrêter uniquement.",
       "C. Ne pas s’arrêter et ne pas stationner."
     ],
     "reponse": "A",
-    "explication": "",
-    "image": "/examen-blanc/q22.jpg"
+    "explication": "La réponse A correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, nous sommes le 12 février.Que peut faire la voiture à cet endroit.",
+    "needsLegalReview": true
   },
   {
     "id": 23,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Le résultat d'un test de l'haleine est de 0,5 ‰.Quelle est la conséquence ?",
+    "question": "Le résultat d'un test de l'haleine est de 0,5 ‰.Quelle est la conséquence?",
     "choix": [
-      "A : Vous pouvez poursuivre votre route.",
-      "B : Vous recevez une interdiction immédiate de conduire pendant 3 heures.",
-      "C : Vous recevez une interdiction immédiate de conduire pendant 12 heures."
+      "A. Il est permis de poursuivre votre route.",
+      "B. Vous recevez une interdiction immédiate de conduire pendant 3 heures.",
+      "C. Vous recevez une interdiction immédiate de conduire pendant 12 heures."
     ],
     "reponse": "C",
-    "explication": "Explication :Un résultat de 0,5 ‰ au test de l'haleine entraîne une interdiction immédiate de conduire de 12 heures.Un résultat de 0,8 ‰ entraîne une interdiction immédiate de conduire de 15 jours.",
-    "image": "/examen-blanc/q23.jpg"
+    "explication": "Règle applicable : Explication:Un résultat de 0,5 ‰ au test de l'haleine entraîne une interdiction immédiate de conduire de 12 heures.Un résultat de 0,8 ‰ entraîne une interdiction immédiate de conduire de 15 jours.",
+    "needsLegalReview": true
   },
   {
     "id": 24,
     "type": "oui_non",
     "gravite": "normale",
-    "question": "Vous avez le permis de conduire provisoire B.Pouvez-vous dépasser un camion au-delà de ces signaux routiers ?",
+    "question": "Vous avez le permis de conduire provisoire B.Pouvez-vous dépasser un camion au-delà de ces signaux routiers?",
     "choix": [],
     "reponse": "OUI",
-    "explication": "",
-    "image": "/examen-blanc/q24.jpg"
+    "explication": "La réponse OUI correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Analysez le cas suivant: vous avez le permis de conduire provisoire B.Pouvez-vous dépasser un camion au-delà de ces signaux routiers.",
+    "needsLegalReview": true
   },
   {
     "id": 25,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "L’air conditionné dans la voiture est allumé.En conséquence ...",
+    "question": "L’air conditionné dans la voiture est allumé.En conséquence...",
     "choix": [
       "A. ... la consommation de carburant augmente.",
       "B. ... la consommation de carburant diminue.",
       "C. ... il n’y a pas d’effet sur la consommation de carburant."
     ],
     "reponse": "A",
-    "explication": "",
-    "image": "/examen-blanc/q25.jpg"
+    "explication": "La réponse A correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsLegalReview": true
   },
   {
     "id": 26,
@@ -323,36 +358,40 @@
       "C. Les quatre chiffres n’ont rien à voir avec la date de fabrication."
     ],
     "reponse": "A",
-    "explication": "",
-    "image": "/examen-blanc/q26.jpg"
+    "explication": "La réponse A correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsLegalReview": true
   },
   {
     "id": 27,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "À quelle vitesse maximale la voiture blanche peut-elle circuler sur cette route pour automobiles dans la Région wallonne ?",
+    "question": "Quelle limitation de vitesse la voiture blanche doit-elle respecter sur cette route pour automobiles dans la Région wallonne ?",
     "choix": [
       "A. 50 km/h.",
       "B. 70 km/h.",
       "C. 90 km/h."
     ],
     "reponse": "C",
-    "explication": "",
-    "image": "/examen-blanc/q27.jpg"
+    "explication": "La réponse C correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Quelle limitation de vitesse la voiture blanche doit-elle respecter sur cette route pour automobiles dans la Région wallonne.",
+    "needsLegalReview": true
   },
   {
     "id": 28,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Que ne peut pas faire le conducteur de la voiture bleue ?",
+    "question": "Que ne peut pas faire le conducteur de la voiture bleue?",
     "choix": [
       "A. Continuer tout droit.",
       "B. Tourner à droite.",
       "C. Tourner à gauche."
     ],
     "reponse": "B",
-    "explication": "",
-    "image": "/examen-blanc/q28.jpg"
+    "explication": "La réponse B correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, que ne peut pas faire le conducteur de la voiture bleue.",
+    "needsLegalReview": true
   },
   {
     "id": 29,
@@ -361,48 +400,56 @@
     "question": "Le véhicule blanc peut-il stationner à cet endroit?",
     "choix": [],
     "reponse": "NON",
-    "explication": "",
-    "image": "/examen-blanc/q29.jpg"
+    "explication": "La réponse NON correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, le véhicule blanc peut-il stationner à cet endroit.",
+    "needsLegalReview": true
   },
   {
     "id": 30,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Qu'est-ce qui n'est PAS autorisé ?",
+    "question": "Quelle configuration est interdite par la réglementation ?",
     "choix": [
       "A. Pneus radiaux avant et arrière diagonaux.",
       "B. Pneus diagonaux avant et radiaux arrière."
     ],
     "reponse": "A",
-    "explication": "",
-    "image": "/examen-blanc/q30.jpg"
+    "explication": "La réponse A correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Quelle configuration est interdite par la réglementation.",
+    "needsLegalReview": true
   },
   {
     "id": 31,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Pouvez-vous dépasser par la gauche la moto à ce carrefour ?",
+    "question": "Dans cette situation, êtes-vous autorisé à dépasser par la gauche la moto à ce carrefour ?",
     "choix": [
-      "A. Oui.",
+      "A. Oui, cette action est permise.",
       "B. Oui, si vous laissez une distance latérale suffisante.",
-      "C. Non."
+      "C. Non, cette action est interdite."
     ],
     "reponse": "B",
-    "explication": "",
-    "image": "/examen-blanc/q31.jpg"
+    "explication": "La réponse B correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans cette situation, êtes-vous autorisé à dépasser par la gauche la moto à ce carrefour.",
+    "needsLegalReview": true
   },
   {
     "id": 32,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Que signifie le panneau additionnel avec les flèches dirigées vers le haut placé sous ce signal de danger ?",
+    "question": "Que signifie le panneau additionnel avec les flèches dirigées vers le haut placé sous ce signal de danger?",
     "choix": [
-      "A: 1 500 mètres plus loin…",
-      "B: Sur une distance de 1 500 mètres…"
+      "A. 1 500 mètres plus loin…",
+      "B. Sur une distance de 1 500 mètres…"
     ],
     "reponse": "B",
-    "explication": "",
-    "image": "/examen-blanc/q32.jpg"
+    "explication": "La réponse B correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, que signifie le panneau additionnel avec les flèches dirigées vers le haut placé sous ce signal de danger.",
+    "needsLegalReview": true
   },
   {
     "id": 33,
@@ -415,21 +462,23 @@
       "C. Zone d’interdiction."
     ],
     "reponse": "A",
-    "explication": "",
-    "image": "/examen-blanc/q33.jpg"
+    "explication": "La réponse A correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Analysez le cas suivant: sur ces marques routières, vous ne pouvez ni circuler, ni vous arrêter ni stationner.Comment appelle-t-on ces marquages routiers.",
+    "needsLegalReview": true
   },
   {
     "id": 34,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Quelle est votre réaction lorsque vous entrez soudainement dans un banc de brouillard ?",
+    "question": "Quelle est votre réaction lorsque vous entrez soudainement dans un banc de brouillard?",
     "choix": [
       "A. Vous freinez brusquement.",
       "B. Vous freinez progressivement."
     ],
     "reponse": "B",
-    "explication": "",
-    "image": "/examen-blanc/q34.jpg"
+    "explication": "La réponse B correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsLegalReview": true
   },
   {
     "id": 35,
@@ -441,8 +490,10 @@
       "B. ... jusqu’à ce que vous voyez le panneau “Fin de Zone”."
     ],
     "reponse": "A",
-    "explication": "",
-    "image": "/examen-blanc/q35.jpg"
+    "explication": "La réponse A correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, cette limite de vitesse s’applique...",
+    "needsLegalReview": true
   },
   {
     "id": 36,
@@ -455,22 +506,26 @@
       "C. ... ni s’arrêter, ni stationner."
     ],
     "reponse": "B",
-    "explication": "",
-    "image": "/examen-blanc/q36.jpg"
+    "explication": "La réponse B correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Analysez le cas suivant: il y a une ligne blanche sur le bord de la chaussée.À cet endroit, la voiture peut…",
+    "needsLegalReview": true
   },
   {
     "id": 37,
     "type": "choix_multiple",
     "gravite": "grave",
-    "question": "Lequel de ces signaux indique que les conducteurs qui transportent certaines marchandises inflammatoires, ne peuvent pas franchir le signal ?",
+    "question": "Parmi les signaux présentés, lequel indique que les conducteurs qui transportent certaines marchandises inflammatoires, ne peuvent pas franchir le signal ?",
     "choix": [
-      "A. Signal 1.",
-      "B. Signal 2.",
-      "C. Signal 3."
+      "A. Panneau 1.",
+      "B. Panneau 2.",
+      "C. Panneau 3."
     ],
     "reponse": "B",
-    "explication": "",
-    "image": "/examen-blanc/q37.jpg"
+    "explication": "La réponse B correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Parmi les signaux présentés, lequel indique que les conducteurs qui transportent certaines marchandises inflammatoires, ne peuvent pas franchir le signal.",
+    "needsLegalReview": true
   },
   {
     "id": 38,
@@ -478,33 +533,35 @@
     "gravite": "normale",
     "question": "Lors d’un test de l’haleine, la lettre S apparaît sur l’écran.",
     "choix": [
-      "A. Vous devez faire une analyse de l’haleine.",
+      "A. Il faut faire une analyse de l’haleine.",
       "B. Vous recevez une interdiction de conduire provisoire de 3 heures.",
-      "C. Vous pouvez continuer votre route."
+      "C. Il est permis de continuer votre route."
     ],
     "reponse": "C",
-    "explication": "",
-    "image": "/examen-blanc/q38.jpg"
+    "explication": "La réponse C correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsLegalReview": true
   },
   {
     "id": 39,
     "type": "oui_non",
     "gravite": "normale",
-    "question": "Le conducteur de la voiture brune peut-il dépasser la bleue par la gauche ?",
+    "question": "Le conducteur de la voiture brune peut-il dépasser la bleue par la gauche?",
     "choix": [],
     "reponse": "OUI",
-    "explication": "",
-    "image": "/examen-blanc/q39.jpg"
+    "explication": "La réponse OUI correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Analysez le cas suivant: le conducteur de la voiture brune peut-il dépasser la bleue par la gauche.",
+    "needsLegalReview": true
   },
   {
     "id": 40,
     "type": "oui_non",
     "gravite": "grave",
-    "question": "L’ambulance dans laquelle se trouve votre père, roule à 155 km/h.Pouvez-vous la suivre ?",
+    "question": "L’ambulance dans laquelle se trouve votre père, roule à 155 km/h.Pouvez-vous la suivre?",
     "choix": [],
     "reponse": "NON",
-    "explication": "",
-    "image": "/examen-blanc/q40.jpg"
+    "explication": "La réponse NON correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsLegalReview": true
   },
   {
     "id": 41,
@@ -517,32 +574,34 @@
       "C. 4 ans."
     ],
     "reponse": "C",
-    "explication": "",
-    "image": "/examen-blanc/q41.jpg"
+    "explication": "La réponse C correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsLegalReview": true
   },
   {
     "id": 42,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Pouvez-vous dépasser par la gauche avec une voiture un cycliste dans une rue cyclable ?",
+    "question": "Dans cette situation, êtes-vous autorisé à dépasser par la gauche avec une voiture un cycliste dans une rue cyclable ?",
     "choix": [
-      "A. Oui.",
-      "B. Oui, si vous pouvez obtenir 1 mètre écart en toute sécurité.",
-      "C. NON."
+      "A. Oui, cette action est permise.",
+      "B. Oui, si Il est permis de obtenir 1 mètre écart en toute sécurité.",
+      "C. Non, cette action est interdite."
     ],
     "reponse": "C",
-    "explication": "",
-    "image": "/examen-blanc/q42.jpg"
+    "explication": "La réponse C correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsLegalReview": true
   },
   {
     "id": 43,
     "type": "oui_non",
     "gravite": "normale",
-    "question": "Une ligne jaune discontinue au bord de la chaussée.Cette voiture peut s’arrêter pour faire descendre quelqu’un.Mais le conducteur peut-il aussi y stationner ?",
+    "question": "Une ligne jaune discontinue au bord de la chaussée.Cette voiture peut s’arrêter pour faire descendre quelqu’un.Mais le conducteur peut-il aussi y stationner?",
     "choix": [],
     "reponse": "NON",
-    "explication": "",
-    "image": "/examen-blanc/q43.jpg"
+    "explication": "La réponse NON correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, une ligne jaune discontinue au bord de la chaussée.Cette voiture peut s’arrêter pour faire descendre quelqu’un.Mais le conducteur peut-il aussi y stationner.",
+    "needsLegalReview": true
   },
   {
     "id": 44,
@@ -554,42 +613,45 @@
       "B. Tous les conducteurs."
     ],
     "reponse": "B",
-    "explication": "",
-    "image": "/examen-blanc/q44.jpg"
+    "explication": "La réponse B correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, vous voulez tourner à droite à ce carrefour.Vous ralentissez et, si nécessaire, vous vous arrêtez pour céder le passage à …",
+    "needsLegalReview": true
   },
   {
     "id": 45,
     "type": "oui_non",
     "gravite": "normale",
-    "question": "Peut-on dépasser un cycliste par la gauche sur un dispositif surélevé situé dans une agglomération ?",
+    "question": "Le Code de la route permet-il de dépasser un cycliste par la gauche sur un dispositif surélevé situé dans une agglomération ?",
     "choix": [],
     "reponse": "OUI",
-    "explication": "",
-    "image": "/examen-blanc/q45.jpg"
+    "explication": "La réponse OUI correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsLegalReview": true
   },
   {
     "id": 46,
     "type": "oui_non",
     "gravite": "normale",
-    "question": "Parfois, un agent se tient à un carrefour avec un bras tendu horizontalement. Parfois, il tend ses deux bras horizontalement. Donne-t-il exactement le même ordre ?",
+    "question": "Parfois, un agent se tient à un carrefour avec un bras tendu horizontalement. Parfois, il tend ses deux bras horizontalement. Donne-t-il exactement le même ordre?",
     "choix": [],
     "reponse": "OUI",
-    "explication": "",
-    "image": "/examen-blanc/q46.jpg"
+    "explication": "La réponse OUI correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, parfois, un agent se tient à un carrefour avec un bras tendu horizontalement. Parfois, il tend ses deux bras horizontalement. Donne-t-il exactement le même ordre.",
+    "needsLegalReview": true
   },
   {
     "id": 47,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "En cas d’accident, comment un conducteur doit-il avertir les autres usagers du danger ?",
+    "question": "En cas d’accident, comment un conducteur doit-il avertir les autres usagers du danger?",
     "choix": [
       "A. Il porte sa veste rétro-réfléchissante.",
       "B. Il place le triangle de danger.",
       "C. Il appelle les secours."
     ],
     "reponse": "B",
-    "explication": "LEÇON 29 - 'Accident'Toujours placer un triangle de danger.",
-    "image": "/examen-blanc/q47.jpg"
+    "explication": "Règle applicable : Toujours placer un triangle de danger."
   },
   {
     "id": 48,
@@ -598,20 +660,22 @@
     "question": "Dans une zone 30, les conducteurs doivent toujours donner la priorité aux piétons, même en l'absence d’un passage pour piétons.",
     "choix": [],
     "reponse": "NON",
-    "explication": "",
-    "image": "/examen-blanc/q48.jpg"
+    "explication": "La réponse NON correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsLegalReview": true
   },
   {
     "id": 49,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Qui peut s'engager en premier dans ce carrefour ?",
+    "question": "Dans quel ordre les véhicules peuvent-ils franchir cette intersection ?",
     "choix": [
       "A. Voiture A.",
       "B. Voiture B."
     ],
     "reponse": "A",
-    "explication": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Un signal d'arrêt se trouve à côté de la voiture B.",
-    "image": "/examen-blanc/q49.jpg"
+    "explication": "Règle applicable : Un signal d'arrêt se trouve à côté de la voiture B.",
+    "needsNewImage": true,
+    "imageBrief": "Afficher le signal belge officiel B5, isolé et parfaitement lisible. Conserver strictement sa forme, ses couleurs et son symbole réglementaires.",
+    "signRef": "B5"
   }
 ]

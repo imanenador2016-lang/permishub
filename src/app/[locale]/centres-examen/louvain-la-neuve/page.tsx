@@ -8,6 +8,7 @@ import { Breadcrumbs } from '@/components/site/Breadcrumbs'
 import { Container } from '@/components/ui/Container'
 import { Link } from '@/i18n/navigation'
 import { CircuitUnlockCta } from '@/components/circuits/CircuitUnlockCta'
+import { CircuitConstructionFaq } from '@/components/circuits/CircuitConstructionFaq'
 import type { AppLocale } from '@/i18n/request'
 import { getCircuitsByCenter } from '@/content/centers/registry'
 import { LOUVAIN_LA_NEUVE_SEO_DATA } from '@/content/centers/louvain-la-neuve-seo'
@@ -93,6 +94,7 @@ export default async function LouvainLaNeuveExamCenterPage({ params: { locale } 
           <details className="group py-4"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-base marker:hidden sm:text-lg">Où se trouve le centre d’examen de Louvain-la-Neuve ?<span aria-hidden="true" className="flex h-8 w-8 flex-none items-center justify-center border-2 border-ink text-lg leading-none transition-transform group-open:rotate-45">+</span></summary><p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/75">Le centre AutoSécurité se trouve au {LOUVAIN_LA_NEUVE_SEO_DATA.address.value}. <a href={mapsUrl} target="_blank" rel="noreferrer" className="font-bold text-brick underline underline-offset-2">Ouvrir l’adresse sur Google Maps</a>.</p></details>
           <details className="group py-4"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-base marker:hidden sm:text-lg">Combien de circuits PermisHub sont disponibles ?<span aria-hidden="true" className="flex h-8 w-8 flex-none items-center justify-center border-2 border-ink text-lg leading-none transition-transform group-open:rotate-45">+</span></summary><p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/75">Quatre circuits sont enregistrés pour Louvain-la-Neuve. Leurs itinéraires Google Maps sont accessibles après déblocage.</p><Link href="#pack" className="mt-2 inline-flex min-h-11 items-center font-bold text-brick underline underline-offset-2">Débloquer les circuits <span aria-hidden className="ml-2">→</span></Link></details>
           <details className="group py-4"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-base marker:hidden sm:text-lg">Comment prendre rendez-vous pour le permis B ?<span aria-hidden="true" className="flex h-8 w-8 flex-none items-center justify-center border-2 border-ink text-lg leading-none transition-transform group-open:rotate-45">+</span></summary><p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/75">L’examen pratique se passe sur rendez-vous via le Portail RDV. Pour les modalités à jour, consulte AutoSécurité.</p><a href={LOUVAIN_LA_NEUVE_SEO_DATA.bookingUrl.value} target="_blank" rel="noreferrer" className="mt-2 inline-flex min-h-11 items-center font-bold text-brick underline underline-offset-2">Ouvrir le Portail RDV <span aria-hidden className="ml-2">↗</span></a></details>
+          <CircuitConstructionFaq />
         </div></div></section>
       </Container>
     </main>

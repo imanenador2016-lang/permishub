@@ -330,13 +330,13 @@
     "image": "/examen-blanc/examen-14/q24.webp",
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Vous vous êtes arrêté à la ligne d’arrêt. À qui devez-vous céder le passage?",
+    "question": "Vous vous êtes arrêté à la ligne d’arrêt. À qui devez-vous céder le passage ?",
     "choix": [
       "A. À tous les usagers de la route.",
-      "B. Aux conducteurs sur la chaussée croisée."
+      "B. À tous les conducteurs qui circulent sur la voie publique que vous abordez."
     ],
     "reponse": "B",
-    "explication": "Règle applicable : Un STOP signifie que vous devez vous arrêter complètement à la ligne d’arrêt et céder le passage aux conducteurs qui circulent sur la voie publique que vous souhaitez rejoindre. S’il n’y a pas de ligne d’arrêt au sol, vous vous arrêtez au panneau. S’il n’y a pas de conducteurs sur la route transversale, vous devez quand même vous arrêter complètement avant de vous engager sur le carrefour.",
+    "explication": "Un STOP vous oblige à vous arrêter complètement à la ligne d’arrêt et à céder le passage à tous les conducteurs qui circulent sur la voie publique que vous abordez. En l’absence de ligne d’arrêt, vous devez vous arrêter à hauteur du signal. Même si aucun conducteur n’est visible sur la voie transversale, l’arrêt complet reste obligatoire avant de vous engager dans le carrefour.",
     "needsNewImage": true,
     "imageBrief": "Afficher le signal belge officiel B1, isolé et parfaitement lisible. Conserver strictement sa forme, ses couleurs et son symbole réglementaires.",
     "signRef": "B1"
@@ -357,14 +357,14 @@
     "image": "/examen-blanc/examen-9/q09.webp",
     "type": "choix_multiple",
     "gravite": "grave",
-    "question": "* Qui doit s'arrêter?",
+    "question": "* Qui doit s’arrêter ?",
     "choix": [
-      "A. Le véhicule bleue.",
+      "A. La voiture bleue.",
       "B. Tout le monde.",
-      "C. Le véhicule brune et la motocyclette."
+      "C. La voiture brune et la motocyclette."
     ],
     "reponse": "C",
-    "explication": "Règle applicable : La motocyclette conduit vers le ventre et la voiture brune vers le dos."
+    "explication": "La voiture brune et la motocyclette doivent s’arrêter. Elles arrivent de directions qui coupent la ligne formée par les bras tendus de l’agent. La voiture bleue circule parallèlement à ses bras et peut poursuivre sa route."
   },
   {
     "id": 27,
@@ -567,11 +567,11 @@
       "A. L’interdiction temporaire est terminée. Il est permis de partir.",
       "B. Il faut vous soumettre de nouveau à un test de l’haleine ou à une analyse de l’haleine."
     ],
-    "reponse": "A",
-    "explication": "Règle applicable : Moins de 0,22 mg/l: vous pouvez partir. 0,22 mg/l ou plus mais moins de 0,35 mg/l: attendre 12 heures.",
+    "reponse": "B",
+    "explication": "Depuis le 1er juillet 2026, un nouveau test ou une nouvelle analyse de l’haleine est obligatoire après les 12 heures, avant que le conducteur puisse reprendre la route. Si le résultat reste égal ou supérieur à 0,22 mg/l, l’interdiction est prolongée de 12 heures à partir du nouveau contrôle.",
     "needsNewImage": true,
     "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, c'est le 2 juillet 2026. Une analyse de l’haleine a indiqué que le taux d’alcool dans l’air expiré était d’au moins 0,30 mg/litre et vous avez reçu une interdiction de conduire de 12 heures. Que se passe-t-il après ces 12 heures.",
-    "needsLegalReview": true
+    "needsLegalReview": false
   },
   {
     "id": 41,
@@ -662,19 +662,19 @@
   },
   {
     "id": 47,
-    "image": "/examen-blanc/examen-14/q47.webp",
+    "image": "/examen-blanc/examen-13/q16.webp",
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Un piéton (flèche orange) peut-il traverser la chaussée à cet endroit?",
+    "question": "Le passage pour piétons se trouve à 50 mètres. Le piéton indiqué par la flèche orange peut-il traverser la chaussée à cet endroit ?",
     "choix": [
       "A. Oui, cette action est permise.",
       "B. Non, il doit utiliser le passage pour piétons."
     ],
     "reponse": "A",
-    "explication": "Règle applicable : LECON 7 Le signal routier indique qu’un passage pour piétons se trouve à 100 mètres. Un piéton doit obligatoirement l’utiliser s’il se trouve à moins de 20 mètres du passage. Ce n’est pas le cas ici.",
+    "explication": "Oui. Le passage pour piétons se trouve à 50 mètres. Un piéton doit obligatoirement utiliser un passage pour piétons lorsqu’il en existe un à moins de 20 mètres environ. Ici, le passage est plus éloigné : le piéton peut donc traverser à cet endroit, perpendiculairement à la chaussée et en s’assurant qu’il peut le faire sans danger.",
     "needsNewImage": true,
     "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Analysez le cas suivant: un piéton (flèche orange) peut-il traverser la chaussée à cet endroit.",
-    "needsLegalReview": true
+    "needsLegalReview": false
   },
   {
     "id": 48,

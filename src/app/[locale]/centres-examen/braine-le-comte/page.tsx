@@ -8,6 +8,7 @@ import { Breadcrumbs } from '@/components/site/Breadcrumbs'
 import { Container } from '@/components/ui/Container'
 import { Link } from '@/i18n/navigation'
 import { CircuitUnlockCta } from '@/components/circuits/CircuitUnlockCta'
+import { CircuitConstructionFaq } from '@/components/circuits/CircuitConstructionFaq'
 import type { AppLocale } from '@/i18n/request'
 import { getCircuitsByCenter } from '@/content/centers/registry'
 import { BRAINE_LE_COMTE_SEO_DATA } from '@/content/centers/braine-le-comte-seo'
@@ -145,6 +146,7 @@ export default async function BraineLeComteExamCenterPage({ params: { locale } }
                 <details className="group py-4"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-base marker:hidden sm:text-lg">Comment prendre rendez-vous pour l’examen pratique ?<span aria-hidden="true" className="flex h-8 w-8 flex-none items-center justify-center border-2 border-ink text-lg leading-none transition-transform group-open:rotate-45">+</span></summary><p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/75">AIBV demande un rendez-vous pour présenter l’examen pratique. Consulte les modalités officielles ou contacte le centre au {BRAINE_LE_COMTE_SEO_DATA.permitPhone.value}.</p><a href={BRAINE_LE_COMTE_SEO_DATA.bookingUrl.value} target="_blank" rel="noreferrer" className="mt-2 inline-flex min-h-11 items-center font-bold text-brick underline underline-offset-2">Voir les modalités AIBV <span aria-hidden className="ml-2">↗</span></a></details>
                 <details className="group py-4"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-base marker:hidden sm:text-lg">Combien de circuits PermisHub sont disponibles ?<span aria-hidden="true" className="flex h-8 w-8 flex-none items-center justify-center border-2 border-ink text-lg leading-none transition-transform group-open:rotate-45">+</span></summary><p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/75">{availableCircuits} circuits sont enregistrés pour Braine-le-Comte. Leurs détails s’ouvrent après déblocage.</p><Link href="#pack" className="mt-2 inline-flex min-h-11 items-center font-bold text-brick underline underline-offset-2">Débloquer les circuits <span aria-hidden className="ml-2">→</span></Link></details>
                 <details className="group py-4"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-base marker:hidden sm:text-lg">Quel repère local travailler en priorité ?<span aria-hidden="true" className="flex h-8 w-8 flex-none items-center justify-center border-2 border-ink text-lg leading-none transition-transform group-open:rotate-45">+</span></summary><p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/75">Garde une observation active quand le contexte change et vérifie les indications sur place, notamment la signalisation et la présence d’autres usagers.</p></details>
+                <CircuitConstructionFaq />
               </div>
             </div>
           </section>

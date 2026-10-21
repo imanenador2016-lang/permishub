@@ -30,11 +30,11 @@ export async function createCircuitCheckoutSession(circuitId: string): Promise<{
  * api/checkout/circuits-bundle et CircuitOfferModal.tsx. Même pattern
  * checkout invité que createCircuitCheckoutSession.
  */
-export async function createCircuitsBundleCheckoutSession(centerSlug: string): Promise<{ url: string }> {
+export async function createCircuitsBundleCheckoutSession(centerSlug: string, promoCode?: string): Promise<{ url: string }> {
   const res = await fetch('/api/checkout/circuits-bundle', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ centerSlug }),
+    body: JSON.stringify({ centerSlug, promoCode }),
   })
 
   if (!res.ok) {

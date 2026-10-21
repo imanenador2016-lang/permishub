@@ -8,6 +8,7 @@ import { ProgressBar } from '@/components/ui/ProgressBar'
 import { TestDeNiveau } from '@/components/test-de-niveau/TestDeNiveau'
 import { trackEvent } from '@/lib/analytics'
 import { computeSegment } from '@/lib/quiz-segment'
+import { ArrowRight } from 'lucide-react'
 import {
   EMPTY_QUALIF_ANSWERS,
   FUNNEL_STEPS,
@@ -204,16 +205,20 @@ export function QuizFunnel({
   const showBack = stepIndex > 0 && step !== 'test'
 
   return (
-    <div className="panel mx-auto max-w-lg p-6 sm:p-8">
+    <div className="panel mx-auto max-w-xl overflow-hidden p-5 sm:p-9">
       {step !== 'test' && (
-        <div className="mb-6">
+        <div className="mb-8">
+          <div className="mb-3 flex items-center justify-between gap-3">
+            <p className="font-display text-xs uppercase tracking-[.16em] text-forest">Test de niveau gratuit</p>
+            <p className="text-xs font-bold text-ink/55">Étape {stepIndex + 1} / {FUNNEL_STEPS.length - 1}</p>
+          </div>
           <ProgressBar value={progress} />
         </div>
       )}
 
       {showBack && (
-        <button onClick={goBack} className="mb-4 text-xs font-semibold text-ink/60 hover:text-brick">
-          {t('back')}
+        <button onClick={goBack} className="mb-6 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-ink/60 transition-colors hover:text-brick">
+          <span aria-hidden>←</span>{t('back')}
         </button>
       )}
 
@@ -327,17 +332,17 @@ function QualifScreen<TValue extends string>({
   onSelect: (value: TValue) => void
 }) {
   return (
-    <div>
-      <h2 className="mb-5 font-display text-2xl leading-snug">{title}</h2>
+    <div className="mx-auto max-w-lg">
+      <p className="mb-3 font-display text-xs uppercase tracking-[.16em] text-forest">Quelques secondes suffisent</p>
+      <h2 className="mb-7 font-display text-3xl leading-[1.03] sm:text-4xl">{title}</h2>
       <div className="flex flex-col gap-3">
         {options.map((opt) => (
           <button
             key={opt.value}
             onClick={() => onSelect(opt.value)}
-            className="w-full border-[3px] border-ink bg-cream px-5 py-4 text-left text-base font-semibold shadow-hard-xs transition-all duration-150 ease-out hover:-translate-x-0.5 hover:-translate-y-0.5 hover:bg-yellow/40 hover:shadow-hard-sm active:translate-x-0 active:translate-y-0 active:shadow-none"
-            style={{ minHeight: 48 }}
+            className="group flex min-h-[72px] w-full items-center justify-between gap-4 border-[3px] border-ink bg-cream px-5 py-4 text-left text-base font-semibold shadow-hard-xs transition-all duration-150 ease-out hover:-translate-x-0.5 hover:-translate-y-0.5 hover:bg-yellow hover:shadow-hard-sm focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-forest active:translate-x-0 active:translate-y-0 active:shadow-none"
           >
-            {opt.label}
+            <span>{opt.label}</span><ArrowRight size={21} aria-hidden="true" className="flex-none transition-transform group-hover:translate-x-1" />
           </button>
         ))}
       </div>

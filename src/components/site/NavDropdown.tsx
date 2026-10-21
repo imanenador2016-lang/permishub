@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { ChevronDown } from 'lucide-react'
+import { ChevronDown, LockKeyhole } from 'lucide-react'
 import { Link } from '@/i18n/navigation'
 
 /**
@@ -9,7 +9,7 @@ import { Link } from '@/i18n/navigation'
  * blancs) — voir Navbar.tsx. Ouverture au clic (pas juste au survol, plus
  * fiable au clavier/tactile), fermeture au clic extérieur ou Échap.
  */
-export function NavDropdown({ label, links }: { label: string; links: { href: string; label: string }[] }) {
+export function NavDropdown({ label, links }: { label: string; links: { href: string; label: string; locked?: boolean }[] }) {
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
 
@@ -37,7 +37,12 @@ export function NavDropdown({ label, links }: { label: string; links: { href: st
 
       {open && (
         <div className="panel !shadow-hard-xs absolute left-0 top-[calc(100%+10px)] z-20 min-w-[200px] overflow-hidden !p-0">
-          {links.map((link) => (
+          {links.map((link) => link.locked ? (
+            <span key={link.href} aria-disabled="true" className="flex cursor-not-allowed items-center gap-2 border-b-2 border-ink/10 bg-creamdim px-4 py-2.5 text-sm font-medium text-ink/55 last:border-b-0">
+              <LockKeyhole size={15} aria-hidden="true" />
+              {link.label}
+            </span>
+          ) : (
             <Link
               key={link.href}
               href={link.href}

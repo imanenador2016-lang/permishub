@@ -6,6 +6,7 @@ import {
   RESUME_OFFER,
   RESUME_PDF_URL,
   EXAMENS_ILLIMITES_OFFER,
+  PACK_THEORIE_ILLIMITE_OFFER,
   PERCEPTION_RISQUE_OFFER,
   PERCEPTION_RISQUE_PDF_URL,
   LAUNCH_BUNDLE_OFFER,
@@ -20,6 +21,7 @@ import { UnlockExamensEffect } from '@/components/examen-blanc/UnlockExamensEffe
 import { UnlockCenterEffect } from '@/components/circuits/UnlockCenterEffect'
 import { Link } from '@/i18n/navigation'
 import type { AppLocale } from '@/i18n/request'
+import { redirect } from 'next/navigation'
 
 // Voir circuits/succes/page.tsx — même raisonnement, jamais indexable.
 export async function generateMetadata({ params: { locale } }: { params: { locale: AppLocale } }): Promise<Metadata> {
@@ -46,13 +48,17 @@ export default async function PackSuccessPage({
   searchParams,
 }: {
   params: { locale: AppLocale }
-  searchParams: { session_id?: string }
+  searchParams: { session_id?: string; access?: string }
 }) {
   setRequestLocale(locale)
   const t = await getTranslations('checkoutSuccess')
 
   const sessionId = searchParams.session_id
   const result = sessionId ? await verify(sessionId, locale) : null
+  const unlocksExamens = result && (result.offerId === EXAMENS_ILLIMITES_OFFER.id || result.offerId === PACK_THEORIE_ILLIMITE_OFFER.id)
+  if (sessionId && unlocksExamens && searchParams.access !== 'confirmed') {
+    redirect(`/api/access/examens/confirm?session_id=${encodeURIComponent(sessionId)}&locale=${locale}`)
+  }
 
   return (
     <>
@@ -127,11 +133,12 @@ export default async function PackSuccessPage({
                     {t('joinWhatsapp')} →
                   </a>
                 </div>
-              ) : result.offerId === EXAMENS_ILLIMITES_OFFER.id ? (
+              ) : result.offerId === EXAMENS_ILLIMITES_OFFER.id || result.offerId === PACK_THEORIE_ILLIMITE_OFFER.id ? (
                 <div className="panel !shadow-hard-xs mb-5 p-4 text-left">
                   <UnlockExamensEffect />
-                  <p className="mb-1 font-display text-sm">{t('examensReadyTitle')}</p>
-                  <p className="mb-3 text-sm text-ink/75">{t('examensReadyBody')}</p>
+                  <p className="mb-1 font-display text-sm">{result.offerId === PACK_THEORIE_ILLIMITE_OFFER.id ? 'Ton résumé et tes examens sont prêts.' : t('examensReadyTitle')}</p>
+                  <p className="mb-3 text-sm text-ink/75">{result.offerId === PACK_THEORIE_ILLIMITE_OFFER.id ? 'Tu peux ouvrir le résumé et commencer les séries d’examens d’entraînement.' : t('examensReadyBody')}</p>
+                  {result.offerId === PACK_THEORIE_ILLIMITE_OFFER.id && <a href={RESUME_PDF_URL} target="_blank" rel="noopener noreferrer" className="btn-comic mb-3 inline-flex px-4 py-2.5 text-sm">{t('openResume')} →</a>}
                   <Link href="/examen-blanc" className="btn-comic inline-flex px-4 py-2.5 text-sm">
                     {t('viewExamens')} →
                   </Link>

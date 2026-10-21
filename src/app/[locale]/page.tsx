@@ -8,7 +8,6 @@ import { CircuitsCarousel } from '@/components/circuits/CircuitsCarousel'
 import { CoutEchecBanner } from '@/components/circuits/CoutEchecBanner'
 import { PacksSection } from '@/components/pricing/PacksSection'
 import { TestimonialsSection } from '@/components/home/TestimonialsSection'
-import { CoachingIntensifHomeSection } from '@/components/home/CoachingIntensifHomeSection'
 import { Container } from '@/components/ui/Container'
 import { Link } from '@/i18n/navigation'
 import type { AppLocale } from '@/i18n/request'
@@ -35,8 +34,6 @@ export default async function HomePage({ params: { locale } }: { params: { local
       <Navbar />
       <main>
         <Hero />
-        <CoachingIntensifHomeSection />
-
         <Container id="circuits" className="scroll-mt-6 py-20">
           <span className="mb-4 inline-block w-fit -rotate-2 border-[3px] border-ink bg-yellow px-3 py-1.5 font-display text-xs">
             {tc('eyebrow')}

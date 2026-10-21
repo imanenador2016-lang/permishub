@@ -1,23 +1,17 @@
-'use client'
-
-import { motion } from 'framer-motion'
-import { useTranslations } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
 import { HeroProof } from './HeroProof'
 
-export function Hero() {
-  const t = useTranslations('home')
-  const tt = useTranslations('testimonials')
+export async function Hero() {
+  const t = await getTranslations('home')
+  const tt = await getTranslations('testimonials')
 
   return (
     <section className="px-4 pt-4 sm:px-6 sm:pt-6">
       <div className="mx-auto max-w-6xl">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-[1.15fr_0.85fr] md:items-stretch">
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-            className="panel flex min-w-0 flex-col justify-center p-6 sm:p-8"
+          <div
+            className="home-enter panel flex min-w-0 flex-col justify-center p-6 sm:p-8"
           >
             <span className="mb-4 inline-block w-fit -rotate-2 border-[3px] border-ink bg-yellow px-3.5 py-1.5 font-display text-xs sm:text-sm">
               {t('heroEyebrow')}
@@ -45,13 +39,10 @@ export function Hero() {
                 {t('ctaPrimary')} →
               </Link>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.1 }}
-            className="min-w-0"
+          <div
+            className="home-enter home-enter-delay min-w-0"
           >
             <HeroProof />
             <Link
@@ -60,7 +51,7 @@ export function Hero() {
             >
               {tt('whyNotYou')} →
             </Link>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

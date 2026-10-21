@@ -41,9 +41,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const centerBraineLeComte = withLocales(base, '/centres-examen/braine-le-comte', 0.7, 'monthly', ['fr'])
   const centerCouillet = withLocales(base, '/centres-examen/couillet', 0.7, 'monthly', ['fr'])
   const centerLouvainLaNeuve = withLocales(base, '/centres-examen/louvain-la-neuve', 0.7, 'monthly', ['fr'])
+  const centerWandre = withLocales(base, '/centres-examen/wandre', 0.7, 'monthly', ['fr'])
+  const centerNamur = withLocales(base, '/centres-examen/namur', 0.7, 'monthly', ['fr'])
   const circuitPages = EXAM_CENTERS
     .filter((center) => !center.comingSoon && getCircuitsByCenter(center.slug).some((circuit) => Boolean(circuit.hasMaps)))
     .flatMap((center) => withLocales(base, `/circuits/${center.slug}`, 0.6, 'monthly'))
 
-  return [...staticPages, ...editorialArticle, ...centerAnderlecht, ...centerCuesmes, ...centerMariembourg, ...centerLobbes, ...centerSchaerbeek, ...centerBraineLeComte, ...centerCouillet, ...centerLouvainLaNeuve, ...circuitPages]
+  return [...staticPages, ...editorialArticle, ...centerAnderlecht, ...centerCuesmes, ...centerMariembourg, ...centerLobbes, ...centerSchaerbeek, ...centerBraineLeComte, ...centerCouillet, ...centerLouvainLaNeuve, ...centerWandre, ...centerNamur, ...circuitPages]
 }

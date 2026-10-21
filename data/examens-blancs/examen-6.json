@@ -31,8 +31,8 @@
     "gravite": "normale",
     "question": "La voiture blanche s’est arrêtée par sécurité avant le carrefour.Quelle voiture peut s’engager la première sur le carrefour?",
     "choix": [
-      "A. Le véhicule bleue, car la blanche s’est arrêtée.",
-      "B. Le véhicule blanche, car elle vient de droite."
+      "A. Le véhicule bleu, car la voiture blanche s’est arrêtée.",
+      "B. Le véhicule blanc, car il vient de droite."
     ],
     "reponse": "B",
     "explication": "Règle applicable : À un carrefour où la priorité n’est pas réglée par un agent qualifié, des feux de signalisation ou des signaux routier, la priorité de droite s’applique.Même si le conducteur venant de droite s’arrête d’abord, il conserve tout de même sa priorité.",
@@ -116,10 +116,11 @@
     "id": 9,
     "type": "numerique",
     "gravite": "normale",
-    "question": "Entrez un nombre.Lors d’une panne ou d’un accident sur cette route pour automobiles, vous placerez le triangle de danger à quelle distance minimale (...) mètres en deçà du véhicule, de manière à ce qu’il soit bien visible des usagers qui s’en approchent à minimum 50 mètres.",
+    "question": "Entrez un nombre. Cette voie est une route pour automobiles, pas une autoroute. Lors d’une panne ou d’un accident, à quelle distance minimale du véhicule devez-vous placer le triangle de danger ?",
     "choix": [],
     "reponse": "30",
-    "explication": "Règle applicable : Autoroute: 100 mètres.Route pour automobiles: 30 mètres.",
+    "explication": "Sur une voie ordinaire, y compris une route pour automobiles, le triangle est placé à au moins 30 mètres du véhicule et doit être visible à environ 50 mètres. La distance de 100 mètres concerne uniquement l’autoroute.",
+    "needsLegalReview": false,
     "needsNewImage": false,
     "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, entrez un nombre.Lors d’une panne ou d’un accident sur cette route pour automobiles, vous placerez le triangle de danger à quelle distance minimale (...) mètres en deçà du véhicule, de manière à ce qu’il soit bien visible des usagers qui s’en approchent à minimum 50 mètres.",
     "image": "/examen-blanc/examen-6/q09-new.png"
@@ -325,11 +326,11 @@
     "gravite": "normale",
     "question": "Quel usager bénéficie du passage prioritaire ?",
     "choix": [
-      "A. Le véhicule noire.",
-      "B. Le véhicule jaune (indiquée par la ligne jaune)."
+      "A. La voiture noire qui débouche de la voie latérale.",
+      "B. Votre véhicule, dont la trajectoire est indiquée par la flèche jaune."
     ],
     "reponse": "B",
-    "explication": "Règle applicable : Le signal routier indique que la voiture jaune à la priorité.",
+    "explication": "Règle applicable : le signal B15 indique que vous bénéficiez de la priorité de passage au prochain carrefour. La voiture noire qui débouche de la voie latérale doit vous céder le passage.",
     "image": "/examen-blanc/examen-6/q23-new.png",
     "needsNewImage": false
   },

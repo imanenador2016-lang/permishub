@@ -24,6 +24,8 @@ const PHOTOS: Record<string, string> = {
   cuesmes: '/images/centers/cuesmes.png',
   lobbes: '/images/centers/lobbes.webp',
   mariembourg: '/images/centers/mariembourg.png',
+  wandre: '/images/centers/wandre.webp',
+  namur: '/images/centers/namur.webp',
 }
 
 const DIFFICULTY_STYLES: Record<string, string> = {

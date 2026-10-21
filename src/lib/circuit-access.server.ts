@@ -1,13 +1,18 @@
 import 'server-only'
 
+import { cookies } from 'next/headers'
 import { getServerSession } from 'next-auth/next'
 import { authOptions } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { LAUNCH_BUNDLE_OFFER } from '@/content/pricing-config'
 import { hasCircuitCenterEntitlement } from '@/domain/circuit-access'
+import { circuitAccessCookieName, verifyCircuitAccessToken } from '@/lib/circuit-access-token'
 
 /** Vérifie le droit réel au pack depuis l'identité de session et les achats Stripe enregistrés. */
 export async function getCircuitCenterAccess(centerSlug: string): Promise<boolean> {
+  const accessToken = cookies().get(circuitAccessCookieName(centerSlug))?.value
+  if (verifyCircuitAccessToken(accessToken, centerSlug)) return true
+
   if (!process.env.DATABASE_URL) return false
 
   try {

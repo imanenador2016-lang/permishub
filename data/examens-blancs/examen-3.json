@@ -28,13 +28,13 @@
     "id": 3,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Quel signal de danger indique une montée à forte inclinaison?",
+    "question": "Quel signal de danger indique une montée à forte inclinaison ?",
     "choix": [
-      "A. Panneau 1.",
-      "B. Panneau 2."
+      "A. Le panneau de gauche, dont la pente monte vers la droite.",
+      "B. Le panneau de droite, dont la pente descend vers la droite."
     ],
     "reponse": "A",
-    "explication": "Règle applicable : La signification du deuxième signal routier: descente dangereuse.Les signaux de danger sont placés à une distance approximative de 150 m de l'endroit dangereux, sauf mention contraire sur un panneau bleu placé sous le signal.",
+    "explication": "Le panneau de gauche annonce une montée à forte inclinaison : la pente représentée monte dans le sens de lecture. Le panneau de droite annonce une descente dangereuse.",
     "visualAnnotations": [
       {
         "label": "1",
@@ -57,9 +57,9 @@
     "gravite": "normale",
     "question": "Un carrefour sans signalisation.Le conducteur de la voiture blanche s’arrête un instant au carrefour et veut ensuite continuer tout droit. Mais la voiture grise tourne soudain à gauche.",
     "choix": [
-      "A. C’est permis, car Le véhicule grise vient de droite.",
-      "B. C’est permis, car Le véhicule blanche s’est arrêtée.",
-      "C. Ce n’est pas permis, car Le véhicule blanche continue tout droit."
+      "A. C’est permis, car le véhicule gris vient de droite.",
+      "B. C’est permis, car le véhicule blanc s’est arrêté.",
+      "C. Ce n’est pas permis, car le véhicule blanc continue tout droit."
     ],
     "reponse": "C",
     "explication": "Règle applicable : Le trafic qui continue tout droit a la priorité sur le trafic qui tourne.Même si le conducteur de la voiture blanche s’arrête un instant, il garde sa priorité.",
@@ -268,7 +268,16 @@
     "reponse": "C",
     "explication": "Règle applicable : La chaussée est une partie de la voie publique.Le code de la route s’applique sur la voie publique.",
     "image": "/examen-blanc/examen-3/q17-new.png",
-    "needsNewImage": false
+    "needsNewImage": false,
+    "imageWidth": 1448,
+    "imageHeight": 1086,
+    "visualAnnotations": [
+      {
+        "label": "?",
+        "x": 52,
+        "y": 73
+      }
+    ]
   },
   {
     "id": 18,
@@ -607,9 +616,9 @@
     "gravite": "grave",
     "question": "Qui peut s'engager dans le carrefour?",
     "choix": [
-      "A. Le véhicule bleue.",
-      "B. Le véhicule brune.",
-      "C. Ni Le véhicule bleue ni Le véhicule brune."
+      "A. Le véhicule bleu.",
+      "B. Le véhicule brun.",
+      "C. Ni le véhicule bleu ni le véhicule brun."
     ],
     "reponse": "B",
     "explication": "Règle applicable : Lorsqu'un agent tend un bras ou les deux bras horizontalement: Les usagers qui se dirigent vers son ventre ou son dos doivent s'arrêter. Ceux qui approchent de son côté (ou de la main tendue) peuvent s'engager dans le carrefour pour continuer tout droit ou tourner à gauche ou à droite. Un agent qui tend les deux bras horizontalement donne la même injonction que s'il tend un seul bras horizontalement.Les voitures bleue et vertes se dirigent vers le coté de l’agent.",

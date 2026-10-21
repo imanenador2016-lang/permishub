@@ -1,0 +1,664 @@
+[
+  {
+    "id": 1,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Le conducteur de tram doit respecter... 1. Les injonctions d’un agent qualifié. 2. Les feux de signalisation. 3. Les règles de priorité.",
+    "choix": [
+      "A. Uniquement le 1.",
+      "B. Uniquement le 1 et le 2.",
+      "C. Le 1, le 2, et le 3."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : Un conducteur de tram doit respecter: 1. les injonctions d’un agent qualifié. 2. les feux de signalisation."
+  },
+  {
+    "id": 2,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "En agglomération. Que peut faire la voiture à cet endroit?",
+    "choix": [
+      "A. S’arrêter seulement.",
+      "B. S’arrêter et stationner.",
+      "C. Ni s’arrêter ni stationner."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : En agglomération, une voiture peut stationner sur une route prioritaire. Hors agglomération, la voiture doit stationner sur l’accotement.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, en agglomération. Que peut faire la voiture à cet endroit.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 3,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Quelle limitation de vitesse une voiture équipée de pneus cloutés peut-elle rouler sur une route à deux chaussées comprenant chacune deux bandes de circulation, séparées par un terre-plein central ?",
+    "choix": [
+      "A. 70 km/h.",
+      "B. 90 km/h.",
+      "C. 120 km/h."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : +5 Les pneus cloutés peuvent être utilisés du 1ᵉʳ novembre au 31 mars sur les véhicules dont la MMA ne dépasse pas 3,5 tonnes. Vitesse: – Autoroutes et routes à 2×2 bandes séparées par un terre-plein: maximum 90 km/h. – Routes ordinaires: maximum 60 km/h.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 4,
+    "type": "numerique",
+    "gravite": "grave",
+    "question": "* Entrez un nombre. Sur un dispositif surélevé, vous pouvez rouler à une vitesse maximale de (...) km/h.",
+    "choix": [],
+    "reponse": "30",
+    "explication": "Règle applicable : Dispositif surélevé: jusqu'à 30 km / h. Vous ne pouvez même pas dépasser les cyclistes par la gauche.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 5,
+    "type": "numerique",
+    "gravite": "normale",
+    "question": "Entrez un nombre: Sur l’autoroute, la vitesse maximale autorisée est de (...) km/h.",
+    "choix": [],
+    "reponse": "120",
+    "explication": "Règle applicable : autoroute’. Sur l’autoroute on peut rouler jusqu’à 120 km/h. Vous devez rouler à une vitesse minimale de 70 km/h quand les conditions le permettent.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 6,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Que signifie le signal routier en forme de triangle renversé?",
+    "choix": [
+      "A. Céder le passage et, si nécessaire, s’arrêter.",
+      "B. S’arrêter complètement et céder le passage.",
+      "C. Céder le passage aux conducteurs venant de droite."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : Explication: Signal routier B1. Signification: céder le passage (aux conducteurs circulant sur la voie publique abordée et, si nécessaire, s’arrêter).",
+    "needsNewImage": true,
+    "imageBrief": "Afficher le signal belge officiel B1, isolé et parfaitement lisible. Conserver strictement sa forme, ses couleurs et son symbole réglementaires.",
+    "signRef": "B1"
+  },
+  {
+    "id": 7,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Si vous suivez la route vers la gauche, vous avez priorité dans le carrefour suivant.",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "Règle applicable : Le signal ci-dessous indique la direction de la route.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Analysez le cas suivant: si vous suivez la route vers la gauche, vous avez priorité dans le carrefour suivant.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 8,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Il y a un embouteillage sur chaque bande de circulation. Où doivent circuler les voitures sur la bande de gauche?",
+    "choix": [
+      "A. Le plus à droite possible.",
+      "B. Au milieu.",
+      "C. Le plus à gauche possible."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : En cas d’embouteillage, les conducteurs doivent former un couloir de secours. Les véhicules sur la bande de gauche se placent le plus à gauche possible et ceux sur la bande voisine se placent le plus à droite possible afin de laisser le passage libre aux véhicules de secours."
+  },
+  {
+    "id": 9,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Ce signal routier indique une zone cyclable. Mais où s'arrête cette zone cyclable?",
+    "choix": [
+      "A. Au Panneau: Fin de la zone cyclable.",
+      "B. À la prochaine intersection.",
+      "C. Au Panneau ou à la prochaine intersection."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : La vitesse maximale autorisée est de 30 km/h. Dans une zone cyclable les voitures ne peuvent pas dépasser les cyclistes.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, ce signal routier indique une zone cyclable. Mais où s'arrête cette zone cyclable.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 10,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Dans quel ordre les conducteurs peuvent-ils s’engager dans ce carrefour ?",
+    "choix": [
+      "A. Voiture bleue - Voiture brune - Moto.",
+      "B. Voiture bleue - Moto - Voiture brune.",
+      "C. Voiture brune - Voiture bleue - Moto."
+    ],
+    "reponse": "B",
+    "explication": "La voiture bleue et la moto circulent en sens opposés sur la route prioritaire. La voiture bleue continue tout droit : elle passe avant la moto, qui tourne à gauche et doit lui céder le passage. La voiture brune rencontre un signal « cédez le passage » et passe donc en dernier.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Observez précisément la configuration. Analysez le cas suivant: dans quel ordre les conducteurs peuvent-ils s’engager dans ce carrefour.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 11,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Ce camion est-il stationné correctement?",
+    "choix": [
+      "A. Oui, car la chaussée n’est pas subdivisée en bandes de circulation.",
+      "B. Non, cette action est interdite."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : Le signal routier bleu indique qu’il faut stationner en partie sur la chaussée et en partie sur l’accotement.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, ce camion est-il stationné correctement."
+  },
+  {
+    "id": 12,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Dans cette situation, êtes-vous autorisé à franchir ce signal routier en voiture ?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "Règle applicable : Sens interdit pour tout conducteur. Signal d’interdiction.",
+    "needsNewImage": true,
+    "imageBrief": "Afficher le signal belge officiel C3, isolé et parfaitement lisible. Conserver strictement sa forme, ses couleurs et son symbole réglementaires.",
+    "signRef": "C3"
+  },
+  {
+    "id": 13,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Vous roulez avec une voiture diesel. À combien de tours est-il préférable de changer de vitesse?",
+    "choix": [
+      "A. 1000–1500.",
+      "B. 1500–2000.",
+      "C. 2000–2500."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : La plage de régime idéale pour changer de vitesse avec un moteur diesel est 1500–2000 tours/minute. Ordre des actions lors du changement de vitesse: 1. Appuyez à fond sur l’embrayage et relâchez simultanément l’accélérateur. 2. Passez à la vitesse appropriée. 3. Relevez l’embrayage jusqu’au point de patinage et appuyez doucement sur l’accélérateur. 4. Relâchez complètement l’embrayage et placez votre pied gauche à côté de la pédale.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 14,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Cet autobus veut quitter l’arrêt en agglomération.",
+    "choix": [
+      "A. Le véhicule a priorité.",
+      "B. L’autobus a priorité."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : Dans une agglomération, et le signal de retour est activé, vous devez donner la priorité.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, cet autobus veut quitter l’arrêt en agglomération.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 15,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Vous approchez d’un carrefour. Que devez-vous faire dans 100 mètres?",
+    "choix": [
+      "A. Céder le passage et éventuellement vous arrêter.",
+      "B. Vous arrêter et céder le passage."
+    ],
+    "reponse": "A",
+    "explication": "La réponse A correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, vous approchez d’un carrefour. Que devez-vous faire dans 100 mètres."
+  },
+  {
+    "id": 16,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Ce signal routier bleu signifie qu’en cas de rétrécissement de la chaussée, les conducteurs circulant de ce côté de la route ont la priorité sur les véhicules venant en sens inverse.",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "Règle applicable : Le signal bleu avec des flèches: priorité. Le signal rouge avec des flèches: céder la priorité.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Analysez le cas suivant: ce signal routier bleu signifie qu’en cas de rétrécissement de la chaussée, les conducteurs circulant de ce côté de la route ont la priorité sur les véhicules venant en sens inverse.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 17,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Une autoroute à trois bandes dans votre sens de circulation. Entre quelles bandes les motocyclistes peuvent-ils circuler lorsqu'il y a de forts ralentissements?",
+    "choix": [
+      "A. Entre la piste 1 et 2.",
+      "B. Entre la piste 2 et 3.",
+      "C. Ils peuvent choisir."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : «Autoroute». En cas d’embouteillages, les conducteurs de motocyclettes peuvent:. Circuler entre les deux bandes de circulation les plus à gauche.. Circuler à une vitesse de maximum 20 km/h plus rapide que les autres véhicules.. Circuler à une vitesse maximale de 50 km/h.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 18,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Est-il vrai que cette femme ne doit pas porter la ceinture de sécurité lorsqu’elle recule?",
+    "choix": [
+      "A. Oui, cette action est permise.",
+      "B. Non, elle doit toujours porter une ceinture."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : En règle générale, le conducteur doit porter la ceinture de sécurité. La loi prévoit toutefois certaines exceptions. Sont dispensés du port de la ceinture: - le conducteur qui effectue une marche arrière; - les chauffeurs de taxi pendant le transport de clients; - les facteurs qui distribuent des colis de porte à porte (cela ne concerne pas toutes les personnes qui livrent des colis;) - les personnes habilitées et les services de secours, lorsque leur mission l’exige.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, est-il vrai que cette femme ne doit pas porter la ceinture de sécurité lorsqu’elle recule.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 19,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Est-il vrai que votre permis de conduire peut être retiré immédiatement si vous franchissez les feux clignotants rouges d’un passage à niveau?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "Règle applicable : Franchir les feux rouges est une infraction grave et votre permis peut être retiré sur le champ.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 20,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Quelle limitation de vitesse cette voiture doit-elle respecter à cet endroit dans la Région de Bruxelles-Capitale ?",
+    "choix": [
+      "A. 20 km/h.",
+      "B. 30 km/h.",
+      "C. 50 km/h."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : La vitesse maximale autorisée sur un dispositif surélevé est de 30 km/h dans tout le pays, quelle que soit la région.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Quelle limitation de vitesse cette voiture doit-elle respecter à cet endroit dans la Région de Bruxelles-Capitale.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 21,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Lors d’un contrôle, la police demande le certificat d’immatriculation du véhicule. Sous quelle forme ce document doit-il être présenté?",
+    "choix": [
+      "A. L’original.",
+      "C. Une copie suffit, à condition de se présenter ultérieurement avec l’original."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : Doivent se trouver dans le véhicule: - Certificat d’immatriculation (original) - Certificat de conformité (original) - Attestation d’assurance (original, copie ou version numérique sur smartphone) - Certificat de contrôle technique (original), dès que le véhicule a 4 ans",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Concentrez-vous sur les règles de priorité. Selon la réglementation belge, lors d’un contrôle, la police demande le certificat d’immatriculation du véhicule. Sous quelle forme ce document doit-il être présenté.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 22,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Dans cette situation, êtes-vous autorisé à dépasser par la gauche ici ?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "Règle applicable : +16 – ‘Le dépassement’. C’est interdit de dépasser par la gauche: un véhicule attelé, un véhicule à plus de deux roues ou un véhicule à moteur à deux roues, sauf s’il y a des barrières ou si le feu blanc clignote.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans cette situation, êtes-vous autorisé à dépasser par la gauche ici.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 23,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Jusqu’à quelle distance une charge indivisible peut-elle dépasser à l’avant de la voiture sans signalisation?",
+    "choix": [
+      "A. 1 mètre.",
+      "B. 0,5 mètre.",
+      "C. Pas du tout."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : Une charge ne peut jamais dépasser à l’avant de la voiture. Tenez-en compte si vous transportez un jour une échelle sur la galerie. À l’arrière, le dépassement maximum autorisé est de 1 mètre."
+  },
+  {
+    "id": 24,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Sur une route pour automobiles, vous devez rouler à une vitesse minimale de 70 km/h.",
+    "choix": [
+      "A. Vrai.",
+      "B. Faux."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : Ce n’est que sur les autoroutes que vous devez rouler, dans des circonstances normales, à au moins 70 km/heure.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 25,
+    "type": "numerique",
+    "gravite": "grave",
+    "question": "* Sur cette route pour automobiles en Wallonie, la voiture bleue peut rouler à une vitesse maximale de (...) km/h.",
+    "choix": [],
+    "reponse": "90",
+    "explication": "Règle applicable : La vitesse maximale sur une route ordinaire est… … en Wallonne: 90 km/h; … en Flandre et Bruxelles capitale région: 70 km/h.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Analysez le cas suivant: *** Question de 5 points *** Sur cette route pour automobiles en Wallonie, la voiture bleue peut rouler à une vitesse maximale de (...) km/h.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 26,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Celui qui pousse un cyclomoteur est un...",
+    "choix": [
+      "A. ... piéton.",
+      "B. ... conducteur."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : Qui pousse un cyclomoteur est un piéton. Il devrait se déplacer sur le trottoir. Qui pousse une moto ou une voiture, est un conducteur. 8.1. Tout véhicule ou train de véhicules en mouvement doit avoir un conducteur. Le cyclomoteur à deux roues non monté n'est pas considéré comme véhicule (idem pour un vélo mais pas Celui qui pousse un cyclomoteur est un piéton. Il doit se déplacer sur le trottoir. Celui qui pousse une moto ou une voiture, est un conducteur. pour une moto). Il en découle que quand on pousse un cyclomoteur ou un vélo, on demeure piéton (et on circule sur le trottoir) alors qu'on est conducteur quand on pousse une moto (et on circule sur la chaussée)"
+  },
+  {
+    "id": 27,
+    "type": "choix_multiple",
+    "gravite": "grave",
+    "question": "* Le conducteur de cette voiture doit s'arrêter.",
+    "choix": [
+      "A. Vrai.",
+      "B. Faux."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : Lorsqu'un agent tend un bras ou les deux bras horizontalement: Les usagers qui se dirigent vers son ventre ou son dos doivent s'arrêter. Ceux qui approchent de son côté (ou de la main tendue) peuvent s'engager dans le carrefour pour continuer tout droit ou tourner à gauche ou à droite. Un agent qui tend les deux bras horizontalement donne la même injonction que s'il tend un seul bras horizontalement.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, *** Question de 5 points *** Le conducteur de cette voiture doit s'arrêter.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 28,
+    "type": "oui_non",
+    "gravite": "grave",
+    "question": "* La voiture rouge peut-elle s'engager dans le carrefour?",
+    "choix": [],
+    "reponse": "NON",
+    "explication": "Règle applicable : Lorsqu'un agent tend un bras ou les deux bras horizontalement: Les usagers qui se dirigent vers son ventre ou son dos doivent s'arrêter. Ceux qui approchent de son côté (ou de la main tendue) peuvent s'engager dans le carrefour pour continuer tout droit ou tourner à gauche ou à droite. Un agent qui tend les deux bras horizontalement donne la même injonction que s'il tend un seul bras horizontalement.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Analysez le cas suivant: *** Question de 5 points *** La voiture rouge peut-elle s'engager dans le carrefour.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 29,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Nous sommes le 26 mars. Pouvez-vous stationner avant ce signal routier?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "Règle applicable : Ce signal signifie que vous ne pouvez pas stationner de ce côté de la chaussée du 1er au 15 du mois.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, nous sommes le 26 mars. Pouvez-vous stationner avant ce signal routier."
+  },
+  {
+    "id": 30,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Le voyant ABS reste allumé. Que faites-vous?",
+    "choix": [
+      "A. Retirer le fusible pour que le voyant s’éteigne.",
+      "B. Continuer à rouler, mais aller le plus rapidement possible au garage.",
+      "C. Il faut vous arrêter et ne plus rouler tant que le problème n’est pas réparé par un garagiste."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : L’ABS intervient lorsque vous appuyez fortement et profondément sur la pédale de frein. Si le voyant ABS reste allumé, le système ABS ne fonctionne plus, mais le freinage normal reste opérationnel. La réglementation autorise à donc continuer à rouler, mais vous devez vous rendre au plus vite dans un garage."
+  },
+  {
+    "id": 31,
+    "type": "choix_multiple",
+    "gravite": "grave",
+    "question": "* La voiture bleue veut tourner à gauche. Qui a la priorité?",
+    "choix": [
+      "A. Les piétons.",
+      "B. Le véhicule bleu."
+    ],
+    "reponse": "A",
+    "explication": "La réponse A correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Analysez le cas suivant: *** Question de 5 points *** La voiture bleue veut tourner à gauche. Qui a la priorité.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 32,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Repérez la prescription déterminante. Quel usager bénéficie du passage prioritaire ?",
+    "choix": [
+      "A. Le tram.",
+      "B. Le véhicule."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : Un tram a toujours priorité.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 33,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Quelle est la conséquence si votre pression des pneus est basse?",
+    "choix": [
+      "A. Une consommation de carburant plus élevée.",
+      "B. L’usage rapide des pneus.",
+      "C. Une consommation de carburant plus élevée et l’usage rapide des pneus."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : La conséquence est une consommation de carburant plus élevée et l’usage rapide des pneus."
+  },
+  {
+    "id": 34,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "La sonnette ne retentit pas. Quand pouvez-vous dépasser un véhicule par la gauche à ce passage à niveau?",
+    "choix": [
+      "A. Uniquement si la barrière est ouverte ET que la lumière blanche lunaire brûle en même temps.",
+      "B. Si la barrière est ouverte et que la lumière blanche lunaire ne brûle pas, parce qu’elle est défectueuse."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : La réglementation autorise à dépasser un véhicule par la gauche à ce passage à niveau lorsque la barrière est complètement ouverte et que la lumière blanche lunaire brûle en même temps. Mais si la sonnette ne retentit pas, que la barrière est ouverte, mais que les feux sont défectueux, vous pouvez aussi dépasser un véhicule par la gauche.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Analysez le cas suivant: la sonnette ne retentit pas. Quand pouvez-vous dépasser un véhicule par la gauche à ce passage à niveau."
+  },
+  {
+    "id": 35,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Cette combinaison d'un signal routier et un panneau indique un danger potentiel s'il y a de la neige ou du verglas sur la route.",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "La réponse OUI correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, cette combinaison d'un signal routier et un panneau indique un danger potentiel s'il y a de la neige ou du verglas sur la route."
+  },
+  {
+    "id": 36,
+    "type": "numerique",
+    "gravite": "normale",
+    "question": "Dans un minibus il peut y avoir un maximum de (...) places assises pour les passagers.",
+    "choix": [],
+    "reponse": "8",
+    "explication": "Règle applicable : Passagers: 8. Conducteur: 1."
+  },
+  {
+    "id": 37,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Tu veux tourner à gauche avec la voiture. Un piéton veut traverser la chaussée. Qui a la priorité?",
+    "choix": [
+      "A. Le piéton.",
+      "B. Le véhicule."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : Le conducteur qui change de direction (tourne à gauche ou à droite) doit céder le passage aux piétons qui traversent la chaussée sur laquelle il veut s’engager. Il doit également céder le passage à tous les usagers (conducteurs et piétons) qui se trouvent sur d’autres parties de la même voie publique."
+  },
+  {
+    "id": 38,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "À quelle vitesse cette voiture peut-elle rouler dans cette agglomération?",
+    "choix": [
+      "A. Max. 70 km / heure.",
+      "B. Max. 50 km / heure.",
+      "C. Adapté aux circonstances."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : En cas de forte pluie, de brouillard, de neige, de neige fondue (...), le conducteur doit adapter sa vitesse en fonction des circonstances.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, à quelle vitesse cette voiture peut-elle rouler dans cette agglomération.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 39,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Vous vous endormez toujours derrière le volant et votre médecin généraliste est d’avis que vous n’êtes plus capable de conduire de façon sûre. Dans combien de jours vous devez aller à la commune muni de votre permis?",
+    "choix": [
+      "A. Le lendemain.",
+      "B. Dans 3 jours.",
+      "C. Dans 4 jours."
+    ],
+    "reponse": "C",
+    "explication": "Règle applicable : 4 jours."
+  },
+  {
+    "id": 40,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Vous approchez de ce carrefour avec votre voiture.",
+    "choix": [
+      "A. Vous êtes obligé de tourner à gauche.",
+      "B. Il est permis de tourner à gauche ou à droite."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : Le signal routier bleu du bas indique que vous pouvez tourner aussi bien à gauche qu’à droite.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Observez précisément la configuration. Analysez le cas suivant: vous approchez de ce carrefour avec votre voiture."
+  },
+  {
+    "id": 41,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Je réponds à un appel avec mon téléphone fixé sur un support.",
+    "choix": [
+      "A. Je ne risque rien.",
+      "B. Je dois redoubler d’attention et rester vigilant."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : Le support ne supprime pas la distraction potentielle. Vous devez rester concentré sur la circulation."
+  },
+  {
+    "id": 42,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Ce signe signifie: fin de toutes les interdictions locales imposées aux véhicules en mouvement.",
+    "choix": [
+      "A. Oui, cette action est permise.",
+      "B. Non, cette action est interdite."
+    ],
+    "reponse": "A",
+    "explication": "La réponse A correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, ce signe signifie: fin de toutes les interdictions locales imposées aux véhicules en mouvement.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 43,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Qui peut s’engager en premier dans le carrefour?",
+    "choix": [
+      "A. Voiture A.",
+      "B. Voiture B."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : Le signal routier indique que le conducteur de la voiture A a la priorité à cette intersection.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Observez précisément la configuration. Analysez le cas suivant: qui peut s’engager en premier dans le carrefour.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 44,
+    "type": "oui_non",
+    "gravite": "grave",
+    "question": "* À l'approche de ce carrefour. Devez-vous vous arrêter?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "Règle applicable : Dans les carrefours qui ne disposent pas de feux de signalisation, une personne autorisée peut arrêter la circulation, à condition d’être identifiable avec un drapeau tricolore sur la manche gauche et de tendre vers le haut un signal C3.",
+    "needsNewImage": true,
+    "imageBrief": "Afficher le signal belge officiel C3, isolé et parfaitement lisible. Conserver strictement sa forme, ses couleurs et son symbole réglementaires.",
+    "signRef": "C3"
+  },
+  {
+    "id": 45,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Un accident sans blessés. Les parties concernées remplissent un constat européen d’accident, est-ce suffisant?",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "Règle applicable : Un accident sans blessés: la police ne doit pas venir.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, un accident sans blessés. Les parties concernées remplissent un constat européen d’accident, est-ce suffisant.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 46,
+    "type": "oui_non",
+    "gravite": "normale",
+    "question": "Lorsque vous voyez ce signal routier, vous savez que vous approchez d’un tunnel de plus de 500 mètres.",
+    "choix": [],
+    "reponse": "OUI",
+    "explication": "La réponse OUI correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Analysez le cas suivant: lorsque vous voyez ce signal routier, vous savez que vous approchez d’un tunnel de plus de 500 mètres."
+  },
+  {
+    "id": 47,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Un agent lève le bras à un carrefour. Qui doit s’arrêter?",
+    "choix": [
+      "A. Tous les usagers de la route.",
+      "B. Uniquement les conducteurs."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : Explication: Un bras levé signifie que tous les usagers de la route doivent s’arrêter. Ceux qui se trouvent déjà sur le carrefour doivent le quitter le plus rapidement possible.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, un agent lève le bras à un carrefour. Qui doit s’arrêter.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 48,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Quelle distance latérale le conducteur de la voiture doit-il garder en dépassant le cyclomotoriste?",
+    "choix": [
+      "A. 1 mètre.",
+      "B. 1,5 mètre.",
+      "C. Une distance suffisante."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : Lors du dépassement d’un cycliste ou d’un cyclomotoriste en agglomération, il faut garder 1 mètre de distance latérale. Hors agglomération, cette distance est obligatoirement d’au moins 1,5 mètre."
+  },
+  {
+    "id": 49,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Une chaussée à double sens de circulation. Le conducteur de la voiture blanche veut tourner à gauche. Il se place à gauche sur la chaussée. Agit-il correctement?",
+    "choix": [
+      "A. Oui, les véhicules qui suivent peuvent ainsi le dépasser par la droite.",
+      "B. Non, il doit se placer le plus près possible de l’axe central de la chaussée."
+    ],
+    "reponse": "B",
+    "explication": "Règle applicable : La chaussée sur laquelle circule la voiture blanche n’est pas une voie à sens unique. - Pour tourner à gauche, le conducteur se place le plus près possible de l’axe central de la chaussée. - Pour tourner à droite, il doit se placer le plus à droite possible sur la chaussée. ➡️ Sur une voie à sens unique, le conducteur qui veut tourner à gauche doit se placer tout à gauche.",
+    "needsNewImage": true,
+    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Analysez le cas suivant: une chaussée à double sens de circulation. Le conducteur de la voiture blanche veut tourner à gauche. Il se place à gauche sur la chaussée. Agit-il correctement.",
+    "needsLegalReview": true
+  },
+  {
+    "id": 50,
+    "type": "choix_multiple",
+    "gravite": "normale",
+    "question": "Vous êtes dans une rue à sens unique. Pouvez-vous stationner du côté gauche de la chaussée?",
+    "choix": [
+      "A. Oui, mais uniquement si le véhicule est stationné dans le sens de la circulation.",
+      "B. Non, le stationnement est uniquement autorisé à droite."
+    ],
+    "reponse": "A",
+    "explication": "Règle applicable : Dans une rue à sens unique, il est permis de stationner à gauche ou à droite. Le véhicule doit toujours être stationné dans le sens de la circulation."
+  }
+]

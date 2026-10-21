@@ -4,6 +4,7 @@ import { Container } from '@/components/ui/Container'
 import { LOCALES } from '@/i18n/request'
 import { MobileMenu } from './MobileMenu'
 import { NavDropdown } from './NavDropdown'
+import { LockKeyhole } from 'lucide-react'
 
 export async function Navbar() {
   const t = await getTranslations('nav')
@@ -22,7 +23,7 @@ export async function Navbar() {
   ]
   const pratiqueLinks = [
     { href: '/#circuits', label: t('circuits') },
-    { href: '/perception-risques', label: `${t('perception')} · ${locale === 'fr' ? 'bientôt' : 'binnenkort'}` },
+    { href: '/perception-risques', label: `${t('perception')} · ${locale === 'fr' ? 'bientôt' : 'binnenkort'}`, locked: true },
     { href: '/roadbook', label: t('roadbook') },
   ]
 
@@ -38,9 +39,10 @@ export async function Navbar() {
             <Link href="/" className="hover:text-brick">
               {t('home')}
             </Link>
-            <Link href="/apprendre" className="hover:text-brick">
-              {locale === 'fr' ? 'Apprendre · bientôt' : 'Leren · binnenkort'}
-            </Link>
+            <span aria-disabled="true" className="flex cursor-not-allowed items-center gap-1.5 text-ink/55">
+              <LockKeyhole size={14} aria-hidden="true" />
+              {locale === 'fr' ? 'Apprendre \u00b7 bient\u00f4t' : 'Leren \u00b7 binnenkort'}
+            </span>
             <NavDropdown label={t('theorieB')} links={theorieLinks} />
             <NavDropdown label={t('pratiqueB')} links={pratiqueLinks} />
             <Link href="/blog" className="hover:text-brick">
@@ -74,7 +76,7 @@ export async function Navbar() {
               }}
               groups={[
                 { label: locale === 'fr' ? 'Accueil' : 'Home', children: [{ href: '/', label: t('home'), icon: 'home' }] },
-                { label: locale === 'fr' ? 'Apprendre' : 'Leren', children: [{ href: '/apprendre', label: locale === 'fr' ? 'Le\u00e7ons interactives · bientôt' : 'Interactieve lessen · binnenkort', icon: 'learn' }] },
+                { label: locale === 'fr' ? 'Apprendre' : 'Leren', children: [{ href: '/apprendre', label: locale === 'fr' ? 'Le\u00e7ons interactives · bientôt' : 'Interactieve lessen · binnenkort', icon: 'learn', locked: true }] },
                 { label: t('theorieB'), children: [
                   { href: '/resume', label: t('resume'), icon: 'summary' },
                   { href: '/examen-blanc', label: t('examens'), icon: 'exams' },
@@ -82,7 +84,7 @@ export async function Navbar() {
                 ] },
                 { label: t('pratiqueB'), children: [
                   { href: '/centres-examen', label: t('circuits'), icon: 'circuits' },
-                  { href: '/perception-risques', label: `${t('perception')} · ${locale === 'fr' ? 'bientôt' : 'binnenkort'}`, icon: 'risks' },
+                  { href: '/perception-risques', label: `${t('perception')} · ${locale === 'fr' ? 'bientôt' : 'binnenkort'}`, icon: 'risks', locked: true },
                 ] },
                 { label: locale === 'fr' ? 'Aide' : 'Hulp', children: [
                   ...(locale === 'fr' ? [{ href: '/faq', label: 'FAQ', icon: 'help' as const }] : []),

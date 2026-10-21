@@ -3,18 +3,18 @@
     "id": 1,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Vous approchez d'une intersection et vous voyez un de ces signaux.À quelle intersection pouvez-vous dépasser un cycliste par la gauche?",
+    "question": "Quelle est la vitesse maximale autorisée hors agglomération en Flandre, lorsqu’aucun signal n’impose une autre limitation ?",
     "choix": [
-      "A. Intersection 1.",
-      "B. Intersection 2.",
-      "C. Intersection 1 et 2."
+      "A. 50 km/h.",
+      "B. 70 km/h.",
+      "C. 90 km/h."
     ],
-    "reponse": "C",
-    "explication": "Règle applicable : +16 – ‘Le dépassement’.Dépasser un vélo par la gauche n’est pas interdit aux intersections où vous devez donner la priorité.",
+    "reponse": "B",
+    "explication": "En Flandre, la vitesse maximale autorisée hors agglomération est de 70 km/h, sauf si un signal impose une autre limitation.",
     "needsNewImage": false,
-    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, vous approchez d'une intersection et vous voyez un de ces signaux.À quelle intersection pouvez-vous dépasser un cycliste par la gauche.",
-    "needsLegalReview": true,
-    "image": "/examen-blanc/examen-7/q01-new.png"
+    "imageBrief": "Montrer une route ordinaire hors agglomération dans la campagne flamande, sans signal de limitation de vitesse et sans caractéristiques d’autoroute.",
+    "needsLegalReview": false,
+    "image": "/examen-blanc/examen-7/q01-flanders-speed.png"
   },
   {
     "id": 2,
@@ -79,11 +79,11 @@
     "gravite": "normale",
     "question": "Tenez compte de toute la signalisation. Quel usager bénéficie du passage prioritaire ?",
     "choix": [
-      "A. Le véhicule noire.",
-      "B. Le véhicule jaune (indiquée par la ligne jaune)."
+      "A. La voiture noire qui débouche de la voie latérale.",
+      "B. Votre véhicule, qui circule sur la voie prioritaire."
     ],
     "reponse": "B",
-    "explication": "Règle applicable : Le signal routier indique que la voiture jaune à la priorité.",
+    "explication": "Règle applicable : le signal B15 indique que vous bénéficiez de la priorité de passage au prochain carrefour. La voiture noire qui débouche de la voie latérale doit vous céder le passage.",
     "image": "/examen-blanc/examen-7/q06-new.png",
     "needsNewImage": false
   },
@@ -241,11 +241,11 @@
     "gravite": "normale",
     "question": "Une autoroute.Qui a la priorité?",
     "choix": [
-      "A. Le véhicule rouge.",
-      "B. Le véhicule jaune."
+      "A. La voiture rouge qui s’insère sur l’autoroute.",
+      "B. La voiture blanche qui circule déjà sur l’autoroute."
     ],
     "reponse": "B",
-    "explication": "Règle applicable : autoroute’.Quand vous entrez sur une autoroute, vous devez cédez le passage à ceux qui y circulent.",
+    "explication": "Règle applicable : le conducteur qui s’insère sur l’autoroute doit céder le passage aux véhicules qui y circulent déjà. La voiture blanche est donc prioritaire.",
     "image": "/examen-blanc/examen-7/q17-new.png",
     "needsNewImage": false
   },
@@ -356,8 +356,8 @@
     "gravite": "grave",
     "question": "Qui peut s'engager dans le carrefour?",
     "choix": [
-      "A. Le véhicule verte.",
-      "B. Le véhicule bleue.",
+      "A. Le véhicule vert.",
+      "B. Le véhicule bleu.",
       "C. Le cyclomoteur."
     ],
     "reponse": "C",
@@ -450,11 +450,11 @@
     "gravite": "normale",
     "question": "Sur cette route pour automobiles en Wallonie, comptant 2 x 2 bandes de circulation, une voiture peut rouler à une vitesse maximale de (...) km/h.",
     "choix": [],
-    "reponse": "90",
-    "explication": "Règle applicable : La vitesse maximale sur une route ordinaire est…… en Wallonne: 90 km/h;… en Flandre et Bruxelles capitale: 70 km/h.",
+    "reponse": "120",
+    "explication": "Hors agglomération, une voiture peut rouler au maximum à 120 km/h sur une voie publique comportant au moins deux bandes dans chaque sens lorsque les deux sens sont séparés autrement que par de simples marques routières. L’image montre ici deux chaussées séparées par une berme centrale. Une limitation signalée plus basse resterait applicable.",
     "needsNewImage": false,
     "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, sur cette route pour automobiles en Wallonie, comptant 2 x 2 bandes de circulation, une voiture peut rouler à une vitesse maximale de (...) km/h.",
-    "needsLegalReview": true,
+    "needsLegalReview": false,
     "image": "/examen-blanc/examen-7/q31-new.png"
   },
   {
@@ -600,32 +600,32 @@
     "id": 41,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Ce chauffeur de DHL livre des colis.Doit-il porter la ceinture de sécurité lorsqu’il conduit?",
+    "question": "Ce chauffeur-livreur distribue des colis. Doit-il porter sa ceinture de sécurité lorsqu’il conduit ?",
     "choix": [
-      "A. Oui, cette action est permise.",
-      "B. Non, cette action est interdite."
+      "A. Oui, il doit porter sa ceinture de sécurité.",
+      "B. Non, les chauffeurs-livreurs sont toujours dispensés."
     ],
     "reponse": "A",
-    "explication": "Règle applicable : En principe, un conducteur doit toujours porter la ceinture de sécurité.La loi prévoit toutefois certaines exceptions strictes.Sont dispensés du port de la ceinture:- le conducteur qui effectue une marche arrière;- les chauffeurs de taxi pendant le transport de clients;- les facteurs qui distribuent des colis de porte à porte.Cela ne s’applique pas aux livreurs de sociétés comme DHL, Amazon ou autres services de messagerie;- les personnes habilitées et les services de secours, lorsque leur mission l’exige.➡️ Un chauffeur DHL n’est pas exempté et doit donc porter la ceinture de sécurité.",
+    "explication": "Oui. Un chauffeur-livreur n’est pas automatiquement dispensé du port de la ceinture de sécurité. Dans la situation montrée, il doit donc la porter lorsqu’il conduit.",
     "needsNewImage": false,
     "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, ce chauffeur de DHL livre des colis.Doit-il porter la ceinture de sécurité lorsqu’il conduit.",
-    "needsLegalReview": true,
+    "needsLegalReview": false,
     "image": "/examen-blanc/examen-7/q41-new.png"
   },
   {
     "id": 42,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Vous roulez en voiture sur la bande de circulation de droite de cette autoroute. Quelle est la vitesse maximale à laquelle vous pouvez circuler?",
+    "question": "Vous circulez sur la bande de droite. Quelle vitesse maximale devez-vous respecter ?",
     "choix": [
       "A. 50 km/h.",
       "B. 120 km/h."
     ],
-    "reponse": "B",
-    "explication": "Règle applicable : La limite de vitesse sur les autoroutes est de 120 km par heure.",
+    "reponse": "A",
+    "explication": "Le signal indique une limitation de 50 km/h applicable à la bande de droite. Cette limitation particulière prime sur la limitation générale de 120 km/h sur autoroute.",
     "needsNewImage": false,
-    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Analysez le cas suivant: vous roulez en voiture sur la bande de circulation de droite de cette autoroute. Quelle est la vitesse maximale à laquelle vous pouvez circuler.",
-    "needsLegalReview": true,
+    "imageBrief": "Montrer une autoroute à trois bandes avec un panneau indiquant clairement une limitation de 50 km/h applicable uniquement à la bande de droite. Aucun panneau de bande réservée aux bus ne doit apparaître.",
+    "needsLegalReview": false,
     "image": "/examen-blanc/examen-7/q42-new.png"
   },
   {

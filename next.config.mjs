@@ -15,6 +15,7 @@ const nextConfig = {
     // automatiquement (redimensionnement à la taille réelle affichée,
     // lazy loading par défaut) — voir audit SEO/perf du 2026-08-22.
     formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 86400,
   },
   // `compress` (Brotli/Gzip) est déjà `true` par défaut — explicité ici
   // pour que ce ne soit jamais désactivé par erreur. Sans effet une fois
@@ -28,6 +29,10 @@ const nextConfig = {
         // contrairement à /_next/static/* qui est déjà immuable/1 an.
         source: '/:path(favicon\\.svg|icons\\.svg|testimonials/.*)',
         headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+      },
+      {
+        source: '/images/:path*',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=604800' }],
       },
     ]
   },

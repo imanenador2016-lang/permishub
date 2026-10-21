@@ -11,10 +11,12 @@ import { X, Check } from 'lucide-react'
 
 type ThemeLabel = { slug: string; label: string }
 
-/** Temps laissé pour répondre une fois la lecture audio de la question terminée — même logique que ExamenBlanc.tsx, voir conversation du 2026-08-27/28. */
+/** Temps laissé pour répondre à chaque question. */
 const ANSWER_SECONDS = 15
-/** Garde-fou si la synthèse vocale ne déclenche jamais onend/onerror. */
-const SPEECH_FALLBACK_MS = 20000
+/** Courte respiration entre l'énoncé et chaque proposition. */
+const SPEECH_PAUSE_MS = 180
+/** Laisse au moteur vocal le temps de vider l'annulation précédente avant l'énoncé. */
+const SPEECH_START_DELAY_MS = 80
 const PRELOAD_AHEAD = 3
 
 function webpOf(src: string): string {
@@ -45,9 +47,13 @@ function cleanForSpeech(text: string, locale: 'fr' | 'nl'): string {
     .replace(/\bkm\/u\b/gi, 'kilometer per uur')
     .replace(/\(\s*(?:\.{2,}|…)\s*\)/g, ', ')
     .replace(/\.{2,}|…/g, ', ')
-    .replace(/([a-zÃ Ã¢Ã¤Ã©Ã¨ÃªÃ«Ã¯Ã®Ã´Ã¶Ã¹Ã»Ã¼Ã§])\.([A-ZÃ€Ã‚Ã„Ã‰ÃˆÃŠÃ‹ÃÃŽÃ”Ã–Ã™Ã›ÃœÃ‡])/g, '$1. $2')
+    .replace(/‰/g, ' pour mille ')
+    .replace(/%/g, ' pour cent ')
+    .replace(/\bMMA\b/g, 'M M A')
+    .replace(/\bMEC\b/g, 'M E C')
+    .replace(/([\p{Ll}])\.([\p{Lu}])/gu, '$1. $2')
     .replace(/[()[\]{}]/g, ' ')
-    .replace(/[«»""'']/g, '')
+    .replace(/[«»"]/g, '')
     .replace(/[^\p{L}\p{N}\s.,!?;:'’\-]/gu, ' ')
     .replace(/\s*,\s*,\s*/g, ', ')
     .replace(/^[,;]\s*/, '')
@@ -57,9 +63,7 @@ function cleanForSpeech(text: string, locale: 'fr' | 'nl'): string {
     .replace(/\.$/, '')
 }
 
-/** Voix douce dans la langue demandée — priorité aux voix réseau haute qualité portant un prénom féminin
- * courant (voir ExamenBlanc.tsx pour le même choix), sinon n'importe quelle voix de qualité, sinon la première
- * voix disponible pour cette langue. */
+/** Priorité aux voix natives/navigateur de meilleure qualité disponibles dans la langue demandée. */
 function pickLivelyVoice(lang: 'fr' | 'nl'): SpeechSynthesisVoice | undefined {
   if (typeof window === 'undefined' || !window.speechSynthesis) return undefined
   const voices = window.speechSynthesis.getVoices().filter((v) => v.lang?.toLowerCase().startsWith(lang))
@@ -78,43 +82,51 @@ function pickLivelyVoice(lang: 'fr' | 'nl'): SpeechSynthesisVoice | undefined {
   )
 }
 
-/** Lit la question puis ses choix, puis appelle `onEnd` — déclenche le chrono de réponse, voir conversation du
- * 2026-08-27/28. Débit ralenti et intonation adoucie ("voix douce et motivante") — voir conversation du
- * 2026-08-28. */
-function speakQuestion(question: Question, locale: 'fr' | 'nl', onEnd: () => void) {
+/** Lit successivement l'énoncé puis les propositions, avec une courte pause entre chaque partie. */
+function speakQuestion(
+  question: Question,
+  locale: 'fr' | 'nl',
+  onEnd: () => void,
+  isActive: () => boolean,
+) {
   if (typeof window === 'undefined' || !window.speechSynthesis) {
     onEnd()
     return
   }
   window.speechSynthesis.cancel()
-  // Pas de préfixe "A, B, C" devant chaque réponse : les boutons à l'écran
-  // n'affichent aucune lettre, et pour des questions comme "Voiture A / B /
-  // C" le texte de la réponse contient déjà l'identifiant — le préfixe
-  // redondant rendait l'audio confus (signalé le 2026-09-08).
-  //
-  // Chaque partie (question, puis chaque réponse) est lue comme un énoncé
-  // séparé plutôt que jointe par de simples points dans un seul texte : la
-  // pause entre deux appels à speak() est nette et fiable, alors qu'un
-  // point de fin de phrase à l'intérieur d'un même énoncé était parfois
-  // quasi inaudible avec certaines voix ("Voiture A. Voiture B." collé en
-  // "Voiture A Voiture B" — toujours signalé après le premier correctif).
   const parts = [cleanForSpeech(question.prompt[locale], locale)]
-  question.options.forEach((opt) => parts.push(cleanForSpeech(opt.text[locale], locale)))
+  question.options.forEach((opt) => {
+    parts.push(cleanForSpeech(opt.text[locale], locale))
+  })
   const lang = locale === 'nl' ? 'nl-BE' : 'fr-FR'
   const voice = pickLivelyVoice(locale)
 
-  parts.forEach((part, i) => {
+  const speakPart = (index: number) => {
+    if (!isActive()) return
+    const part = parts[index]
     const utterance = new SpeechSynthesisUtterance(part)
     utterance.lang = lang
     if (voice) utterance.voice = voice
-    utterance.rate = 0.88
-    utterance.pitch = 0.92
-    if (i === parts.length - 1) {
-      utterance.onend = onEnd
-      utterance.onerror = onEnd
+    utterance.rate = 1.0
+    utterance.pitch = 1.05
+    const continueReading = () => {
+      if (!isActive()) return
+      if (index === parts.length - 1) {
+        onEnd()
+        return
+      }
+      window.setTimeout(() => {
+        if (isActive()) speakPart(index + 1)
+      }, SPEECH_PAUSE_MS)
     }
+    utterance.onend = continueReading
+    utterance.onerror = continueReading
     window.speechSynthesis.speak(utterance)
-  })
+  }
+
+  window.setTimeout(() => {
+    if (isActive()) speakPart(0)
+  }, SPEECH_START_DELAY_MS)
 }
 
 type SpeechState = 'idle' | 'playing' | 'paused'
@@ -142,7 +154,7 @@ export function TestDeNiveau({
   // autant montrer la bonne réponse plutôt que de juste passer à la suite.
   const [showCorrection, setShowCorrection] = useState(false)
   const [speechState, setSpeechState] = useState<SpeechState>('idle')
-  // null = lecture audio pas encore terminée (chrono pas démarré).
+  // null uniquement lorsque le résultat est affiché.
   const [secondsLeft, setSecondsLeft] = useState<number | null>(null)
 
   const isResult = step >= questions.length
@@ -180,12 +192,9 @@ export function TestDeNiveau({
     questions.slice(step + 1, step + 1 + PRELOAD_AHEAD).forEach((q) => q.imageUrl && preload(q.imageUrl))
   }, [step, isResult, questions])
 
-  // Lecture automatique de la question dès son affichage — le chrono de réponse démarre à la fin de la lecture.
-  const spokenForRef = useRef<string | null>(null)
-  // Jeton de génération : avancer avant la fin de la lecture annule l'utterance en cours, ce qui déclenche
-  // quand même son onend/onerror — sans ce garde-fou ce callback tardif redémarrerait par erreur le chrono
-  // de la NOUVELLE question, voir ExamenBlanc.tsx.
+  // Jeton de génération : annuler une lecture peut encore déclencher onend/onerror dans certains navigateurs.
   const speechGenRef = useRef(0)
+  const autoSpokenRef = useRef<string | null>(null)
 
   function guardedIdle(myGen: number, extra?: () => void) {
     return () => {
@@ -195,19 +204,22 @@ export function TestDeNiveau({
     }
   }
 
+  function stopSpeech() {
+    speechGenRef.current += 1
+    if (typeof window !== 'undefined' && window.speechSynthesis) window.speechSynthesis.cancel()
+    setSpeechState('idle')
+  }
+
   useEffect(() => {
     if (isResult || !current) return
-    if (spokenForRef.current === current.id) return
-    spokenForRef.current = current.id
-    setSecondsLeft(null)
+    const spokenKey = `${current.id}:${locale}`
+    if (autoSpokenRef.current === spokenKey) return
+    autoSpokenRef.current = spokenKey
+    stopSpeech()
+    setSecondsLeft(ANSWER_SECONDS)
     const myGen = ++speechGenRef.current
-    const startTimer = () => {
-      if (speechGenRef.current !== myGen) return
-      setSecondsLeft(ANSWER_SECONDS)
-    }
     setSpeechState('playing')
-    speakQuestion(current, locale, guardedIdle(myGen, startTimer))
-    window.setTimeout(startTimer, SPEECH_FALLBACK_MS)
+    speakQuestion(current, locale, guardedIdle(myGen), () => speechGenRef.current === myGen)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [current?.id, isResult, locale])
 
@@ -237,17 +249,19 @@ export function TestDeNiveau({
     } else {
       const myGen = ++speechGenRef.current
       setSpeechState('playing')
-      speakQuestion(current, locale, guardedIdle(myGen))
+      speakQuestion(current, locale, guardedIdle(myGen), () => speechGenRef.current === myGen)
     }
   }
 
   function selectOption(optionId: string) {
     if (showCorrection) return
+    stopSpeech()
     setAnswers((prev) => [...prev.filter((a) => a.questionId !== current.id), { questionId: current.id, optionId }])
     setShowCorrection(true)
   }
 
   function goToNextQuestion() {
+    stopSpeech()
     setShowCorrection(false)
     setStep((s) => s + 1)
   }
@@ -295,13 +309,13 @@ export function TestDeNiveau({
     : []
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/80 p-4">
+    <div className={`fixed inset-0 z-50 flex items-center justify-center bg-ink/80 ${isResult ? 'p-0 sm:p-4' : 'p-4'}`}>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 20 }}
         transition={{ duration: 0.18 }}
-        className="panel relative max-h-[92vh] w-full max-w-xl overflow-y-auto bg-cream !p-0"
+        className={`panel relative w-full overflow-y-auto bg-cream !p-0 ${isResult ? 'max-h-dvh max-w-6xl sm:max-h-[92vh]' : 'max-h-[92vh] max-w-xl'}`}
       >
         <button
           onClick={onClose}
@@ -312,7 +326,7 @@ export function TestDeNiveau({
         </button>
 
         {!isResult && (
-          <div className="p-6 sm:p-8">
+          <div className="p-5 sm:p-7">
             <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
               <div className="flex items-center gap-3">
                 <span className="border-[3px] border-ink bg-yellow px-3 py-1 font-display text-xs uppercase tracking-wide">
@@ -377,6 +391,12 @@ export function TestDeNiveau({
                   </h3>
                 </div>
 
+                {current.penaltyPoints === 5 && (
+                  <p className="mb-4 inline-flex border-[3px] border-ink bg-brick px-3 py-1.5 font-display text-xs uppercase tracking-wide text-cream shadow-hard-xs">
+                    {locale === 'fr' ? 'Faute grave · −5 points' : 'Zware fout · −5 punten'}
+                  </p>
+                )}
+
                 <div className="grid gap-3">
                   {current.options.map((opt) => {
                     const selected = answers.find((a) => a.questionId === current.id)?.optionId === opt.id
@@ -425,7 +445,7 @@ export function TestDeNiveau({
         )}
 
         {isResult && result && (
-          <div className="p-6 sm:p-8">
+          <div className="px-2 pb-3 pt-12 sm:p-7">
             <ResumeHook
               score10={result.score10}
               answerStates={questions.map((question) => {

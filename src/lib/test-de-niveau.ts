@@ -50,8 +50,15 @@ export function computeTestResult(answers: TestAnswer[], questions: Question[]):
 
   const totalCorrect = [...byTheme.values()].reduce((sum, t) => sum + t.correct, 0)
   const totalCount = [...byTheme.values()].reduce((sum, t) => sum + t.total, 0)
-  const overallScore = totalCount > 0 ? Math.round((totalCorrect / totalCount) * 100) : 0
-  const score10 = totalCount > 0 ? Math.round((totalCorrect / totalCount) * 10) : 0
+  // Une erreur normale retire 1 point. Une question marquée faute grave en
+  // retire 5. Le score reste borné entre 0 et 10.
+  const penaltyPoints = questions.reduce((total, question) => {
+    const answer = answers.find((item) => item.questionId === question.id)
+    const chosen = answer ? question.options.find((option) => option.id === answer.optionId) : undefined
+    return chosen?.correct ? total : total + (question.penaltyPoints ?? 1)
+  }, 0)
+  const score10 = Math.max(0, 10 - penaltyPoints)
+  const overallScore = score10 * 10
 
   const level: Niveau = overallScore >= 80 ? 'PRET' : overallScore >= 50 ? 'INTERMEDIAIRE' : 'DEBUTANT'
 

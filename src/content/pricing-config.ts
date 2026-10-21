@@ -36,7 +36,14 @@ export const EXAMENS_ILLIMITES_OFFER = {
  * est coupée, pour ne pas casser une session déjà en cours qui l'aurait
  * choisie. Repasser à `false` une fois le contenu prêt.
  */
-export const EXAMENS_ILLIMITES_HIDDEN = true
+export const EXAMENS_ILLIMITES_HIDDEN = false
+
+/** Un seul achat pour le Résumé et les examens d'entraînement illimités. */
+export const PACK_THEORIE_ILLIMITE_OFFER = {
+  id: 'offer-pack-theorie-illimite',
+  priceCents: 2999,
+  title: { fr: 'Pack théorie illimitée — Résumé + examens', nl: 'Theoriepakket onbeperkt — samenvatting + examens' },
+}
 
 /**
  * Le vrai PDF perception des risques (public/documents/perception-risques-permishub.pdf,
@@ -105,7 +112,7 @@ export const DRIVING_SCHOOL_THEORY_HOURS = 12
 export const DRIVING_SCHOOL_THEORY_CENTS = 15000
 export const DRIVING_SCHOOL_TOTAL_CENTS = DRIVING_SCHOOL_DRIVING_CENTS + DRIVING_SCHOOL_THEORY_CENTS
 
-export const PACK_OFFERS = [RESUME_OFFER, EXAMENS_ILLIMITES_OFFER, PERCEPTION_RISQUE_OFFER, LAUNCH_BUNDLE_OFFER]
+export const PACK_OFFERS = [RESUME_OFFER, EXAMENS_ILLIMITES_OFFER, PACK_THEORIE_ILLIMITE_OFFER, PERCEPTION_RISQUE_OFFER, LAUNCH_BUNDLE_OFFER]
 
 export function getPackOffer(id: string) {
   return PACK_OFFERS.find((o) => o.id === id)

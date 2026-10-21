@@ -437,17 +437,18 @@
     "id": 30,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Les deux voitures arrivent face à face. La voiture noire veut tourner à gauche, tandis que la voiture grise continue tout droit. Quelle voiture passe en premier ?",
+    "question": "Vous stationnez votre voiture la nuit sur une chaussée non éclairée. Quels feux devez-vous normalement laisser allumés ?",
     "choix": [
-      "A. La voiture grise, car elle continue tout droit.",
-      "B. La voiture noire, car elle tourne à gauche."
+      "A. Les feux de croisement.",
+      "B. Les feux de position avant et les feux rouges arrière.",
+      "C. Aucun feu."
     ],
-    "reponse": "A",
-    "explication": "Les deux voitures arrivent en sens opposé. La voiture noire tourne à gauche et doit céder le passage à la voiture grise qui continue tout droit.",
+    "reponse": "B",
+    "explication": "Lorsqu’un véhicule stationne la nuit sur une chaussée non éclairée, il doit normalement rester visible grâce à ses feux de position et ses feux rouges arrière. Des exceptions existent, notamment dans certaines situations de stationnement en agglomération.",
     "needsNewImage": false,
-    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Analysez le cas suivant: la voiture noire s’est arrêtée par sécurité avant le carrefour.Quelle voiture peut s’engager la première sur le carrefour.",
-    "needsLegalReview": true,
-    "image": "/examen-blanc/examen-4/q30-new.png"
+    "imageBrief": "Montrer une voiture stationnée la nuit sur le bord droit d’une chaussée non éclairée, entièrement visible depuis le point de vue d’un conducteur qui approche.",
+    "needsLegalReview": false,
+    "image": "/examen-blanc/examen-4/q30-night-parking.png"
   },
   {
     "id": 31,
@@ -537,13 +538,13 @@
     "id": 37,
     "type": "choix_multiple",
     "gravite": "grave",
-    "question": "Lequel de ces dessins est correct?",
+    "question": "Lequel de ces deux schémas présente les trajectoires correctes ?",
     "choix": [
-      "A. Dessin 1.",
-      "B. Dessin 2."
+      "A. Le schéma de gauche.",
+      "B. Le schéma de droite."
     ],
     "reponse": "B",
-    "explication": "Règle applicable : A un carrefour ou aucune flèche n’est tracée sur la chaussée, le croisement s’effectue par la droite = l’un derrière l’autre!.",
+    "explication": "Lorsque deux conducteurs venant en sens opposé tournent tous les deux à gauche, ils se croisent par la droite, l’un derrière l’autre. Le schéma de droite représente correctement leurs trajectoires.",
     "needsNewImage": false,
     "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, lequel de ces dessins est correct.",
     "image": "/examen-blanc/examen-4/q37-new.png"
@@ -725,16 +726,16 @@
     "id": 50,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Un carrefour sans signaux routiers réglant la priorité.Les derniers mètres d’un chemin de terre sont asphaltés.La voiture bleue doit-elle céder le passage?",
+    "question": "La voiture rouge arrive d’un chemin de terre dont les derniers mètres sont asphaltés. La voiture bleue doit-elle lui céder le passage ?",
     "choix": [
-      "A. Oui, cette action est permise.",
-      "B. Non, cette action est interdite."
+      "A. Oui, car la voiture rouge vient de sa droite.",
+      "B. Non, car la voiture rouge vient d’un chemin de terre."
     ],
     "reponse": "B",
-    "explication": "Règle applicable : Lorsque les derniers mètres d’un chemin de terre sont revêtus, il reste néanmoins un chemin de terre.Dans ce cas, la priorité de droite ne s’applique pas.Le conducteur qui vient du chemin de terre doit céder le passage.",
+    "explication": "Un conducteur qui débouche d’un chemin de terre doit céder le passage aux autres conducteurs. Le fait que les derniers mètres soient asphaltés ne modifie pas cette obligation.",
     "needsNewImage": false,
     "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, un carrefour sans signaux routiers réglant la priorité.Les derniers mètres d’un chemin de terre sont asphaltés.La voiture bleue doit-elle céder le passage.",
-    "needsLegalReview": true,
+    "needsLegalReview": false,
     "image": "/examen-blanc/examen-4/q50-new.png"
   }
 ]

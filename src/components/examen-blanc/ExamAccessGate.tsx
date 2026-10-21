@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import { ExamOfferModal } from './ExamOfferModal'
@@ -26,21 +26,11 @@ export const EXAMENS_UNLOCKED_KEY = 'examens-unlocked'
  * useEffect ne fait plus que *déverrouiller* si le localStorage le confirme
  * — même comportement utilisateur, juste sans le flash de page vide.
  */
-export function ExamAccessGate({ free, children }: { free: boolean; children: React.ReactNode }) {
+export function ExamAccessGate({ unlocked, children }: { unlocked: boolean; children?: React.ReactNode }) {
   const t = useTranslations('examenBlanc')
   const tc = useTranslations('common')
   const locale = useLocale() as 'fr' | 'nl'
-  const [unlocked, setUnlocked] = useState(free)
   const [offerOpen, setOfferOpen] = useState(false)
-
-  useEffect(() => {
-    if (free) return
-    try {
-      if (localStorage.getItem(EXAMENS_UNLOCKED_KEY) === '1') setUnlocked(true)
-    } catch {
-      // localStorage indisponible — reste verrouillé, jamais bloquant pour la navigation.
-    }
-  }, [free])
 
   if (unlocked) return <>{children}</>
 

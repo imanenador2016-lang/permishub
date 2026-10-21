@@ -1,16 +1,17 @@
 'use client'
 
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { useTranslations, useLocale } from 'next-intl'
+import { usePathname } from 'next/navigation'
 import type { ExamenPhotoQuestion, ExamenPhotoVisualAnnotation } from '@/domain/examen-photo'
 import { Button } from '@/components/ui/Button'
 import { ProgressBar } from '@/components/ui/ProgressBar'
 import { createCheckoutSession } from '@/lib/payment'
 import { formatPrice } from '@/domain/centers'
-import { RESUME_OFFER, EXAMENS_ILLIMITES_OFFER } from '@/content/pricing-config'
-import { computeExamenBlancResult, type ExamenBlancAnswer, type ExamenBlancResult } from '@/lib/examen-blanc'
-import { LoaderCircle } from 'lucide-react'
+import { EXAMENS_ILLIMITES_OFFER } from '@/content/pricing-config'
+import { computeExamenBlancResult, getExamenBlancScoring, type ExamenBlancAnswer, type ExamenBlancResult } from '@/lib/examen-blanc'
+import { ArrowDown, ArrowRight, CheckCircle2, LoaderCircle, MessageCircle, XCircle } from 'lucide-react'
 
 type Phase = 'intro' | 'running' | 'result'
 
@@ -18,15 +19,27 @@ const MILESTONES = [25, 40]
 const PRELOAD_AHEAD = 3
 /** Temps laissé pour répondre une fois la lecture audio de la question terminée (voir conversation du 2026-08-27). */
 const ANSWER_SECONDS = 15
+const EXAM_ASSET_VERSION = '20261020-1'
 /** Garde-fou : démarre quand même le chrono si la synthèse vocale ne déclenche jamais onend/onerror (voix indisponible, navigateur capricieux) — pour ne jamais bloquer un visiteur indéfiniment sur une question. */
 const SPEECH_FALLBACK_MS = 20000
+const COACHING_WHATSAPP_NUMBER = '32451027232'
 
 function letterOf(choix: string): string {
   return choix.match(/^([A-D])[.:]/)?.[1] ?? choix[0]
 }
 
+function answerLabel(question: ExamenPhotoQuestion, answer?: string): string | undefined {
+  if (!answer) return undefined
+  if (question.type !== 'choix_multiple') return answer
+  return question.choix.find((choice) => letterOf(choice) === answer.trim().toUpperCase()) ?? answer
+}
+
 function webpOf(src: string): string {
   return src.replace(/\.jpg$/i, '.webp')
+}
+
+function versionedAsset(src: string): string {
+  return `${src}${src.includes('?') ? '&' : '?'}v=${EXAM_ASSET_VERSION}`
 }
 
 /** Précharge l'image (variante webp — celle réellement servie par <picture> dans les navigateurs modernes) pour qu'elle soit déjà en cache navigateur quand la question s'affiche. */
@@ -34,7 +47,7 @@ function preload(src?: string) {
   if (!src) return
   if (typeof window === 'undefined') return
   const img = new window.Image()
-  img.src = webpOf(src)
+  img.src = versionedAsset(webpOf(src))
 }
 
 /** Photo de question — <picture> webp + fallback jpg, taille intrinsèque déclarée pour ne pas faire sauter la mise en page pendant le chargement. */
@@ -58,9 +71,9 @@ function QuestionPhoto({
         aria-hidden="true"
         viewBox={`0 0 ${imageWidth} ${imageHeight}`}
         preserveAspectRatio="xMidYMid meet"
-        className={`absolute inset-0 h-full w-full ${className}`}
+        className={`block h-auto w-full ${className}`}
       >
-        <image href={src} width={imageWidth} height={imageHeight} preserveAspectRatio="xMidYMid meet" />
+        <image href={versionedAsset(src)} width={imageWidth} height={imageHeight} preserveAspectRatio="xMidYMid meet" />
         {annotations.map((annotation) => {
           const x = imageWidth * annotation.x / 100
           const y = imageHeight * annotation.y / 100
@@ -87,15 +100,15 @@ function QuestionPhoto({
 
   return (
     <picture>
-      <source srcSet={webpOf(src)} type="image/webp" />
+      <source srcSet={versionedAsset(webpOf(src))} type="image/webp" />
       <img
-        src={src}
+        src={versionedAsset(src)}
         alt=""
         width={592}
         height={442}
         loading="eager"
         decoding="async"
-        className={`absolute inset-0 h-full w-full object-contain ${className}`}
+        className={`block h-auto w-full ${className}`}
       />
     </picture>
   )
@@ -193,18 +206,16 @@ export function ExamenBlanc({ questions, hideCorrection = false }: { questions: 
   const to = useTranslations('offers')
   const tc = useTranslations('common')
   const locale = useLocale() as 'fr' | 'nl'
+  const pathname = usePathname()
+  const reduceMotion = useReducedMotion()
   const [phase, setPhase] = useState<Phase>('intro')
   const [index, setIndex] = useState(0)
   const [answers, setAnswers] = useState<ExamenBlancAnswer[]>([])
   const [numericDraft, setNumericDraft] = useState('')
-  const [checkoutMessage, setCheckoutMessage] = useState<string | null>(null)
-  const [checkoutMessageSecondary, setCheckoutMessageSecondary] = useState<string | null>(null)
   const [checkoutMessageCorrection, setCheckoutMessageCorrection] = useState<string | null>(null)
   // Aucun retour visuel pendant l'appel à Stripe sur ces 4 boutons — même bug
   // que OfferCard.tsx, jamais corrigé ici (signalé le 2026-09-08 : "il faut
   // un truc de redirection sur tout, pas juste le résumé").
-  const [checkoutLoading, setCheckoutLoading] = useState(false)
-  const [checkoutLoadingSecondary, setCheckoutLoadingSecondary] = useState(false)
   const [checkoutLoadingCorrection, setCheckoutLoadingCorrection] = useState(false)
   // État du bouton audio (écouter / pause / reprendre) — voir conversation du 2026-08-28.
   const [speechState, setSpeechState] = useState<SpeechState>('idle')
@@ -418,12 +429,11 @@ export function ExamenBlanc({ questions, hideCorrection = false }: { questions: 
             exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.2 }}
           >
-            {/* Hauteur bornée (pas aspect-ratio, qui grandit avec la largeur
-                et pousse le reste hors écran sur les grands téléphones) —
-                l'image reste bien visible sans dominer tout l'écran, voir
-                conversation du 2026-08-28 (format de référence envoyé). */}
+            {/* Le ratio vient de l'image elle-même : aucune zone vide et aucun
+                recadrage. Les panneaux, véhicules et flèches restent visibles
+                aussi bien sur mobile que sur ordinateur. */}
             {current.image && (
-              <div className="relative mx-auto mb-2 aspect-[4/3] w-full overflow-hidden border-[3px] border-ink bg-creamdim md:mb-0">
+              <div className="relative mx-auto mb-2 w-full overflow-hidden border-[3px] border-ink bg-creamdim md:mb-0">
                 <QuestionPhoto src={current.image} annotations={current.visualAnnotations} imageWidth={current.imageWidth} imageHeight={current.imageHeight} />
               </div>
             )}
@@ -539,75 +549,100 @@ export function ExamenBlanc({ questions, hideCorrection = false }: { questions: 
   }
 
   if (phase === 'result' && result) {
+    const incorrectResults = result.perQuestion.filter(({ correct }) => !correct)
+    const { passThreshold } = getExamenBlancScoring(result.total)
+    const currentExamNumber = Number(pathname?.match(/\/examen-(\d+)$/)?.[1])
+    const hasNextExam = Number.isInteger(currentExamNumber) && currentExamNumber < 14
+    const nextExamHref = hasNextExam
+      ? pathname?.replace(/\/examen-\d+$/, `/examen-${currentExamNumber + 1}`)
+      : pathname?.replace(/\/examen-blanc\/examen-\d+$/, '/examen-blanc')
+    const coachingMessage = encodeURIComponent(t('coachingWhatsAppMessage', {
+      score: Math.max(result.score, 0),
+      total: result.total,
+      graves: result.gravesFautes,
+      normales: result.normalesFautes,
+    }))
+
     return (
       <div className="flex flex-col gap-6">
-        <div className="panel p-6 text-center sm:p-8">
-          <h1 className="mb-2 font-display text-2xl tracking-tight text-ink sm:text-3xl">{t('resultTitle')}</h1>
-          <p className="mb-3 font-display text-3xl text-ink sm:text-4xl">
-            {t('scoreLabel', { score: Math.max(result.score, 0), total: result.total })}
-          </p>
-          <span
-            className={`mb-3 inline-block border-[3px] border-ink px-4 py-1.5 font-display text-sm ${
-              result.passed ? 'bg-forest text-cream' : 'bg-brick text-cream'
-            }`}
+        <motion.section
+          initial={reduceMotion ? false : { opacity: 0, y: 18, scale: 0.985 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.45, ease: 'easeOut' }}
+          className={`panel overflow-hidden border-t-[8px] p-5 text-center sm:p-8 ${result.passed ? 'border-t-forest' : 'border-t-brick'}`}
+          aria-live="polite"
+        >
+          <motion.div
+            initial={reduceMotion ? false : { scale: 0.55, rotate: result.passed ? -12 : 12 }}
+            animate={{ scale: 1, rotate: 0 }}
+            transition={{ type: 'spring', stiffness: 280, damping: 18, delay: 0.08 }}
+            className={`mx-auto mb-4 grid size-16 place-items-center rounded-full border-[3px] border-ink ${result.passed ? 'bg-forest text-cream' : 'bg-brick text-cream'}`}
           >
-            {result.passed ? t('passed') : t('failed')}
-          </span>
-          <p className="mb-1 text-sm text-ink/70">
-            {t('faultsBreakdown', { graves: result.gravesFautes, normales: result.normalesFautes })}
+            {result.passed ? <CheckCircle2 size={38} aria-hidden="true" /> : <XCircle size={38} aria-hidden="true" />}
+          </motion.div>
+
+          <p className="mb-2 text-xs font-bold uppercase tracking-[0.16em] text-ink/55">{t('resultTitle')}</p>
+          <h1 className="font-display text-3xl tracking-tight text-ink sm:text-5xl">
+            {result.passed ? t('successTitle') : t('failureTitle')}
+          </h1>
+          <p className="mt-2 text-sm text-ink/70 sm:text-base">
+            {result.passed ? t('successBody') : t('failureBody')}
           </p>
-          <p className="mx-auto mb-6 max-w-md text-xs italic text-ink/50">{t('adaptedThresholdNote')}</p>
 
-          {!result.passed ? (
-            <div className="mx-auto max-w-md border-[3px] border-ink bg-yellow/20 p-5 text-left">
-              <span className="mb-3 inline-block w-fit -rotate-2 border-[3px] border-ink bg-yellow px-3 py-1 font-display text-xs">
-                {t('failOfferEyebrow')}
-              </span>
-              <h3 className="mb-3 font-display text-lg leading-snug">{t('failOfferTitle')}</h3>
-
-              <button
-                onClick={() => unlock(EXAMENS_ILLIMITES_OFFER, setCheckoutMessage, setCheckoutLoading)}
-                disabled={checkoutLoading}
-                className="btn-comic block w-full px-5 py-4 text-base disabled:opacity-60"
-              >
-                {checkoutLoading
-                  ? <span className="inline-flex items-center justify-center gap-2"><LoaderCircle size={17} className="animate-spin" aria-hidden="true" />{tc('redirecting')}</span>
-                  : `${to('cta')} ${to('examensTitle')} — ${formatPrice(EXAMENS_ILLIMITES_OFFER.priceCents, locale)} →`}
-              </button>
-              {checkoutMessage && <p className="mt-1.5 text-center text-xs text-ink/60">{checkoutMessage}</p>}
-
-              <button
-                onClick={() => unlock(RESUME_OFFER, setCheckoutMessageSecondary, setCheckoutLoadingSecondary)}
-                disabled={checkoutLoadingSecondary}
-                className="mt-4 block w-full text-center text-xs font-semibold text-ink/70 underline decoration-2 underline-offset-4 hover:text-brick disabled:opacity-60"
-              >
-                {checkoutLoadingSecondary
-                  ? <span className="inline-flex items-center justify-center gap-2"><LoaderCircle size={17} className="animate-spin" aria-hidden="true" />{tc('redirecting')}</span>
-                  : `${t('resumeSecondaryPrefix')} ${to('resumeTitle')} — ${formatPrice(RESUME_OFFER.priceCents, locale)} →`}
-              </button>
-              {checkoutMessageSecondary && <p className="mt-1.5 text-center text-xs text-ink/60">{checkoutMessageSecondary}</p>}
+          <div className="mx-auto mt-6 grid max-w-xl grid-cols-2 gap-3 sm:grid-cols-3">
+            <div className="col-span-2 border-[3px] border-ink bg-cream p-4 shadow-hard-xs sm:col-span-1">
+              <strong className="block font-display text-3xl">{Math.max(result.score, 0)}<span className="text-lg text-ink/50">/{result.total}</span></strong>
+              <span className="text-xs font-bold uppercase tracking-wide text-ink/55">{t('pointsLabel')}</span>
             </div>
-          ) : (
-            <div className="mx-auto max-w-md border-[3px] border-ink bg-forest/10 p-5 text-left">
-              <h3 className="mb-2 font-display text-base leading-snug">{t('passOfferTitle')}</h3>
-              <p className="mb-3 text-sm text-ink/70">{t('passOfferBody')}</p>
-              <button
-                onClick={() => unlock(RESUME_OFFER, setCheckoutMessage, setCheckoutLoading)}
-                disabled={checkoutLoading}
-                className="block w-full text-center text-sm font-semibold text-ink underline decoration-2 underline-offset-4 hover:text-brick disabled:opacity-60"
-              >
-                {checkoutLoading ? <span className="inline-flex items-center justify-center gap-2"><LoaderCircle size={17} className="animate-spin" aria-hidden="true" />{tc('redirecting')}</span> : `${to('resumeTitle')} — ${formatPrice(RESUME_OFFER.priceCents, locale)} →`}
-              </button>
-              {checkoutMessage && <p className="mt-1.5 text-center text-xs text-ink/60">{checkoutMessage}</p>}
+            <div className="border-[3px] border-brick bg-brick/10 p-4">
+              <strong className="block font-display text-3xl text-brick">{result.gravesFautes}</strong>
+              <span className="text-xs font-bold uppercase tracking-wide text-ink/60">{t('seriousFaultsLabel')}</span>
             </div>
-          )}
+            <div className="border-[3px] border-yellow bg-yellow/20 p-4">
+              <strong className="block font-display text-3xl text-ink">{result.normalesFautes}</strong>
+              <span className="text-xs font-bold uppercase tracking-wide text-ink/60">{t('normalFaultsLabel')}</span>
+            </div>
+          </div>
 
-          <div className="mt-6">
-            <Button variant="secondary" onClick={restart}>
+          <p className="mx-auto mt-4 max-w-lg text-xs text-ink/55">{t('adaptedThresholdNote', { threshold: passThreshold, total: result.total })}</p>
+
+          <div className="mt-6 grid grid-cols-2 gap-3 sm:flex sm:flex-row sm:items-stretch sm:justify-center">
+            <a href="#correction-detaillee" className="btn-comic col-span-2 inline-flex min-h-12 items-center justify-center gap-2 px-5 py-3 text-sm sm:col-span-1">
+              {t('viewCorrections')} <ArrowDown size={18} aria-hidden="true" />
+            </a>
+            <Button variant="secondary" onClick={restart} className="min-h-12 px-2 sm:px-5">
               {t('retry')}
             </Button>
+            {nextExamHref && (
+              <a
+                href={nextExamHref}
+                className="inline-flex min-h-12 items-center justify-center gap-1.5 border-[3px] border-ink bg-forest px-2 py-3 text-center font-display text-sm text-cream shadow-hard-xs transition-transform hover:-translate-y-0.5 hover:shadow-hard-sm focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-forest sm:gap-2 sm:px-5"
+              >
+                {hasNextExam ? t('nextExam') : t('allExams')} <ArrowRight size={18} aria-hidden="true" />
+              </a>
+            )}
           </div>
-        </div>
+        </motion.section>
+
+        {!result.passed && (
+          <section className="panel overflow-hidden bg-forest text-cream">
+            <div className="grid gap-5 p-5 sm:grid-cols-[1fr_auto] sm:items-center sm:p-7">
+              <div className="text-left">
+                <span className="mb-2 inline-block border-2 border-cream/50 px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.14em]">{t('coachingEyebrow')}</span>
+                <h2 className="font-display text-2xl leading-tight sm:text-3xl">{t('coachingTitle')}</h2>
+                <p className="mt-2 max-w-2xl text-sm leading-relaxed text-cream/80 sm:text-base">{t('coachingBody')}</p>
+              </div>
+              <a
+                href={`https://wa.me/${COACHING_WHATSAPP_NUMBER}?text=${coachingMessage}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-14 items-center justify-center gap-2 border-[3px] border-ink bg-yellow px-5 py-3 font-display text-sm text-ink shadow-hard-xs transition-transform hover:-translate-y-0.5 hover:shadow-hard-sm focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-yellow"
+              >
+                <MessageCircle size={21} aria-hidden="true" /> {t('coachingCta')}
+              </a>
+            </div>
+          </section>
+        )}
 
         {hideCorrection ? (
           <div className="panel p-6 text-center sm:p-8">
@@ -625,40 +660,68 @@ export function ExamenBlanc({ questions, hideCorrection = false }: { questions: 
             {checkoutMessageCorrection && <p className="mt-1.5 text-center text-xs text-ink/60">{checkoutMessageCorrection}</p>}
           </div>
         ) : (
-          <div className="panel p-6 sm:p-8">
-            <h2 className="mb-5 font-display text-lg">{t('correctionTitle')}</h2>
-            <div className="flex flex-col gap-5">
-              {result.perQuestion.map((r) => (
-                <div key={r.question.id} className={`border-[3px] p-4 ${r.correct ? 'border-forest' : 'border-brick'}`}>
-                  <p className="mb-2 text-xs font-bold uppercase tracking-wide text-ink/50">
-                    {t('questionOf', { current: r.question.id, total: result.total })}
-                    {r.question.gravite === 'grave' && <span className="ml-2 text-brick">{t('gravePill')}</span>}
-                  </p>
-
-                  {r.question.image && (
-                    <div className="relative mb-3 aspect-[4/3] w-full max-w-sm overflow-hidden border-[3px] border-ink bg-creamdim">
-                      <QuestionPhoto src={r.question.image} annotations={r.question.visualAnnotations} imageWidth={r.question.imageWidth} imageHeight={r.question.imageHeight} />
-                    </div>
-                  )}
-
-                  <p className="mb-3 font-display text-base leading-snug">{r.question.question}</p>
-
-                  <p className="mb-1 text-sm">
-                    <span className="font-semibold text-ink/70">{t('yourAnswer')} : </span>
-                    <span className={r.correct ? 'text-forest' : 'text-brick'}>{r.answer ?? t('noAnswer')}</span>
-                  </p>
-                  {!r.correct && (
-                    <p className="mb-2 text-sm">
-                      <span className="font-semibold text-ink/70">{t('correctAnswer')} : </span>
-                      <span className="text-forest">{r.question.reponse}</span>
-                    </p>
-                  )}
-
-                  {r.question.explication && <p className="text-sm text-ink/70">{r.question.explication}</p>}
-                </div>
-              ))}
+          <section id="correction-detaillee" className="panel scroll-mt-5 p-4 sm:p-8">
+            <div className="mb-6 border-b-[3px] border-ink pb-5">
+              <p className="mb-1 text-xs font-bold uppercase tracking-[0.14em] text-brick">{t('correctionEyebrow')}</p>
+              <h2 className="font-display text-2xl sm:text-3xl">{t('correctionTitle')}</h2>
+              <p className="mt-2 max-w-2xl text-sm leading-relaxed text-ink/65">
+                {incorrectResults.length > 0
+                  ? t('correctionIntro', { count: incorrectResults.length })
+                  : t('perfectCorrection')}
+              </p>
             </div>
-          </div>
+
+            <div className="flex flex-col gap-5">
+              {incorrectResults.map((r, correctionIndex) => {
+                const userAnswer = answerLabel(r.question, r.answer)
+                const correctAnswer = answerLabel(r.question, r.question.reponse)
+                return (
+                  <article key={r.question.id} className="overflow-hidden border-[3px] border-ink bg-cream shadow-hard-xs">
+                    <div className="flex flex-wrap items-center justify-between gap-2 border-b-[3px] border-ink bg-brick/10 px-4 py-3">
+                      <p className="text-xs font-bold uppercase tracking-wide text-ink/60">
+                        {t('correctionNumber', { current: correctionIndex + 1, total: incorrectResults.length })}
+                        <span className="mx-2 text-ink/30">•</span>
+                        {t('questionOf', { current: r.question.id, total: result.total })}
+                      </p>
+                      <span className={`border-2 border-ink px-2 py-1 text-[11px] font-bold uppercase ${r.question.gravite === 'grave' ? 'bg-brick text-cream' : 'bg-yellow text-ink'}`}>
+                        {r.question.gravite === 'grave' ? t('gravePill') : t('normalFaultPill')}
+                      </span>
+                    </div>
+
+                    <div className="grid gap-0 lg:grid-cols-[minmax(280px,0.9fr)_minmax(0,1.1fr)]">
+                      {r.question.image && (
+                        <div className="relative border-b-[3px] border-ink bg-creamdim lg:border-b-0 lg:border-r-[3px]">
+                          <QuestionPhoto src={r.question.image} annotations={r.question.visualAnnotations} imageWidth={r.question.imageWidth} imageHeight={r.question.imageHeight} />
+                        </div>
+                      )}
+
+                      <div className="p-4 sm:p-5">
+                        <h3 className="font-display text-lg leading-snug sm:text-xl">{r.question.question}</h3>
+
+                        <div className="mt-4 grid gap-3">
+                          <div className="border-l-[5px] border-brick bg-brick/10 px-4 py-3">
+                            <span className="block text-[11px] font-bold uppercase tracking-wide text-brick">{t('yourAnswer')}</span>
+                            <strong className="mt-1 block text-sm leading-snug text-ink">{userAnswer ?? t('noAnswer')}</strong>
+                          </div>
+                          <div className="border-l-[5px] border-forest bg-forest/10 px-4 py-3">
+                            <span className="block text-[11px] font-bold uppercase tracking-wide text-forest">{t('correctAnswer')}</span>
+                            <strong className="mt-1 block text-sm leading-snug text-ink">{correctAnswer}</strong>
+                          </div>
+                        </div>
+
+                        {r.question.explication && (
+                          <div className="mt-4 border-t-2 border-ink/15 pt-4">
+                            <span className="mb-1 block text-[11px] font-bold uppercase tracking-wide text-ink/50">{t('explanationLabel')}</span>
+                            <p className="text-sm leading-relaxed text-ink/75">{r.question.explication}</p>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </article>
+                )
+              })}
+            </div>
+          </section>
         )}
       </div>
     )

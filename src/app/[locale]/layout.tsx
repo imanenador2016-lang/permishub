@@ -6,12 +6,13 @@ import { getMessages, setRequestLocale } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { LOCALES, type AppLocale } from '@/i18n/request'
 import { SITE_URL } from '@/lib/seo'
+import { WhatsAppContactButton } from '@/components/site/WhatsAppContactButton'
 import '../globals.css'
 
 // Direction artistique v2 "ligne claire" — voir reference-design-hero.html
 // et docs/DESIGN_SYSTEM.md. Ne pas substituer ces familles.
 const archivoBlack = localFont({
-  src: '../../../public/fonts/archivo-black.ttf',
+  src: '../../../public/fonts/archivo-black.woff2',
   weight: '400',
   variable: '--font-archivo-black',
   display: 'swap',
@@ -20,8 +21,8 @@ const archivoBlack = localFont({
 
 const kalam = localFont({
   src: [
-    { path: '../../../public/fonts/kalam-400.ttf', weight: '400' },
-    { path: '../../../public/fonts/kalam-700.ttf', weight: '700' },
+    { path: '../../../public/fonts/kalam-400.woff2', weight: '400' },
+    { path: '../../../public/fonts/kalam-700.woff2', weight: '700' },
   ],
   variable: '--font-kalam',
   display: 'swap',
@@ -30,11 +31,11 @@ const kalam = localFont({
 
 const inter = localFont({
   src: [
-    { path: '../../../public/fonts/inter-400.ttf', weight: '400' },
-    { path: '../../../public/fonts/inter-500.ttf', weight: '500' },
-    { path: '../../../public/fonts/inter-600.ttf', weight: '600' },
-    { path: '../../../public/fonts/inter-700.ttf', weight: '700' },
-    { path: '../../../public/fonts/inter-800.ttf', weight: '800' },
+    { path: '../../../public/fonts/inter-400.woff2', weight: '400' },
+    { path: '../../../public/fonts/inter-500.woff2', weight: '500' },
+    { path: '../../../public/fonts/inter-600.woff2', weight: '600' },
+    { path: '../../../public/fonts/inter-700.woff2', weight: '700' },
+    { path: '../../../public/fonts/inter-800.woff2', weight: '800' },
   ],
   variable: '--font-inter',
   display: 'swap',
@@ -105,10 +106,12 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={`${archivoBlack.variable} ${kalam.variable} ${inter.variable}`}>
       <body className="bg-cream text-ink">
+        <link rel="preconnect" href="https://checkout.stripe.com" />
+        <link rel="dns-prefetch" href="https://checkout.stripe.com" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
         {gaMeasurementId && (
           <>
-            <Script src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`} strategy="afterInteractive" />
+            <Script src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`} strategy="lazyOnload" />
             <Script id="google-analytics" strategy="afterInteractive">
               {`
                 window.dataLayer = window.dataLayer || [];
@@ -119,7 +122,10 @@ export default async function LocaleLayout({
             </Script>
           </>
         )}
-        <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider messages={messages}>
+          {children}
+          <WhatsAppContactButton locale={locale as AppLocale} />
+        </NextIntlClientProvider>
       </body>
     </html>
   )

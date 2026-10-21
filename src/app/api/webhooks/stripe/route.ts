@@ -37,6 +37,26 @@ export async function POST(request: Request) {
     if (session.payment_status !== 'paid') {
       return NextResponse.json({ received: true })
     }
+    if (session.metadata?.kind === 'learning-subscription') {
+      const email = session.customer_details?.email ?? session.customer_email
+      const subscriptionId = typeof session.subscription === 'string' ? session.subscription : session.subscription?.id
+      if (!email || !subscriptionId) {
+        console.error('learning subscription sans email ou subscriptionId', session.id)
+        return NextResponse.json({ error: 'abonnement incomplet' }, { status: 400 })
+      }
+      const subscription = await stripe.subscriptions.retrieve(subscriptionId)
+      const periodEnd = (subscription as unknown as { current_period_end?: number }).current_period_end
+      const user = session.metadata?.userId
+        ? await prisma.user.findUnique({ where: { id: session.metadata.userId } })
+        : await prisma.user.upsert({ where: { email }, update: {}, create: { email } })
+      if (!user) return NextResponse.json({ error: 'utilisateur introuvable' }, { status: 400 })
+      await prisma.abonnement.upsert({
+        where: { userId: user.id },
+        update: { plan: 'PREMIUM', stripeId: subscriptionId, expiresAt: periodEnd ? new Date(periodEnd * 1000) : null },
+        create: { userId: user.id, plan: 'PREMIUM', stripeId: subscriptionId, expiresAt: periodEnd ? new Date(periodEnd * 1000) : null },
+      })
+      return NextResponse.json({ received: true })
+    }
     const circuitId = session.metadata?.circuitId
     const centerSlug = session.metadata?.kind === 'circuits-bundle' ? session.metadata?.centerSlug : undefined
     // Le déblocage "tous les circuits d'un centre" (api/checkout/circuits-bundle)
@@ -127,6 +147,18 @@ export async function POST(request: Request) {
       } catch (err) {
         console.error('Échec de l’envoi de la confirmation pack complet (non bloquant) :', err instanceof Error ? err.message : err)
       }
+    }
+  }
+
+  if (event.type === 'customer.subscription.updated' || event.type === 'customer.subscription.deleted') {
+    const subscription = event.data.object as Stripe.Subscription
+    if (subscription.metadata?.kind === 'learning-subscription') {
+      const active = ['active', 'trialing'].includes(subscription.status)
+      const periodEnd = (subscription as unknown as { current_period_end?: number }).current_period_end
+      await prisma.abonnement.updateMany({
+        where: { stripeId: subscription.id },
+        data: { plan: active ? 'PREMIUM' : 'FREE', expiresAt: periodEnd ? new Date(periodEnd * 1000) : new Date() },
+      })
     }
   }
 

@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import { getOptionalSession } from '@/lib/auth'
 import { createStripeCheckoutSession } from '@/lib/stripe-checkout-error'
 import { getFeaturedCircuit, getCenters } from '@/content/centers/registry'
+import { getCheckoutOrigin } from '@/lib/checkout-origin'
 
 /**
  * Crée une Stripe Checkout Session pour un circuit — jamais de prix envoyé
@@ -35,7 +36,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Circuit introuvable' }, { status: 404 })
   }
 
-  const origin = request.headers.get('origin') ?? process.env.NEXTAUTH_URL ?? 'http://localhost:3000'
+  const origin = getCheckoutOrigin(request)
 
   const checkoutResult = await createStripeCheckoutSession({
     mode: 'payment',

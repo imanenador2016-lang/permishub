@@ -3,26 +3,28 @@
     "id": 1,
     "type": "oui_non",
     "gravite": "normale",
-    "question": "Cette photo a été prise en agglomération. Pouvez-vous stationner sur la chaussée au-delà de ce panneau?",
+    "question": "Cette photo a été prise en agglomération. Pouvez-vous stationner sur la chaussée au-delà de ce panneau ?",
     "choix": [],
     "reponse": "OUI",
-    "explication": "Règle applicable : Hors agglomération sur la chaussée d’une voie prioritaire vous ne pouvez pas stationner. Mais vous pouvez vous arrêter.",
+    "explication": "Oui. Le panneau indique une route prioritaire. L’interdiction de stationner sur la chaussée d’une route prioritaire ne s’applique qu’en dehors d’une agglomération. Ici, en agglomération, le stationnement reste permis si aucune autre interdiction ne s’y oppose et si le véhicule ne gêne pas ou ne met pas les autres usagers en danger.",
     "image": "/examen-blanc/examen-10/q01.webp"
   },
   {
     "id": 2,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "À quelle intersection pouvez-vous dépasser une moto à deux roues par la gauche?",
+    "question": "Quelle est la vitesse maximale autorisée hors agglomération dans la Région de Bruxelles-Capitale, lorsqu’aucun signal n’impose une autre limitation ?",
     "choix": [
-      "A. Uniquement après le panneau routier 1.",
-      "B. Uniquement après le panneau routier 2.",
-      "C. Après tous ces signaux."
+      "A. 50 km/h.",
+      "B. 70 km/h.",
+      "C. 90 km/h."
     ],
     "reponse": "B",
-    "explication": "Le panneau 2 indique une route prioritaire. Les panneaux 1 et 3 annoncent un carrefour où la priorité de droite s'applique. Le dépassement par la gauche d'une motocyclette à deux roues est interdit à l'approche d'un carrefour où le conducteur doit céder le passage; il n'est donc permis ici que dans la situation 2, à condition de pouvoir l'effectuer sans danger.",
-    "needsLegalReview": true,
-    "image": "/examen-blanc/examen-10/q02.webp"
+    "explication": "Dans la Région de Bruxelles-Capitale, la vitesse maximale autorisée hors agglomération est de 70 km/h, sauf si un signal impose une autre limitation.",
+    "needsLegalReview": false,
+    "needsNewImage": false,
+    "imageBrief": "Montrer une route ordinaire hors agglomération dans la périphérie boisée de Bruxelles, sans signal de limitation de vitesse et sans caractéristiques d’autoroute.",
+    "image": "/examen-blanc/examen-10/q02-outside-brussels.png"
   },
   {
     "id": 3,
@@ -70,24 +72,24 @@
     "id": 6,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Qui doit s’arrêter?",
+    "question": "Qui doit s’arrêter ?",
     "choix": [
-      "A. Le véhicule brune.",
-      "B. Le véhicule bleue.",
-      "C. Le véhicule brune et Le véhicule bleue."
+      "A. La voiture brune.",
+      "B. La voiture bleue.",
+      "C. Les deux voitures."
     ],
-    "reponse": "A",
-    "explication": "Règle applicable : Les ordres d'un officier de police, sont plus importants que les feux de signalisation.",
+    "reponse": "C",
+    "explication": "Les deux voitures doivent s’arrêter. Les bras de l’agent sont tendus horizontalement : les usagers venant de directions qui coupent la ligne formée par ses bras doivent s’arrêter. La voiture brune et la voiture bleue arrivent toutes les deux de telles directions. L’injonction de l’agent prime sur les feux de signalisation.",
     "image": "/examen-blanc/examen-10/q06.webp"
   },
   {
     "id": 7,
     "type": "oui_non",
     "gravite": "grave",
-    "question": "* Vous avez le permis de conduire provisoire B. En voiture, pouvez-vous dépasser par la gauche un cheval attelé?",
+    "question": "* Après ce panneau, pouvez-vous dépasser par la gauche le véhicule attelé ?",
     "choix": [],
     "reponse": "NON",
-    "explication": "Règle applicable : +16 – ‘Le dépassement’. Le signal d’interdiction interdit aux conducteurs de dépasser par la gauche:. un véhicule attelé.. ou un véhicule à plus de deux roues.",
+    "explication": "Non. Le panneau C35 interdit, à partir du signal et jusqu’au prochain carrefour inclus, de dépasser par la gauche un véhicule attelé ou un véhicule à plus de deux roues. Le véhicule tiré par le cheval est un véhicule attelé.",
     "image": "/examen-blanc/examen-10/q07.webp"
   },
   {
@@ -486,16 +488,18 @@
     "id": 38,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "À quelle intersection pouvez-vous dépasser un cycliste par la gauche?",
+    "question": "Quelle est la vitesse maximale autorisée hors agglomération en Flandre, lorsqu’aucun signal n’impose une autre limitation ?",
     "choix": [
-      "A. Uniquement après le Panneau routier 1.",
-      "B. Uniquement après les signaux routiers 1 et 2.",
-      "C. Après tous ces signaux."
+      "A. 50 km/h.",
+      "B. 70 km/h.",
+      "C. 90 km/h."
     ],
-    "reponse": "C",
-    "explication": "Règle applicable : Signal 1 = priorité au prochain carrefour. Signal 2 = route prioritaire. Signal 3 = priorité de droite.",
-    "needsLegalReview": true,
-    "image": "/examen-blanc/examen-10/q38.webp"
+    "reponse": "B",
+    "explication": "En Flandre, la vitesse maximale autorisée hors agglomération est de 70 km/h, sauf si un signal impose une autre limitation.",
+    "needsNewImage": false,
+    "imageBrief": "Montrer une route ordinaire hors agglomération dans la campagne flamande, sans signal de limitation de vitesse et sans caractéristiques d’autoroute.",
+    "needsLegalReview": false,
+    "image": "/examen-blanc/examen-10/q38-flanders-speed.png"
   },
   {
     "id": 39,

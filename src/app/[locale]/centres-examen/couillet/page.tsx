@@ -8,6 +8,7 @@ import { Breadcrumbs } from '@/components/site/Breadcrumbs'
 import { Container } from '@/components/ui/Container'
 import { Link } from '@/i18n/navigation'
 import { CircuitUnlockCta } from '@/components/circuits/CircuitUnlockCta'
+import { CircuitConstructionFaq } from '@/components/circuits/CircuitConstructionFaq'
 import type { AppLocale } from '@/i18n/request'
 import { getCircuitsByCenter } from '@/content/centers/registry'
 import { COUILLET_SEO_DATA } from '@/content/centers/couillet-seo'
@@ -93,6 +94,7 @@ export default async function CouilletExamCenterPage({ params: { locale } }: { p
           <details className="group py-4"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-base marker:hidden sm:text-lg">Où se trouve le centre d’examen de Couillet ?<span aria-hidden="true" className="flex h-8 w-8 flex-none items-center justify-center border-2 border-ink text-lg leading-none transition-transform group-open:rotate-45">+</span></summary><p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/75">Le centre AIBV se trouve au {COUILLET_SEO_DATA.address.value}. <a href={mapsUrl} target="_blank" rel="noreferrer" className="font-bold text-brick underline underline-offset-2">Ouvrir l’adresse sur Google Maps</a>.</p></details>
           <details className="group py-4"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-base marker:hidden sm:text-lg">Combien de circuits PermisHub sont disponibles ?<span aria-hidden="true" className="flex h-8 w-8 flex-none items-center justify-center border-2 border-ink text-lg leading-none transition-transform group-open:rotate-45">+</span></summary><p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/75">Quatre circuits sont enregistrés pour Couillet. Leurs itinéraires Google Maps sont accessibles après déblocage.</p><Link href="#pack" className="mt-2 inline-flex min-h-11 items-center font-bold text-brick underline underline-offset-2">Débloquer les circuits <span aria-hidden className="ml-2">→</span></Link></details>
           <details className="group py-4"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-base marker:hidden sm:text-lg">Comment prendre rendez-vous pour l’examen pratique ?<span aria-hidden="true" className="flex h-8 w-8 flex-none items-center justify-center border-2 border-ink text-lg leading-none transition-transform group-open:rotate-45">+</span></summary><p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/75">AIBV demande un rendez-vous pour les examens pratiques. Consulte les modalités officielles ou contacte le centre au {COUILLET_SEO_DATA.permitPhone.value}.</p><a href={COUILLET_SEO_DATA.bookingUrl.value} target="_blank" rel="noreferrer" className="mt-2 inline-flex min-h-11 items-center font-bold text-brick underline underline-offset-2">Voir les modalités AIBV <span aria-hidden className="ml-2">↗</span></a></details>
+          <CircuitConstructionFaq />
         </div></div></section>
       </Container>
     </main>

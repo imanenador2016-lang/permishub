@@ -1,0 +1,212 @@
+{
+  "exam": 9,
+  "totalQuestions": 50,
+  "createdImages": 50,
+  "questionsWithoutImage": 0,
+  "unresolvedVisuals": [],
+  "protectedContentFingerprint": "2f03fef8f5560040a0e6e26504dfa3c9d779c875e118e7ee32842fba0227d8e6",
+  "protectedContentUnchanged": true,
+  "missingFiles": [],
+  "visuals": {
+    "Q1": {
+      "image": "/examen-blanc/examen-9/q01.webp",
+      "description": "Fin de la limitation à 70 km/h sur une route ordinaire flamande."
+    },
+    "Q2": {
+      "image": "/examen-blanc/examen-9/q02.webp",
+      "description": "Voiture arrêtée le long d’une ligne jaune continue."
+    },
+    "Q4": {
+      "image": "/examen-blanc/examen-9/q04.webp",
+      "description": "Voiture ayant dépassé la sortie d’autoroute."
+    },
+    "Q5": {
+      "image": "/examen-blanc/examen-9/q05.webp",
+      "description": "Signal obligatoire commun aux piétons et cyclistes."
+    },
+    "Q7": {
+      "image": "/examen-blanc/examen-9/q07.webp",
+      "description": "Zone de stationnement réservée aux véhicules de 3,5 t maximum."
+    },
+    "Q9": {
+      "image": "/examen-blanc/examen-9/q09.webp",
+      "description": "Agent au centre d’un carrefour, bras tendus, avec trois usagers."
+    },
+    "Q10": {
+      "image": "/examen-blanc/examen-9/q10.webp",
+      "description": "Minibus identifié par le panneau jaune de transport scolaire."
+    },
+    "Q14": {
+      "image": "/examen-blanc/examen-9/q14.webp",
+      "description": "Limitation ponctuelle à 30 km/h, sans signal de zone."
+    },
+    "Q16": {
+      "image": "/examen-blanc/examen-9/q16.webp",
+      "description": "Signal belge B1 : céder le passage."
+    },
+    "Q19": {
+      "image": "/examen-blanc/examen-9/q19.webp",
+      "description": "Compartiment moteur avec cinq repères techniques; liquide de frein n° 2."
+    },
+    "Q23": {
+      "image": "/examen-blanc/examen-9/q23.webp",
+      "description": "Entrée d’une zone résidentielle belge."
+    },
+    "Q25": {
+      "image": "/examen-blanc/examen-9/q25.webp",
+      "description": "Limitation à 90 km/h affectée uniquement à la sortie."
+    },
+    "Q26": {
+      "image": "/examen-blanc/examen-9/q26.webp",
+      "description": "Intersection avec priorité de droite; véhicule rouge prioritaire."
+    },
+    "Q30": {
+      "image": "/examen-blanc/examen-9/q30.webp",
+      "description": "Obstacle pouvant être contourné par la gauche ou par la droite."
+    },
+    "Q31": {
+      "image": "/examen-blanc/examen-9/q31.webp",
+      "description": "Carrefour aménagé sur un dispositif surélevé."
+    },
+    "Q33": {
+      "image": "/examen-blanc/examen-9/q33.webp",
+      "description": "Route pour automobiles en Région flamande."
+    },
+    "Q34": {
+      "image": "/examen-blanc/examen-9/q34.webp",
+      "description": "Signal belge A51 de danger non défini."
+    },
+    "Q36": {
+      "image": "/examen-blanc/examen-9/q36.webp",
+      "description": "Automobile engagée sur une autoroute après avoir manqué sa direction."
+    },
+    "Q37": {
+      "image": "/examen-blanc/examen-9/q37.webp",
+      "description": "Limitation à 90 km/h, limite administrative et intersection suivante."
+    },
+    "Q38": {
+      "image": "/examen-blanc/examen-9/q38.webp",
+      "description": "Arrêt temporaire devant un accès carrossable privé."
+    },
+    "Q40": {
+      "image": "/examen-blanc/examen-9/q40.webp",
+      "description": "Signal belge C1 : sens interdit."
+    },
+    "Q45": {
+      "image": "/examen-blanc/examen-9/q45.webp",
+      "description": "Deux signaux imposant tous deux de tourner à gauche."
+    },
+    "Q47": {
+      "image": "/examen-blanc/examen-9/q47.webp",
+      "description": "Annonce d’un passage à niveau à 150 mètres."
+    },
+    "Q49": {
+      "image": "/examen-blanc/examen-9/q49.webp",
+      "description": "Sens interdit avec exception pour cycles et speed pedelecs."
+    },
+    "Q50": {
+      "image": "/examen-blanc/examen-9/q50.webp",
+      "description": "Limitation à 50 km/h affectée uniquement à une sortie autoroutière."
+    },
+    "Q3": {
+      "image": "/examen-blanc/examen-9/q03.webp",
+      "description": "Visuel original correspondant à la question 3."
+    },
+    "Q6": {
+      "image": "/examen-blanc/examen-9/q06.webp",
+      "description": "Visuel original correspondant à la question 6."
+    },
+    "Q8": {
+      "image": "/examen-blanc/examen-9/q08.webp",
+      "description": "Visuel original correspondant à la question 8."
+    },
+    "Q11": {
+      "image": "/examen-blanc/examen-9/q11.webp",
+      "description": "Visuel original correspondant à la question 11."
+    },
+    "Q12": {
+      "image": "/examen-blanc/examen-9/q12.webp",
+      "description": "Visuel original correspondant à la question 12."
+    },
+    "Q13": {
+      "image": "/examen-blanc/examen-9/q13.webp",
+      "description": "Visuel original correspondant à la question 13."
+    },
+    "Q15": {
+      "image": "/examen-blanc/examen-9/q15.webp",
+      "description": "Visuel original correspondant à la question 15."
+    },
+    "Q17": {
+      "image": "/examen-blanc/examen-9/q17.webp",
+      "description": "Visuel original correspondant à la question 17."
+    },
+    "Q18": {
+      "image": "/examen-blanc/examen-9/q18.webp",
+      "description": "Visuel original correspondant à la question 18."
+    },
+    "Q20": {
+      "image": "/examen-blanc/examen-9/q20.webp",
+      "description": "Visuel original correspondant à la question 20."
+    },
+    "Q21": {
+      "image": "/examen-blanc/examen-9/q21.webp",
+      "description": "Visuel original correspondant à la question 21."
+    },
+    "Q22": {
+      "image": "/examen-blanc/examen-9/q22.webp",
+      "description": "Visuel original correspondant à la question 22."
+    },
+    "Q24": {
+      "image": "/examen-blanc/examen-9/q24.webp",
+      "description": "Visuel original correspondant à la question 24."
+    },
+    "Q27": {
+      "image": "/examen-blanc/examen-9/q27.webp",
+      "description": "Visuel original correspondant à la question 27."
+    },
+    "Q28": {
+      "image": "/examen-blanc/examen-9/q28.webp",
+      "description": "Visuel original correspondant à la question 28."
+    },
+    "Q29": {
+      "image": "/examen-blanc/examen-9/q29.webp",
+      "description": "Visuel original correspondant à la question 29."
+    },
+    "Q32": {
+      "image": "/examen-blanc/examen-9/q32.webp",
+      "description": "Visuel original correspondant à la question 32."
+    },
+    "Q35": {
+      "image": "/examen-blanc/examen-9/q35.webp",
+      "description": "Visuel original correspondant à la question 35."
+    },
+    "Q39": {
+      "image": "/examen-blanc/examen-9/q39.webp",
+      "description": "Visuel original correspondant à la question 39."
+    },
+    "Q41": {
+      "image": "/examen-blanc/examen-9/q41.webp",
+      "description": "Visuel original correspondant à la question 41."
+    },
+    "Q42": {
+      "image": "/examen-blanc/examen-9/q42.webp",
+      "description": "Visuel original correspondant à la question 42."
+    },
+    "Q43": {
+      "image": "/examen-blanc/examen-9/q43.webp",
+      "description": "Visuel original correspondant à la question 43."
+    },
+    "Q44": {
+      "image": "/examen-blanc/examen-9/q44.webp",
+      "description": "Visuel original correspondant à la question 44."
+    },
+    "Q46": {
+      "image": "/examen-blanc/examen-9/q46.webp",
+      "description": "Visuel original correspondant à la question 46."
+    },
+    "Q48": {
+      "image": "/examen-blanc/examen-9/q48.webp",
+      "description": "Visuel original correspondant à la question 48."
+    }
+  }
+}

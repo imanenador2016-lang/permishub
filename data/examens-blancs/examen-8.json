@@ -43,8 +43,8 @@
       "B. Une interdiction de conduire immédiate pendant 12 heures."
     ],
     "reponse": "B",
-    "explication": "Règle applicable : Moins de 0,22 mg/l: vous pouvez partir. À partir de 0,22 mg/l et moins de 0,35 mg/l: attendre 12 heures (depuis 1/7/2026) 0,35 mg/l ou plus: attendre 15 jours.",
-    "needsLegalReview": true,
+    "explication": "Depuis le 1er juillet 2026, toute concentration d’alcool égale ou supérieure à la limite autorisée entraîne une interdiction temporaire de conduire de 12 heures. Avant de pouvoir conduire à nouveau, un nouveau test ou une nouvelle analyse de l’haleine est obligatoire. Si le résultat reste égal ou supérieur à 0,22 mg/l, une nouvelle interdiction de 12 heures est imposée.",
+    "needsLegalReview": false,
     "image": "/examen-blanc/examen-8/q03-new.png",
     "needsNewImage": false
   },
@@ -262,15 +262,19 @@
   },
   {
     "id": 19,
-    "type": "oui_non",
+    "type": "choix_multiple",
     "gravite": "normale",
-    "question": "La voiture brune peut-elle tourner à droite?",
-    "choix": [],
-    "reponse": "OUI",
-    "explication": "Règle applicable : Il n'y a aucun signal que c'est interdit.",
+    "question": "Votre véhicule mesure 3 mètres de haut et 2 mètres de large. Pouvez-vous franchir ces deux panneaux ?",
+    "choix": [
+      "A. Oui, les deux.",
+      "B. Uniquement celui de gauche.",
+      "C. Uniquement celui de droite."
+    ],
+    "reponse": "A",
+    "explication": "Le panneau de gauche limite la largeur à 2,50 m, tandis que celui de droite limite la hauteur à 3,50 m. Votre véhicule respecte les deux limites.",
     "needsNewImage": false,
-    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, la voiture brune peut-elle tourner à droite.",
-    "needsLegalReview": true,
+    "imageBrief": "Montrer côte à côte un panneau limitant la largeur à 2,50 m et un panneau limitant la hauteur à 3,50 m, tous deux entièrement visibles et lisibles.",
+    "needsLegalReview": false,
     "image": "/examen-blanc/examen-8/q19-new.png"
   },
   {
@@ -519,17 +523,18 @@
     "id": 37,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Au-delà duquel de ces signaux routiers pouvez-vous dépasser une autre voiture par la gauche?",
+    "question": "À l’approche de laquelle de ces deux situations pouvez-vous dépasser une voiture par la gauche ?",
     "choix": [
-      "A. Panneau 1.",
-      "B. Panneau 2.",
-      "C. Panneau 1 et 2."
+      "A. Uniquement dans la situation 1.",
+      "B. Uniquement dans la situation 2.",
+      "C. Dans les deux situations."
     ],
     "reponse": "B",
-    "explication": "Règle applicable : le dépassement par la gauche d’une voiture est interdit dans un carrefour où la priorité de droite s’applique. Il reste permis à l’approche du carrefour signalé par le panneau 2, qui indique que le conducteur circule sur une voie prioritaire, si la manœuvre peut être effectuée sans danger.",
+    "explication": "Uniquement dans la situation 2. Le signal triangulaire B17 de la situation 1 annonce un carrefour où la priorité de droite s’applique : dépasser une voiture par la gauche y est interdit. Le signal B9 de la situation 2 indique une voie prioritaire ; le dépassement reste permis si la visibilité est suffisante et si la manœuvre peut être effectuée sans danger.",
+    "needsLegalReview": false,
     "needsNewImage": false,
     "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Selon la réglementation belge, au-delà duquel de ces signaux routiers pouvez-vous dépasser une autre voiture par la gauche.",
-    "image": "/examen-blanc/examen-11/q03.webp"
+    "image": "/examen-blanc/examen-11/q03-b17-fixed.png"
   },
   {
     "id": 38,
@@ -551,13 +556,13 @@
     "id": 39,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "La priorité de droite s’applique-t-elle sur le parking d’un supermarché?",
+    "question": "Vous circulez sur le parking d’un supermarché ouvert à la circulation publique. À une intersection entre deux voies de circulation, aucun signal ne règle la priorité. Quelle règle devez-vous appliquer ?",
     "choix": [
-      "A. Oui, cette action est permise.",
-      "B. Non, cette action est interdite."
+      "A. La priorité de droite.",
+      "B. Aucune règle de priorité ne s’applique sur un parking."
     ],
     "reponse": "A",
-    "explication": "Règle applicable : La priorité de droite s’applique en principe aussi sur le parking d’un supermarché, car il s’agit généralement d’un lieu accessible à la circulation publique. Les règles de circulation routière y sont donc d’application. Attention Quitter une place de stationnement (en avançant ou en reculant) est une manœuvre particulière: le conducteur doit céder le passage à tous les autres usagers. En présence de signaux routiers, de triangles (dents de requin), de stops ou de marquages au sol, ces règles de priorité sont obligatoirement respectées.",
+    "explication": "Sur un parking accessible à la circulation publique et soumis au Code de la route, la priorité de droite s’applique en principe aux intersections entre voies de circulation, sauf signalisation contraire. Attention : quitter une place de stationnement constitue une manœuvre et impose de céder le passage aux autres usagers.",
     "image": "/examen-blanc/examen-8/q39-new.png",
     "needsNewImage": false
   },

@@ -4,15 +4,15 @@ import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { Navbar } from '@/components/site/Navbar'
 import { Footer } from '@/components/site/Footer'
 import { Container } from '@/components/ui/Container'
-import { ExamenBlanc } from '@/components/examen-blanc/ExamenBlanc'
 import { ExamAccessGate } from '@/components/examen-blanc/ExamAccessGate'
-import { EXAMENS_BLANCS, getExamenBlanc } from '@/lib/examens-blancs'
+import { ExamenBlanc } from '@/components/examen-blanc/ExamenBlanc'
+import { getExamenBlanc } from '@/lib/examens-blancs'
+import { hasExamAccess } from '@/lib/exam-access.server'
 import type { AppLocale } from '@/i18n/request'
 import { pageMetadata } from '@/lib/seo'
 
-export function generateStaticParams() {
-  return EXAMENS_BLANCS.map((exam) => ({ slug: exam.slug }))
-}
+// L'autorisation payante est lue dans un cookie HttpOnly à chaque requête.
+export const dynamic = 'force-dynamic'
 
 export async function generateMetadata({
   params: { locale, slug },
@@ -33,24 +33,26 @@ export async function generateMetadata({
  */
 export default async function ExamenBlancPlayerPage({
   params: { locale, slug },
+  searchParams,
 }: {
   params: { locale: AppLocale; slug: string }
+  searchParams?: { preview?: string }
 }) {
   setRequestLocale(locale)
   const exam = getExamenBlanc(slug)
   if (!exam) notFound()
-
+  const unlocked = hasExamAccess() || (process.env.NODE_ENV !== 'production' && searchParams?.preview === '1')
   return (
     <>
       <Navbar />
-      <main className="px-4 py-10 sm:px-6 sm:py-14">
-        <Container className="max-w-3xl">
+      <main className="px-2 py-3 sm:px-4 sm:py-4">
+        <Container className="max-w-5xl">
           {locale === 'nl' && (
             <p className="mb-4 border-[3px] border-ink bg-cream p-3 text-center text-xs text-ink/70">
               Deze inhoud is momenteel enkel in het Frans beschikbaar.
             </p>
           )}
-          <ExamAccessGate free={exam.free}>
+          <ExamAccessGate unlocked={unlocked}>
             <ExamenBlanc questions={exam.questions} hideCorrection={exam.hideCorrection} />
           </ExamAccessGate>
         </Container>

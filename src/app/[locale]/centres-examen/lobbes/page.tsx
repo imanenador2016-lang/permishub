@@ -8,6 +8,7 @@ import { Breadcrumbs } from '@/components/site/Breadcrumbs'
 import { Container } from '@/components/ui/Container'
 import { Link } from '@/i18n/navigation'
 import { CircuitUnlockCta } from '@/components/circuits/CircuitUnlockCta'
+import { CircuitConstructionFaq } from '@/components/circuits/CircuitConstructionFaq'
 import type { AppLocale } from '@/i18n/request'
 import { getCircuitsByCenter } from '@/content/centers/registry'
 import { LOBBES_SEO_DATA } from '@/content/centers/lobbes-seo'
@@ -147,6 +148,7 @@ export default async function LobbesExamCenterPage({ params: { locale } }: { par
                 <details className="group py-4"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-base marker:hidden sm:text-lg">Quels sont les horaires du centre ?<span aria-hidden="true" className="flex h-8 w-8 flex-none items-center justify-center border-2 border-ink text-lg leading-none transition-transform group-open:rotate-45">+</span></summary><p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/75">Le centre est ouvert lundi, mardi, mercredi et vendredi de 07:00 à 12:15 et de 13:00 à 16:45. Il est fermé le jeudi. Les examens pratiques ont leurs propres rendez-vous.</p></details>
                 <details className="group py-4"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-base marker:hidden sm:text-lg">Combien de circuits PermisHub sont disponibles à Lobbes ?<span aria-hidden="true" className="flex h-8 w-8 flex-none items-center justify-center border-2 border-ink text-lg leading-none transition-transform group-open:rotate-45">+</span></summary><p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/75">{availableCircuits} circuits officiels PermisHub sont proposés avec leurs tracés Google Maps, accessibles après déblocage.</p><Link href="#pack" className="mt-2 inline-flex min-h-11 items-center font-bold text-brick underline underline-offset-2">Débloquer les circuits Lobbes <span aria-hidden className="ml-2">→</span></Link></details>
                 <details className="group py-4"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-base marker:hidden sm:text-lg">Quel repère local préparer à Lobbes ?<span aria-hidden="true" className="flex h-8 w-8 flex-none items-center justify-center border-2 border-ink text-lg leading-none transition-transform group-open:rotate-45">+</span></summary><p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/75">Le plan communal relève du trafic de transit sur les routes nationales et des voiries plus étroites dans certaines agglomérations. Prépare-toi à adapter ta position et ton allure aux panneaux et à la situation réelle, sans mémoriser un trajet unique.</p></details>
+                <CircuitConstructionFaq />
               </div>
             </div>
           </section>

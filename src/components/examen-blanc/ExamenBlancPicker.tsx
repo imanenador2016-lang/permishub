@@ -7,6 +7,8 @@ import { ExamOfferModal } from './ExamOfferModal'
 import { EXAMENS_UNLOCKED_KEY } from './ExamAccessGate'
 import type { ExamenBlancSummary } from '@/lib/examens-blancs'
 
+const LOCAL_DEV_UNLOCKED = process.env.NODE_ENV === 'development'
+
 /**
  * Liste des examens blancs — tous réservés au pack "Examens illimités"
  * (voir conversation du 2026-08-30 : plus aucun examen gratuit). Clic
@@ -32,9 +34,10 @@ export function ExamenBlancPicker({ exams }: { exams: ExamenBlancSummary[] }) {
   const tc = useTranslations('common')
   const locale = useLocale() as 'fr' | 'nl'
   const [offerOpen, setOfferOpen] = useState(false)
-  const [unlocked, setUnlocked] = useState(false)
+  const [unlocked, setUnlocked] = useState(LOCAL_DEV_UNLOCKED)
 
   useEffect(() => {
+    if (LOCAL_DEV_UNLOCKED) return
     try {
       if (localStorage.getItem(EXAMENS_UNLOCKED_KEY) === '1') setUnlocked(true)
     } catch {

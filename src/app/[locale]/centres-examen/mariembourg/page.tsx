@@ -8,6 +8,7 @@ import { Breadcrumbs } from '@/components/site/Breadcrumbs'
 import { Container } from '@/components/ui/Container'
 import { Link } from '@/i18n/navigation'
 import { CircuitUnlockCta } from '@/components/circuits/CircuitUnlockCta'
+import { CircuitConstructionFaq } from '@/components/circuits/CircuitConstructionFaq'
 import type { AppLocale } from '@/i18n/request'
 import { getCircuitsByCenter } from '@/content/centers/registry'
 import { MARIEMBOURG_SEO_DATA } from '@/content/centers/mariembourg-seo'
@@ -147,6 +148,7 @@ export default async function MariembourgExamCenterPage({ params: { locale } }: 
                 <details className="group py-4"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-base marker:hidden sm:text-lg">Quels sont les horaires du centre ?<span aria-hidden="true" className="flex h-8 w-8 flex-none items-center justify-center border-2 border-ink text-lg leading-none transition-transform group-open:rotate-45">+</span></summary><p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/75">Le centre est ouvert du lundi au vendredi, de 07:30 à 12:00 et de 12:30 à 17:00. Ces heures sont les horaires d’ouverture du centre ; les examens pratiques se prennent sur rendez-vous.</p></details>
                 <details className="group py-4"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-base marker:hidden sm:text-lg">Combien de circuits PermisHub sont disponibles à Mariembourg ?<span aria-hidden="true" className="flex h-8 w-8 flex-none items-center justify-center border-2 border-ink text-lg leading-none transition-transform group-open:rotate-45">+</span></summary><p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/75">{availableCircuits} circuits officiels PermisHub sont proposés, avec leurs tracés Google Maps accessibles après déblocage.</p><Link href="#pack" className="mt-2 inline-flex min-h-11 items-center font-bold text-brick underline underline-offset-2">Débloquer les circuits Mariembourg <span aria-hidden className="ml-2">→</span></Link></details>
                 <details className="group py-4"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-base marker:hidden sm:text-lg">Qu’est-ce qui caractérise les points de passage à Mariembourg ?<span aria-hidden="true" className="flex h-8 w-8 flex-none items-center justify-center border-2 border-ink text-lg leading-none transition-transform group-open:rotate-45">+</span></summary><p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/75">La liste officielle 2026–2027 s’étend à plusieurs localités de la région et mentionne la N5. Les points peuvent varier selon le trafic et les travaux : prépare-toi à lire la route et sa signalisation plutôt qu’à mémoriser un trajet unique.</p></details>
+                <CircuitConstructionFaq />
               </div>
             </div>
           </section>

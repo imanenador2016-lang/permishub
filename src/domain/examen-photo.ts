@@ -10,7 +10,7 @@ export type ExamenPhotoQuestionType = 'choix_multiple' | 'oui_non' | 'numerique'
 export type ExamenPhotoGravite = 'normale' | 'grave'
 
 export interface ExamenPhotoVisualAnnotation {
-  /** Lettre affichee dans la pastille (A, B, C ou D). */
+  /** Repère affiché dans la pastille (lettre, chiffre ou point d’interrogation). */
   label: string
   /** Position horizontale en pourcentage de la largeur de l'image source. */
   x: number

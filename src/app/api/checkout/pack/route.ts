@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server'
-import { getOptionalSession } from '@/lib/auth'
 import { createStripeCheckoutSession } from '@/lib/stripe-checkout-error'
 import { getPackOffer, LAUNCH_BUNDLE_OFFER } from '@/content/pricing-config'
 import { getLaunchOfferStatus } from '@/lib/launch-offer'
+import { getCheckoutOrigin } from '@/lib/checkout-origin'
 
 /**
  * Crée une Stripe Checkout Session pour un pack (Résumé, examens
@@ -13,8 +13,10 @@ import { getLaunchOfferStatus } from '@/lib/launch-offer'
  * de Stripe — pas de base de données nécessaire pour ce mécanisme.
  */
 export async function POST(request: Request) {
-  const session = await getOptionalSession()
-
+  // Le checkout de packs reste volontairement invité : aucune lecture de
+  // session/base de données avant Stripe. Cela évite une attente inutile
+  // (notamment lors d'un réveil à froid de la base) ; le webhook rattache
+  // ensuite l'achat grâce à l'e-mail réellement confirmé par Stripe.
   const body = await request.json().catch(() => null)
   const offerId = typeof body?.offerId === 'string' ? body.offerId : null
   if (!offerId) {
@@ -43,14 +45,14 @@ export async function POST(request: Request) {
     }
   }
 
-  const origin = request.headers.get('origin') ?? process.env.NEXTAUTH_URL ?? 'http://localhost:3000'
+  const origin = getCheckoutOrigin(request)
 
   const checkoutResult = await createStripeCheckoutSession({
     mode: 'payment',
     // Bancontact : très utilisé en Belgique, ajouté le 2026-09-03 — n'apparaît
     // vraiment au client que si Bancontact est aussi activé côté Dashboard
     // Stripe (Paramètres > Moyens de paiement).
-    customer_email: session?.user?.email ?? bodyEmail,
+    customer_email: bodyEmail,
     line_items: [
       {
         price_data: {
@@ -63,7 +65,7 @@ export async function POST(request: Request) {
     ],
     metadata: {
       offerId: offer.id,
-      userId: session?.user?.id ?? '',
+      userId: '',
     },
     success_url: `${origin}/fr/packs/succes?session_id={CHECKOUT_SESSION_ID}`,
     cancel_url: `${origin}/fr/?achat=annule#packs`,
@@ -77,4 +79,22 @@ export async function POST(request: Request) {
   }
 
   return NextResponse.json({ url: checkoutSession.url })
+}
+
+export async function GET(request: Request) {
+  const offerId = new URL(request.url).searchParams.get('offerId')
+  const internalRequest = new Request(request.url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ offerId }),
+  })
+  const response = await POST(internalRequest)
+  if (!response.ok) return response
+
+  const data = await response.json().catch(() => null)
+  if (typeof data?.url !== 'string' || !data.url.startsWith('https://checkout.stripe.com/')) {
+    return NextResponse.json({ error: 'Impossible de créer la session de paiement.' }, { status: 500 })
+  }
+
+  return NextResponse.redirect(data.url, 303)
 }

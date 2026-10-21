@@ -15,6 +15,8 @@ import { SCHAERBEEK_SEO_DATA } from '@/content/centers/schaerbeek-seo'
 import { BRAINE_LE_COMTE_SEO_DATA } from '@/content/centers/braine-le-comte-seo'
 import { COUILLET_SEO_DATA } from '@/content/centers/couillet-seo'
 import { LOUVAIN_LA_NEUVE_SEO_DATA } from '@/content/centers/louvain-la-neuve-seo'
+import { WANDRE_SEO_DATA } from '@/content/centers/wandre-seo'
+import { NAMUR_SEO_DATA } from '@/content/centers/namur-seo'
 import { EXAM_CENTERS, getCircuitsByCenter } from '@/content/centers/registry'
 import { REGION_LABELS } from '@/domain/region'
 import { pageMetadata } from '@/lib/seo'
@@ -23,7 +25,7 @@ const TITLE = "Circuits d'examen du permis en Belgique"
 const DESCRIPTION = "Choisis ton centre d'examen pour retrouver ses informations et, lorsqu'ils existent, ses circuits d'entraînement PermisHub."
 
 // Ajouter un slug ici uniquement lorsque sa page locale est prête.
-const PUBLISHED_CENTER_PAGES = ['anderlecht', 'schaerbeek', 'cuesmes', 'mariembourg', 'lobbes', 'braine-le-comte', 'couillet', 'louvain-la-neuve'] as const
+const PUBLISHED_CENTER_PAGES = ['anderlecht', 'schaerbeek', 'cuesmes', 'mariembourg', 'lobbes', 'braine-le-comte', 'couillet', 'louvain-la-neuve', 'wandre', 'namur'] as const
 const CENTER_PHOTOS: Record<string, { src: string; alt: string }> = {
   anderlecht: ANDERLECHT_SEO_DATA.photo.value,
   schaerbeek: SCHAERBEEK_SEO_DATA.photo,
@@ -33,6 +35,8 @@ const CENTER_PHOTOS: Record<string, { src: string; alt: string }> = {
   'braine-le-comte': BRAINE_LE_COMTE_SEO_DATA.photo,
   couillet: COUILLET_SEO_DATA.photo,
   'louvain-la-neuve': LOUVAIN_LA_NEUVE_SEO_DATA.photo,
+  wandre: WANDRE_SEO_DATA.photo,
+  namur: NAMUR_SEO_DATA.photo,
 }
 const REGIONS = [
   { id: 'BRUXELLES', title: 'Bruxelles' },

@@ -12,7 +12,7 @@
     { id: 'tram-et-vehicules-sur-rails', title: 'Tram et véhicules sur rails', description: 'Analyser les règles et exceptions propres aux véhicules sur rails.', xp: 20 },
     { id: 'manoeuvres-et-situations-complexes', title: 'Manœuvres & situations complexes', description: 'Combiner observation, position, visibilité et signalisation.', xp: 25 },
   ],
-  finalChallenge: { id: 'defi-final-manoeuvres-depassement', title: 'Défi final — Manœuvres & dépassement', description: 'Verrouillé jusqu’à la fin des 7 leçons.', xp: 50 },
+  finalChallenge: { id: 'defi-final-manoeuvres-depassement', title: 'Défi final — Manœuvres & dépassement', description: '15 situations pour évaluer les 7 leçons du module.', xp: 50 },
 } as const
 
 export const MODULE_4_VISUAL_ID_PREFIX = 'M4_'

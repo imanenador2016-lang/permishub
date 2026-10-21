@@ -20,6 +20,8 @@ export interface Question {
   imageUrl?: string
   options: AnswerOption[]
   explanation: LocalizedText
+  /** Points retirés au score du test en cas de mauvaise réponse. Par défaut : 1. */
+  penaltyPoints?: 1 | 5
   factIds: string[]
   difficulty: Difficulty
 }

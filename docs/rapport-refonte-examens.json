@@ -1,0 +1,191 @@
+{
+  "total": 748,
+  "oldImagesRemoved": 748,
+  "needsNewImage": 461,
+  "needsLegalReview": 415,
+  "roadIllustrations": 433,
+  "perExam": {
+    "1": 49,
+    "2": 50,
+    "3": 49,
+    "4": 50,
+    "5": 50,
+    "6": 50,
+    "7": 50,
+    "8": 50,
+    "9": 50,
+    "10": 50,
+    "11": 50,
+    "12": 50,
+    "13": 50,
+    "14": 50,
+    "15": 50
+  },
+  "uniqueSignals": 10,
+  "signals": {
+    "A23": [
+      {
+        "exam": 2,
+        "question": 30
+      }
+    ],
+    "B1": [
+      {
+        "exam": 2,
+        "question": 11
+      },
+      {
+        "exam": 3,
+        "question": 18
+      },
+      {
+        "exam": 3,
+        "question": 21
+      },
+      {
+        "exam": 4,
+        "question": 2
+      },
+      {
+        "exam": 5,
+        "question": 31
+      },
+      {
+        "exam": 5,
+        "question": 43
+      },
+      {
+        "exam": 8,
+        "question": 33
+      },
+      {
+        "exam": 8,
+        "question": 35
+      },
+      {
+        "exam": 11,
+        "question": 15
+      },
+      {
+        "exam": 11,
+        "question": 48
+      },
+      {
+        "exam": 12,
+        "question": 2
+      },
+      {
+        "exam": 12,
+        "question": 47
+      },
+      {
+        "exam": 13,
+        "question": 45
+      },
+      {
+        "exam": 14,
+        "question": 23
+      },
+      {
+        "exam": 14,
+        "question": 24
+      },
+      {
+        "exam": 15,
+        "question": 6
+      }
+    ],
+    "B5": [
+      {
+        "exam": 1,
+        "question": 49
+      },
+      {
+        "exam": 5,
+        "question": 10
+      },
+      {
+        "exam": 5,
+        "question": 17
+      }
+    ],
+    "B9": [
+      {
+        "exam": 2,
+        "question": 35
+      },
+      {
+        "exam": 11,
+        "question": 45
+      }
+    ],
+    "B17": [
+      {
+        "exam": 8,
+        "question": 43
+      },
+      {
+        "exam": 13,
+        "question": 24
+      }
+    ],
+    "C3": [
+      {
+        "exam": 2,
+        "question": 21
+      },
+      {
+        "exam": 3,
+        "question": 12
+      },
+      {
+        "exam": 3,
+        "question": 35
+      },
+      {
+        "exam": 3,
+        "question": 38
+      },
+      {
+        "exam": 9,
+        "question": 40
+      },
+      {
+        "exam": 13,
+        "question": 36
+      },
+      {
+        "exam": 15,
+        "question": 12
+      },
+      {
+        "exam": 15,
+        "question": 44
+      }
+    ],
+    "C24b": [
+      {
+        "exam": 2,
+        "question": 40
+      }
+    ],
+    "C29": [
+      {
+        "exam": 5,
+        "question": 4
+      }
+    ],
+    "D3": [
+      {
+        "exam": 11,
+        "question": 10
+      }
+    ],
+    "E1": [
+      {
+        "exam": 13,
+        "question": 30
+      }
+    ]
+  }
+}

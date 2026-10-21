@@ -10,17 +10,25 @@ export interface PurchasableItem {
   priceCents: number
 }
 
+export function createCheckoutPath(item: PurchasableItem) {
+  return `/api/checkout/pack?offerId=${encodeURIComponent(item.id)}`
+}
+
 export async function createCheckoutSession(item: PurchasableItem, options?: { email?: string }): Promise<{ url: string }> {
   const res = await fetch('/api/checkout/pack', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
+    cache: 'no-store',
     body: JSON.stringify({ offerId: item.id, email: options?.email }),
   })
 
+  const data = await res.json().catch(() => ({}))
   if (!res.ok) {
-    const data = await res.json().catch(() => ({}))
     throw new Error(data.error ?? 'Le paiement a échoué.')
   }
+  if (typeof data.url !== 'string' || !data.url.startsWith('https://checkout.stripe.com/')) {
+    throw new Error('La page de paiement Stripe n’est pas disponible. Réessaie dans quelques instants.')
+  }
 
-  return res.json()
+  return { url: data.url }
 }

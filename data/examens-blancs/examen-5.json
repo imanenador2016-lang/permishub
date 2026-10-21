@@ -49,17 +49,16 @@
     "id": 4,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Au-delà de quel signal routier pouvez-vous circuler avec une voiture de 7 mètres de long?",
+    "question": "Votre véhicule mesure 3 mètres de haut et 2 mètres de large. Pouvez-vous franchir ces deux panneaux ?",
     "choix": [
-      "A. Uniquement au-delà du Panneau A.",
-      "B. Uniquement au-delà du Panneau B.",
-      "C. Au-delà du Panneau A et du Panneau B."
+      "A. Oui, les deux.",
+      "B. Uniquement celui de gauche.",
+      "C. Uniquement celui de droite."
     ],
-    "reponse": "C",
-    "explication": "Règle applicable : C27. Accès interdit aux conducteurs de véhicules dont la largeur, chargement compris, dépasse celle indiquée.C29. Accès interdit aux conducteurs de véhicules dont la hauteur, chargement compris, dépasse celle indiquée.",
+    "reponse": "A",
+    "explication": "Le panneau de gauche limite la largeur à 2,50 m, tandis que celui de droite limite la hauteur à 3,50 m. Votre véhicule respecte les deux limites.",
     "needsNewImage": false,
-    "imageBrief": "Afficher le signal belge officiel C29, isolé et parfaitement lisible. Conserver strictement sa forme, ses couleurs et son symbole réglementaires.",
-    "signRef": "C29",
+    "imageBrief": "Montrer côte à côte un panneau limitant la largeur à 2,50 m et un panneau limitant la hauteur à 3,50 m, tous deux entièrement visibles et lisibles.",
     "image": "/examen-blanc/examen-5/q04-new.png"
   },
   {
@@ -206,10 +205,10 @@
     "id": 14,
     "type": "oui_non",
     "gravite": "normale",
-    "question": "Cette photo a été prise en agglomération.Pouvez-vous stationner sur la chaussée au-delà de ce panneau?",
+    "question": "Cette photo a été prise en agglomération. Pouvez-vous stationner sur la chaussée au-delà de ce panneau ?",
     "choix": [],
     "reponse": "OUI",
-    "explication": "Règle applicable : Hors agglomération sur la chaussée d’une voie prioritaire vous ne pouvez pas stationner. Mais vous pouvez vous arrêter.",
+    "explication": "Oui. Le panneau indique une route prioritaire. L’interdiction de stationner sur la chaussée d’une route prioritaire ne s’applique qu’en dehors d’une agglomération. Ici, en agglomération, le stationnement reste permis si aucune autre interdiction ne s’y oppose et si le véhicule ne gêne pas ou ne met pas les autres usagers en danger.",
     "needsNewImage": false,
     "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Analysez le cas suivant: cette photo a été prise en agglomération.Pouvez-vous stationner sur la chaussée au-delà de ce panneau.",
     "image": "/examen-blanc/examen-5/q14-new.png"
@@ -218,10 +217,10 @@
     "id": 15,
     "type": "oui_non",
     "gravite": "normale",
-    "question": "Sur cette route, pouvez-vous dépasser une voiture par la gauche?",
+    "question": "Sur cette route, pouvez-vous dépasser une voiture par la gauche ?",
     "choix": [],
     "reponse": "NON",
-    "explication": "Règle applicable : +16 – ‘Le dépassement’.Le signal d’interdiction interdit aux conducteurs de dépasser par la gauche:. un véhicule attelé.. ou un véhicule à plus de deux roues.",
+    "explication": "Non. Le panneau C35 interdit de dépasser par la gauche un véhicule attelé ou un véhicule à plus de deux roues, notamment une voiture.",
     "needsNewImage": false,
     "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, sur cette route, pouvez-vous dépasser une voiture par la gauche.",
     "needsLegalReview": true,
@@ -671,14 +670,14 @@
     "id": 45,
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Qui doit s’arrêter?",
+    "question": "Qui doit s’arrêter ?",
     "choix": [
-      "A. Le véhicule brune.",
-      "B. Le véhicule bleue.",
-      "C. Le véhicule brune et Le véhicule bleue."
+      "A. La voiture brune.",
+      "B. La voiture bleue.",
+      "C. Les deux voitures."
     ],
-    "reponse": "A",
-    "explication": "Règle applicable : Les ordres d'un officier de police, sont plus importants que les feux de signalisation.",
+    "reponse": "C",
+    "explication": "Les deux voitures doivent s’arrêter. Les bras de l’agent sont tendus horizontalement : les usagers venant de directions qui coupent la ligne formée par ses bras doivent s’arrêter. La voiture brune et la voiture bleue arrivent toutes les deux de telles directions. L’injonction de l’agent prime sur les feux de signalisation.",
     "image": "/examen-blanc/examen-10/q06.webp",
     "needsNewImage": false
   },

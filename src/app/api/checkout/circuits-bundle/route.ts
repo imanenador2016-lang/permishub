@@ -2,6 +2,10 @@ import { NextResponse } from 'next/server'
 import { getOptionalSession } from '@/lib/auth'
 import { createStripeCheckoutSession } from '@/lib/stripe-checkout-error'
 import { getCenter, CIRCUITS_BUNDLE_PRICE_CENTS } from '@/content/centers/registry'
+import { getCheckoutOrigin } from '@/lib/checkout-origin'
+
+const TIKTOK_PROMO_CODE = 'tiktok'
+const TIKTOK_DISCOUNT_PERCENT = 20
 
 /**
  * Crée une Stripe Checkout Session pour débloquer TOUS les circuits d'un
@@ -15,10 +19,12 @@ import { getCenter, CIRCUITS_BUNDLE_PRICE_CENTS } from '@/content/centers/regist
  * obligatoire avant d'acheter.
  */
 export async function POST(request: Request) {
-  const session = await getOptionalSession()
-
-  const body = await request.json().catch(() => null)
+  const [session, body] = await Promise.all([
+    getOptionalSession(),
+    request.json().catch(() => null),
+  ])
   const centerSlug = typeof body?.centerSlug === 'string' ? body.centerSlug : null
+  const promoCode = typeof body?.promoCode === 'string' ? body.promoCode.trim().toLowerCase() : ''
   if (!centerSlug) {
     return NextResponse.json({ error: 'centerSlug manquant' }, { status: 400 })
   }
@@ -28,7 +34,11 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Centre introuvable' }, { status: 404 })
   }
 
-  const origin = request.headers.get('origin') ?? process.env.NEXTAUTH_URL ?? 'http://localhost:3000'
+  const origin = getCheckoutOrigin(request)
+  const promoApplied = promoCode === TIKTOK_PROMO_CODE
+  const priceCents = promoApplied
+    ? Math.round(CIRCUITS_BUNDLE_PRICE_CENTS * (100 - TIKTOK_DISCOUNT_PERCENT) / 100)
+    : CIRCUITS_BUNDLE_PRICE_CENTS
 
   const checkoutResult = await createStripeCheckoutSession({
     mode: 'payment',
@@ -40,7 +50,7 @@ export async function POST(request: Request) {
       {
         price_data: {
           currency: 'eur',
-          unit_amount: CIRCUITS_BUNDLE_PRICE_CENTS,
+          unit_amount: priceCents,
           product_data: {
             name: `Tous les circuits — ${center.name}`,
           },
@@ -52,8 +62,13 @@ export async function POST(request: Request) {
       kind: 'circuits-bundle',
       centerSlug: center.slug,
       userId: session?.user?.id ?? '',
+      promoCode: promoApplied ? TIKTOK_PROMO_CODE : '',
     },
-    success_url: `${origin}/fr/circuits/succes?session_id={CHECKOUT_SESSION_ID}`,
+    // Stripe revient d'abord sur la route serveur qui vérifie le paiement,
+    // pose le cookie d'accès puis envoie immédiatement l'acheteur vers ses
+    // quatre circuits. Cela évite une page intermédiaire et une double
+    // vérification réseau auprès de Stripe.
+    success_url: `${origin}/api/access/circuits/confirm?locale=fr&session_id={CHECKOUT_SESSION_ID}`,
     cancel_url: `${origin}/fr/circuits/${center.slug}?achat=annule`,
   }, `circuits-bundle:${center.slug}`)
 

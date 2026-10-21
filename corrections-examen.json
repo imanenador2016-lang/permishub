@@ -1,0 +1,675 @@
+[
+  {
+    "position_session": 1,
+    "id_question": "1",
+    "question": "Il fait nuit en dehors d’une agglomération. Pendant que la voiture bleue dépasse, le conducteur distrait de la voiture blanche dévie soudain vers la gauche. Que peut faire le conducteur de la voiture bleue ?",
+    "choix": [
+      "A. Il peut seulement utiliser les feux de route, car c’est la nuit.",
+      "B. Il peut utiliser le klaxon pour éviter un accident."
+    ],
+    "bonne_reponse": "B",
+    "correction": "LEÇON 11\nQuand peut-on utiliser l’avertisseur sonore ?\nPendant la journée :\nÀ l’intérieur et en dehors d’une agglomération : pour avertir les autres et éviter un accident.\nEn dehors d’une agglomération : pour avertir le conducteur que l’on veut dépasser.\nEntre la tombée du jour et le lever du jour :\nSeulement en cas de danger imminent.\nDans les autres cas, il faut faire des appels de phares plutôt que d’utiliser le klaxon.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/1.jpg"
+  },
+  {
+    "position_session": 2,
+    "id_question": "2",
+    "question": "Les deux voitures roulent à 70 km/h. Quelle est la distance de sécurité ?",
+    "choix": [
+      "A. 35 mètres.",
+      "B. 42 mètres.",
+      "C. 45 mètres."
+    ],
+    "bonne_reponse": "A",
+    "correction": "LEÇON 13\nVous pouvez calculer cette distance grâce à une formule simple : la vitesse à laquelle vous circulez, divisée par deux.\nDonc : 70 km/h : 2 = 35 mètres.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/2.jpg"
+  },
+  {
+    "position_session": 3,
+    "id_question": "3",
+    "question": "Au-delà duquel de ces signaux routiers pouvez-vous dépasser une autre voiture par la gauche ?",
+    "choix": [
+      "A. Panneau 1.",
+      "B. Panneau 2.",
+      "C. Panneau 1 et panneau 2."
+    ],
+    "bonne_reponse": "C",
+    "correction": "LEÇON 15+16 – ‘Le dépassement’.\nDépasser une voiture par la gauche n’est pas interdit aux intersections où vous voyez ces signaux.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/3.jpg"
+  },
+  {
+    "position_session": 4,
+    "id_question": "4",
+    "question": "Introduisez un nombre. Sur l’autoroute, si les conditions le permettent, vous devez rouler à une vitesse minimale de (...) km/h.",
+    "choix": [
+      "70"
+    ],
+    "bonne_reponse": "70",
+    "correction": "LEÇON 12 – ‘La vitesse’.\nSur une autoroute: au moins 70 km / h.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/4.jpg"
+  },
+  {
+    "position_session": 5,
+    "id_question": "5",
+    "question": "Quelle distance latérale devez-vous laisser lorsque vous croisez une autre voiture avec votre véhicule ?",
+    "choix": [
+      "A. Min 1 m.",
+      "B. Min 1,5 m.",
+      "C. Une distance suffisante."
+    ],
+    "bonne_reponse": "C",
+    "correction": "LEÇON 14\nLe conducteur doit laisser une distance latérale suffisante lors du croisement. Si nécessaire, il doit se déporter vers la droite. Il peut utiliser l’accotement de plain-pied, mais jamais une piste cyclable ni les emplacements de stationnement situés à droite de la limite fictive de la chaussée.\nLorsque vous croisez un cycliste, vous devez toutefois garder une distance d’au moins 1 m en agglomération et de 1,5 m hors agglomération.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/5.jpg"
+  },
+  {
+    "position_session": 6,
+    "id_question": "6",
+    "question": "La photo est prise depuis la voiture que vous conduisez. Pouvez-vous dépasser le camion par la droite ?",
+    "choix": [],
+    "bonne_reponse": "NON",
+    "correction": "Vous devez dépasser par la gauche.\nDépasser par la droite est une infraction grave.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/6.jpg"
+  },
+  {
+    "position_session": 7,
+    "id_question": "7",
+    "question": "En agglomération, sur quel accotement pouvez-vous stationner ?",
+    "choix": [
+      "A. Seul sur l’accotement de plain-pied.",
+      "B. Sur tous les accotements."
+    ],
+    "bonne_reponse": "A",
+    "correction": "LEÇON 25 – ‘Arrêt et stationnement’.\nEn agglomération sur l’accotement de plain-pied.\nHors agglomération sur tous les accotements",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/7.jpg"
+  },
+  {
+    "position_session": 8,
+    "id_question": "8",
+    "question": "L’arrêt ou le stationnement sur les voies d’un passage à niveau est une infraction …",
+    "choix": [
+      "A. … du deuxième degré.",
+      "B. … du troisième degré",
+      "C. … du quatrième degré."
+    ],
+    "bonne_reponse": "C",
+    "correction": "LEÇON – INFRACTIONS GRAVES\nIl est interdit de laisser un véhicule à l’arrêt ou en stationnement sur un passage à niveau.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/8.jpg"
+  },
+  {
+    "position_session": 9,
+    "id_question": "9",
+    "question": "Vous avez le permis de conduire provisoire B. Pouvez-vous dépasser un camion au-delà de ces signaux routiers ?",
+    "choix": [],
+    "bonne_reponse": "OUI",
+    "correction": "LEÇON 15+16 – ‘Le dépassement’.\n200 m plus loin, il est interdit.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/9.jpg"
+  },
+  {
+    "position_session": 10,
+    "id_question": "10",
+    "question": "Le conducteur de cette voiture peut-il tourner à gauche ?",
+    "choix": [],
+    "bonne_reponse": "NON",
+    "correction": "Explication :\nSignal d’obligation D3.\nSignification : les conducteurs sont obligés de suivre l’une des directions indiquées par les flèches.\nLe conducteur doit donc continuer tout droit ou tourner à droite.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/10.jpg"
+  },
+  {
+    "position_session": 11,
+    "id_question": "11",
+    "question": "*** Question de 5 points *** Est-il autorisé de dépasser par la gauche un cyclomotoriste sur ce passage à niveau ?",
+    "choix": [],
+    "bonne_reponse": "OUI",
+    "correction": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]\nLEÇON 22 – ‘Train – tram -autobus’.\nSi le feu blanc lunaire clignote, vous pouvez dépasser par la gauche.",
+    "points": 5,
+    "faute_grave": null,
+    "image": "images/11.jpg"
+  },
+  {
+    "position_session": 12,
+    "id_question": "12",
+    "question": "Que devez-vous faire dans un long tunnel, pour être en sécurité ?",
+    "choix": [
+      "A. Vous faites attention aux sorties de secours.",
+      "B. Vous allumez les feux de croisement.",
+      "C. Vous écoutez attentivement les informations routières."
+    ],
+    "bonne_reponse": "B",
+    "correction": "LEÇON 29\nLorsqu’un tunnel a une longueur de plus de 500 mètres, il est indiqué par ce panneau.\nUn tunnel est souvent plus sombre que la route à l’extérieur. C’est pourquoi il faut enlever vos lunettes de soleil et allumer vos feux de croisement avant d’y entrer.\nDans un tunnel, il est interdit de : stationner ou s’arrêter, faire demi-tour, et reculer.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/12.jpg"
+  },
+  {
+    "position_session": 13,
+    "id_question": "13",
+    "question": "Lequel de ces signaux routiers annonce une bande de circulation réservée aux autobus ?",
+    "choix": [
+      "A. Uniquement le signal 1.",
+      "B. Uniquement les signaux 1 et 2.",
+      "C. Signaux 1, 2 et 3."
+    ],
+    "bonne_reponse": "A",
+    "correction": "LEÇON 22 – ‘Train – tram -autobus’.\nSignal 1 : bande de circulation réservée aux autobus.\nSignaux 2+3 : tram-bus site spécial franchissable.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/13.jpg"
+  },
+  {
+    "position_session": 14,
+    "id_question": "14",
+    "question": "Quels cyclomoteurs peuvent franchir ce signal routier ?",
+    "choix": [
+      "A. Classe A.",
+      "B. Classe B.",
+      "C. Aucun cyclomoteur."
+    ],
+    "bonne_reponse": "C",
+    "correction": "LEÇON 7 – ‘Les piétons’.\nPiétons et la bicyclette se trouvent l’un au-dessus de l’autre : aucun cyclomoteur.\nPiétons et la bicyclette côte à côte : cyclomoteurs de classe A.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/14.jpg"
+  },
+  {
+    "position_session": 15,
+    "id_question": "15",
+    "question": "Le conducteur de cette voiture n’a vu aucun autre conducteur et est entré prudemment dans l’intersection sans s’arrêter. Avait-il le droit de le faire ?",
+    "choix": [
+      "A. Oui, car il n’y a pas de ligne d’arrêt sur la chaussée.",
+      "B. Non, il doit d’abord s’arrêter."
+    ],
+    "bonne_reponse": "B",
+    "correction": "LEÇON 19\nUn STOP signifie que vous devez vous arrêter complètement à la ligne d’arrêt et céder le passage aux conducteurs qui circulent sur la voie publique que vous voulez rejoindre.\nS’il n’y a pas de ligne d’arrêt sur la chaussée, vous vous arrêtez au signal routier.\nMême s’il n’y a pas de conducteurs sur la route transversale, vous devez d’abord marquer un arrêt complet avant d’entrer dans l’intersection.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/15.jpg"
+  },
+  {
+    "position_session": 16,
+    "id_question": "16",
+    "question": "Le conducteur de la voiture bleue peut-il dépasser la voiture blanche pendant que celle-ci dépasse un cyclomoteur ?",
+    "choix": [
+      "A. Oui.",
+      "B. Non."
+    ],
+    "bonne_reponse": "A",
+    "correction": "LEÇON 16\nSur une chaussée à double sens, il est autorisé de dépasser une voiture qui dépasse un cyclomoteur ou une moto.\nMAIS : il est interdit de dépasser une voiture qui est elle-même en train de dépasser une autre voiture.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/16.jpg"
+  },
+  {
+    "position_session": 17,
+    "id_question": "17",
+    "question": "La voiture noire est à l’arrêt et empêche le tram de continuer sa route. Quand le conducteur doit-il réagir ?",
+    "choix": [
+      "A. Le plus rapidement possible.",
+      "B. Dès que le tram émet un signal sonore."
+    ],
+    "bonne_reponse": "A",
+    "correction": "LEÇON 25\nIl est interdit de s’arrêter ou de stationner si cela gêne un tram.\n➡️ Le conducteur doit réagir immédiatement, même si le tram ne donne pas de signal sonore.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/17.jpg"
+  },
+  {
+    "position_session": 18,
+    "id_question": "18",
+    "question": "Dans quel ordre les conducteurs peuvent-ils s’engager dans ce carrefour ?",
+    "choix": [
+      "A. Voiture bleue - Voiture brune - Moto.",
+      "B. Voiture bleue - Moto - Voiture brune.",
+      "C. Voiture brune - Voiture bleue - Moto."
+    ],
+    "bonne_reponse": "B",
+    "correction": "LEÇON 21 – ‘Tourner à droite ou à gauche’.\nLa voiture bleue et la moto roulent sur une route prioritaire.\nLa voiture bleue veut tourner à droite ou faire un petit tournant et a la priorité.\nLa moto qui fait un long tournant, accorde la priorité.\nDès que l’intersection est libre, la voiture brune continue.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/18.jpg"
+  },
+  {
+    "position_session": 19,
+    "id_question": "19",
+    "question": "Tu as suivi 20 heures de cours pratiques dans une auto-école agréée et tu as reçu une « attestation de compétence ». À partir de quel âge peux-tu désormais conduire seul pour t’exercer ?",
+    "choix": [
+      "A. À partir de 17 ans.",
+      "B. À partir de 17 ans et 9 mois.",
+      "C. À partir de 18 ans."
+    ],
+    "bonne_reponse": "C",
+    "correction": "INFO - PERMIS DE CONDUIRE\nTu dois avoir suivi 20 heures de cours pratiques et avoir 18 ans pour pouvoir conduire seul avec un permis provisoire 18M.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/19.jpg"
+  },
+  {
+    "position_session": 20,
+    "id_question": "20",
+    "question": "*** Question de 5 points *** Le conducteur de la voiture noire veut tourner à gauche.",
+    "choix": [
+      "A. Il peut le faire.",
+      "B. Il peut uniquement continuer tout droit.",
+      "C. Il doit s'arrêter."
+    ],
+    "bonne_reponse": "A",
+    "correction": "LEÇON 17\nLorsqu'un agent tend un bras ou les deux bras horizontalement : Les usagers qui se dirigent vers son ventre ou son dos doivent s'arrêter. Ceux qui approchent de son côté (ou de la main tendue) peuvent s'engager dans le carrefour pour continuer tout droit ou tourner à gauche ou à droite. Un agent qui tend les deux bras horizontalement donne la même injonction que s'il tend un seul bras horizontalement.",
+    "points": 5,
+    "faute_grave": null,
+    "image": "images/20.jpg"
+  },
+  {
+    "position_session": 21,
+    "id_question": "21",
+    "question": "Pouvez vous circuler sur cet accotement pour croiser un vehicule ?",
+    "choix": [],
+    "bonne_reponse": "OUI",
+    "correction": "LEÇON 7 – ‘Les piétons’.\nIl ne peut pas sur une piste cyclable ou sur la bande à côté de la ligne imaginaire de la voie destinée au stationnement.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/21.jpg"
+  },
+  {
+    "position_session": 22,
+    "id_question": "22",
+    "question": "Les services de remorquage peuvent-ils rouler sur la bande d’arrêt d’urgence pendant leur intervention ?",
+    "choix": [],
+    "bonne_reponse": "OUI",
+    "correction": "LEÇON 4\nLa police, les services de secours et les services de remorquage (pendant leur intervention) peuvent circuler sur la bande d’arrêt d’urgence.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/22.jpg"
+  },
+  {
+    "position_session": 23,
+    "id_question": "23",
+    "question": "À quelle vitesse maximale autorisée pouvez-vous circuler au-delà de ces signaux en Région flamande ? A : 20 km/h. B : 30 km/h. C : 50 km/h.",
+    "choix": [],
+    "bonne_reponse": "C",
+    "correction": "Explication\nLe signal supérieur indique que vous entrez dans une agglomération.\nRégion flamande : 50 km/h.\nRégion wallonne : 50 km/h.\nRégion de Bruxelles-Capitale : 30 km/h.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/23.jpg"
+  },
+  {
+    "position_session": 24,
+    "id_question": "24",
+    "question": "Quelle distance latérale la voiture rouge doit-elle respecter en dépassant ce cycliste ?",
+    "choix": [
+      "A. Une distance suffisante.",
+      "B. Minimum 1 mètre.",
+      "C. Minimum 1,5 mètre."
+    ],
+    "bonne_reponse": "C",
+    "correction": "LEÇON 15\nCette chaussée se situe clairement hors agglomération.\nLors du dépassement d’un cycliste ou d’un cyclomotoriste, le conducteur doit respecter au moins 1,5 mètre de distance latérale.\nCette distance de 1,5 mètre s’applique également :\n- si le cycliste ou le cyclomotoriste circule sur une piste cyclable ;\n- lors du croisement d’un cycliste ou d’un cyclomotoriste.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/24.jpg"
+  },
+  {
+    "position_session": 25,
+    "id_question": "25",
+    "question": "*** Question de 5 points *** Votre amie vit dans une zone piétonne. Pouvez-vous rendre jusque chez elle avec votre voiture? Correct = NON [Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32] LEÇON 7 – ‘Les piétons’. L'accès aux zones piétonnes est réservé aux piétons. Toutefois: 1° peuvent accéder à ces zones:",
+    "choix": [
+      "b) les véhicules de surveillance, de contrôle et d'entretien de cette zone et les véhicules affectés au ramassage des immondices;",
+      "c) les véhicules prioritaires, lorsque la nature de leur mission le justifie;",
+      "a) les véhicules qui doivent charger ou décharger dans lesdites zones;",
+      "b) les taxis qui ont une destination déterminée à l'intérieur de ces zones pour l'embarquement ou le débarquement de personnes;",
+      "c) les cyclistes."
+    ],
+    "bonne_reponse": "NON",
+    "correction": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]\nLEÇON 7 – ‘Les piétons’.\nL'accès aux zones piétonnes est réservé aux piétons.\nToutefois:\n1° peuvent accéder à ces zones:\nb) les véhicules de surveillance, de contrôle et d'entretien de cette zone et les véhicules affectés au ramassage des immondices;\nc) les véhicules prioritaires, lorsque la nature de leur mission le justifie;\nd) les véhicules des services réguliers de transport en commun;\ne) les conducteurs de véhicules dont le garage est situé à l'intérieur de ces zones et qui n'est accessible qu'en traversant ces zones;\nf) en cas d'absolue nécessité, les véhicules appartenant à des entreprises commerciales établies dans ces zones et uniquement accessible qu'en les traversant, lorsque ces véhicules sont affectés à des livraisons et si ces livraisons constituent une activité principale de ces entreprises;\ng) en cas d'absolue nécessité, les véhicules destinés à effectuer des travaux dans ces zones;\nh) les trains miniatures touristiques et les trains de véhicules composés d’un véhicule tracteur et d’un chariot bâché, les véhicules attelés, les cycles-taxis;\ni) les véhicules employés dans le cadre d'activités médicales ou de soins à domicile;\nDans les cas visés sous e) à i), les bénéficiaires doivent apposer sur la face interne du pare-brise de leur véhicule, un laisser-passer délivré par le bourgmestre ou son délégué; pour les véhicules attelés et les cycles taxis, le conducteur doit détenir ce laissez-passer.\n2° peuvent accéder à ces zones lorsque la signalisation routière le prévoit et selon les restrictions qui y figurent:\na) les véhicules qui doivent charger ou décharger dans lesdites zones;\nb) les taxis qui ont une destination déterminée à l'intérieur de ces zones pour l'embarquement ou le débarquement de personnes;\nc) les cyclistes.",
+    "points": 5,
+    "faute_grave": null,
+    "image": "images/25.jpg"
+  },
+  {
+    "position_session": 26,
+    "id_question": "26",
+    "question": "Plus vite vous roulerez, plus longue sera la distance de réaction.",
+    "choix": [
+      "A. Vrai.",
+      "B. Faux."
+    ],
+    "bonne_reponse": "A",
+    "correction": "LEÇON 13 – ‘La distance d’arrêt’.\nÀ 50 km/heure la distance de réaction est par exemple 15 mètres,\nÀ 90 km/heure 27 mètres.\nÀ 120 km/heure 36 mètres.\n(C’est la distance parcourue avant que vous ne commenciez à appuyer sur la pédale de frein).",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/26.jpg"
+  },
+  {
+    "position_session": 27,
+    "id_question": "27",
+    "question": "Pour vérifier le niveau d’huile, la voiture doit être stationnée à l’horizontale. Mais quand faut-il vérifier le niveau d’huile ?",
+    "choix": [
+      "A. Quand le moteur est froid.",
+      "B. Après avoir roulé quelques kilomètres, pour que l’huile soit chaude."
+    ],
+    "bonne_reponse": "A",
+    "correction": "LEÇON 31 – ‘Technique’.\nL’huile moteur est un des liquides les plus importants du véhicule. Elle lubrifie les pièces en mouvement, évite la surchauffe et l’usure, et garde le moteur propre.\nPour obtenir une mesure fiable, il faut vérifier le niveau quand le moteur est froid et que la voiture est à l’horizontale. Si l’huile est encore chaude, elle n’est pas totalement redescendue dans le carter, ce qui fausse la mesure.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/27.jpg"
+  },
+  {
+    "position_session": 28,
+    "id_question": "28",
+    "question": "Deux voitures sur une chaussée à voie centrale veulent se croiser. Quelle voiture doit conduire sur la bande latérale pour rendre le croisement possible ?",
+    "choix": [
+      "A. La voiture jaune.",
+      "B. La voiture rouge.",
+      "C. Les deux voitures."
+    ],
+    "bonne_reponse": "C",
+    "correction": null,
+    "points": null,
+    "faute_grave": null,
+    "image": "images/28.jpg"
+  },
+  {
+    "position_session": 29,
+    "id_question": "29",
+    "question": "La voiture noire s’est arrêtée par sécurité avant le carrefour. Quelle voiture peut s’engager la première sur le carrefour ?",
+    "choix": [
+      "A. La voiture grise, car la noire s’est arrêtée.",
+      "B. La voiture noire, car elle vient de droite."
+    ],
+    "bonne_reponse": "B",
+    "correction": "LEÇON 20\nÀ un carrefour où la priorité n’est pas réglée par un agent qualifié, des feux de signalisation ou des signaux routier, la priorité de droite s’applique.\nMême si le conducteur venant de droite s’arrête d’abord, il conserve tout de même sa priorité.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/29.jpg"
+  },
+  {
+    "position_session": 30,
+    "id_question": "30",
+    "question": "Vous êtes déjà engagé sur le carrefour, lorsqu’un agent de police lève le bras à la verticale. Que faites-vous ?",
+    "choix": [
+      "A. Vous ralentissez et attendez l’injonction qu’il va donner.",
+      "B. Vous vous arrêtez.",
+      "C. Vous continuez à avancer et vous quittez le carrefour."
+    ],
+    "bonne_reponse": "C",
+    "correction": "LEÇON 17\nLorsqu’un agent lève le bras, cela signifie que tous les véhicules doivent s’arrêter.\nToutefois les véhicules déjà engagés dans le carrefour doivent le quitter le plus rapidement possible, dans la direction qu’ils voulaient suivre.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/30.jpg"
+  },
+  {
+    "position_session": 31,
+    "id_question": "31",
+    "question": "Qui peut s’engager en premier dans ce carrefour ?",
+    "choix": [
+      "A. La voiture brune.",
+      "B. La voiture bleue.",
+      "C. La moto."
+    ],
+    "bonne_reponse": "C",
+    "correction": "LEÇON 21 – ‘Tourner à droite ou à gauche’.\nL’agent dit que la voiture bleue doit s’arrêter.\nLe conducteur qui désire conduire tout droit a la priorité.\nLe conducteur qui veut tourner à gauche, doit donner la priorité.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/31.jpg"
+  },
+  {
+    "position_session": 32,
+    "id_question": "32",
+    "question": "Je circule à mon retour du travail sur cette voirie. Le traffic est dense et il y a 3 flèches au dessus des bandes de circulation. Je peux choisir ma bande de circulation.",
+    "choix": [
+      "A. Vrai.",
+      "B. Faux."
+    ],
+    "bonne_reponse": "A",
+    "correction": "LEÇON 18 – ‘les feux de circulation’.\nIl y a densité et donc choix de la file.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/32.jpg"
+  },
+  {
+    "position_session": 33,
+    "id_question": "33",
+    "question": "Le conducteur de cette voiture s’est arrêté pour répondre au téléphone. Peut-il le faire à cet endroit ?",
+    "choix": [
+      "A. Oui.",
+      "B. Non."
+    ],
+    "bonne_reponse": "A",
+    "correction": "LEÇON 26\nS’arrêter pour répondre au téléphone est considéré comme du stationnement.\nSur une chaussée sans ligne blanche discontinue ou continue entre les voies, le stationnement et l’arrêt sont autorisés.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/33.jpg"
+  },
+  {
+    "position_session": 34,
+    "id_question": "34",
+    "question": "Qui peut s’engager dans le carrefour ?",
+    "choix": [
+      "A. La voiture verte et la voiture bleue.",
+      "B. La voiture brune et la motocyclette."
+    ],
+    "bonne_reponse": "A",
+    "correction": "LEÇON 18 – ‘les feux de circulation’.\nL’agent de police donne l’ordre, que la voiture brune et la moto doivent s’arrêter.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/34.jpg"
+  },
+  {
+    "position_session": 35,
+    "id_question": "35",
+    "question": "Vous ne pouvez pas franchir ce signal routier en voiture. Mais pouvez-vous déboucher de cette rue en voiture ?",
+    "choix": [],
+    "bonne_reponse": "OUI",
+    "correction": "LEÇON 23 – ‘Sens interdits’.\nAccès interdit aux conducteurs de véhicules à moteur à plus de deux roues et de motocyclettes avec side-car.\nSignal d’interdiction.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/35.jpg"
+  },
+  {
+    "position_session": 36,
+    "id_question": "36",
+    "question": "Qui peut s’engager en premier dans ce carrefour ?",
+    "choix": [
+      "A. La voiture A.",
+      "B. La voiture B."
+    ],
+    "bonne_reponse": "A",
+    "correction": "LEÇON 21 – ‘Tourner à droite ou à gauche’.\nLa voiture rouge et la voiture bleue doivent stopper avant la ligne d’arrêt.\nLa voiture grise conduit tout droit et a la priorité de la voiture verte qui veut tourner à gauche.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/36.jpg"
+  },
+  {
+    "position_session": 37,
+    "id_question": "37",
+    "question": "Tous les documents que vous présentez à la police doivent être originaux, à l’exception d’un seul document. Lequel ?",
+    "choix": [
+      "A. Le certificat d’immatriculation.",
+      "B. L’attestation d’assurance.",
+      "C. Le certificat de conformité."
+    ],
+    "bonne_reponse": "B",
+    "correction": "LEÇON 9\nTous les documents qui doivent se trouver dans le véhicule doivent être originaux.\nLa seule exception est l’attestation d’assurance : celle-ci peut également être présentée sous forme numérique, par exemple via une image sur votre smartphone.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/37.jpg"
+  },
+  {
+    "position_session": 38,
+    "id_question": "38",
+    "question": "Le GPS peut-il déconcentrer le conducteur ?",
+    "choix": [],
+    "bonne_reponse": "OUI",
+    "correction": "Explication :\nPendant la conduite, vous écoutez les instructions vocales du GPS et regardez occasionnellement l’écran. Votre attention pour la circulation peut ainsi diminuer.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/38.jpg"
+  },
+  {
+    "position_session": 39,
+    "id_question": "39",
+    "question": "*** Question de 5 points *** Pouvez-vous franchir ce signal routier en voiture ?",
+    "choix": [],
+    "bonne_reponse": "OUI",
+    "correction": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]\nLEÇON 23 – ‘Sens interdits’\nCes signes disent que les véhicules agricoles avec une M.E.C. de plus de 5,5 tonnes, peuvent continuer.",
+    "points": 5,
+    "faute_grave": null,
+    "image": "images/39.jpg"
+  },
+  {
+    "position_session": 40,
+    "id_question": "40",
+    "question": "Il y a un épais brouillard dans cette agglomération située en Région wallonne. À quelle vitesse maximale pouvez-vous rouler ici ? A : À maximum 30 km/h. B : À maximum 50 km/h. C : À une vitesse adaptée aux circonstances.",
+    "choix": [],
+    "bonne_reponse": "C",
+    "correction": "Explication :\nDans une agglomération située en Région wallonne, la vitesse maximale autorisée est normalement de 50 km/h. Toutefois, l’épais brouillard réduit fortement la visibilité. Vous devez donc adapter votre vitesse aux circonstances.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/40.jpg"
+  },
+  {
+    "position_session": 41,
+    "id_question": "41",
+    "question": "Les vélos se sont arrêtés. Qui a la priorité ?",
+    "choix": [
+      "A. Les vélos.",
+      "B. La voiture."
+    ],
+    "bonne_reponse": "A",
+    "correction": "LEÇON 20 – ‘La priorité de droite’.\nUn cycliste est également un conducteur.\nLe cycliste vient de la droite.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/41.jpg"
+  },
+  {
+    "position_session": 42,
+    "id_question": "42",
+    "question": "La distance que la voiture parcourt entre l’instant où le conducteur appuie sur la pédale de frein et l’instant où la voiture s’arrête complètement, s’appelle la distance de freinage.",
+    "choix": [
+      "A. Vrai.",
+      "B. Faux."
+    ],
+    "bonne_reponse": "A",
+    "correction": "LEÇON 13 – ‘La distance d’arrêt’.\nIl s’agit de la distance de freinage.\nA ne pas confondre avec la distance d’arrêt qui est plus longue en comporte 2 éléments la distance de réaction et la distance de freinage.\nRevoyez bien la leçon si vous avez mal répondu car c’est essentiel de comprendre cette matière.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/42.jpg"
+  },
+  {
+    "position_session": 43,
+    "id_question": "43",
+    "question": "*** Question de 5 points *** Vous avez le permis de conduire provisoire B. En voiture, pouvez-vous dépasser par la gauche un cheval attelé ?",
+    "choix": [],
+    "bonne_reponse": "NON",
+    "correction": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]\nLEÇON 15+16 – ‘Le dépassement’.\nLe signal d’interdiction interdit aux conducteurs de dépasser par la gauche:\n. un véhicule attelé.\n. ou un véhicule à plus de deux roues.",
+    "points": 5,
+    "faute_grave": null,
+    "image": "images/43.jpg"
+  },
+  {
+    "position_session": 44,
+    "id_question": "44",
+    "question": "Vous avez bu de l’alcool et vous craignez un contrôle de police. Existe-t-il un médicament qui peut faire baisser rapidement le taux d’alcool dans le sang ?",
+    "choix": [],
+    "bonne_reponse": "NON",
+    "correction": "LEÇON 28\nIl n’existe aucun médicament ni aucun autre moyen (comme boire du café) pour faire baisser plus vite le taux d’alcool dans le sang. Seul le temps permet à l’organisme d’éliminer l’alcool. Au contraire, certains médicaments renforcent même les effets de l’alcool.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/44.jpg"
+  },
+  {
+    "position_session": 45,
+    "id_question": "45",
+    "question": "Le conducteur de la voiture rouge doit-il céder le passage à la voiture verte venant de droite ?",
+    "choix": [],
+    "bonne_reponse": "NON",
+    "correction": "Explication\nSignal routier B9.\nSignification : route prioritaire.\nVous avez la priorité aux prochains carrefours.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/45.jpg"
+  },
+  {
+    "position_session": 46,
+    "id_question": "46",
+    "question": "Qui peut s’engager en premier dans le carrefour ?",
+    "choix": [
+      "A. Voiture A.",
+      "B. Voiture B."
+    ],
+    "bonne_reponse": "B",
+    "correction": "LEÇON 19 – ‘Une intersection et les signaux routiers’.\nVoiture B est sur une intersection de priorité.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/46.jpg"
+  },
+  {
+    "position_session": 47,
+    "id_question": "47",
+    "question": "Vous vous êtes trompé de sortie. Pouvez-vous encore prendre vers la gauche ?",
+    "choix": [],
+    "bonne_reponse": "NON",
+    "correction": "LEÇON 2 – ‘Bandes de circulation’.\nSur une zone d’évitement, vous ne pouvez pas circuler, vous arrêter ou stationner.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/47.jpg"
+  },
+  {
+    "position_session": 48,
+    "id_question": "48",
+    "question": "La voiture bleue circule sur le carrefour. Le conducteur peut-il le faire ?",
+    "choix": [
+      "A. Oui, car il a la priorité de droite.",
+      "B. Non, car la voiture rouge continue tout droit."
+    ],
+    "bonne_reponse": "A",
+    "correction": "LEÇON 20\nAux carrefours où : il n’y a ni agent qualifié, ni feux de signalisation, ni signaux routiers réglant la priorité, la règle de la priorité de droite s’applique. Cela signifie que tout conducteur (voiture, motocyclette, cyclomoteur à deux roues ou vélo) doit céder le passage au conducteur venant de droite, sauf s’il circule sur un rond-point ou si le conducteur venant de droite sort d’une direction interdite.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/48.jpg"
+  },
+  {
+    "position_session": 49,
+    "id_question": "49",
+    "question": "À partir de quel âge peut-on passer l’examen pratique du permis de conduire B en Belgique ?",
+    "choix": [
+      "A. 17 ans.",
+      "B. 17 ans et 9 mois.",
+      "C. 18 ans."
+    ],
+    "bonne_reponse": "C",
+    "correction": "INFO - PERMIS DE CONDUIRE\nDès que vous avez 18 ans, vous pouvez présenter l’examen pratique du permis de conduire B dans un centre d’examen, à condition que votre période de stage remplisse les exigences légales.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/49.jpg"
+  },
+  {
+    "position_session": 50,
+    "id_question": "50",
+    "question": "Le conducteur de ce camion n’empiète qu’un petit peu sur la bande cyclable suggérée.",
+    "choix": [
+      "A. C’est incorrect, car il doit rouler à droite sur la chaussée.",
+      "B. C’est correct, car il laisse assez d’espace pour les cyclistes."
+    ],
+    "bonne_reponse": "A",
+    "correction": "LEÇON 3 – ‘La piste cyclable’.\nLa bande cyclable suggérée n’est qu’une partie de la chaussée peinte d’une autre couleur.\nLes conducteurs doivent conduire sur le côté droit de la chaussée.",
+    "points": null,
+    "faute_grave": null,
+    "image": "images/50.jpg"
+  }
+]

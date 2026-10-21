@@ -123,6 +123,64 @@ Tant que ces 3 étapes ne sont pas faites, les nouveaux leads arriveront
 quand même dans le Sheet, juste sans la colonne `region` remplie (le
 script actuel ignore silencieusement les champs qu'il ne connaît pas).
 
+## Mise à jour du 2026-09-12 : ajout de la note au test de niveau
+
+Le code envoie maintenant une **ligne séparée** dès qu'un visiteur termine le
+test de niveau (`score10` sur 10, `points_faibles` = ses thèmes les plus
+faibles) — voir `src/lib/leads.ts` (`saveTestScore`). Une ligne séparée plutôt
+que remplir la ligne existante du lead : beaucoup plus simple côté script (pas
+besoin de retrouver la bonne ligne par email), retrouvable facilement en
+triant/filtrant la colonne `email` dans le Sheet.
+
+Comme pour "région", **le Sheet et le script déjà déployés ne savent pas
+encore lire ces deux champs** — 3 actions manuelles à faire une seule fois :
+
+1. **Dans le Sheet** : ajoute `score10` puis `points_faibles` comme en-têtes
+   des **deux colonnes suivant la dernière existante** (après `region`, donc
+   colonnes N et O si tu es parti du modèle ci-dessus).
+2. **Dans l'éditeur Apps Script** : ajoute `'score10'` puis `'points_faibles'`
+   **à la fin** du tableau `COLUMNS` en haut de `Code.gs` (après `'region'`),
+   dans le même ordre que dans le Sheet.
+3. **Republie** : **Déployer** → **Gérer les déploiements** → icône crayon
+   ✏️ sur le déploiement existant → **Nouvelle version** → **Déployer**. Ne
+   crée surtout pas un *nouveau* déploiement (voir plus haut).
+
+Tant que ces 3 étapes ne sont pas faites, ces lignes arriveront quand même
+dans le Sheet, juste sans ces deux colonnes remplies.
+
+## Mise à jour du 2026-09-14 : réponses du quiz de qualification (pack 49 €)
+
+Le Hero propose maintenant un quiz de qualification avant l'achat du pack de
+lancement (`QualificationQuiz.tsx`, ouvert depuis le CTA du Hero) : email
+d'abord (ligne classique via `saveLead`, `segment: "pack-qualification"`),
+puis 4 questions (région, niveau théorie, échec examen, motivation). Une fois
+la question 4 répondue, le code envoie une **ligne séparée** (même principe
+que "score10"/"points_faibles" ci-dessus, via `saveQuizAnswers` dans
+`src/lib/leads.ts` et `POST /api/quiz-answers`) — retrouvable par email dans
+le Sheet.
+
+Comme pour les mises à jour précédentes, **le Sheet et le script déjà
+déployés ne savent pas encore lire ces champs** — 3 actions manuelles à
+faire une seule fois :
+
+1. **Dans le Sheet** : ajoute `niveau_theorie`, `echec_examen`, `motivation`
+   puis `eligible` comme en-têtes des **quatre colonnes suivant la
+   dernière existante** (après `points_faibles`), dans cet ordre exact.
+2. **Dans l'éditeur Apps Script** : ajoute `'niveau_theorie'`,
+   `'echec_examen'`, `'motivation'`, `'eligible'` **à la fin** du tableau
+   `COLUMNS` en haut de `Code.gs` (après `'points_faibles'`), dans le même
+   ordre que dans le Sheet. `region` est déjà dans `COLUMNS` (réutilisé tel
+   quel — mêmes valeurs Wallonie/Bruxelles/Flandre que QuizFunnel).
+3. **Republie** : **Déployer** → **Gérer les déploiements** → icône crayon
+   ✏️ sur le déploiement existant → **Nouvelle version** → **Déployer**. Ne
+   crée surtout pas un *nouveau* déploiement (voir plus haut).
+
+Tant que ces 3 étapes ne sont pas faites, ces lignes arriveront quand même
+dans le Sheet (testé : `date`, `email` et `region` s'y écrivent déjà), juste
+sans ces quatre colonnes remplies. Valeurs possibles : `niveau_theorie`
+(`debute` / `flou` / `active`), `echec_examen` (`une` / `plusieurs` / `non`),
+`motivation` (`oui` / `non`), `eligible` (`oui` / `non`).
+
 ## Retoucher le script plus tard
 
 Si tu modifies `Code.gs` après ce premier déploiement, il faut **republier**

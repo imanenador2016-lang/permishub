@@ -42,7 +42,7 @@ export function heroCopy(locale: string) { return locale === 'nl' ? nl : fr }
 /** Replace only this asset/key pair when a new authentic hero photo is supplied.
  * The current image belongs to reussite5; its quote is reused without alteration. */
 export const HERO_CANDIDATE = {
-  src: '/testimonials/avis-2.jpg',
+  src: '/testimonials/avis-2-floute.jpg',
   testimonialKey: 'reussite5',
   objectPosition: '45% 28%',
 } as const

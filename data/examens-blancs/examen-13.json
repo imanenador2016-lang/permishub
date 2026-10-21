@@ -127,8 +127,8 @@
       "C. Tu as une interdiction de conduire de 12 heures."
     ],
     "reponse": "C",
-    "explication": "Règle applicable : Lors d’une analyse d’haleine, tu souffles dans un appareil qui mesure la concentration d’alcool dans l’air alvéolaire expiré. Le résultat exact apparaît sur l’écran (par ex. 0,25 mg/l). - Moins de 0,22 mg/l: tu peux partir. - De 0,22 à moins de 0,35 mg/l: interdiction de conduire pendant 12 heures. C’est une infraction et tu recevras une amende. - 0,35 mg/l ou plus: interdiction de conduire pendant 15 jours.",
-    "needsLegalReview": true
+    "explication": "Depuis le 1er juillet 2026, un résultat de 0,25 mg/l, donc supérieur à la limite générale de 0,22 mg/l, entraîne une interdiction temporaire de conduire de 12 heures. Avant de pouvoir conduire à nouveau, un nouveau test ou une nouvelle analyse de l’haleine est obligatoire. Si le résultat reste égal ou supérieur à 0,22 mg/l, une nouvelle interdiction de 12 heures est imposée.",
+    "needsLegalReview": false
   },
   {
     "id": 10,
@@ -142,18 +142,19 @@
       "C. Vous recevez une interdiction immédiate de conduire pendant 12 heures."
     ],
     "reponse": "C",
-    "explication": "Règle applicable : Explication: Un résultat de 0,5 ‰ au test de l'haleine entraîne une interdiction immédiate de conduire de 12 heures. Un résultat de 0,8 ‰ entraîne une interdiction immédiate de conduire de 15 jours.",
-    "needsLegalReview": true
+    "explication": "Un résultat de 0,5 ‰ correspond à la limite générale à partir de laquelle le conducteur est en infraction. Depuis le 1er juillet 2026, il entraîne une interdiction temporaire de conduire de 12 heures. Un nouveau test ou une nouvelle analyse est obligatoire avant de pouvoir reprendre la route.",
+    "needsLegalReview": false
   },
   {
     "id": 11,
     "image": "/examen-blanc/examen-13/q11.webp",
     "type": "numerique",
     "gravite": "normale",
-    "question": "Entrez un nombre. Lors d’une panne ou d’un accident sur cette route pour automobiles, vous placerez le triangle de danger à quelle distance minimale (...) mètres en deçà du véhicule, de manière à ce qu’il soit bien visible des usagers qui s’en approchent à minimum 50 mètres.",
+    "question": "Entrez un nombre. Cette voie est une route pour automobiles, pas une autoroute. Lors d’une panne ou d’un accident, à quelle distance minimale du véhicule devez-vous placer le triangle de danger ?",
     "choix": [],
     "reponse": "30",
-    "explication": "Règle applicable : Autoroute: 100 mètres. Route pour automobiles: 30 mètres.",
+    "explication": "Sur une voie ordinaire, y compris une route pour automobiles, le triangle est placé à au moins 30 mètres du véhicule et doit être visible à environ 50 mètres. La distance de 100 mètres concerne uniquement l’autoroute.",
+    "needsLegalReview": false,
     "needsNewImage": true,
     "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Observez précisément la configuration. Selon la réglementation belge, entrez un nombre. Lors d’une panne ou d’un accident sur cette route pour automobiles, vous placerez le triangle de danger à quelle distance minimale (...) mètres en deçà du véhicule, de manière à ce qu’il soit bien visible des usagers qui s’en approchent à minimum 50 mètres."
   },
@@ -193,17 +194,17 @@
     "image": "/examen-blanc/examen-13/q14.webp",
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Quelle limitation de vitesse cette voiture peut-elle rouler après ce signal routier dans la Région de Bruxelles-Capitale ?",
+    "question": "À quelle vitesse maximale cette voiture peut-elle circuler après ce signal d’entrée d’agglomération en Région de Bruxelles-Capitale ?",
     "choix": [
       "A. 30 km/h.",
       "B. 50 km/h.",
       "C. 70 km/h."
     ],
-    "reponse": "C",
-    "explication": "Règle applicable : Le signal routier indique la fin d’une agglomération. La vitesse maximale en dehors des agglomérations est: - dans les Régions flamande et bruxelloise: 70 km/h - dans la Région wallonne: 90 km/h",
-    "needsNewImage": true,
+    "reponse": "A",
+    "explication": "30 km/h. Le signal F1a indique le commencement d’une agglomération. En Région de Bruxelles-Capitale, la vitesse maximale générale en agglomération est de 30 km/h, sauf si un autre signal impose ou autorise une vitesse différente.",
+    "needsNewImage": false,
     "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Observez précisément la configuration. Quelle limitation de vitesse cette voiture peut-elle rouler après ce signal routier dans la Région de Bruxelles-Capitale.",
-    "needsLegalReview": true
+    "needsLegalReview": false
   },
   {
     "id": 15,
@@ -223,16 +224,16 @@
     "image": "/examen-blanc/examen-13/q16.webp",
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Un piéton (flèche orange) peut-il traverser la chaussée à cet endroit?",
+    "question": "Le passage pour piétons se trouve à 50 mètres. Le piéton indiqué par la flèche orange peut-il traverser la chaussée à cet endroit ?",
     "choix": [
       "A. Oui, cette action est permise.",
       "B. Non, il doit utiliser le passage pour piétons."
     ],
     "reponse": "A",
-    "explication": "Règle applicable : LECON 7 Le signal routier indique qu’un passage pour piétons se trouve à 100 mètres. Un piéton doit obligatoirement l’utiliser s’il se trouve à moins de 20 mètres du passage. Ce n’est pas le cas ici.",
+    "explication": "Oui. Le passage pour piétons se trouve à 50 mètres. Un piéton doit obligatoirement utiliser un passage pour piétons lorsqu’il en existe un à moins de 20 mètres environ. Ici, le passage est plus éloigné : le piéton peut donc traverser à cet endroit, perpendiculairement à la chaussée et en s’assurant qu’il peut le faire sans danger.",
     "needsNewImage": true,
     "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, un piéton (flèche orange) peut-il traverser la chaussée à cet endroit.",
-    "needsLegalReview": true
+    "needsLegalReview": false
   },
   {
     "id": 17,
@@ -311,20 +312,20 @@
   },
   {
     "id": 22,
-    "image": "/examen-blanc/examen-13/q22.webp",
+    "image": "/examen-blanc/examen-13/q22-flanders-speed.png",
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Vous approchez d'une intersection et vous voyez un de ces signaux. À quelle intersection pouvez-vous dépasser un cycliste par la gauche?",
+    "question": "Quelle est la vitesse maximale autorisée hors agglomération en Flandre, lorsqu’aucun signal n’impose une autre limitation ?",
     "choix": [
-      "A. Intersection 1.",
-      "B. Intersection 2.",
-      "C. Intersection 1 et 2."
+      "A. 50 km/h.",
+      "B. 70 km/h.",
+      "C. 90 km/h."
     ],
-    "reponse": "C",
-    "explication": "Règle applicable : +16 – ‘Le dépassement’. Dépasser un vélo par la gauche n’est pas interdit aux intersections où vous devez donner la priorité.",
-    "needsNewImage": true,
-    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Observez précisément la configuration. Dans la situation décrite, vous approchez d'une intersection et vous voyez un de ces signaux. À quelle intersection pouvez-vous dépasser un cycliste par la gauche.",
-    "needsLegalReview": true
+    "reponse": "B",
+    "explication": "En Flandre, la vitesse maximale autorisée hors agglomération est de 70 km/h, sauf si un signal impose une autre limitation.",
+    "needsNewImage": false,
+    "imageBrief": "Montrer une route ordinaire hors agglomération dans la campagne flamande, sans signal de limitation de vitesse et sans caractéristiques d’autoroute.",
+    "needsLegalReview": false
   },
   {
     "id": 23,
@@ -364,10 +365,10 @@
     "image": "/examen-blanc/examen-13/q25.webp",
     "type": "oui_non",
     "gravite": "grave",
-    "question": "* Au-delà de ce signal routier, le conducteur d’une motocyclette peut-il dépasser une voiture par la gauche?",
+    "question": "* Au-delà de ce signal routier, le conducteur d’une motocyclette peut-il dépasser une voiture par la gauche ?",
     "choix": [],
     "reponse": "NON",
-    "explication": "Règle applicable : +16 – ‘Le dépassement’. Le signal d’interdiction interdit aux conducteurs de dépasser par la gauche:. un véhicule attelé.. ou un véhicule à plus de deux roues.",
+    "explication": "Non. Le panneau C35 interdit de dépasser par la gauche un véhicule attelé ou un véhicule à plus de deux roues, notamment une voiture. Cette interdiction s’applique également au conducteur d’une motocyclette.",
     "needsNewImage": true,
     "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, *** Question de 5 points *** Au-delà de ce signal routier, le conducteur d’une motocyclette peut-il dépasser une voiture par la gauche.",
     "needsLegalReview": true
@@ -535,8 +536,8 @@
     "gravite": "normale",
     "question": "Qui peut s’engager en premier dans ce carrefour?",
     "choix": [
-      "A. Le véhicule brune.",
-      "B. Le véhicule bleue.",
+      "A. Le véhicule brun.",
+      "B. Le véhicule bleu.",
       "C. La moto."
     ],
     "reponse": "C",

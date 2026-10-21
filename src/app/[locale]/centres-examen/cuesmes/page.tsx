@@ -8,6 +8,7 @@ import { Breadcrumbs } from '@/components/site/Breadcrumbs'
 import { Container } from '@/components/ui/Container'
 import { Link } from '@/i18n/navigation'
 import { CircuitUnlockCta } from '@/components/circuits/CircuitUnlockCta'
+import { CircuitConstructionFaq } from '@/components/circuits/CircuitConstructionFaq'
 import type { AppLocale } from '@/i18n/request'
 import { getCircuitsByCenter } from '@/content/centers/registry'
 import { CUESMES_SEO_DATA } from '@/content/centers/cuesmes-seo'
@@ -146,6 +147,7 @@ export default async function CuesmesExamCenterPage({ params: { locale } }: { pa
                 <details className="group py-4"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-base marker:hidden sm:text-lg">Quels sont les horaires du centre ?<span aria-hidden="true" className="flex h-8 w-8 flex-none items-center justify-center border-2 border-ink text-lg leading-none transition-transform group-open:rotate-45">+</span></summary><p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/75">Le centre est ouvert {CUESMES_SEO_DATA.openingHours.value.toLowerCase()}. Les examens théoriques et le test de perception des risques ont lieu du mardi au vendredi, de 08:00 à 16:00, sur rendez-vous. Pour le permis B pratique, la prise de rendez-vous se fait via le Portail RDV.</p></details>
                 <details className="group py-4"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-base marker:hidden sm:text-lg">Combien de circuits PermisHub sont disponibles à Cuesmes ?<span aria-hidden="true" className="flex h-8 w-8 flex-none items-center justify-center border-2 border-ink text-lg leading-none transition-transform group-open:rotate-45">+</span></summary><p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/75">{availableCircuits} circuits officiels PermisHub sont disponibles à Cuesmes, avec des tracés Google Maps accessibles après déblocage.</p><Link href="#pack" className="mt-2 inline-flex min-h-11 items-center font-bold text-brick underline underline-offset-2">Débloquer les circuits Cuesmes <span aria-hidden className="ml-2">→</span></Link></details>
                 <details className="group py-4"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-base marker:hidden sm:text-lg">Quel repère local préparer en priorité ?<span aria-hidden="true" className="flex h-8 w-8 flex-none items-center justify-center border-2 border-ink text-lg leading-none transition-transform group-open:rotate-45">+</span></summary><p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/75">Le R5 fait partie des points de passage officiels de la catégorie B à Cuesmes. Prépare la lecture des panneaux et ton placement, en gardant à l’esprit que l’ordre des points peut varier.</p></details>
+                <CircuitConstructionFaq />
               </div>
             </div>
           </section>

@@ -32,20 +32,20 @@
   },
   {
     "id": 3,
-    "image": "/examen-blanc/examen-11/q03.webp",
+    "image": "/examen-blanc/examen-11/q03-b17-fixed.png",
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Au-delà duquel de ces signaux routiers pouvez-vous dépasser une autre voiture par la gauche?",
+    "question": "À l’approche de laquelle de ces deux situations pouvez-vous dépasser une voiture par la gauche ?",
     "choix": [
-      "A. Panneau 1.",
-      "B. Panneau 2.",
-      "C. Panneau 1 et panneau 2."
+      "A. Uniquement dans la situation 1.",
+      "B. Uniquement dans la situation 2.",
+      "C. Dans les deux situations."
     ],
     "reponse": "B",
-    "explication": "Règle applicable : le dépassement par la gauche d’une voiture est interdit dans un carrefour où la priorité de droite s’applique. Il reste permis à l’approche du carrefour signalé par le panneau 2, qui indique que le conducteur circule sur une voie prioritaire, si la manœuvre peut être effectuée sans danger.",
+    "explication": "Uniquement dans la situation 2. Le signal triangulaire B17 de la situation 1 annonce un carrefour où la priorité de droite s’applique : dépasser une voiture par la gauche y est interdit. Le signal B9 de la situation 2 indique une voie prioritaire ; le dépassement reste permis si la visibilité est suffisante et si la manœuvre peut être effectuée sans danger.",
     "needsNewImage": false,
     "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, au-delà duquel de ces signaux routiers pouvez-vous dépasser une autre voiture par la gauche.",
-    "needsLegalReview": true
+    "needsLegalReview": false
   },
   {
     "id": 4,
@@ -245,20 +245,20 @@
   },
   {
     "id": 18,
-    "image": "/examen-blanc/examen-11/q18.webp",
+    "image": "/examen-blanc/examen-11/q18-simple.png",
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Dans quel ordre les conducteurs peuvent-ils s’engager dans ce carrefour?",
+    "question": "Dans quel ordre les conducteurs peuvent-ils s’engager dans ce carrefour ?",
     "choix": [
       "A. Voiture bleue - Voiture brune - Moto.",
       "B. Voiture bleue - Moto - Voiture brune.",
       "C. Voiture brune - Voiture bleue - Moto."
     ],
     "reponse": "B",
-    "explication": "Règle applicable : La voiture bleue et la moto roulent sur une route prioritaire. La voiture bleue veut tourner à droite ou faire un petit tournant et a la priorité. La moto qui fait un long tournant, accorde la priorité. Dès que l’intersection est libre, la voiture brune continue.",
+    "explication": "La voiture bleue et la moto circulent en sens opposés sur la route prioritaire. La voiture bleue continue tout droit : elle passe avant la moto, qui tourne à gauche et doit lui céder le passage. La voiture brune rencontre un signal « cédez le passage » et des dents de requin ; elle passe donc en dernier.",
     "needsNewImage": false,
     "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Dans la situation décrite, dans quel ordre les conducteurs peuvent-ils s’engager dans ce carrefour.",
-    "needsLegalReview": true
+    "needsLegalReview": false
   },
   {
     "id": 19,
@@ -405,16 +405,16 @@
     "image": "/examen-blanc/examen-4/q30-new.png",
     "type": "choix_multiple",
     "gravite": "normale",
-      "question": "Les deux voitures arrivent face à face. La voiture bleu foncé veut tourner à gauche, tandis que la voiture grise continue tout droit. Quelle voiture passe en premier ?",
+    "question": "La voiture grise et la voiture bleu foncé arrivent à un carrefour sans signalisation réglant la priorité. Quelle voiture passe en premier ?",
     "choix": [
-        "A. La voiture grise, car elle continue tout droit.",
-        "B. La voiture bleu foncé, car elle tourne à gauche."
+      "A. La voiture grise, car elle continue tout droit.",
+      "B. La voiture bleu foncé, car elle vient de la droite."
     ],
-      "reponse": "A",
-      "explication": "Les deux voitures arrivent en sens opposé. La voiture bleu foncé tourne à gauche et doit céder le passage à la voiture grise qui continue tout droit.",
+    "reponse": "B",
+    "explication": "À ce carrefour sans signalisation réglant la priorité, la priorité de droite s’applique. La voiture bleu foncé vient de la droite de la voiture grise : elle passe donc en premier.",
     "needsNewImage": false,
-    "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Observez précisément la configuration. Analysez le cas suivant: la voiture noire s’est arrêtée par sécurité avant le carrefour. Quelle voiture peut s’engager la première sur le carrefour.",
-    "needsLegalReview": true
+    "imageBrief": "Montrer un carrefour sans signalisation où une voiture bleu foncé arrive à droite d’une voiture grise, afin d’illustrer clairement la priorité de droite.",
+    "needsLegalReview": false
   },
   {
     "id": 30,
@@ -434,20 +434,20 @@
   },
   {
     "id": 31,
-    "image": "/examen-blanc/examen-11/q31.webp",
+    "image": "/examen-blanc/examen-11/q31-fixed.png",
     "type": "choix_multiple",
     "gravite": "normale",
-    "question": "Qui peut s’engager en premier dans ce carrefour?",
+    "question": "Qui peut s’engager en premier dans ce carrefour ?",
     "choix": [
-      "A. Le véhicule brune.",
-      "B. Le véhicule bleue.",
+      "A. La voiture brune.",
+      "B. La voiture bleue.",
       "C. La moto."
     ],
     "reponse": "C",
-    "explication": "Règle applicable : L’agent dit que la voiture bleue doit s’arrêter. Le conducteur qui désire conduire tout droit a la priorité. Le conducteur qui veut tourner à gauche, doit donner la priorité.",
+    "explication": "La moto voit l’agent de profil et peut poursuivre tout droit. La voiture bleue arrive d’une direction qui coupe celle indiquée par les bras tendus de l’agent : elle doit s’arrêter. La voiture brune, qui tourne à gauche, doit céder le passage à la moto qui continue tout droit. La moto s’engage donc en premier.",
     "needsNewImage": false,
     "imageBrief": "Créer une illustration routière PermisHub entièrement nouvelle, sans reprendre l'ancienne composition. Montrer clairement les véhicules, usagers, panneaux, marquages et directions indispensables pour répondre à ceci : Observez précisément la configuration. Selon la réglementation belge, qui peut s’engager en premier dans ce carrefour.",
-    "needsLegalReview": true
+    "needsLegalReview": false
   },
   {
     "id": 32,
@@ -487,8 +487,8 @@
     "gravite": "normale",
     "question": "Qui peut s’engager dans le carrefour?",
     "choix": [
-      "A. Le véhicule verte et Le véhicule bleue.",
-      "B. Le véhicule brune et la motocyclette."
+      "A. Le véhicule vert et le véhicule bleu.",
+      "B. Le véhicule brun et la motocyclette."
     ],
     "reponse": "A",
     "explication": "Règle applicable : L’agent de police donne l’ordre, que la voiture brune et la moto doivent s’arrêter.",
@@ -607,13 +607,13 @@
   },
   {
     "id": 43,
-    "image": "/examen-blanc/examen-11/q43.webp",
+    "image": "/examen-blanc/examen-10/q07.webp",
     "type": "oui_non",
     "gravite": "grave",
-    "question": "* Vous avez le permis de conduire provisoire B. En voiture, pouvez-vous dépasser par la gauche un cheval attelé?",
+    "question": "* Après ce panneau, pouvez-vous dépasser par la gauche le véhicule attelé ?",
     "choix": [],
     "reponse": "NON",
-    "explication": "Règle applicable : +16 – ‘Le dépassement’. Le signal d’interdiction interdit aux conducteurs de dépasser par la gauche:. un véhicule attelé.. ou un véhicule à plus de deux roues."
+    "explication": "Non. Le panneau C35 interdit, à partir du signal et jusqu’au prochain carrefour inclus, de dépasser par la gauche un véhicule attelé ou un véhicule à plus de deux roues. Le véhicule tiré par le cheval est un véhicule attelé."
   },
   {
     "id": 44,

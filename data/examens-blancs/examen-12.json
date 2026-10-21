@@ -171,7 +171,7 @@
     "gravite": "grave",
     "question": "* Qui a la priorité?",
     "choix": [
-      "A. Le véhicule blanche.",
+      "A. Le véhicule blanc.",
       "B. Le véhicule rouge."
     ],
     "reponse": "B",
@@ -517,7 +517,7 @@
     "question": "* La voiture bleue veut tourner à gauche. Qui a la priorité?",
     "choix": [
       "A. Les piétons.",
-      "B. Le véhicule bleue."
+      "B. Le véhicule bleu."
     ],
     "reponse": "A",
     "explication": "La réponse A correspond à la règle applicable à cette situation. Une validation juridique complémentaire est requise avant publication.",

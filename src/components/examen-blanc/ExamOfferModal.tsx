@@ -6,6 +6,7 @@ import { formatPrice } from '@/domain/centers'
 import { EXAMENS_ILLIMITES_OFFER } from '@/content/pricing-config'
 import { createCheckoutSession } from '@/lib/payment'
 import { Link } from '@/i18n/navigation'
+import { LoaderCircle } from 'lucide-react'
 
 /**
  * Offre "tous les examens blancs" présentée avant tout achat (picker
@@ -72,7 +73,7 @@ export function ExamOfferModal({ locale, onClose }: { locale: 'fr' | 'nl'; onClo
         </ul>
 
         <button onClick={handleUnlock} disabled={loading} className="btn-comic block w-full px-4 py-3.5 text-base disabled:opacity-60">
-          {loading ? tc('redirecting') : `${t('cta')} — ${formatPrice(EXAMENS_ILLIMITES_OFFER.priceCents, locale)} →`}
+          {loading ? <span className="inline-flex items-center justify-center gap-2"><LoaderCircle size={18} className="animate-spin" aria-hidden="true" />{tc('redirecting')}</span> : `${t('cta')} — ${formatPrice(EXAMENS_ILLIMITES_OFFER.priceCents, locale)} →`}
         </button>
         <p className="mt-2.5 text-center text-[11px] font-semibold text-ink/50">{t('trustLine')}</p>
         <Link href="/restaurer-acces" className="mt-3 block text-center text-[11px] font-semibold text-ink/50 hover:text-brick">

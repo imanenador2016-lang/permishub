@@ -104,14 +104,14 @@
     "id": 9,
     "type": "choix_multiple",
     "gravite": "grave",
-    "question": "* Qui doit s'arrêter?",
+    "question": "* Qui doit s’arrêter ?",
     "choix": [
-      "A. Le véhicule bleue.",
+      "A. La voiture bleue.",
       "B. Tout le monde.",
-      "C. Le véhicule brune et la motocyclette."
+      "C. La voiture brune et la motocyclette."
     ],
     "reponse": "C",
-    "explication": "Règle applicable : La motocyclette conduit vers le ventre et la voiture brune vers le dos.",
+    "explication": "La voiture brune et la motocyclette doivent s’arrêter. Elles arrivent de directions qui coupent la ligne formée par les bras tendus de l’agent. La voiture bleue circule parallèlement à ses bras et peut poursuivre sa route.",
     "image": "/examen-blanc/examen-9/q09.webp"
   },
   {
@@ -333,8 +333,8 @@
     "question": "Ne retenez que les éléments décrits. Dans quel ordre les véhicules peuvent-ils franchir cette intersection ?",
     "choix": [
       "A. Le véhicule rouge.",
-      "B. Le véhicule blanche.",
-      "C. Le véhicule bleue."
+      "B. Le véhicule blanc.",
+      "C. Le véhicule bleu."
     ],
     "reponse": "A",
     "explication": "Règle applicable : Panneau de signalisation: carrefour où la priorité de droite est applicable.",

@@ -8,6 +8,7 @@ import { Breadcrumbs } from '@/components/site/Breadcrumbs'
 import { Container } from '@/components/ui/Container'
 import { Link } from '@/i18n/navigation'
 import { AnderlechtPackCta } from '@/components/circuits/AnderlechtPackCta'
+import { CircuitConstructionFaq } from '@/components/circuits/CircuitConstructionFaq'
 import type { AppLocale } from '@/i18n/request'
 import { getCircuitsByCenter } from '@/content/centers/registry'
 import { ANDERLECHT_SEO_DATA } from '@/content/centers/anderlecht-seo'
@@ -157,6 +158,7 @@ export default async function AnderlechtExamCenterPage({ params: { locale } }: {
               <div className="divide-y divide-ink/20 border-y border-ink/20">
                 <details className="group py-4"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-base marker:hidden sm:text-lg">Où se trouve le centre d’examen d’Anderlecht ?<span aria-hidden="true" className="flex h-8 w-8 flex-none items-center justify-center border-2 border-ink text-lg leading-none transition-transform group-open:rotate-45">+</span></summary><p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/75">L’adresse répertoriée dans PermisHub est {ANDERLECHT_SEO_DATA.address.value}. <a href={mapsUrl} target="_blank" rel="noreferrer" className="font-bold text-brick underline underline-offset-2">Afficher sur Google Maps</a>.</p></details>
                 <details className="group py-4"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-base marker:hidden sm:text-lg">Existe-t-il des parcours pour s’entraîner à Anderlecht ?<span aria-hidden="true" className="flex h-8 w-8 flex-none items-center justify-center border-2 border-ink text-lg leading-none transition-transform group-open:rotate-45">+</span></summary><p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/75">PermisHub répertorie quatre parcours d’entraînement pour Anderlecht. Tu peux les débloquer depuis cette page.</p><Link href="#pack" className="mt-3 inline-flex min-h-11 items-center font-bold text-brick underline underline-offset-2">Débloquer les 4 circuits <span aria-hidden>→</span></Link></details>
+                <CircuitConstructionFaq />
               </div>
             </div>
           </section>

@@ -30,6 +30,8 @@ export const EXAM_CENTERS: ExamCenter[] = [
   // point de départ réel d'un circuit) — à affiner si besoin plus tard.
   { id: 'louvain-la-neuve', slug: 'louvain-la-neuve', name: 'Louvain-la-Neuve', region: 'WALLONIE', priceCents: 2499, lat: 50.6681, lng: 4.6118 },
   { id: 'couillet', slug: 'couillet', name: 'Couillet', region: 'WALLONIE', priceCents: 2499, lat: 50.4028, lng: 4.4696 },
+  { id: 'wandre', slug: 'wandre', name: 'Liège - Wandre', region: 'WALLONIE', priceCents: 2499, lat: 50.6709, lng: 5.6598 },
+  { id: 'namur', slug: 'namur', name: 'Namur - Suarlée', region: 'WALLONIE', priceCents: 2499, lat: 50.4875, lng: 4.8039 },
   // Verrouillés "Bientôt" le 2026-08-29 à la demande du client — pas encore
   // de vrai tracé pour ceux-ci, voir conversation du 2026-08-29.
   { id: 'mariembourg', slug: 'mariembourg', name: 'Mariembourg', region: 'WALLONIE', priceCents: 2499, lat: 50.0965, lng: 4.5211 },
@@ -267,6 +269,30 @@ export const PRACTICE_CIRCUITS: PracticeCircuit[] = [
     hasMaps: true,
     durationMinutes: 30,
   },
+  {
+    id: 'namur-1',
+    centerSlug: 'namur',
+    title: { fr: 'Circuit d’entraînement 1', nl: 'Trainingscircuit 1' },
+    description: { fr: 'Premier itinéraire d’entraînement autour du centre de Namur - Suarlée.', nl: 'Eerste trainingsroute rond het examencentrum van Namen-Suarlée.' },
+    hasMaps: true,
+    durationMinutes: 30,
+    priceCents: 2499,
+  },
+  { id: 'namur-2', centerSlug: 'namur', title: { fr: 'Circuit d’entraînement 2', nl: 'Trainingscircuit 2' }, description: { fr: 'Deuxième itinéraire d’entraînement autour du centre de Namur - Suarlée.', nl: 'Tweede trainingsroute rond het examencentrum van Namen-Suarlée.' }, hasMaps: true, durationMinutes: 30 },
+  { id: 'namur-3', centerSlug: 'namur', title: { fr: 'Circuit d’entraînement 3', nl: 'Trainingscircuit 3' }, description: { fr: 'Troisième itinéraire d’entraînement autour du centre de Namur - Suarlée.', nl: 'Derde trainingsroute rond het examencentrum van Namen-Suarlée.' }, hasMaps: true, durationMinutes: 30 },
+  { id: 'namur-4', centerSlug: 'namur', title: { fr: 'Circuit d’entraînement 4', nl: 'Trainingscircuit 4' }, description: { fr: 'Quatrième itinéraire d’entraînement autour du centre de Namur - Suarlée.', nl: 'Vierde trainingsroute rond het examencentrum van Namen-Suarlée.' }, hasMaps: true, durationMinutes: 30 },
+  {
+    id: 'wandre-1',
+    centerSlug: 'wandre',
+    title: { fr: 'Circuit d’entraînement 1', nl: 'Trainingscircuit 1' },
+    description: { fr: 'Premier itinéraire d’entraînement autour du centre de Liège - Wandre.', nl: 'Eerste trainingsroute rond het examencentrum van Luik-Wandre.' },
+    hasMaps: true,
+    durationMinutes: 30,
+    priceCents: 2499,
+  },
+  { id: 'wandre-2', centerSlug: 'wandre', title: { fr: 'Circuit d’entraînement 2', nl: 'Trainingscircuit 2' }, description: { fr: 'Deuxième itinéraire d’entraînement autour du centre de Liège - Wandre.', nl: 'Tweede trainingsroute rond het examencentrum van Luik-Wandre.' }, hasMaps: true, durationMinutes: 30 },
+  { id: 'wandre-3', centerSlug: 'wandre', title: { fr: 'Circuit d’entraînement 3', nl: 'Trainingscircuit 3' }, description: { fr: 'Troisième itinéraire d’entraînement autour du centre de Liège - Wandre.', nl: 'Derde trainingsroute rond het examencentrum van Luik-Wandre.' }, hasMaps: true, durationMinutes: 30 },
+  { id: 'wandre-4', centerSlug: 'wandre', title: { fr: 'Circuit d’entraînement 4', nl: 'Trainingscircuit 4' }, description: { fr: 'Quatrième itinéraire d’entraînement autour du centre de Liège - Wandre.', nl: 'Vierde trainingsroute rond het examencentrum van Luik-Wandre.' }, hasMaps: true, durationMinutes: 30 },
   {
     id: 'mariembourg-1',
     centerSlug: 'mariembourg',

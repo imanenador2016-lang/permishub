@@ -1,9 +1,14 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { lazy, Suspense, useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
-import { CircuitOfferModal } from './CircuitOfferModal'
+
+const CircuitOfferModal = lazy(() => import('./CircuitOfferModal').then((module) => ({ default: module.CircuitOfferModal })))
+
+function preloadCircuitOfferModal() {
+  void import('./CircuitOfferModal').catch(() => undefined)
+}
 
 /** Clé localStorage marquant un centre comme débloqué — posée par circuits/succes après paiement vérifié. */
 export function circuitsUnlockedKey(centerSlug: string) {
@@ -48,11 +53,19 @@ export function CircuitUnlockCta({
 
   return (
     <>
-      <button onClick={() => setModalOpen(true)} className="btn-comic block w-full px-4 py-3 text-center text-sm">
+      <button
+        onClick={() => setModalOpen(true)}
+        onPointerEnter={preloadCircuitOfferModal}
+        onFocus={preloadCircuitOfferModal}
+        onTouchStart={preloadCircuitOfferModal}
+        className="btn-comic block w-full px-4 py-3 text-center text-sm"
+      >
         {unlockLabel ?? t('viewItinerary')} →
       </button>
       {modalOpen && (
-        <CircuitOfferModal centerName={centerName} centerSlug={centerSlug} locale={locale} onClose={() => setModalOpen(false)} />
+        <Suspense fallback={null}>
+          <CircuitOfferModal centerName={centerName} centerSlug={centerSlug} locale={locale} onClose={() => setModalOpen(false)} />
+        </Suspense>
       )}
     </>
   )

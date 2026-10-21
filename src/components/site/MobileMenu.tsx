@@ -2,12 +2,12 @@
 
 import { useEffect, useId, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
-import { BookOpen, ChevronRight, CircleHelp, FileText, GraduationCap, House, MapPin, Newspaper, ShieldAlert, UserRound, X, Menu, type LucideIcon } from 'lucide-react'
+import { BookOpen, ChevronRight, CircleHelp, FileText, GraduationCap, House, LockKeyhole, MapPin, Newspaper, ShieldAlert, UserRound, X, Menu, type LucideIcon } from 'lucide-react'
 import { Link, usePathname } from '@/i18n/navigation'
 import type { AppLocale } from '@/i18n/request'
 
 type NavIcon = 'home' | 'learn' | 'summary' | 'exams' | 'coaching' | 'circuits' | 'risks' | 'blog' | 'help'
-type NavLink = { href: string; label: string; icon: NavIcon }
+type NavLink = { href: string; label: string; icon: NavIcon; locked?: boolean }
 type NavGroup = { label: string; children: NavLink[] }
 type MenuLabels = {
   open: string
@@ -175,9 +175,20 @@ export function MobileMenu({
                 <section key={group.label} className="mb-3 last:mb-0">
                   <h2 className="mb-1 px-1 text-[10px] font-extrabold uppercase tracking-[0.16em] text-forest/80">{group.label}</h2>
                   <ul>
-                    {group.children.map(({ href, label, icon }) => {
+                    {group.children.map(({ href, label, icon, locked }) => {
                       const active = isActive(href)
                       const Icon = NAV_ICONS[icon]
+                      if (locked) {
+                        return (
+                          <li key={href}>
+                            <span aria-disabled="true" className="flex min-h-11 cursor-not-allowed items-center gap-3 rounded-sm px-2.5 py-2 text-[15px] font-semibold text-ink/50">
+                              <Icon size={18} strokeWidth={1.8} aria-hidden="true" className="text-ink/40" />
+                              <span className="flex-1">{label}</span>
+                              <LockKeyhole size={16} aria-hidden="true" className="text-brick" />
+                            </span>
+                          </li>
+                        )
+                      }
                       return (
                         <li key={href}>
                           <Link
