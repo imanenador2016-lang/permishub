@@ -19,7 +19,9 @@ export default async function middleware(request: NextRequest) {
   }
 
   const learningChild = request.nextUrl.pathname.match(/^\/(fr|nl)\/apprendre\/.+/)
-  if (learningChild && !isFreeLearningPath(request.nextUrl.pathname)) {
+  // Local QA: allow the owner to inspect every lesson without creating a
+  // Stripe subscription. Production access control remains unchanged.
+  if (process.env.NODE_ENV === 'production' && learningChild && !isFreeLearningPath(request.nextUrl.pathname)) {
     const token = request.cookies.get(LEARNING_ACCESS_COOKIE)?.value
     if (!(await verifyLearningAccess(token))) {
       if (await verifyLearningAccess(token, true)) {

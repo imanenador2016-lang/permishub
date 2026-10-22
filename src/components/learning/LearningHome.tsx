@@ -58,7 +58,7 @@ const MODULES: ModuleDefinition[] = [
 type SavedProgress = Record<string, number>
 type ChallengeProgress = Record<string, boolean>
 
-export function LearningHome({ hasPremiumAccess, locale }: { hasPremiumAccess: boolean; locale: 'fr' | 'nl' }) {
+export function LearningHome({ hasPremiumAccess, locale, showSubscriptionManagement = true }: { hasPremiumAccess: boolean; locale: 'fr' | 'nl'; showSubscriptionManagement?: boolean }) {
   const [savedProgress, setSavedProgress] = useState<SavedProgress>({})
   const [challengeProgress, setChallengeProgress] = useState<ChallengeProgress>({})
   const [hydrated, setHydrated] = useState(false)
@@ -111,7 +111,9 @@ export function LearningHome({ hasPremiumAccess, locale }: { hasPremiumAccess: b
             <span>{startedLessons ? 'Reprendre ma formation' : 'Commencer ma formation'}</span>
             <ArrowRight size={19} aria-hidden="true" />
           </Link>
-          {hasPremiumAccess ? <a className="learn-manage-subscription" href={`/api/billing/learning?locale=${locale}`}>Gérer mon abonnement</a> : <small className="learn-free-note">Module 1 gratuit · Modules 2 à 10 : 7,99 €/semaine</small>}
+          {hasPremiumAccess
+            ? showSubscriptionManagement && <a className="learn-manage-subscription" href={`/api/billing/learning?locale=${locale}`}>Gérer mon abonnement</a>
+            : <small className="learn-free-note">Module 1 gratuit · Modules 2 à 10 : 7,99 €/semaine</small>}
           {nextItem ? <small className="learn-next-objective"><Sparkles size={15} aria-hidden="true" /> Prochaine étape : <strong>{nextItem.lesson.title}</strong>{nextModule ? ` · ${nextModule.number}` : ''}</small> : null}
         </div>
         <div className="learn-overview" aria-label="Progression globale">

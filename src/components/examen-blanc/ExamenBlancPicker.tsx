@@ -37,6 +37,10 @@ export function ExamenBlancPicker({ exams }: { exams: ExamenBlancSummary[] }) {
   const [unlocked, setUnlocked] = useState(LOCAL_DEV_UNLOCKED)
 
   useEffect(() => {
+    void fetch('/api/checkout/pack', { method: 'HEAD', cache: 'no-store' }).catch(() => undefined)
+  }, [])
+
+  useEffect(() => {
     if (LOCAL_DEV_UNLOCKED) return
     try {
       if (localStorage.getItem(EXAMENS_UNLOCKED_KEY) === '1') setUnlocked(true)

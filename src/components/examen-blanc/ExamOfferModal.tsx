@@ -22,6 +22,7 @@ export function ExamOfferModal({ locale, onClose }: { locale: 'fr' | 'nl'; onClo
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
+    void fetch('/api/checkout/pack', { method: 'HEAD', cache: 'no-store' }).catch(() => undefined)
     function onKeyDown(e: KeyboardEvent) {
       if (e.key === 'Escape') onClose()
     }

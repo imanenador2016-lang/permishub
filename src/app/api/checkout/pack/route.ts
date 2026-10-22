@@ -4,6 +4,11 @@ import { getPackOffer, LAUNCH_BUNDLE_OFFER } from '@/content/pricing-config'
 import { getLaunchOfferStatus } from '@/lib/launch-offer'
 import { getCheckoutOrigin } from '@/lib/checkout-origin'
 
+/** Compile/préchauffe la route sans créer de session Stripe. */
+export function HEAD() {
+  return new NextResponse(null, { status: 204 })
+}
+
 /**
  * Crée une Stripe Checkout Session pour un pack (Résumé, examens
  * illimités, perception des risques) — même principe que

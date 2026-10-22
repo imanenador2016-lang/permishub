@@ -7,12 +7,14 @@ import { COACHING_INTENSIF_SESSIONS } from '@/content/coaching-intensif'
 
 export function CoachingBooking() {
   const searchParams = useSearchParams()
-  const [selected, setSelected] = useState<string>()
+  const firstAvailableSession = COACHING_INTENSIF_SESSIONS.find((session) => session.status === 'available')
+  const [selected, setSelected] = useState<string | undefined>(firstAvailableSession?.id)
   const [email, setEmail] = useState('')
   const [loading, setLoading] = useState(false)
   const [message, setMessage] = useState('')
 
   useEffect(() => {
+    void fetch('/api/checkout/coaching', { method: 'HEAD', cache: 'no-store' }).catch(() => undefined)
     const requestedSession = searchParams?.get('session')
     if (requestedSession && COACHING_INTENSIF_SESSIONS.some((session) => session.id === requestedSession && session.status === 'available')) setSelected(requestedSession)
   }, [searchParams])
@@ -43,13 +45,16 @@ export function CoachingBooking() {
         <div className="grid items-stretch gap-5 lg:grid-cols-[.9fr_1.1fr]">
           <header className="panel flex flex-col justify-center p-7 sm:p-10">
             <span className="inline-block w-fit -rotate-2 border-[3px] border-ink bg-yellow px-4 py-2 font-display text-sm shadow-hard-xs">EN DIRECT SUR ZOOM</span>
-            <p className="mt-8 text-sm font-bold uppercase tracking-[.14em] text-forest">Permis B · Belgique</p>
-            <h1 className="mt-3 max-w-xl text-4xl leading-[.98] sm:text-6xl">Coaching intensif pour ton permis.</h1>
-            <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink/85">La crème de la crème : l’essentiel pour réussir, en direct avec PermisHub.</p>
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <p className="text-sm font-bold uppercase tracking-[.14em] text-forest">Permis B · Belgique</p>
+              <span className="border-2 border-ink bg-brick px-3 py-1 text-xs font-bold uppercase tracking-wide text-cream">Plus que 4 places</span>
+            </div>
+            <h1 className="mt-3 max-w-xl text-4xl leading-[.98] sm:text-6xl">5 heures pour faire décoller ta préparation.</h1>
+            <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink/85">Une session intensive à distance, en direct avec PermisHub, pour revoir l’essentiel et poser tes questions.</p>
             <ul className="mt-8 space-y-3 font-bold">
               <li className="flex gap-3"><span className="grid size-7 shrink-0 place-items-center rounded-full border-[3px] border-ink bg-forest text-cream">✓</span>Session intensive de 5 heures</li>
-              <li className="flex gap-3"><span className="grid size-7 shrink-0 place-items-center rounded-full border-[3px] border-ink bg-forest text-cream">✓</span>Dimanche 18 octobre, de 09:00 à 14:00</li>
-              <li className="flex gap-3"><span className="grid size-7 shrink-0 place-items-center rounded-full border-[3px] border-ink bg-forest text-cream">✓</span>Participation en direct sur Zoom</li>
+              <li className="flex gap-3"><span className="grid size-7 shrink-0 place-items-center rounded-full border-[3px] border-ink bg-forest text-cream">✓</span>Dimanche 1er novembre 2026, de 9 h à 14 h</li>
+              <li className="flex gap-3"><span className="grid size-7 shrink-0 place-items-center rounded-full border-[3px] border-ink bg-forest text-cream">✓</span>À distance, en direct sur Zoom</li>
             </ul>
           </header>
 
@@ -67,8 +72,8 @@ export function CoachingBooking() {
                   <button key={session.id} type="button" aria-pressed={isSelected} disabled={isUnavailable || loading} onClick={() => !isUnavailable && setSelected(session.id)} className={`border-[3px] border-ink p-5 text-left transition-transform focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-forest ${isUnavailable ? 'cursor-not-allowed bg-creamdim opacity-60' : isSelected ? 'bg-yellow shadow-hard-xs' : 'bg-cream hover:-translate-y-0.5 hover:shadow-hard-xs'}`}>
                     <b className="block text-xl leading-tight">{session.label}</b>
                     <span className="mt-3 block">{session.time} · Zoom</span>
-                    {isComplete ? <span className="mt-4 block w-fit border-2 border-ink bg-brick px-2 py-1 text-xs font-bold text-cream">COMPLET</span> : isExpired ? <span className="mt-4 block w-fit border-2 border-ink bg-creamdim px-2 py-1 text-xs font-bold">SESSION TERMINÉE</span> : <span className="mt-4 inline-flex items-center gap-1.5 border-2 border-ink bg-forest px-2 py-1 text-xs font-bold text-cream"><Check size={14} aria-hidden="true" /> INSCRIPTIONS OUVERTES</span>}
-                    <strong className="mt-5 block font-display text-lg">79 €</strong>
+                    {isComplete ? <span className="mt-4 block w-fit border-2 border-ink bg-brick px-2 py-1 text-xs font-bold text-cream">COMPLET</span> : isExpired ? <span className="mt-4 block w-fit border-2 border-ink bg-creamdim px-2 py-1 text-xs font-bold">SESSION TERMINÉE</span> : <span className="mt-4 inline-flex items-center gap-1.5 border-2 border-ink bg-brick px-2 py-1 text-xs font-bold text-cream"><Check size={14} aria-hidden="true" /> PLUS QUE {session.remainingSeats} PLACES</span>}
+                    <strong className="mt-5 block font-display text-lg">{(session.priceCents / 100).toFixed(0)} €</strong>
                   </button>
                 )
               })}

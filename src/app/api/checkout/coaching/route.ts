@@ -2,6 +2,12 @@
 import { createStripeCheckoutSession } from '@/lib/stripe-checkout-error'
 import { getCoachingIntensifSession } from '@/content/coaching-intensif'
 import { getCheckoutOrigin } from '@/lib/checkout-origin'
+
+/** Compile/préchauffe la route sans créer de session Stripe. */
+export function HEAD() {
+  return new NextResponse(null, { status: 204 })
+}
+
 export async function POST(request: Request) {
   const body = await request.json().catch(() => null)
   const sessionId = typeof body?.sessionId === 'string' ? body.sessionId : ''

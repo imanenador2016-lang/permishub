@@ -4,6 +4,7 @@ import { Footer } from '@/components/site/Footer'
 import { Hero } from '@/components/home/Hero'
 import { TrustBar } from '@/components/home/TrustBar'
 import { HomeFaq } from '@/components/home/HomeFaq'
+import { CoachingIntensifHomeSection } from '@/components/home/CoachingIntensifHomeSection'
 import { CircuitsCarousel } from '@/components/circuits/CircuitsCarousel'
 import { CoutEchecBanner } from '@/components/circuits/CoutEchecBanner'
 import { PacksSection } from '@/components/pricing/PacksSection'
@@ -53,6 +54,7 @@ export default async function HomePage({ params: { locale } }: { params: { local
           <PacksSection />
         </Container>
 
+        {locale === 'fr' && <CoachingIntensifHomeSection />}
         <TestimonialsSection />
         <TrustBar />
         {locale === 'fr' && <HomeFaq />}

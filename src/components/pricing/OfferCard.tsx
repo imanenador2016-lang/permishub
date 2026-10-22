@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { useTranslations, useLocale } from 'next-intl'
 import { formatPrice } from '@/domain/centers'
@@ -82,6 +82,11 @@ export function OfferCard({
   // certains clients recliquaient en pensant que rien ne se passait (doublons
   // vus dans Stripe le 2026-09-07), d'où ce retour visuel immédiat.
   const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    if (!offer) return
+    void fetch('/api/checkout/pack', { method: 'HEAD', cache: 'no-store' }).catch(() => undefined)
+  }, [offer])
 
   async function handleClick() {
     if (!offer) return

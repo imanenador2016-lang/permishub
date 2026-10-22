@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import { ExamOfferModal } from './ExamOfferModal'
@@ -31,6 +31,10 @@ export function ExamAccessGate({ unlocked, children }: { unlocked: boolean; chil
   const tc = useTranslations('common')
   const locale = useLocale() as 'fr' | 'nl'
   const [offerOpen, setOfferOpen] = useState(false)
+
+  useEffect(() => {
+    if (!unlocked) void fetch('/api/checkout/pack', { method: 'HEAD', cache: 'no-store' }).catch(() => undefined)
+  }, [unlocked])
 
   if (unlocked) return <>{children}</>
 

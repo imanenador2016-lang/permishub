@@ -12,6 +12,7 @@ export function generateMetadata({ params: { locale } }: { params: { locale: App
 }
 
 export default async function LearnPage({ params: { locale } }: { params: { locale: AppLocale } }) {
-  const hasPremiumAccess = Boolean(await verifyLearningAccess(cookies().get(LEARNING_ACCESS_COOKIE)?.value))
-  return <><Navbar /><LearningHome hasPremiumAccess={hasPremiumAccess} locale={locale} /><Footer /></>
+  const hasPremiumAccess = process.env.NODE_ENV !== 'production'
+    || Boolean(await verifyLearningAccess(cookies().get(LEARNING_ACCESS_COOKIE)?.value))
+  return <><Navbar /><LearningHome hasPremiumAccess={hasPremiumAccess} locale={locale} showSubscriptionManagement={process.env.NODE_ENV === 'production'} /><Footer /></>
 }

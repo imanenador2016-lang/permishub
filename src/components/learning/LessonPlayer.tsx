@@ -29,11 +29,12 @@ const SCENE_IMAGES = {
 
 function searchableVisualText(step: LessonStep) {
   const question = 'question' in step ? step.question : ''
-  const options = 'options' in step ? step.options.join(' ') : ''
   const title = 'title' in step ? step.title : ''
   const body = 'body' in step ? step.body : ''
 
-  return `${title} ${body} ${question} ${options}`
+  // Never infer a visual from answer choices: distractors intentionally contain
+  // false statements and were causing unrelated or contradictory illustrations.
+  return `${title} ${body} ${question}`
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
     .replace(/[’‘]/g, "'")
@@ -122,11 +123,19 @@ function LearningVisual({ step }: { step: LessonStep }) {
     return <div className="learn-scene-frame"><img className="learn-scene-image learn-lesson-scene" src={explicitScene.image} alt={explicitScene.description} />{signs.length ? <div className={`learn-scene-signs${signs.length > 1 ? ' is-pair' : ''}`}>{signs.map((sign) => <img className="learn-scene-sign" src={sign.asset} alt={sign.name} key={sign.id} />)}</div> : null}</div>
   }
   if (explicitScene?.status === 'needs-validation') return <div className="learn-scene-placeholder"><strong>Visuel en attente de validation</strong><span>{explicitScene.requiredVisual}</span></div>
+  // Mini-tests must never receive a guessed illustration. Their distractors and
+  // short wording are too ambiguous: only an audited visualId may display media.
+  if (!('type' in step)) return null
   const text = searchableVisualText(step)
   const restriction = restrictionValues(text)
   if (restriction) return <RestrictionVisual {...restriction} />
   const speedLimit = speedLimitValue(text)
   if (speedLimit) return <SpeedLimitVisual value={speedLimit} />
+  // The lesson subject must take precedence over keywords found in distractor
+  // answers (for example "Je fais demi-tour", which previously selected C33a).
+  if (text.includes('agent de profil') || text.includes('est de profil')) {
+    return <img className="learn-scene-image learn-lesson-scene" src={SCENE_IMAGES.agentProfile} alt="Agent qualifié vu de profil au milieu d'un carrefour" />
+  }
   const fallbackSigns = fallbackSignIds(text).map(getPermisHubSign).filter((sign): sign is NonNullable<typeof sign> => Boolean(sign))
   if (fallbackSigns.length) return <div className={`learn-lesson-sign-board${fallbackSigns.length > 1 ? ' is-multiple' : ''}`}>{fallbackSigns.map((sign) => <figure key={sign.id}><img className="learn-lesson-sign-visual" src={sign.asset} alt={sign.name} /><figcaption>{sign.officialCode ? `Signal ${sign.officialCode}` : sign.name}</figcaption></figure>)}</div>
   const source = text.includes('agent de profil') || text.includes('est de profil') ? SCENE_IMAGES.agentProfile
@@ -135,7 +144,7 @@ function LearningVisual({ step }: { step: LessonStep }) {
     : text.includes('fleche orange') || text.includes('croix rouge') || text.includes('au-dessus de ta bande') ? SCENE_IMAGES.laneControl
     : text.includes('zone avancee cyclistes') || text.includes('zone cycliste') ? SCENE_IMAGES.cycleBox
     : text.includes('autoroute') ? SCENE_IMAGES.motorway
-    : text.includes('fleche verte') || text.includes('pieton') ? SCENE_IMAGES.greenArrow
+    : text.includes('fleche verte') ? SCENE_IMAGES.greenArrow
     : text.includes('travaux') || text.includes('temporaire') ? SCENE_IMAGES.roadworks
     : text.includes('juxtapos') || text.includes('ligne de mon cote') ? SCENE_IMAGES.pairedLines
     : text.includes('200 m') ? SCENE_IMAGES.distance
@@ -146,8 +155,7 @@ function LearningVisual({ step }: { step: LessonStep }) {
     : (text.includes('obligatoire') || text.includes('obligation')) && text.includes('droite') ? SCENE_IMAGES.mandatoryRight
     : text.includes("ligne d'arret") || text.includes('feu rouge') ? SCENE_IMAGES.stopLine
     : text.includes('orange') ? SCENE_IMAGES.amber
-    : text.includes('ligne discontinue') || text.includes('ligne continue') ? SCENE_IMAGES.dashedLine
-    : text.includes('agent') || text.includes('carrefour') ? SCENE_IMAGES.hierarchy
+    : text.includes('agent') && !text.includes("pas d'agent") ? SCENE_IMAGES.hierarchy
     : null
   return source ? <img className="learn-scene-image learn-lesson-scene" src={source} alt="Illustration de situation routière" /> : null
 }
