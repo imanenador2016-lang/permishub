@@ -88,6 +88,11 @@ export async function POST(request: Request) {
 
 export async function GET(request: Request) {
   const offerId = new URL(request.url).searchParams.get('offerId')
+  // Netlify peut convertir une requête HEAD en GET avant de l'envoyer à la
+  // fonction Next.js. Sans offre, il s'agit uniquement du préchauffage du
+  // serveur : répondre immédiatement sans créer de session ni appeler Stripe.
+  if (!offerId) return new NextResponse(null, { status: 204 })
+
   const internalRequest = new Request(request.url, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
